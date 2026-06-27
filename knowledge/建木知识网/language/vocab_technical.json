@@ -1,0 +1,66 @@
+{
+  "description": "技术领域词汇映射 — 中文↔English↔建木知识域",
+  "version": "1.0",
+  "fame_initial": "all_zero",
+  "domains": {
+    "算法与计算": {
+      "entries": [
+        {"zh": "查表", "en": "lookup table", "domain": "迷龙算法"},
+        {"zh": "缓存", "en": "cache", "domain": "迷龙算法"},
+        {"zh": "预烧录", "en": "pre-burn / pre-flash", "domain": "迷龙算法/MCU"},
+        {"zh": "回落/兜底", "en": "fallback", "domain": "迷龙算法"},
+        {"zh": "命中率", "en": "hit rate", "domain": "迷龙算法"},
+        {"zh": "加速比", "en": "speedup ratio", "domain": "迷龙算法"},
+        {"zh": "三级", "en": "three-level / L1/L2/L3", "domain": "迷龙算法/建木"},
+        {"zh": "推测执行", "en": "speculative execution", "domain": "迷龙算法"},
+        {"zh": "零侵入", "en": "zero-intrusion / non-invasive", "domain": "迷龙算法/商业"},
+        {"zh": "语义树", "en": "semantic tree", "domain": "建木系统"},
+        {"zh": "神经元", "en": "neuron", "domain": "建木系统/AI"},
+        {"zh": "抽象层", "en": "abstraction layer", "domain": "建木系统"},
+        {"zh": "联想", "en": "association", "domain": "建木系统"}
+      ]
+    },
+    "嵌入式/MCU": {
+      "entries": [
+        {"zh": "单片机", "en": "microcontroller (MCU)", "domain": "迷龙算法/MCU"},
+        {"zh": "固件", "en": "firmware", "domain": "迷龙算法/MCU"},
+        {"zh": "烧录", "en": "flash/burn", "domain": "迷龙算法/MCU"},
+        {"zh": "防抖", "en": "debouncing", "domain": "MCU/工业"},
+        {"zh": "最坏执行时间", "en": "WCET (Worst-Case Execution Time)", "domain": "MCU/实时系统"},
+        {"zh": "电机控制", "en": "motor control / FOC", "domain": "MCU/工业"},
+        {"zh": "电池管理", "en": "BMS (Battery Management System)", "domain": "MCU/工业"},
+        {"zh": "实时系统", "en": "RTOS (Real-Time Operating System)", "domain": "MCU/嵌入式"}
+      ]
+    },
+    "金融与量化": {
+      "entries": [
+        {"zh": "收敛系数", "en": "convergence coefficient (κ)", "domain": "SCAC量化"},
+        {"zh": "量化框架", "en": "quantitative framework", "domain": "SCAC量化"},
+        {"zh": "风险指数", "en": "risk index", "domain": "SCAC量化/金融"},
+        {"zh": "非农就业", "en": "non-farm payrolls", "domain": "金融/宏观"},
+        {"zh": "布伦特原油", "en": "Brent crude oil", "domain": "金融/大宗商品"},
+        {"zh": "避险", "en": "risk aversion / safe haven", "domain": "金融/黄金"}
+      ]
+    },
+    "会计与财务": {
+      "entries": [
+        {"zh": "凭证", "en": "voucher", "domain": "智能会计系统"},
+        {"zh": "借贷", "en": "debit-credit", "domain": "智能会计系统"},
+        {"zh": "科目", "en": "account / ledger item", "domain": "智能会计系统"},
+        {"zh": "瀑布匹配", "en": "waterfall matching", "domain": "智能会计系统"}
+      ]
+    },
+    "AI与革命性理论": {
+      "entries": [
+        {"zh": "情感维度", "en": "emotional dimension", "domain": "FAME理论"},
+        {"zh": "原型情感", "en": "proto-emotion", "domain": "FAME理论"},
+        {"zh": "情感惯性", "en": "emotional inertia", "domain": "FAME理论"},
+        {"zh": "推理引擎", "en": "inference engine", "domain": "建木系统"},
+        {"zh": "测验引擎", "en": "exam engine", "domain": "建木系统"},
+        {"zh": "训练引擎", "en": "training engine", "domain": "建木系统"},
+        {"zh": "双脑结构", "en": "dual-brain architecture", "domain": "建木系统"},
+        {"zh": "路由权重", "en": "routing weight", "domain": "建木系统/Transformer"}
+      ]
+    }
+  }
+}

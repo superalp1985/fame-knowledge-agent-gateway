@@ -1,0 +1,9 @@
+{
+  "routes": 2714,
+  "final_nodes": 186,
+  "auto_ok": 2635,
+  "review_flagged": 79,
+  "exception_guarded": 893,
+  "child_bucket_assigned": 526,
+  "shadow_eligible": 2635
+}

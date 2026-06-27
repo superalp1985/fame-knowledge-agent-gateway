@@ -1,0 +1,130 @@
+{
+  "subject": "英语",
+  "type": "specific_layer",
+  "layer": "neurons",
+  "description": "英语学科具体知识——全部高中教材知识点",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "total": 19,
+  "neurons": {
+    "语法_时态语态": [
+      {
+        "id": "eng_001",
+        "name": "一般现在时",
+        "content": "do/does; 客观真理/习惯/状态; 频度副词always/usually/often/sometimes",
+        "example": "The earth goes around the sun."
+      },
+      {
+        "id": "eng_002",
+        "name": "一般过去时",
+        "content": "did; 过去时间/过去动作; yesterday/last week/ago/in 2020",
+        "example": "I visited Beijing last year."
+      },
+      {
+        "id": "eng_003",
+        "name": "现在完成时",
+        "content": "have/has done; 过去动作对现在有影响或持续到现在; already/yet/ever/never/for/since",
+        "example": "I have lived here for 5 years."
+      },
+      {
+        "id": "eng_004",
+        "name": "被动语态",
+        "content": "be+过去分词; 各时态的被动形式; 不及物动词无被动",
+        "example": "The book was written by Lu Xun."
+      }
+    ],
+    "语法_从句": [
+      {
+        "id": "eng_005",
+        "name": "定语从句",
+        "content": "先行词+关系词(that/which/who/whom/whose/where/when/why); 限制性vs非限制性; 介词+which/whom",
+        "example": "The man who is standing there is my teacher."
+      },
+      {
+        "id": "eng_006",
+        "name": "名词性从句",
+        "content": "主语从句/宾语从句/表语从句/同位语从句; 引导词that/if/whether/wh-; that不可省略(主语/同位语)"
+      },
+      {
+        "id": "eng_007",
+        "name": "状语从句",
+        "content": "时间(when/while/as/before/after/since/until); 条件(if/unless/as long as); 原因(because/since/as); 让步(although/though/even if); 目的(so that/in order that); 结果(so...that/such...that)"
+      }
+    ],
+    "语法_其他": [
+      {
+        "id": "eng_008",
+        "name": "虚拟语气",
+        "content": "与现在:If I were..., I would...; 与过去:If I had done..., I would have done...; 与将来:If I were to/should..., I would...; 建议命令require/suggest+(should)do"
+      },
+      {
+        "id": "eng_009",
+        "name": "非谓语动词",
+        "content": "to do(目的/将来); doing(主动/进行/一般); done(被动/完成); 独立主格结构"
+      },
+      {
+        "id": "eng_010",
+        "name": "倒装与强调",
+        "content": "部分倒装(否定词前置Never/Hardly/Not only...); 完全倒装(here/there/out/in+谓语+主语); It is...that...强调句型"
+      }
+    ],
+    "写作": [
+      {
+        "id": "eng_011",
+        "name": "书信格式",
+        "content": "Dear...,\n正文\nYours sincerely/faithfully,\n署名; 开头问候/结尾祝愿"
+      },
+      {
+        "id": "eng_012",
+        "name": "议论文结构",
+        "content": "Introduction(引出话题+提出观点)→Body paragraphs(每段topic sentence+supporting details)→Conclusion(重申观点+总结)"
+      },
+      {
+        "id": "eng_013",
+        "name": "连接词",
+        "content": "递进moreover/furthermore/in addition; 转折however/nevertheless/on the contrary; 因果therefore/consequently/thus; 举例for instance/such as; 总结in conclusion/to sum up"
+      }
+    ],
+    "初中英语": [
+      {
+        "id": "eng_m01",
+        "name": "八大时态基础",
+        "content": "一般现在/一般过去/一般将来(will/be going to)/现在进行/过去进行/现在完成/过去完成/过去将来"
+      },
+      {
+        "id": "eng_m02",
+        "name": "比较级与最高级",
+        "content": "单音节+er/est(tall→taller→tallest); 多音节more/most+adj; 不规则(good→better→best; bad→worse→worst)"
+      },
+      {
+        "id": "eng_m03",
+        "name": "被动语态基础",
+        "content": "be+过去分词; 现在时am/is/are done; 过去时was/were done; 情态动词+be done",
+        "example": "The classroom is cleaned every day."
+      },
+      {
+        "id": "eng_m04",
+        "name": "宾语从句",
+        "content": "that(陈述句)/if或whether(一般疑问句)/wh-词(特殊疑问句); 语序为陈述语序; 主过从过(时态呼应)"
+      },
+      {
+        "id": "eng_m05",
+        "name": "状语从句基础",
+        "content": "时间(when/while/as); 条件(if/unless注意主将从现); 原因(because/since/as); 让步(although/though不与but连用); 目的(so that)"
+      },
+      {
+        "id": "eng_m06",
+        "name": "情态动词",
+        "content": "can/could; may/might; must/have to; need(否定/疑问)/dare; should; would(过去习惯)"
+      }
+    ]
+  }
+}

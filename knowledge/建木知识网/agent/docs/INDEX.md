@@ -1,0 +1,41 @@
+# 建木 Agent Studio 文档索引
+
+- `FINAL_ALIGNMENT_2026-05-22.md`：2026-05-22 最终对齐报告，记录知识网约束、模块路由、质量门禁、文学知识网接入与校验结果。
+- `MULTIMODAL_KNOWLEDGE_DECISIONS_2026-05-22.md`：建木多模态知识网建设决策、补库轮次、运行时接入与 Claw Code 中控约束来源。
+- `DESIGN_SYSTEM_KNOWLEDGE_AUDIT_2026-05-22.md`：设计系统知识网审计，确认一级联想、语义树、抽象层、规律层、底层 token [REDACTED] 2714 route overlay。
+- `architecture_v0.3.md`：当前总架构（协议层 + 前置审计 + worker 沙盒）
+- `architecture_v0.2.md`：上一版总架构图与原则
+- `architecture_v0.2.html`：可视化架构预览
+- `api_endpoints_v0.1.md`：当前 API 总表（health / contracts / workers / tasks / documents / ppt / video / animation / localization / course-pack / course-production）
+- `delivery_exports_v0.2.md`：PPTX 导出、视频分镜 HTML 与渲染脚本接入情况
+- `llm_tool_planner_v0.1.md`：模型参与意图规划并调用本地工具的 Chat 编排层
+- `web_search_api_keys_v0.1.md`：主动搜索引擎式 Web Search 与 API key 设置页
+- `control_console_v0.1.md`：设置页、计划任务、本地后台状态与重启请求边界
+- `clawbot_bridge_v0.1.md`：UI Chat 到真实 ClawBot endpoint 的桥接设计与 local_rules 默认模式
+- `chat_ui_v0.1.md`：Claw Bot 文字对话框与 Chat API
+- `try_it_v0.1.md`：本地启动、自检与 UI 端到端试用说明
+- `ui_prototype_v0.1.md`：Office 风格 Web UI 原型，挂载在 FastAPI 根路径
+- `dashboard_api_v0.1.md`：UI-ready 首页总览 API，一次返回 health/gate/tasks/jobs/workers/contracts
+- `backend_contracts_v0.1.md`：后端协议冻结与 contract registry
+- `contract_validation_v0.1.md`：任务 manifest 对冻结合同的可执行校验
+- `contract_governance_v0.1.md`：合同健康、系统门禁、版本变更提示、错误任务校验
+- `backend_hardening_v0.1.md`：worker health / error task / preview / async queue / SQLite 后端硬化
+- `artifact_manifest_v0.1.md`：统一成果包 manifest schema 与 hash/审计字段
+- `task_store_v0.1.md`：任务索引与 manifest 查询
+- `task_query_api_v0.1.md`：任务详情、artifact 读取、manifest 校验、审计读取 API
+- `api_gateway_v0.1.md`：API Gateway 最小闭环接口文档
+- `doc_adapter_lite_v0.1.md`：自研轻量文档理解入口
+- `course_production_router_v0.1.md`：统一成果包 task router
+- `handoff_audit_v0.1.md`：下游模块交接前置审计
+- `web_research_adapter_v0.1.md`：Web Research 临时证据适配器
+- `animation_worker_protocol_v0.1.md`：动画 worker 协议适配层
+- `localization_worker_protocol_v0.1.md`：多语种讲稿/字幕/语言包协议适配层
+- `ppt_worker_protocol_v0.1.md`：PPT worker 协议适配层
+- `video_worker_protocol_v0.1.md`：视频 worker 协议适配层
+- `worker_registry_v0.1.md`：统一 worker registry 与接入原则
+- `module_integration_matrix_v0.1.md`：模块接入清单
+- `candidate_repos_20260521.md`：成熟 Agent 候选仓库列表
+- `candidate_repo_review_20260521.md`：成熟 Agent 候选初审
+- `open_source_survey_v0.1.md`：开源项目调研
+- `jianmu_agent_studio_v0.1_plan.md`：整体实施方案
+- `README.md`：项目总说明

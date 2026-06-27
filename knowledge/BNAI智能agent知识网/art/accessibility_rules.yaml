@@ -1,0 +1,15 @@
+version: v0.1
+contrast:
+  normal_text_min: 4.5
+  large_text_min: 3.0
+  prefer_above_minimum: true
+rules:
+- do_not_rely_on_color_alone
+- image_text_must_be_readable
+- subtitle_requires_safe_contrast
+- complex_background_requires_text_plate
+hard_fail:
+- fake_or_garbled_text_in_image
+- subtitle_low_contrast
+- critical_chart_color_only
+- text_on_busy_background_without_plate

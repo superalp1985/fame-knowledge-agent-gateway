@@ -1,0 +1,26 @@
+{
+  "subject": "生物",
+  "en": "Biology",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "细胞生物学",
+    "遗传与进化",
+    "人体生理",
+    "生态学"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/生物_rules.json",
+  "specific_neurons_ref": "neurons/生物_neurons.json",
+  "language_associations": "associations/lang_生物.json"
+}

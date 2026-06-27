@@ -1,0 +1,692 @@
+{
+  "timestamp": "2026-05-15 20:00:40",
+  "mode": "llm",
+  "total": 20,
+  "ok": 20,
+  "route_ok": 20,
+  "calc_ok": 20,
+  "ok_rate": 1.0,
+  "route_ok_rate": 1.0,
+  "calc_ok_rate": 1.0,
+  "elapsed_s": 54.78049278259277,
+  "rows": [
+    {
+      "case": {
+        "id": "core_001",
+        "question": "什么是借贷记账法",
+        "expect_route": [
+          "借贷记账法"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "借贷记账法",
+          "借贷记账法"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_debit_credit",
+          "auto_rule_会计学_rules_会计核算方法_0"
+        ],
+        "matched_aliases": [
+          "借贷记账法",
+          "借贷记账法"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 5.39220404624939
+    },
+    {
+      "case": {
+        "id": "core_002",
+        "question": "会计分录怎么编制",
+        "expect_route": [
+          "会计分录"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "会计分录"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_entry"
+        ],
+        "matched_aliases": [
+          "会计分录",
+          "分录"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6072397232055664
+    },
+    {
+      "case": {
+        "id": "core_003",
+        "question": "固定资产折旧有哪几种方法",
+        "expect_route": [
+          "固定资产折旧方法"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(3节点)",
+        "neurons": [
+          "固定资产折旧方法",
+          "固定资产",
+          "借贷记账法"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_depreciation",
+          "auto_neuron_会计学_neurons_中级财务会计_3",
+          "manual_acc_debit_credit"
+        ],
+        "matched_aliases": [
+          "固定资产折旧",
+          "固定资产",
+          "折旧",
+          "固定资产",
+          "资产"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.619645833969116
+    },
+    {
+      "case": {
+        "id": "core_004",
+        "question": "NPV公式是什么",
+        "expect_route": [
+          "净现值"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "净现值 NPV"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_fin_npv"
+        ],
+        "matched_aliases": [
+          "NPV",
+          "NPV公式"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5640664100646973
+    },
+    {
+      "case": {
+        "id": "core_005",
+        "question": "投资100万每年赚20万折现率10%做5年NPV多少",
+        "expect_route": [
+          "净现值"
+        ],
+        "expected_domain": "会计学",
+        "has_calculation": true
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "净现值 NPV",
+          "内部收益率 IRR"
+        ],
+        "calc": "NPV=-241,842.65 (总投资1000000.0, 年收益200000.0, 折现率10.0%, 5年, 现值=758,157.35)",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_fin_npv",
+          "manual_fin_irr"
+        ],
+        "matched_aliases": [
+          "NPV",
+          "折现",
+          "折现率",
+          "投资",
+          "每年",
+          "折现率"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6270196437835693
+    },
+    {
+      "case": {
+        "id": "core_006",
+        "question": "IRR和NPV有什么区别",
+        "expect_route": [
+          "内部收益率",
+          "净现值"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "净现值 NPV",
+          "内部收益率 IRR"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_fin_npv",
+          "manual_fin_irr"
+        ],
+        "matched_aliases": [
+          "NPV",
+          "IRR"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.587423801422119
+    },
+    {
+      "case": {
+        "id": "core_007",
+        "question": "WACC是什么意思",
+        "expect_route": [
+          "加权平均资本成本"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "加权平均资本成本 WACC",
+          "加权平均资本成本(WACC)"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_fin_wacc"
+        ],
+        "matched_aliases": [
+          "WACC"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6070423126220703
+    },
+    {
+      "case": {
+        "id": "core_008",
+        "question": "收入确认五步法是什么",
+        "expect_route": [
+          "收入确认"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(3节点)",
+        "neurons": [
+          "收入确认五步法",
+          "收入确认五步法",
+          "借贷记账法"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_revenue",
+          "auto_rule_会计学_rules_会计核算方法_2",
+          "manual_acc_debit_credit"
+        ],
+        "matched_aliases": [
+          "收入确认",
+          "五步法",
+          "收入确认五步法",
+          "收入"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.593146800994873
+    },
+    {
+      "case": {
+        "id": "core_009",
+        "question": "合并财务报表为什么要抵销内部交易",
+        "expect_route": [
+          "合并财务报表"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "合并财务报表"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_consolidation"
+        ],
+        "matched_aliases": [
+          "合并财务报表",
+          "抵销",
+          "内部交易"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6120710372924805
+    },
+    {
+      "case": {
+        "id": "core_010",
+        "question": "增值税一般纳税人和小规模纳税人的区别",
+        "expect_route": [
+          "增值税"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "增值税一般纳税人与小规模纳税人"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_tax_vat"
+        ],
+        "matched_aliases": [
+          "增值税一般纳税人",
+          "小规模纳税人",
+          "一般纳税人",
+          "增值税"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.613204002380371
+    },
+    {
+      "case": {
+        "id": "core_011",
+        "question": "审计风险模型是什么",
+        "expect_route": [
+          "审计风险"
+        ],
+        "expected_domain": "会计学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "审计风险模型"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_audit_risk"
+        ],
+        "matched_aliases": [
+          "审计风险",
+          "审计",
+          "风险"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.580451011657715
+    },
+    {
+      "case": {
+        "id": "core_012",
+        "question": "勾股定理怎么证明",
+        "expect_route": [
+          "勾股定理"
+        ],
+        "expected_domain": "数学"
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "勾股定理",
+          "勾股定理"
+        ],
+        "calc": "",
+        "assocs": 2,
+        "route_index_hits": [
+          "manual_math_pythagorean",
+          "auto_neuron_数学_neurons_立体几何_4"
+        ],
+        "matched_aliases": [
+          "勾股定理",
+          "勾股定理"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5996885299682617
+    },
+    {
+      "case": {
+        "id": "core_013",
+        "question": "5的平方加12的平方等于多少",
+        "expect_route": [],
+        "expected_domain": "计算",
+        "has_calculation": true
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(3节点)",
+        "neurons": [
+          "股票价格为200元，当前分红为4元，未来分红预期以固定的速度增长，增长率为8$\\%$。请问，该股票的必要回报率接近于多少",
+          "某企业于2020年2月以3000万元购得一宗土地，面积为1500平方米。在购地后，企业投入200万元进行土地开发，并在该",
+          "某企业于2020年2月以3000万元购得一宗土地，面积为1500平方米。在购地后，企业投入200万元进行土地开发，并在该土地上建造了一座建筑面积为800平方米的"
+        ],
+        "calc": "5²+12²=169",
+        "assocs": 0,
+        "route_index_hits": [],
+        "matched_aliases": []
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6347880363464355
+    },
+    {
+      "case": {
+        "id": "sample_001",
+        "question": "请简要解释：衍生金融工具",
+        "reference_answer": "远期/期货/期权(看涨call/看跌put)/互换; 套期会计:公允价值套期/现金流量套期/境外经营净投资套期; 嵌入式衍生工具是否需分拆",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "衍生金融工具"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "auto_neuron_会计学_neurons_高级财务会计_4"
+        ],
+        "matched_aliases": [
+          "衍生金融工具"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5927295684814453
+    },
+    {
+      "case": {
+        "id": "sample_002",
+        "question": "请简要解释：错账更正方法",
+        "reference_answer": "划线更正法(记账凭证无误账簿记错); 红字更正法(凭证科目或金额多记); 补充登记法(凭证金额少记)",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "错账更正方法"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "auto_neuron_会计学_neurons_基础会计_8"
+        ],
+        "matched_aliases": [
+          "错账更正方法"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5967447757720947
+    },
+    {
+      "case": {
+        "id": "sample_003",
+        "question": "请简要解释：资本结构理论",
+        "reference_answer": "MM理论(无税→资本结构无关; 有税→100%负债最优); 权衡理论(税盾收益vs破产成本); 优序融资(内源→债务→股权); 信号理论",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(3节点)",
+        "neurons": [
+          "加权平均资本成本 WACC",
+          "资本结构理论(权衡理论)",
+          "MM理论(有税条件)"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_fin_wacc"
+        ],
+        "matched_aliases": [
+          "资本结构"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.6303319931030273
+    },
+    {
+      "case": {
+        "id": "sample_004",
+        "question": "请简要解释：具体项目审计",
+        "reference_answer": "货币资金(函证银行/现金盘点/截止测试); 应收账款(函证/替代测试/账龄分析); 存货(监盘/计价测试/截止测试); 应付账款(查找未入账负债)",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(2节点)",
+        "neurons": [
+          "具体项目审计",
+          "审计风险模型"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "auto_neuron_会计学_neurons_审计学_6",
+          "manual_audit_risk"
+        ],
+        "matched_aliases": [
+          "具体项目审计",
+          "审计"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5718042850494385
+    },
+    {
+      "case": {
+        "id": "sample_005",
+        "question": "请简要解释：短期经营决策",
+        "reference_answer": "是否接受特殊订单(只要边际贡献>0可接受→但需考虑产能); 零部件自制或外购; 亏损产品是否停产; 定价决策(成本加成/目标成本/市场导向)",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "短期经营决策"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "auto_neuron_会计学_neurons_管理会计_5"
+        ],
+        "matched_aliases": [
+          "短期经营决策"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5734970569610596
+    },
+    {
+      "case": {
+        "id": "sample_006",
+        "question": "请简要解释：公允价值计量",
+        "reference_answer": "三个层次:第一层(活跃市场报价)/第二层(类似资产可观测输入)/第三层(不可观测输入需估值技术); 市场法/收益法/成本法",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "公允价值计量"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "auto_neuron_会计学_neurons_高级财务会计_8"
+        ],
+        "matched_aliases": [
+          "公允价值计量"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5780036449432373
+    },
+    {
+      "case": {
+        "id": "sample_007",
+        "question": "请简要解释：合并财务报表",
+        "reference_answer": "合并资产负债表(内部债权债务/内部交易存货/内部交易固定资产抵销); 合并利润表(内部销售收入抵销); 少数股东权益/少数股东损益; 股权投资抵销",
+        "expected_domain": "会计",
+        "expect_route": []
+      },
+      "result": {
+        "answer": "",
+        "kappa": 0.95,
+        "source": "知识网(1节点)",
+        "neurons": [
+          "合并财务报表"
+        ],
+        "calc": "",
+        "assocs": 3,
+        "route_index_hits": [
+          "manual_acc_consolidation"
+        ],
+        "matched_aliases": [
+          "合并财务报表"
+        ]
+      },
+      "score": {
+        "route_ok": true,
+        "calc_ok": true,
+        "ok": true
+      },
+      "time_s": 2.5988802909851074
+    }
+  ]
+}

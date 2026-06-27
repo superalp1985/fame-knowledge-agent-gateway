@@ -1,0 +1,25 @@
+{
+  "store_id": "fame-multimodal-asset-store",
+  "store_name": "FAME Multimodal Asset Store",
+  "version": "0.1.0",
+  "policy": {
+    "knowledge_graph_weight": "light_index_only",
+    "raw_asset_storage": "asset_store/objects/",
+    "extraction_storage": "asset_store/extractions/",
+    "thumbnail_storage": "asset_store/thumbnails/",
+    "core_write_policy": "asset_index_only_without_review",
+    "project_memory_policy": "project_assets_do_not_pollute_core",
+    "manual_knowledge_sync_policy": "KnowledgePatchProposal -> AssetDbSyncItem -> ApprovedAction before database write",
+    "manual_core_edit_boundary": "manual knowledge edits refresh asset indexes, edges and FAME refs only; raw assets stay in asset store"
+  },
+  "roots": {
+    "asset_records": "asset_store/assets.jsonl",
+    "asset_index": "asset_store/asset_index.jsonl",
+    "asset_edges": "asset_store/asset_edges.jsonl",
+    "extraction_runs": "asset_store/extraction_runs.jsonl",
+    "fame_history": "asset_store/asset_fame_history.jsonl",
+    "sync_queue": "asset_store/asset_sync_queue.jsonl"
+  },
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00"
+}

@@ -1,0 +1,26 @@
+{
+  "subject": "历史",
+  "en": "History",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "中国古代史",
+    "中国近现代史",
+    "世界古代史",
+    "世界近现代史"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/历史_rules.json",
+  "specific_neurons_ref": "neurons/历史_neurons.json",
+  "language_associations": "associations/lang_历史.json"
+}

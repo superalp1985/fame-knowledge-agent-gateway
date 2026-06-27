@@ -1,0 +1,439 @@
+version: v0.1
+updated_at: '2026-05-25T18:44:00+08:00'
+purpose: Map Jianmu Studio task intent, artifact type, and review failure category to tool capabilities without granting automatic execution permission.
+positioning:
+  product_identity: 本地知识网驱动的万能 AI 组织器
+  principle: 工具调用必须由知识结构、任务类型、产物契约和质量门推导；工具映射不是自动执行授权。
+  multi_agent_role: optional_worker_form_not_core_belief
+
+permission_boundary:
+  mapping_is_not_permission: true
+  requires_explicit_confirmation:
+    - external_message_send
+    - public_post
+    - start_or_stop_gateway
+    - modify_main_openclaw
+    - real_model_call
+    - destructive_file_operation
+    - external_write_or_upload
+    - cross_local_data_boundary
+  preview_final_boundary:
+    preview_requires_manifest: true
+    final_requires_real_review_pass: true
+    fallback_cannot_pose_as_final: true
+
+compute_gradient_refs:
+  L0: direct_answer
+  L1: local_knowledge_lookup
+  L2: structured_reasoning
+  L3: tool_assisted_generation
+  L4: worker_render_export
+  L5: reviewer_execution
+  L6: auto_fix_rerun
+  L7: multi_review_human_confirmation
+
+reasoning_gradient_refs:
+  R0: intent_detection
+  R1: concept_routing
+  R2: abstraction_classification
+  R3: regularity_matching
+  R4: modality_planning
+  R5: tool_orchestration
+  R6: quality_prediction
+  R7: revision_strategy
+  R8: delivery_governance
+
+tool_classes:
+  file_tool:
+    purpose: Read, write, organize, and package local artifacts.
+    deterministic: true
+    typical_inputs:
+      - local_path
+      - artifact_manifest
+      - task_output_package
+    typical_outputs:
+      - file
+      - directory
+      - manifest_update
+      - log_entry
+    failure_handling:
+      - create_missing_file_issue
+      - preserve_partial_output
+      - write_log_before_retry
+    permission_notes:
+      - safe_for_project_files_when_non_destructive
+      - destructive_operations_require_confirmation
+  local_search_tool:
+    purpose: Locate routes, concepts, local docs, schemas, and source evidence.
+    deterministic: true
+    typical_inputs:
+      - query
+      - knowledge_root
+      - route_id
+    typical_outputs:
+      - matched_files
+      - matched_routes
+      - evidence_snippets
+    failure_handling:
+      - retry_with_broader_query
+      - mark_evidence_missing
+      - ask_for_clarification_if_route_ambiguous
+    permission_notes:
+      - local_read_only_by_default
+  web_fetch_tool:
+    purpose: Fetch external web evidence as temporary source material.
+    deterministic: false
+    typical_inputs:
+      - url
+      - query
+    typical_outputs:
+      - extracted_text
+      - source_metadata
+    failure_handling:
+      - mark_external_source_unavailable
+      - use_browser_fallback_if_confirmed
+    permission_notes:
+      - external_content_is_temporary_evidence
+      - do_not_write_external_content_into_knowledge_base_without_review
+  browser_tool:
+    purpose: Interact with pages, capture screenshots, and verify rendered visuals.
+    deterministic: false
+    typical_inputs:
+      - url
+      - selector
+      - viewport
+    typical_outputs:
+      - screenshot
+      - page_snapshot
+      - visual_evidence
+    failure_handling:
+      - capture_error_snapshot
+      - downgrade_to_manual_review
+    permission_notes:
+      - logged_in_user_browser_requires_care
+      - external_actions_require_confirmation
+  exec_tool:
+    purpose: Run local scripts, smoke checks, builds, exports, and workers.
+    deterministic: partly
+    typical_inputs:
+      - command
+      - cwd
+      - env
+    typical_outputs:
+      - stdout
+      - stderr
+      - exit_code
+      - generated_artifacts
+    failure_handling:
+      - capture_exit_code
+      - classify_failure_category
+      - create_fix_ticket
+    permission_notes:
+      - non_destructive_project_checks_allowed
+      - installs_start_stop_delete_require_confirmation
+  render_worker:
+    purpose: Produce PPT, PDF, image, audio, video, chart, or animation preview artifacts.
+    deterministic: partly
+    typical_inputs:
+      - confirmed_task_spec
+      - artifact_contract
+      - source_materials
+      - design_tokens
+    typical_outputs:
+      - preview_artifact
+      - render_log
+      - manifest_entry
+    failure_handling:
+      - mark_render_failed
+      - preserve_intermediate_assets
+      - route_to_auto_fix
+    permission_notes:
+      - sandbox_worker_preferred
+      - no_final_without_review
+  reviewer_tool:
+    purpose: Evaluate preview artifacts against quality gates.
+    deterministic: partly
+    typical_inputs:
+      - preview_artifact
+      - quality_gate
+      - review_prompt
+      - schema
+    typical_outputs:
+      - review_result
+      - issues
+      - final_allowed_flag
+    failure_handling:
+      - mark_review_incomplete
+      - require_manual_review
+      - prevent_final_promotion
+    permission_notes:
+      - skeleton_reviewer_cannot_allow_final
+      - final_allowed_requires_real_passed_status
+  auto_fix_tool:
+    purpose: Convert review issues into structured fixes and rerun preview generation.
+    deterministic: partly
+    typical_inputs:
+      - review_result
+      - auto_fix_ticket
+      - revision_recipe
+    typical_outputs:
+      - revised_preview
+      - fix_log
+      - review_run_entry
+    failure_handling:
+      - cap_retry_count
+      - escalate_to_human_review
+    permission_notes:
+      - revision_requires_re_review
+  communication_tool:
+    purpose: Deliver progress, reminders, or finished artifacts through configured channels.
+    deterministic: false
+    typical_inputs:
+      - target
+      - message
+      - attachment
+    typical_outputs:
+      - sent_message_id
+      - delivery_status
+    failure_handling:
+      - report_delivery_failure
+      - do_not_retry_external_send_without_reason
+    permission_notes:
+      - external_send_requires_confirmation_unless_current_chat_reply
+
+task_intent_routes:
+  normal_question:
+    compute_gradient: L0
+    reasoning_gradient:
+      - R0
+    required_tool_classes: []
+    output: direct_answer
+    notes:
+      - Do not enter full path.
+      - Do not create artifact package.
+  knowledge_grounded_answer:
+    compute_gradient: L1
+    reasoning_gradient:
+      - R0
+      - R1
+      - R2
+    required_tool_classes:
+      - local_search_tool
+      - file_tool
+    output: grounded_answer
+    notes:
+      - Read local knowledge first.
+      - Keep response lightweight.
+  structured_plan_or_outline:
+    compute_gradient: L2
+    reasoning_gradient:
+      - R0
+      - R1
+      - R2
+      - R3
+    required_tool_classes:
+      - local_search_tool
+    output: draft_structure_or_task_spec
+    notes:
+      - Still chat-first discovery unless user confirms production.
+  confirmed_document_package:
+    compute_gradient: L3
+    reasoning_gradient:
+      - R0
+      - R1
+      - R2
+      - R3
+      - R5
+      - R8
+    required_tool_classes:
+      - local_search_tool
+      - file_tool
+      - reviewer_tool
+    output: preview_document_package
+    notes:
+      - Manifest required.
+      - Document reviewer may pass preview-only but cannot allow final.
+  confirmed_multimodal_package:
+    compute_gradient: L4
+    reasoning_gradient:
+      - R0
+      - R1
+      - R2
+      - R3
+      - R4
+      - R5
+      - R6
+      - R8
+    required_tool_classes:
+      - local_search_tool
+      - file_tool
+      - render_worker
+      - reviewer_tool
+    output: preview_multimodal_package
+    notes:
+      - Worker outputs preview only.
+      - Reviewer chain required before final.
+  failed_review_revision:
+    compute_gradient: L6
+    reasoning_gradient:
+      - R6
+      - R7
+      - R8
+    required_tool_classes:
+      - reviewer_tool
+      - auto_fix_tool
+      - file_tool
+    output: revised_preview_and_review_run
+    notes:
+      - Fix does not imply pass.
+      - Rerun review before final.
+
+artifact_type_routes:
+  document:
+    primary_tools:
+      - file_tool
+      - local_search_tool
+      - reviewer_tool
+    required_reviewers:
+      - document_structure_review
+      - source_factual_review_pending
+    common_failures:
+      - missing_artifact
+      - empty_document
+      - missing_heading
+      - missing_sources
+      - unsupported_claim
+  ppt:
+    primary_tools:
+      - render_worker
+      - browser_tool
+      - reviewer_tool
+    required_reviewers:
+      - ppt_vision_review
+      - content_narrative_review
+    common_failures:
+      - text_overflow
+      - visual_clutter
+      - missing_hierarchy
+      - chart_mismatch
+      - inconsistent_style
+  video:
+    primary_tools:
+      - render_worker
+      - browser_tool
+      - reviewer_tool
+    required_reviewers:
+      - video_keyframe_review
+      - audio_music_review
+      - content_narrative_review
+    common_failures:
+      - audio_video_desync
+      - unreadable_subtitle
+      - pacing_mismatch
+      - missing_keyframe_evidence
+  audio:
+    primary_tools:
+      - render_worker
+      - reviewer_tool
+    required_reviewers:
+      - audio_music_review
+    common_failures:
+      - bgm_over_voice
+      - clipping
+      - unclear_narration
+  music:
+    primary_tools:
+      - render_worker
+      - reviewer_tool
+    required_reviewers:
+      - audio_music_review
+    common_failures:
+      - emotion_mismatch
+      - overdramatic_bed
+      - loop_discontinuity
+  chart:
+    primary_tools:
+      - render_worker
+      - browser_tool
+      - reviewer_tool
+    required_reviewers:
+      - chart_data_review_pending
+      - visual_review_pending
+    common_failures:
+      - chart_concept_mismatch
+      - unreadable_axis
+      - misleading_scale
+  image:
+    primary_tools:
+      - render_worker
+      - browser_tool
+      - reviewer_tool
+    required_reviewers:
+      - visual_review_pending
+    common_failures:
+      - style_mismatch
+      - low_readability
+      - artifact_noise
+
+failure_category_routes:
+  missing_artifact:
+    preferred_tools:
+      - file_tool
+      - render_worker
+    action: regenerate_preview_or_restore_manifest_entry
+  empty_document:
+    preferred_tools:
+      - file_tool
+      - local_search_tool
+    action: regenerate_from_confirmed_task_spec
+  missing_sources:
+    preferred_tools:
+      - local_search_tool
+      - web_fetch_tool
+    action: attach_route_evidence_or_external_temporary_source
+  unsupported_claim:
+    preferred_tools:
+      - local_search_tool
+      - reviewer_tool
+    action: remove_or_source_claim
+  text_overflow:
+    preferred_tools:
+      - render_worker
+      - browser_tool
+    action: split_slide_or_reduce_density
+  visual_clutter:
+    preferred_tools:
+      - render_worker
+      - browser_tool
+    action: simplify_layout_and_recheck
+  chart_mismatch:
+    preferred_tools:
+      - local_search_tool
+      - render_worker
+      - reviewer_tool
+    action: remap_chart_to_concept_relation
+  audio_video_desync:
+    preferred_tools:
+      - render_worker
+      - reviewer_tool
+    action: align_timeline_and_rerender
+  bgm_over_voice:
+    preferred_tools:
+      - render_worker
+      - reviewer_tool
+    action: lower_bgm_or_duck_under_voice
+  permission_required:
+    preferred_tools: []
+    action: stop_and_ask_human_confirmation
+
+minimum_manifest_fields_for_tool_use:
+  - task_id
+  - compute_gradient
+  - reasoning_gradient
+  - selected_tool_classes
+  - artifact_type
+  - preview_path
+  - quality_gates
+  - review_status
+  - final_allowed
+  - permission_boundary

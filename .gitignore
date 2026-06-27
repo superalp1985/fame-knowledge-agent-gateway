@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+
+# Local knowledge data and generated private indexes
+knowledge_backup/
+workbench/src/generated/
+workbench/public/generated/
+data/
+indexes/
+logs/
+cache/
+.cache/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Runtime artifacts
+runtime_store/
+*.log
+*.tmp
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

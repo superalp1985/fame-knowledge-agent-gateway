@@ -1,0 +1,100 @@
+version: v0.2
+purpose: canonical manifest schema for Jianmu Studio task output packages
+required_top_level:
+  - ok
+  - action
+  - runId
+  - createdAt
+  - input
+  - packageRoot
+  - previewDir
+  - finalDir
+  - processDir
+  - intent
+  - artifactKinds
+  - routeHitStrength
+  - knowledgeRoutes
+  - productionLineage
+  - files
+  - qualityReports
+  - finalStatus
+fields:
+  ok:
+    type: boolean
+  action:
+    const: jianmu-task-output-package
+  runId:
+    type: string
+    description: timestamp plus safe task slug
+  createdAt:
+    type: iso_datetime
+  input:
+    type: string
+    description: original user request
+  packageRoot:
+    type: path
+  previewDir:
+    type: path
+    description: unreviewed or preview artifacts live here
+  finalDir:
+    type: path
+    description: only artifacts that passed quality gates may live here
+  processDir:
+    type: path
+  artifactKinds:
+    type: array
+    items: document|ppt|video|pdf|image|audio|music
+  intent:
+    type: string
+  routeHitStrength:
+    enum: [none, weak, strong]
+  knowledgeRoutes:
+    type: array
+    item_fields:
+      path: knowledge file path relative to multimodal_knowledge root
+      title: readable title
+      score: routing score after boost
+      baseScore: original text/path score
+      boost: deterministic routing boost
+  productionLineage:
+    required_fields:
+      - chatFirstDiscoveryUsed
+      - confirmedTaskSpecProvided
+      - fullPathRegenerated
+      - preflightCallsModel
+      - harnessCallsModel
+      - modelJoinsAtFullPath
+      - userConfirmedExecution
+    rules:
+      fullPathRegenerated: must be true for confirmed production
+      chatFirstDiscoveryUsed: true only when confirmed task spec is present
+      confirmedTaskSpecProvided: true only after user confirmation
+  files:
+    type: array
+    item_fields:
+      role: final-answer|visual-reference|confirmed-task-spec|process-context|quality-report|manifest|artifact
+      kind: markdown|json|image|audio|video|pdf|pptx|html|source
+      path: absolute path
+      relPath: package-root relative path
+      sourcePath: optional original source path
+      status: final|preview|process|source
+  qualityReports:
+    type: array
+    item_fields:
+      artifactRole: file role or artifact id
+      artifactKind: document|ppt|video|pdf|image|audio|unknown
+      finalAllowed: boolean
+      overallScore: 0-100 or null
+      hardFailures: list
+      issues: list
+      nextAction: final|preview|auto_fix|rerender|manual_review|fail
+  finalStatus:
+    enum: [final, preview, fail]
+    rule: final only when every required artifact has finalAllowed=true and no P0/P1 issue
+rules:
+  preview_is_default_until_reviewed: true
+  preview_artifacts_must_not_live_in_final_dir: true
+  final_dir_requires_quality_gate: true
+  final_answer_without_quality_review: preview
+  process_files_do_not_count_as_final_artifacts: true
+  manifest_must_be_written_last: true

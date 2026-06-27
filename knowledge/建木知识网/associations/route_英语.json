@@ -1,0 +1,49 @@
+{
+  "subject": "英语",
+  "type": "routing_table",
+  "from": "language/sentence_patterns.json",
+  "to": "entries/英语.json → neurons/英语_neurons.json",
+  "trigger_keywords": [
+    "一般现在时",
+    "一般过去时",
+    "现在完成时",
+    "被动语态",
+    "定语从句",
+    "名词性从句",
+    "状语从句",
+    "虚拟语气",
+    "非谓语动词",
+    "倒装与强调",
+    "书信格式",
+    "议论文结构",
+    "连接词",
+    "八大时态基础",
+    "比较级与最高级",
+    "被动语态基础",
+    "宾语从句",
+    "状语从句基础",
+    "情态动词"
+  ],
+  "routes": [
+    {
+      "pattern_id": "pat_explanation_request",
+      "example": "什么是勾股定理",
+      "route_chain": "句法匹配(解释请求) → {subj}入口 → 按关键词匹配神经元 → 返回内容+例句"
+    },
+    {
+      "pattern_id": "pat_ability_query",
+      "example": "二次函数能求最大值吗",
+      "route_chain": "句法匹配(能力询问) → {subj}入口 → 查找对应规律 → 给出可行性判断"
+    }
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  }
+}

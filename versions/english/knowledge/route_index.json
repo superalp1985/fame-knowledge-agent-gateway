@@ -1,0 +1,60 @@
+{
+  "edition_id": "english",
+  "status": "seed",
+  "stats": {
+    "manual": 5,
+    "generated": 0
+  },
+  "routes": [
+    {
+      "id": "route-language-intent-to-scope",
+      "name": "Intent to Scope",
+      "subject": "language-tree-hub",
+      "domain": "intent",
+      "type": "routing",
+      "content": "Transform the active goal into project_id, subject, route_id, task_id and context budget before loading professional knowledge.",
+      "keywords": ["intent", "scope", "route", "context"],
+      "priority": 1
+    },
+    {
+      "id": "route-language-abstraction-to-association",
+      "name": "Abstraction to Association",
+      "subject": "language-tree-hub",
+      "domain": "semantics",
+      "type": "association",
+      "content": "Lift a local problem into a reusable abstraction, then search adjacent professional branches only when the abstraction suggests useful transfer.",
+      "keywords": ["abstraction", "association", "transfer", "semantics"],
+      "priority": 1
+    },
+    {
+      "id": "route-language-validation-feedback",
+      "name": "Validation Feedback",
+      "subject": "language-tree-hub",
+      "domain": "validation",
+      "type": "feedback",
+      "content": "Convert tests, tool results, user review and failure lessons into FAME edge updates without deleting raw memory.",
+      "keywords": ["validation", "feedback", "FAME", "full memory"],
+      "priority": 1
+    },
+    {
+      "id": "route-programming-spec-to-implementation",
+      "name": "Specification to Implementation",
+      "subject": "programming",
+      "domain": "software-engineering",
+      "type": "placeholder",
+      "content": "Placeholder route for turning English specifications into verified implementation work.",
+      "keywords": ["programming", "specification", "implementation", "testing"],
+      "priority": 2
+    },
+    {
+      "id": "route-design-intent-to-interface",
+      "name": "Intent to Interface",
+      "subject": "design",
+      "domain": "product-design",
+      "type": "placeholder",
+      "content": "Placeholder route for turning user intent into interface structure, visual hierarchy and validation rubrics.",
+      "keywords": ["design", "intent", "interface", "visual hierarchy"],
+      "priority": 2
+    }
+  ]
+}

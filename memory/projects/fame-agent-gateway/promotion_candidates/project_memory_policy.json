@@ -1,0 +1,31 @@
+{
+  "proposal_id": "promotion-v10-project-memory-policy",
+  "proposer": "agent",
+  "source_project_id": "fame-agent-gateway",
+  "target_core_route_id": "project-memory-overlay-policy",
+  "promotion_type": "add_route",
+  "review_status": "proposed",
+  "content_summary": "项目级工程记忆应作为 Core Knowledge Net 的隔离 overlay：工程事实、工具成败和失败教训默认只写 ProjectMemoryGraph；可复用经验必须通过 promotion candidate 和 review 后才能进入主知识网。",
+  "evidence_refs": [
+    "memory/projects/fame-agent-gateway/project_manifest.json",
+    "memory/projects/fame-agent-gateway/project_graph.jsonl",
+    "memory/projects/fame-agent-gateway/fame_overlay.jsonl"
+  ],
+  "promotion_checks": {
+    "cross_project_repeated": false,
+    "source_refs_present": true,
+    "quality_gate_refs_present": true,
+    "human_review_required": true,
+    "core_write_allowed": false
+  },
+  "initial_fame": {
+    "mu": 0.58,
+    "chi": 0.86,
+    "epsilon": 0.78,
+    "kappa": 0.42,
+    "nu": 0.48,
+    "delta": 0.12,
+    "rho": 0.22,
+    "lambda": 0.14
+  }
+}

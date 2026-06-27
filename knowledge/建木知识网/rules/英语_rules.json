@@ -1,0 +1,42 @@
+{
+  "subject": "英语",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "英语学科的规律抽象层——定理/定律/公式/方法论",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "语法体系": [
+      {
+        "id": "eng_rule_gram_01",
+        "name": "时态规则",
+        "law": "16种时态; 核心:现在/过去/将来 × 一般/进行/完成/完成进行; 时间状语与语境决定时态"
+      },
+      {
+        "id": "eng_rule_gram_02",
+        "name": "从句规则",
+        "law": "定语从句(that/which/who/whom/whose/where/when); 名词性从句(that/wh-); 状语从句(时间/条件/原因/让步/目的/结果)"
+      },
+      {
+        "id": "eng_rule_gram_03",
+        "name": "虚拟语气",
+        "law": "与现在相反: If I were..., I would...; 与过去相反: If I had done..., I would have done...; 与将来相反: If I should/were to..., I would..."
+      }
+    ],
+    "词汇分类": [
+      {
+        "id": "eng_rule_vocab_01",
+        "name": "构词法",
+        "law": "前缀(否定un-/in-/dis-; 重复re-; 前pre-; 后post-); 后缀(名词-tion/-ness/-ment; 形容词-ful/-less/-able; 动词-ize/-ify; 副词-ly)"
+      }
+    ]
+  }
+}

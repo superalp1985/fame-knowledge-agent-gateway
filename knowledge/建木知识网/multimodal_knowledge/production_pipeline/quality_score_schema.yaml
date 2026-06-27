@@ -1,0 +1,33 @@
+version: v0.2
+score_range:
+- 0
+- 100
+gates:
+  content:
+    final_min: 85
+    preview_min: 70
+    fail_below: 60
+  ppt:
+    final_min: 88
+    preview_min: 75
+    fail_below: 65
+  video:
+    final_min: 86
+    preview_min: 72
+    fail_below: 62
+  music_audio:
+    final_min: 82
+    preview_min: 70
+    fail_below: 60
+  visual:
+    final_min: 85
+    preview_min: 72
+    fail_below: 62
+hard_fail:
+- 中文乱码或问号污染
+- 关键文字遮挡或溢出
+- 音画不同步超过可接受范围
+- 字幕遮挡主体
+- BGM 压过旁白
+- 文件缺失或无法打开
+- 事实错误或概念冲突

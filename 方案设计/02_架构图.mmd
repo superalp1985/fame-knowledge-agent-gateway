@@ -1,0 +1,109 @@
+flowchart TB
+  EXT[外部 Agent / IDE / CLI / Workflow] --> ADP[MCP / API / CLI / IDE Adapters]
+  ADP --> U[用户意图 / 工程任务]
+  U --> R0[R0 意图识别]
+  R0 --> KR[建木知识网按需路由]
+
+  subgraph K[建木知识网思考链]
+    K1[基本概念]
+    K2[一级联想]
+    K3[抽象层]
+    K4[规律层]
+    K5[工具层]
+    K6[表达层]
+    K7[工程约束]
+    K8[质量门]
+    K9[返修规则]
+    K1 --> K2 --> K3 --> K4 --> K5 --> K6 --> K7 --> K8 --> K9
+  end
+
+  KR --> K1
+  K9 --> FE[FAME 路由状态层]
+
+  subgraph F[FAMEEdgeState]
+    F1[mu 有效正反馈]
+    F2[chi 探索价值]
+    F3[epsilon 目标贴合]
+    F4[kappa 置信度]
+    F5[nu 风险不确定]
+    F6[delta 逻辑冲突]
+    F7[rho 资源压力]
+    F8[lambda 失败教训]
+    F9[xi 惯性]
+    F10[freshness 时效]
+  end
+
+  FE --> F1
+  FE --> F2
+  FE --> F3
+  FE --> F4
+  FE --> F5
+  FE --> F6
+  FE --> F7
+  FE --> F8
+  FE --> F9
+  FE --> F10
+
+  subgraph P[工程现场图谱]
+    P1[文件 / 模块 / 函数]
+    P2[任务 / 阶段 / 进度]
+    P3[工具调用 / MCP]
+    P4[测试 / 构建 / 运行]
+    P5[失败 / 冲突 / 修复]
+    P6[manifest / artifact]
+    P7[日志 / 摘要]
+  end
+
+  subgraph PM[Project Memory Graph 项目工程记忆 Overlay]
+    PM1[project_manifest]
+    PM2[project_graph]
+    PM3[fame_overlay]
+    PM4[tool_invocation_summary]
+    PM5[failure_lessons]
+    PM6[context_summaries]
+    PM7[promotion_candidates]
+  end
+
+  P --> PM
+  PM --> FE
+  PM --> S
+  FE --> S[路线评分与上下文裁剪]
+  S --> GG[GoalGate 找球门]
+  GG --> GP[GoalPath scoped beam traversal]
+  GP --> G{权限 / 质量门 / 风险}
+  G -->|通过| M[按需读取工具说明书]
+  M --> EK[Enforcement Kernel 强制检查]
+  EK --> AA[签发 ApprovedAction]
+  AA --> T[一次性工具编排与执行]
+  G -->|不通过| H[人工确认 / 降级 / 返修]
+  T --> O[执行结果]
+  H --> O
+  O --> Q[review / quality gate]
+  Q --> L[日志与摘要写回]
+  L --> P
+  L --> PM
+  L --> FE
+  L --> C[上下文释放：只保留摘要和可检索索引]
+  L --> CLK[Agent 时钟 / 提醒 / 自我迭代]
+  CLK --> KR
+  CLK --> P
+  L --> WB[Knowledge Workbench 可视化与补充入口]
+  WB --> KP[KnowledgePatchProposal / Review]
+  WB --> PMV[Project Memory View]
+  PMV --> PM
+  PM7 --> KP
+  WB --> TD[Traversal Debug / 剪枝原因]
+  TD --> GG
+  KP --> KR
+  KP --> FE
+
+  subgraph D[模块化调试接口]
+    D1[health]
+    D2[explain]
+    D3[dry-run]
+    D4[replay]
+    D5[metrics]
+  end
+  KR --> D
+  FE --> D
+  EK --> D

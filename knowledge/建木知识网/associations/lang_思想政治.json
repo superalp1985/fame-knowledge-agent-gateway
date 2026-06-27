@@ -1,0 +1,32 @@
+{
+  "name": "语言树→思想政治联想通道",
+  "type": "1-level association",
+  "from": "language/sentence_patterns.json",
+  "to": "entries/思想政治.json",
+  "trigger_keywords": [
+    "经济生活",
+    "政治生活",
+    "文化生活",
+    "哲学"
+  ],
+  "examples": [
+    {
+      "query": "勾股定理是什么",
+      "route": "language→sentence_pattern(解释请求)→数学入口→几何规律→勾股定理"
+    },
+    {
+      "query": "牛顿第二定律怎么用",
+      "route": "language→sentence_pattern(解释请求)→物理入口→力学规律→F=ma"
+    }
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  }
+}

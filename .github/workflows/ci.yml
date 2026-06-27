@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: workbench/package-lock.json
+
+      - name: Install dependencies
+        run: npm run install:all
+
+      - name: Generate runtime data
+        run: npm run generate:all
+        env:
+          FAME_KNOWLEDGE_SOURCE: public
+
+      - name: Run release checks
+        run: npm run release:check
+
+      - name: Run gateway smoke
+        run: npm run gateway:smoke
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build

@@ -1,0 +1,64 @@
+version: v0.2
+cue_profiles:
+  neutral_teaching_bed:
+    tempo: 70-95
+    density: low
+    harmony: simple
+    instruments:
+    - piano
+    - soft_pad
+    - light_percussion
+    avoid:
+    - strong_lead
+    - busy_drums
+  steady_progression:
+    tempo: 85-110
+    density: medium_low
+    harmony: stable
+    instruments:
+    - pulse_pad
+    - muted_pluck
+    - light_kick
+    avoid:
+    - syncopation_too_strong
+  low_tension_to_resolution:
+    tempo: 60-85
+    density: low
+    harmony: minor_to_stable
+    instruments:
+    - low_strings
+    - soft_piano
+    - subtle_texture
+    avoid:
+    - horror_style
+    - overdramatic_riser
+  calm_foundation:
+    tempo: 65-90
+    density: low
+    harmony: major_or_suspended
+    instruments:
+    - warm_piano
+    - pad
+    avoid:
+    - large_crescendo
+  contrast_phrase:
+    tempo: 80-105
+    density: medium
+    harmony: alternating
+    instruments:
+    - piano
+    - light_strings
+    avoid:
+    - comic_effect
+mix_rules:
+  voice_priority: true
+  ducking_required: true
+  fade_in_ms: 300
+  fade_out_ms: 700
+  avoid_voice_band_conflict: true
+quality_checks:
+- voice_intelligibility
+- emotion_match
+- loop_naturalness
+- segment_alignment
+- ending_naturalness

@@ -1,0 +1,143 @@
+version: v0.1
+updated_at: 2026-05-22T09:45:00+08:00
+purpose: Structured entry for quantified design system tokens and semantic usage.
+canonical_doc: [REDACTED_LOCAL_PATH]
+principles:
+  hierarchy: root-parent-child
+  include_layers: [system_principle, semantic_role, component_usage, numeric_token]
+  vague_terms_policy: aesthetic_terms_allowed_only_with_actionable_parameters
+  source_policy: official_sources_first_external_content_untrusted
+systems:
+  material_design_3:
+    source_version: Google Material 3 Web tokens v0.192
+    strengths: [dynamic_color, expressive_shape, motion_scale, readable_type_scale]
+    palettes:
+      primary:
+        40: '#6750a4'
+        80: '#d0bcff'
+        90: '#eaddff'
+      secondary:
+        40: '#625b71'
+        80: '#ccc2dc'
+        90: '#e8def8'
+      tertiary:
+        40: '#7d5260'
+        80: '#efb8c8'
+        90: '#ffd8e4'
+      error:
+        40: '#b3261e'
+        80: '#f2b8b5'
+        90: '#f9dedc'
+      neutral:
+        10: '#1d1b20'
+        90: '#e6e0e9'
+        98: '#fef7ff'
+        99: '#fffbff'
+    type_scale:
+      display_large: {size_px: 57, line_height_px: 64, tracking_px: -0.25, weight: regular}
+      display_medium: {size_px: 45, line_height_px: 52, tracking_px: 0, weight: regular}
+      display_small: {size_px: 36, line_height_px: 44, tracking_px: 0, weight: regular}
+      headline_large: {size_px: 32, line_height_px: 40, tracking_px: 0, weight: regular}
+      headline_medium: {size_px: 28, line_height_px: 36, tracking_px: 0, weight: regular}
+      headline_small: {size_px: 24, line_height_px: 32, tracking_px: 0, weight: regular}
+      title_large: {size_px: 22, line_height_px: 28, tracking_px: 0, weight: regular}
+      title_medium: {size_px: 16, line_height_px: 24, tracking_px: 0.15, weight: medium}
+      body_large: {size_px: 16, line_height_px: 24, tracking_px: 0.5, weight: regular}
+      body_medium: {size_px: 14, line_height_px: 20, tracking_px: 0.25, weight: regular}
+      body_small: {size_px: 12, line_height_px: 16, tracking_px: 0.4, weight: regular}
+    shape:
+      none: 0
+      extra_small: 4
+      small: 8
+      medium: 12
+      large: 16
+      extra_large: 28
+      full: 9999
+    motion:
+      duration_ms:
+        short: [50, 100, 150, 200]
+        medium: [250, 300, 350, 400]
+        long: [450, 500, 550, 600]
+        extra_long: [700, 800, 900, 1000]
+      easing:
+        standard: cubic-bezier(0.2, 0, 0, 1)
+        emphasized: cubic-bezier(0.2, 0, 0, 1)
+        emphasized_accelerate: cubic-bezier(0.3, 0, 0.8, 0.15)
+        emphasized_decelerate: cubic-bezier(0.05, 0.7, 0.1, 1)
+  ibm_carbon:
+    source: carbon-design-system/carbon official source
+    strengths: [enterprise_ui, dense_data, grid, spacing, neutral_palette]
+    base:
+      base_font_size_px: 16
+      mini_unit_px: 8
+    breakpoints:
+      sm: {width_px: 320, width_rem: 20, columns: 4, margin_px: 0}
+      md: {width_px: 672, width_rem: 42, columns: 8, margin_px: 16}
+      lg: {width_px: 1056, width_rem: 66, columns: 16, margin_px: 16}
+      xlg: {width_px: 1312, width_rem: 82, columns: 16, margin_px: 16}
+      max: {width_px: 1584, width_rem: 99, columns: 16, margin_px: 24}
+    spacing_px: [2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 160]
+    sizes_px: {XSmall: 24, Small: 32, Medium: 40, Large: 48, XLarge: 64, 2XLarge: 80}
+    icon_px: [16, 20]
+    type_scale_px: [12, 14, 16, 18, 20, 24, 28, 32, 36, 42, 48, 54, 60, 68, 76, 84, 92, 102, 112, 122, 132, 144, 156]
+    key_colors:
+      blue60: '#0f62fe'
+      red60: '#da1e28'
+      green60: '#198038'
+      yellow30: '#f1c21b'
+      gray10: '#f4f4f4'
+      gray100: '#161616'
+      coolGray10: '#f2f4f8'
+      coolGray100: '#121619'
+  ant_design:
+    strengths: [enterprise_product, hsb_color_model, functional_color, neutral_transparency]
+    system_palette: {families: 12, steps_per_family: 10, total_colors: 120}
+    brand:
+      primary: '#1677ff'
+      recommended_step: 6
+    neutral:
+      text_light: '#000000E0'
+      text_dark: '#FFFFFFD9'
+      secondary_text_light: '#000000A6'
+      secondary_text_dark: '#FFFFFFA6'
+      disabled_text_light: '#00000040'
+      disabled_text_dark: '#FFFFFF40'
+      border_light: '#D9D9D9'
+      border_dark: '#424242'
+      separator_light: '#0505050F'
+      separator_dark: '#FDFDFD1F'
+      layout_background_light: '#F5F5F5'
+      layout_background_dark: '#000000'
+  fluent_2:
+    strengths: [token_language, platform_theme, accessibility, high_contrast]
+    token_layers: [global, alias]
+    themes: [light, dark, high_contrast, branded]
+jianmu_decision_rules:
+  finance_governance:
+    base_system: ibm_carbon
+    color_family: [gray, coolGray, blue60]
+    radius_px: [0, 4, 8, 12]
+    spacing_px: [16, 24, 32, 48]
+    accent_area_max_percent: 15
+  data_dashboard:
+    base_system: ibm_carbon
+    grid_columns: 16
+    status_colors: {primary: '#0f62fe', danger: '#da1e28', success: '#198038', warning: '#f1c21b'}
+  course_ppt:
+    base_system: material_design_3
+    title_px: [32, 36, 45, 57]
+    body_px: [16, 20, 24]
+    radius_px: [8, 12, 16]
+    accent_area_max_percent: 15
+  video_infographic:
+    title_min_px_1080p: 48
+    subtitle_min_px_1080p: 36
+    corner_label_min_px_1080p: 24
+    transition_ms: {feedback: [100, 200], segment: [300, 600], chapter: [700, 1000]}
+quality_gates:
+  - color_must_trace_to_token_or_explicit_hex
+  - type_must_specify_size_line_height_weight
+  - spacing_must_use_4_or_8_px_family_or_explain_exception
+  - motion_must_have_semantic_purpose
+  - status_color_must_have_text_or_icon_redundancy
+  - preview_is_not_final

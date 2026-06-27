@@ -1,0 +1,6 @@
+templates:
+- flowchart
+- mindmap
+- sequenceDiagram
+- gantt
+- classDiagram

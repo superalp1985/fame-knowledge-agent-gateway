@@ -1,0 +1,27 @@
+{
+  "subject": "物理",
+  "en": "Physics",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "力学",
+    "热学",
+    "电磁学",
+    "光学",
+    "原子物理"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/物理_rules.json",
+  "specific_neurons_ref": "neurons/物理_neurons.json",
+  "language_associations": "associations/lang_物理.json"
+}

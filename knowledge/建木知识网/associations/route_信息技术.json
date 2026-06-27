@@ -1,0 +1,53 @@
+{
+  "subject": "信息技术",
+  "type": "routing_table",
+  "from": "language/sentence_patterns.json",
+  "to": "entries/信息技术.json → neurons/信息技术_neurons.json",
+  "trigger_keywords": [
+    "计算机组成原理",
+    "进制转换",
+    "操作系统基础",
+    "计算机网络",
+    "排序算法",
+    "查找算法",
+    "递归与分治",
+    "贪心与动态规划",
+    "树与图",
+    "Python基础",
+    "C语言基础",
+    "关系数据库",
+    "加解密",
+    "网络安全",
+    "信息与信息技术",
+    "计算机硬件",
+    "计算机软件",
+    "文字处理(Word基础)",
+    "数据处理(Excel基础)",
+    "演示文稿(PPT基础)",
+    "互联网基础",
+    "算法入门",
+    "编程入门(Scratch/Python)"
+  ],
+  "routes": [
+    {
+      "pattern_id": "pat_explanation_request",
+      "example": "什么是勾股定理",
+      "route_chain": "句法匹配(解释请求) → {subj}入口 → 按关键词匹配神经元 → 返回内容+例句"
+    },
+    {
+      "pattern_id": "pat_ability_query",
+      "example": "二次函数能求最大值吗",
+      "route_chain": "句法匹配(能力询问) → {subj}入口 → 查找对应规律 → 给出可行性判断"
+    }
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  }
+}

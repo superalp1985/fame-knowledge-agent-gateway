@@ -1,0 +1,63 @@
+{
+  "subject": "法学",
+  "type": "first_order_associations",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "associations": [
+    {
+      "from": "票据债务人",
+      "to": [
+        "票据金额大小写不一致",
+        "法律事实范围",
+        "破产程序中未结诉讼"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "物权客体",
+      "to": [
+        "动产物权类型边界",
+        "区域性股权市场交易方式",
+        "非上市公众公司边界"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "上市公司季报披露期限",
+      "to": [
+        "上市公司对外担保披露时点",
+        "非上市公众公司边界",
+        "区域性股权市场交易方式"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "公开发行证券人数边界",
+      "to": [
+        "非上市公众公司边界",
+        "区域性股权市场交易方式",
+        "证券服务机构承销期买卖限制"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "上市公司收购公告要约义务罚则",
+      "to": [
+        "上市公司对外担保披露时点",
+        "公开发行证券人数边界",
+        "证券交易所负责人任职限制"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "受托投资管理不得承诺收益",
+      "to": [
+        "合规管理人员兼职边界",
+        "表外业务定义",
+        "证券从业登记变更期限"
+      ],
+      "type": "first_order_same_domain"
+    }
+  ],
+  "version": "law-from-securities-practitioner-2026-05-19"
+}

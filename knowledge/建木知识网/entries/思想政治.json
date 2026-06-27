@@ -1,0 +1,26 @@
+{
+  "subject": "思想政治",
+  "en": "Politics & Ethics",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "经济生活",
+    "政治生活",
+    "文化生活",
+    "哲学"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/思想政治_rules.json",
+  "specific_neurons_ref": "neurons/思想政治_neurons.json",
+  "language_associations": "associations/lang_思想政治.json"
+}

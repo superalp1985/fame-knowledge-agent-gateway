@@ -1,0 +1,56 @@
+{
+  "id": "language-tree-hub",
+  "edition_id": "english",
+  "type": "LanguageTreeHub",
+  "label": "Language Tree Hub",
+  "status": "seed",
+  "description": "Central language layer for intent, abstraction, semantics, expression and cross-domain association.",
+  "layers": [
+    {
+      "id": "intent",
+      "label": "Intent",
+      "purpose": "Turn a user goal into a scoped route request."
+    },
+    {
+      "id": "lexicon",
+      "label": "Lexicon",
+      "purpose": "Maintain names, terms, aliases and controlled vocabulary."
+    },
+    {
+      "id": "grammar",
+      "label": "Grammar",
+      "purpose": "Represent structural constraints, valid transformations and operation forms."
+    },
+    {
+      "id": "semantics",
+      "label": "Semantics",
+      "purpose": "Map meaning, abstraction level, evidence and cross-domain relations."
+    },
+    {
+      "id": "expression",
+      "label": "Expression",
+      "purpose": "Prepare task-facing summaries, instructions, UI text and implementation notes."
+    },
+    {
+      "id": "validation",
+      "label": "Validation",
+      "purpose": "Bind claims to tests, evidence, route outcomes and FAME updates."
+    }
+  ],
+  "fame_defaults": {
+    "mu": 0.5,
+    "chi": 0.5,
+    "epsilon": 0.6,
+    "kappa": 0.45,
+    "nu": 0.35,
+    "delta": 0.1,
+    "rho": 0.25,
+    "lambda": 0.1
+  },
+  "routing_policy": {
+    "center_first": true,
+    "scope_keys": ["edition_id", "project_id", "subject", "route_id"],
+    "context_policy": "summary_refs_lazy_load",
+    "full_memory_retention": true
+  }
+}

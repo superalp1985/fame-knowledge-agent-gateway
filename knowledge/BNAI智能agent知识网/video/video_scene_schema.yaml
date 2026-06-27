@@ -1,0 +1,29 @@
+version: v0.2
+scene_required_fields:
+- scene_id
+- goal
+- duration_sec
+- narration
+- visual
+- motion
+- subtitle
+- audio
+- transition
+- quality_checks
+shot_types:
+  wide: 交代环境或系统全局
+  medium: 表达关系与操作
+  close: 突出重点信息
+  detail: 强调关键数字、术语、动作
+  top_down: 表达流程、地图、架构
+timeline_rules:
+- 旁白真实时长优先于预估时长
+- 每个视觉变化必须对应叙事变化
+- 静态画面超过 6-8 秒必须加入信息变化或轻运动
+- 关键术语出现时字幕与画面必须同步
+fail_conditions:
+- 字幕遮挡主体
+- 关键帧不可读
+- 旁白与画面不一致
+- BGM 压人声
+- 结尾突然截断

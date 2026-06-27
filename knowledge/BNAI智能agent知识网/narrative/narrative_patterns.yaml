@@ -1,0 +1,69 @@
+version: v0.2
+patterns:
+- id: teaching_concept
+  steps:
+  - 学习目标
+  - 直觉案例
+  - 概念定义
+  - 结构框架
+  - 反例辨析
+  - 练习迁移
+  - 小结
+  best_for:
+  - 课程
+  - 培训
+  - 讲稿
+- id: policy_brief
+  steps:
+  - 结论先行
+  - 背景压缩
+  - 证据分层
+  - 风险约束
+  - 选项比较
+  - 建议落地
+  best_for:
+  - 研究简报
+  - 领导汇报
+  - 政策分析
+- id: problem_solution
+  steps:
+  - 痛点
+  - 根因
+  - 方案
+  - 机制
+  - 收益
+  - 实施路径
+  best_for:
+  - 改革方案
+  - 项目汇报
+  - 产品方案
+- id: case_story
+  steps:
+  - 场景
+  - 冲突
+  - 行动
+  - 结果
+  - 复盘
+  - 启示
+  best_for:
+  - 案例教学
+  - 视频脚本
+  - 演讲
+- id: comparison_argument
+  steps:
+  - 比较维度
+  - A方案
+  - B方案
+  - 关键差异
+  - 取舍
+  - 建议
+  best_for:
+  - 方案选择
+  - 政策对比
+  - 模型比较
+director_checks:
+- 是否一句话说清主线
+- 是否每个抽象概念都有例子
+- 是否存在跳步
+- 是否有反例
+- 是否有结论收束

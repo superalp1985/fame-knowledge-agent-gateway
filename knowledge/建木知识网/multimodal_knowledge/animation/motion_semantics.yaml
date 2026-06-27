@@ -1,0 +1,16 @@
+version: v0.1
+motion_semantics:
+  fade_in: 引入信息
+  fade_out: 移除信息
+  move: 状态/位置变化
+  scale_up: 重要性增强
+  scale_down: 重要性降低
+  color_change: 状态变化
+  draw_line: 建立关系
+  highlight: 聚焦注意力
+  step_reveal: 逐步解释结构
+rules:
+- motion_must_have_semantic_purpose
+- sync_with_narration
+- hold_after_key_change
+- avoid_random_transitions

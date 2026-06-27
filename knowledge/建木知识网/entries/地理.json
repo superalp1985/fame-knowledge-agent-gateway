@@ -1,0 +1,26 @@
+{
+  "subject": "地理",
+  "en": "Geography",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "自然地理",
+    "人文地理",
+    "中国地理",
+    "世界地理"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/地理_rules.json",
+  "specific_neurons_ref": "neurons/地理_neurons.json",
+  "language_associations": "associations/lang_地理.json"
+}

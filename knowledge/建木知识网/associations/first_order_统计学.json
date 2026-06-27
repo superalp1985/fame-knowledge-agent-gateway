@@ -1,0 +1,46 @@
+{
+  "subject": "统计学",
+  "type": "first_order_associations",
+  "version": "statistics-abstract-2026-05-17",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "note": "一级联想只提供 working memory 材料，不投票、不平均、不继续展开。每个 from 最多 3 个 to。",
+  "associations": [
+    {
+      "from": "总体、样本、统计量与参数",
+      "to": [
+        "由样本推断总体",
+        "估计量性质",
+        "抽样误差与样本量"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "假设检验解释",
+      "to": [
+        "单侧假设检验",
+        "显著性水平嵌套",
+        "置信水平与α"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "列联表与相关系数",
+      "to": [
+        "卡方列联表自由度",
+        "期望频数",
+        "φ相关系数"
+      ],
+      "type": "first_order_same_structure"
+    },
+    {
+      "from": "正态分布经验法则",
+      "to": [
+        "正态标准化",
+        "中心极限定理与样本均值",
+        "样本均值方差"
+      ],
+      "type": "first_order_same_structure"
+    }
+  ]
+}

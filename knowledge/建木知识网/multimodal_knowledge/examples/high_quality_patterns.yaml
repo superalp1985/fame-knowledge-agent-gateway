@@ -1,0 +1,18 @@
+version: v0.1
+ppt_patterns:
+- conclusion_three_evidence
+- left_visual_right_text
+- closed_loop_process
+- comparison_decision
+- data_insight
+video_scene_patterns:
+- problem_intro
+- mechanism_explainer
+- case_validation
+- summary_closure
+music_patterns:
+- neutral_teaching_bed
+- risk_tension_bed
+- summary_lift_bed
+rule: Patterns are reusable defaults, not templates to copy blindly. Always bind to
+  language-tree concept and audience.

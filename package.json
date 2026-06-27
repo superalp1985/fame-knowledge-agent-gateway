@@ -1,0 +1,23 @@
+{
+  "name": "fame-knowledge-agent-gateway",
+  "private": true,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm ci --prefix workbench",
+    "install:workbench": "npm install --prefix workbench",
+    "prepare:public-knowledge": "node scripts/prepare-public-knowledge.mjs",
+    "generate:knowledge": "npm run generate:knowledge --prefix workbench",
+    "generate:all": "npm run generate:knowledge --prefix workbench && npm run generate:project-memory --prefix workbench && npm run generate:multimodal --prefix workbench && npm run generate:v13 --prefix workbench",
+    "dev": "npm run dev --prefix workbench -- --host 127.0.0.1 --port 5178",
+    "gateway": "npm run start --prefix runtime_server",
+    "gateway:mcp": "npm run mcp --prefix runtime_server",
+    "gateway:smoke": "npm run smoke --prefix runtime_server",
+    "build": "npm run build --prefix workbench",
+    "lint": "npm run lint --prefix workbench",
+    "release:check": "node scripts/release-check.mjs",
+    "test": "npm run gateway:smoke",
+    "ci": "npm run release:check && npm run gateway:smoke && npm run lint && npm run build"
+  }
+}

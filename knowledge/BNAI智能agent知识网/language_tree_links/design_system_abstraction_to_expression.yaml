@@ -1,0 +1,125 @@
+version: v0.1
+updated_at: 2026-05-22T10:00:00+08:00
+purpose: Connect abstract visual/design regularities to quantified design-system expression patterns.
+mappings:
+  - abstraction: 信息层级/主次/注意力
+    design_system_layer: semantic_token_layer
+    expression_patterns:
+      ppt: hierarchy_slide
+      ui: visual_priority_layout
+      report: heading_body_caption_stack
+      video: title_keypoint_subtitle_sequence
+    bottom_tokens_required:
+      - font_size_delta_px
+      - font_weight_delta
+      - contrast_delta
+      - spacing_delta_px
+      - accent_area_percent
+    recommended_sources:
+      - Material Design 3 typescale
+      - IBM Carbon type styles
+      - IBM Carbon spacing
+  - abstraction: 稳重/克制/可信
+    design_system_layer: system_layer
+    expression_patterns:
+      ppt: restrained_governance_deck
+      ui: enterprise_gray_blue_interface
+      report: neutral_document_layout
+      video: low_motion_information_graphic
+    bottom_tokens_required:
+      - neutral_palette_hex
+      - accent_color_hex
+      - radius_px_lte_12
+      - motion_ms_lte_300
+      - spacing_px
+    recommended_sources:
+      - IBM Carbon gray/coolGray/blue60
+      - Material Design 3 corner 0/4/8/12
+      - Material Design 3 duration short/medium
+  - abstraction: 科技/系统/平台
+    design_system_layer: system_layer
+    expression_patterns:
+      ppt: system_architecture_slide
+      ui: dashboard_or_console
+      report: technical_brief
+      video: mechanism_animation
+    bottom_tokens_required:
+      - grid_columns
+      - cool_gray_palette
+      - primary_blue_hex
+      - monospaced_code_style_if_needed
+      - motion_easing
+    recommended_sources:
+      - IBM Carbon 16-column grid
+      - IBM Carbon coolGray
+      - IBM Carbon blue60
+      - Material Design 3 motion easing
+  - abstraction: 风险/控制/合规
+    design_system_layer: semantic_token_layer
+    expression_patterns:
+      ppt: risk_matrix_slide
+      ui: warning_error_status
+      report: compliance_table
+      video: warning_to_solution_sequence
+    bottom_tokens_required:
+      - error_color_hex
+      - warning_color_hex
+      - text_or_icon_redundancy
+      - border_or_badge_style
+      - contrast_check
+    recommended_sources:
+      - Material Design 3 error palette
+      - IBM Carbon red60/yellow30
+      - Ant Design functional color principle
+  - abstraction: 数据密集/对比/分类
+    design_system_layer: modality_binding_layer
+    expression_patterns:
+      ppt: comparison_or_taxonomy_slide
+      ui: dense_table_dashboard
+      report: table_chart_hybrid
+      video: progressive_data_reveal
+    bottom_tokens_required:
+      - grid_columns
+      - table_padding_px
+      - label_font_px
+      - chart_palette_hex
+      - group_spacing_px
+    recommended_sources:
+      - IBM Carbon breakpoints/grid
+      - IBM Carbon spacing
+      - IBM Carbon type scale
+      - Ant Design 12 color families
+  - abstraction: 温和/叙事/人文
+    design_system_layer: semantic_token_layer
+    expression_patterns:
+      ppt: story_case_slide
+      ui: soft_card_layout
+      report: case_narrative_box
+      video: human_story_scene
+    bottom_tokens_required:
+      - warm_or_tertiary_palette_hex
+      - radius_px
+      - body_line_height
+      - low_saturation_accent
+      - no_overdecorated_rule
+    recommended_sources:
+      - Material Design 3 tertiary palette
+      - IBM Carbon warmGray
+      - Material Design 3 shape
+  - abstraction: 可访问性/可读性
+    design_system_layer: quality_gate
+    expression_patterns:
+      ppt: readable_projection_layout
+      ui: accessible_component_state
+      report: print_safe_document
+      video: subtitle_safe_graphic
+    bottom_tokens_required:
+      - min_font_size_px
+      - line_height_ratio
+      - contrast_ratio
+      - non_color_redundancy
+      - safe_area_margin
+    recommended_sources:
+      - Fluent 2 high contrast/theming principle
+      - Ant Design WCAG-oriented neutral principle
+      - Jianmu accessibility_rules

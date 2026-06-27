@@ -1,0 +1,71 @@
+{
+  "subject": "物理",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "物理学科的规律抽象层——定理/定律/公式/方法论",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "力学": [
+      {
+        "id": "phys_rule_mech_01",
+        "name": "牛顿三定律",
+        "law": "①惯性定律: F=0时物体保持静止/匀速; ②F=ma; ③作用力与反作用力大小相等方向相反"
+      },
+      {
+        "id": "phys_rule_mech_02",
+        "name": "能量守恒",
+        "law": "动能E_k=½mv², 势能E_p=mgh, 机械能守恒: E_k1+E_p1=E_k2+E_p2(仅保守力)"
+      },
+      {
+        "id": "phys_rule_mech_03",
+        "name": "动量守恒",
+        "law": "碰撞前后总动量不变: m1v1+m2v2=m1v1'+m2v2' (合外力为0时)"
+      },
+      {
+        "id": "phys_rule_mech_04",
+        "name": "万有引力",
+        "law": "F=Gm1m2/r², G=6.67×10⁻¹¹; 卫星环绕: GMm/r²=mv²/r, v=√(GM/r)"
+      }
+    ],
+    "热学": [
+      {
+        "id": "phys_rule_therm_01",
+        "name": "热力学定律",
+        "law": "①ΔU=Q+W(能量守恒); ②熵增原理; 理想气体: PV=nRT, P₁V₁/T₁=P₂V₂/T₂"
+      }
+    ],
+    "电磁学": [
+      {
+        "id": "phys_rule_em_01",
+        "name": "库仑定律与电场",
+        "law": "F=kq1q2/r²; 电场强度 E=F/q; 电势差 U=W/q; 匀强电场 U=Ed"
+      },
+      {
+        "id": "phys_rule_em_02",
+        "name": "欧姆定律与电路",
+        "law": "I=U/R; P=UI=I²R; 串联 R=R₁+R₂, 并联 1/R=1/R₁+1/R₂; 基尔霍夫定律 ΣI=0, ΣU=0"
+      },
+      {
+        "id": "phys_rule_em_03",
+        "name": "电磁感应",
+        "law": "法拉第定律 E=-dΦ/dt; 楞次定律:感应电流的磁场阻碍原磁通变化; 交流电 u=U_m sin(ωt+φ)"
+      }
+    ],
+    "光学": [
+      {
+        "id": "phys_rule_opt_01",
+        "name": "几何光学",
+        "law": "折射定律 n1sinθ1=n2sinθ2; 全反射 sinC=n2/n1; 薄透镜公式 1/f=1/u+1/v"
+      }
+    ]
+  }
+}

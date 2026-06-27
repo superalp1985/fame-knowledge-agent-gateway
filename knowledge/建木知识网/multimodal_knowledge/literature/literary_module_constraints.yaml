@@ -1,0 +1,43 @@
+version: v0.1
+modules:
+  course_pack:
+    use_literature_for:
+      - course_opening
+      - section_transition
+      - core_sentence
+    must_not:
+      - replace_evidence_with_emotion
+  ppt_draft:
+    use_literature_for:
+      - slide_titles_as_claims
+      - story_arc_across_sections
+      - concise_memorable_phrasing
+    must_not:
+      - overdecorate_slide_text
+  video_plan:
+    use_literature_for:
+      - narration_rhythm
+      - scene_transition
+      - imagery_for_keyframes
+    must_not:
+      - make_bgm_or_visuals_drive_false_emotion
+  web_research:
+    use_literature_for:
+      - identifying_author_position
+      - separating_rhetoric_from_fact
+    must_not:
+      - treat_persuasive_language_as_evidence
+  doc_analysis:
+    use_literature_for:
+      - argument_structure
+      - tone_and_stance_detection
+      - implied_value_judgment
+    must_not:
+      - summarize_style_without_logic
+  weavemuse_compose:
+    use_literature_for:
+      - mood_keywords
+      - motif_memory
+      - title_and_theme_consistency
+    must_not:
+      - emotionalize_formal_content_excessively

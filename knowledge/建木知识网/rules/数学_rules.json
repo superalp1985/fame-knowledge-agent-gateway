@@ -1,0 +1,91 @@
+{
+  "subject": "数学",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "数学学科的规律抽象层——定理/定律/公式/方法论",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "代数": [
+      {
+        "id": "math_rule_algebra_01",
+        "name": "运算法则",
+        "law": "交换律 a+b=b+a, ab=ba; 结合律 (a+b)+c=a+(b+c); 分配律 a(b+c)=ab+ac"
+      },
+      {
+        "id": "math_rule_algebra_02",
+        "name": "方程求解",
+        "law": "一元一次方程: ax+b=0→x=-b/a; 一元二次方程: ax²+bx+c=0→x=(-b±√(b²-4ac))/2a"
+      },
+      {
+        "id": "math_rule_algebra_03",
+        "name": "指数与对数",
+        "law": "a^m·a^n=a^(m+n); (a^m)^n=a^(mn); log_a(xy)=log_a x+log_a y"
+      },
+      {
+        "id": "math_rule_algebra_04",
+        "name": "数列",
+        "law": "等差数列 a_n=a_1+(n-1)d, S_n=n(a_1+a_n)/2; 等比数列 a_n=a_1·q^(n-1)"
+      }
+    ],
+    "几何": [
+      {
+        "id": "math_rule_geo_01",
+        "name": "三角形",
+        "law": "内角和=180°; 勾股定理 a²+b²=c²; 正弦定理 a/sinA=b/sinB=c/sinC; 余弦定理 c²=a²+b²-2ab·cosC"
+      },
+      {
+        "id": "math_rule_geo_02",
+        "name": "圆",
+        "law": "周长 C=2πr; 面积 S=πr²; 圆周角定理:同弧所对圆周角相等; 垂径定理"
+      },
+      {
+        "id": "math_rule_geo_03",
+        "name": "立体几何",
+        "law": "球体 V=4/3πr³, S=4πr²; 柱体 V=Sh; 锥体 V=1/3Sh; 欧拉公式 V-E+F=2"
+      }
+    ],
+    "函数与分析": [
+      {
+        "id": "math_rule_func_01",
+        "name": "函数性质",
+        "law": "单调性/奇偶性/周期性/有界性; 反函数 f⁻¹; 复合函数 f(g(x))"
+      },
+      {
+        "id": "math_rule_func_02",
+        "name": "初等函数",
+        "law": "一次函数 y=kx+b; 二次函数 y=ax²+bx+c(顶点x=-b/2a); 指数函数 y=a^x; 对数函数 y=log_a x; 幂函数 y=x^α"
+      },
+      {
+        "id": "math_rule_func_03",
+        "name": "三角函数",
+        "law": "sin²θ+cos²θ=1; sin2θ=2sinθcosθ; 和差化积; 正弦型 y=Asin(ωx+φ)+k, A振幅/ω角频率/φ初相"
+      },
+      {
+        "id": "math_rule_func_04",
+        "name": "导数与微积分",
+        "law": "f'(x)=lim[Δy/Δx]; (x^n)'=nx^(n-1); ∫x^n dx=x^(n+1)/(n+1)+C; 定积分∫_a^b f(x)dx=F(b)-F(a)"
+      }
+    ],
+    "概率与统计": [
+      {
+        "id": "math_rule_prob_01",
+        "name": "概率基础",
+        "law": "P(A)=n(A)/n(Ω); 条件概率 P(A|B)=P(AB)/P(B); 独立事件 P(AB)=P(A)P(B)"
+      },
+      {
+        "id": "math_rule_prob_02",
+        "name": "统计基础",
+        "law": "均值X̄=Σx_i/n; 方差σ²=Σ(x_i-X̄)²/n; 正态分布 N(μ,σ²); 中心极限定理"
+      }
+    ]
+  }
+}

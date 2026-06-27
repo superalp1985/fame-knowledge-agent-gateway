@@ -1,0 +1,28 @@
+{
+  "project_id": "fame-agent-gateway",
+  "project_name": "FAME Knowledge Agent Gateway",
+  "workspace_root": ".",
+  "agent_id": "codex-workbench-agent",
+  "core_knowledge_version": "v9-agent-runtime",
+  "memory_policy": {
+    "write_scope": "project_overlay_only",
+    "core_knowledge_write": "forbidden_without_promotion_review",
+    "promotion_required": true,
+    "summary_first": true
+  },
+  "active_scope": {
+    "subject": "knowledge-workbench",
+    "domain": "agent-engineering",
+    "route_id": "project-memory-overlay",
+    "task_id": "workbench-v10-project-memory"
+  },
+  "project_phase": "implementation",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00",
+  "roots": {
+    "core_knowledge": "knowledge/",
+    "project_memory": "memory/projects/fame-agent-gateway/",
+    "summaries": "memory/projects/fame-agent-gateway/context_summaries/",
+    "promotion_candidates": "memory/projects/fame-agent-gateway/promotion_candidates/"
+  }
+}

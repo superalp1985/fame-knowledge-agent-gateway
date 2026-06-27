@@ -1,0 +1,27 @@
+version: v0.1
+shot_selection:
+  define_concept:
+    shot: medium_or_clean_graphic
+    angle: eye_level
+    motion: static_or_slow_push
+  show_system:
+    shot: wide_or_top_down
+    angle: top_down
+    motion: slow_reveal
+  show_risk:
+    shot: close_or_contrast
+    angle: slightly_high_or_oblique
+    motion: slow_tension
+  show_process:
+    shot: top_down_or_medium
+    angle: top_down
+    motion: left_to_right_or_cycle
+  show_conclusion:
+    shot: close
+    angle: eye_level
+    motion: hold
+hard_fail:
+- 主体不明确
+- 关键文字被裁切
+- 画面主体与旁白无关
+- 素材风格与主题冲突

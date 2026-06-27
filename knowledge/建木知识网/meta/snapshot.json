@@ -1,0 +1,39 @@
+{
+  "description": "建木知识网元信息",
+  "version": "1.0",
+  "created": "2026-05-10",
+  "principles": [
+    "只存知识，不存记忆",
+    "所有权重从0开始，通过测验/实践逐步确认",
+    "FAME 8D打分跟随每条神经元",
+    "一级联想只做单跳，不展开多级",
+    "抽象层(规则) ↔ 具体层(神经元) 双向挂载",
+    "语言大树是中文到建木知识域的桥梁",
+    "自动化任务定期剪枝、补链、一致性检查"
+  ],
+  "automation_tasks": {
+    "daily_trim": {
+      "description": "每日检查FAME得分低于阈值(-0.5)的神经元，标记待删除",
+      "schedule": "daily"
+    },
+    "weekly_link_check": {
+      "description": "每周扫描所有文件，发现未挂载到backbone的知识自动创建节点",
+      "schedule": "weekly"
+    },
+    "contradiction_check": {
+      "description": "检查神经元间的δ(矛盾)维度，δ>0.5的标记冲突",
+      "schedule": "weekly"
+    }
+  },
+  "weight_snapshot": {
+    "last_update": "2026-05-10",
+    "total_neurons": 0,
+    "total_rules": 3,
+    "total_associations": 0,
+    "verified_count": 0
+  },
+  "router_engine": "router.py v1.0",
+  "model": "jianmu:latest (Qwen3-0.6B-Q8_0, Ollama, RTX 4070 CUDA)",
+  "last_test": "2026-05-10",
+  "test_results": "专业知识路由命中正常, 仍需调试"
+}

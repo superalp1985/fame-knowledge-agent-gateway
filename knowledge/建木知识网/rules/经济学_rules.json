@@ -1,0 +1,5130 @@
+{
+  "subject": "经济学",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "经济学学科的规律抽象层——微观、宏观、财政、中央银行、金融与国民经济核算",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "微观经济学": [
+      {
+        "id": "econ_cobweb_divergent",
+        "name": "蛛网模型发散条件",
+        "law": "供给曲线与需求曲线斜率取绝对值比较时，若供给曲线斜率小于需求曲线斜率，供给对价格反应更强，蛛网模型呈发散型摆动。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_indifference_curve_properties",
+        "name": "无差异曲线基本性质",
+        "law": "无差异曲线通常向右下方倾斜、互不相交，离原点越远效用越高；沿同一条无差异曲线总效用相同，但边际效用不必相等。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_lac_economies_of_scale",
+        "name": "长期平均成本与规模经济",
+        "law": "长期平均成本 LAC 随产出增加而下降，通常表示存在规模经济。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_capital_flow_rate_equalization",
+        "name": "资本流动与收益率均等化",
+        "law": "资本倾向于从低利润率/低利率行业流向高利润率/高利率行业，直到行业间收益率趋于均等。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_partial_equilibrium_scope",
+        "name": "局部均衡适用范围",
+        "law": "局部均衡适合分析影响范围较窄的商品税或单一市场冲击，不适合分析公司所得税等广泛影响多个市场的政策。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_firm_shutdown_rule",
+        "name": "厂商亏损仍生产条件",
+        "law": "短期内厂商亏损仍生产的条件是价格不低于平均可变成本 AVC；若 P ≥ AVC，继续生产可覆盖可变成本并分摊部分固定成本。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_perfect_competition_total_revenue",
+        "name": "完全竞争总收益曲线",
+        "law": "完全竞争厂商是价格接受者，价格既定，因此总收益 TR=P·Q，总收益曲线斜率固定且等于价格。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_average_revenue_market_structure",
+        "name": "平均收益曲线与市场结构",
+        "law": "平均收益曲线向右下方倾斜说明厂商面对向下倾斜的需求曲线，即不完全竞争；完全竞争下平均收益曲线通常为水平线。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_factor_demand_marginal_product",
+        "name": "要素需求曲线与边际产量",
+        "law": "厂商要素需求向右下方倾斜，根源在于边际产量递减和边际收益产品递减。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_market_labor_supply",
+        "name": "市场劳动供给曲线",
+        "law": "单个劳动者供给曲线可能后弯，但市场劳动供给曲线汇总后通常仍向右上方倾斜。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_wage_income_effect_labor_supply",
+        "name": "工资率收入效应",
+        "law": "工资率提高的收入效应使劳动者在相同劳动时间下收入增加，从而倾向于购买更多闲暇、减少劳动供给。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_partial_general_equilibrium",
+        "name": "局部均衡与一般均衡",
+        "law": "局部均衡关注单一市场并忽视其他市场反馈；当冲击影响很多市场时，应使用一般均衡，否则局部均衡可能误判。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_pareto_efficiency_fairness",
+        "name": "帕累托效率与公平",
+        "law": "帕累托有效要求生产效率、交换效率和产品组合效率，但不保证收入分配公平。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_externality_pigouvian_tax",
+        "name": "外部性与庇古税",
+        "law": "外部性使市场价格不能反映交易全部社会成本或收益；污染负外部性的庇古税通常等于社会边际成本与私人边际成本之差。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_information_asymmetry_sources",
+        "name": "信息不对称来源",
+        "law": "信息不对称可来自卖方隐瞒、买方认知有限或完全获取信息成本过高。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_rent_seeking",
+        "name": "寻租行为",
+        "law": "企业投入资源游说政府设置准入壁垒、阻止竞争者进入，以获得或维持垄断租金，属于寻租。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_cournot_model",
+        "name": "古诺模型",
+        "law": "古诺模型讨论寡头厂商以产量为战略变量进行竞争。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_prisoners_dilemma",
+        "name": "囚徒困境",
+        "law": "囚徒困境中，个体独立按自身利益选择会导致集体较差结果；有限期重复囚徒困境可用逆推得到每期背叛/坦白。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_first_degree_price_discrimination",
+        "name": "一级价格歧视",
+        "law": "一级价格歧视按每个消费者最高支付意愿收费，理论上可攫取消费者剩余，使消费者剩余最小。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_increasing_cost_industry_supply",
+        "name": "成本递增行业长期供给",
+        "law": "成本递增行业中，行业扩张推高投入价格，长期供给曲线通常向右上方倾斜。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_short_run_optimal_output",
+        "name": "短期最优产出",
+        "law": "最优短期产出水平使总利润最大；若亏损不可避免，则使总亏损最小。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_perfect_competition_long_run_supply",
+        "name": "完全竞争长期供给曲线",
+        "law": "完全竞争行业长期供给与长期平均成本最低点轨迹相关，长期均衡中价格等于最低长期平均成本。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_mc_avc_relation",
+        "name": "MC 与 AVC 关系",
+        "law": "当边际成本 MC 高于平均可变成本 AVC 时，增加产量会拉高 AVC；当 MC 低于 AVC 时，会拉低 AVC。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_short_run_variable_cost",
+        "name": "短期可变成本",
+        "law": "短期可变成本随产量增加而增加；其斜率由边际成本决定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_total_product_mp_zero",
+        "name": "总产量最大与边际产量",
+        "law": "总产量达到最大时，边际产量 MP=0，边际产量曲线与横轴相交。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_decreasing_returns_split",
+        "name": "规模报酬递减与拆分",
+        "law": "若单一工厂在所有相关产出水平呈规模报酬递减，拆分为较小规模生产单位可能提高总产出。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_inferior_goods",
+        "name": "低档商品",
+        "law": "收入降低时购买量增加、收入提高时购买量减少的商品，对该消费者属于低档商品。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_satiation_vertical_indifference_curve",
+        "name": "饱和商品与垂直无差异曲线",
+        "law": "若无差异曲线为垂直线且 X 在横轴、Y 在纵轴，通常表示 Y 已达到饱和，效用只随 X 增加而变化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_price_support_surplus_purchase",
+        "name": "支持价格",
+        "law": "政府设定高于均衡价格的支持价格会造成供给过剩；为维持支持价格，政府可收购过剩产品。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_law_of_demand",
+        "name": "需求规律",
+        "law": "需求规律指其他条件不变时，商品自身价格下降会使需求量增加，价格上升会使需求量减少。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_game_payoff",
+        "name": "博弈支付",
+        "law": "博弈中局中人从策略组合中得到的结果或收益称为支付。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_mrs_exchange_direction",
+        "name": "MRS 与互利交换方向",
+        "law": "两人对 X 替代 Y 的边际替代率不同，则存在互利交换空间；MRS 较低者可用 X 向 MRS 较高者交换 Y。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "econ_utility_max_mrs_price_ratio",
+        "name": "效用最大化与相对价格",
+        "law": "消费者效用最大化时，边际替代率等于相对价格；跨地区相对价格不同会导致效用最大化下的 MRS 不同。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "microeconomics_abstract_patch_20260517"
+      }
+    ],
+    "宏观经济学": [
+      {
+        "id": "macro_rational_expectations_announced_money_growth",
+        "name": "理性预期与已宣布货币增长",
+        "law": "中央银行公开宣布提高货币增长率，在理性预期下主要提高预期通胀和实际通胀，失业率不因可预期政策系统性变化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_investment_demand_interest_rate",
+        "name": "投资需求与利率关系",
+        "law": "投资需求通常与利率反向变动，利率越高，投资项目现值越低，投资需求越弱。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_harrod_warranted_growth",
+        "name": "哈罗德有保证增长率",
+        "law": "实际增长率高于有保证增长率时，需求扩张和投资加速机制可能导致长期膨胀。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_expenditure_gdp",
+        "name": "支出法 GDP",
+        "law": "GDP = C + I + G + X - M；NDP 通常为 GDP - 折旧；净出口为 X-M。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_auto_stabilizer_tax",
+        "name": "自动稳定器与税收",
+        "law": "在没有主动财政政策变化时，国民收入提高会通过所得税等自动稳定器增加政府税收。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_structural_unemployment",
+        "name": "结构性失业",
+        "law": "因产业结构、技术结构或地区结构变化导致劳动者技能/岗位不匹配而产生的失业属于结构性失业。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_crowding_out_effect",
+        "name": "挤出效应",
+        "law": "政府支出增加可能推高利率，从而挤出对利率敏感的私人投资或私人部门支出。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_steady_state_capital_per_capita",
+        "name": "稳态人均资本",
+        "law": "经济增长模型的稳态下，人均资本水平保持稳定；相应人均消费也可稳定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_repressed_inflation",
+        "name": "抑制性通货膨胀",
+        "law": "经济已有通货膨胀压力但价格因管制未显性上涨时，属于抑制性通货膨胀。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_life_cycle_vs_permanent_income",
+        "name": "生命周期假说与永久收入假说",
+        "law": "生命周期假说强调年龄、财富和一生收入路径对消费的影响；“消费主要由永久收入决定”属于永久收入假说。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_neoclassical_roots",
+        "name": "新古典宏观理论渊源",
+        "law": "新古典宏观经济学的重要理论渊源包括货币主义、理性预期和市场出清思想。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_monetarism_money_supply_target",
+        "name": "货币主义政策指标",
+        "law": "货币主义强调货币供给量是货币政策的核心控制指标。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_new_keynesian_unexpected_expansion",
+        "name": "新凯恩斯短期扩张政策",
+        "law": "新凯恩斯主义模型中，预料外扩张性政策短期可能推动价格水平上升并增加总产出。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_economic_system_definition",
+        "name": "经济体制定义",
+        "law": "资源配置和利用方式通常称为经济体制。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_gdp_growth_net_investment",
+        "name": "GDP持续上升与净投资",
+        "law": "若 GDP 或产出能力持续上升，通常意味着净投资大于零，资本存量在增加。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_multiplier_accelerator_cycle",
+        "name": "乘数-加速数经济周期",
+        "law": "经济周期波动可由乘数作用与加速数作用交织解释。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_long_run_growth_technology",
+        "name": "长期增长源泉",
+        "law": "长期经济增长率提升最根本依靠技术进步和创新。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_balanced_budget_multiplier",
+        "name": "平衡预算乘数",
+        "law": "税收和政府购买等额增加时，平衡预算乘数为 1，均衡产出增加额等于政府购买增加额。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_tax_cut_multiplier",
+        "name": "减税乘数",
+        "law": "定量税减税乘数为 MPC/(1-MPC)，减税 ΔT 会使收入增加 MPC/(1-MPC)×ΔT。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_investment_multiplier",
+        "name": "投资乘数",
+        "law": "简单凯恩斯模型中投资乘数为 1/(1-MPC)，投资增加 ΔI 会使均衡收入增加 ΔI/(1-MPC)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_gdp_deflator_nominal_gdp",
+        "name": "GDP平减指数与名义GDP",
+        "law": "名义 GDP = 实际 GDP × GDP 平减指数；若平减指数以倍数表示则直接相乘。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_real_gdp_base_price",
+        "name": "基期价格实际GDP",
+        "law": "按基期价格计算实际 GDP，可用名义 GDP × 基期价格指数 / 当期价格指数。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_price_index",
+        "name": "价格指数",
+        "law": "以基期为 1 或 100 时，价格指数 = 当期价格 / 基期价格。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_inflation_rate",
+        "name": "通货膨胀率",
+        "law": "通货膨胀率 = (本期价格指数 - 上期价格指数) / 上期价格指数。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_okun_law",
+        "name": "奥肯定律",
+        "law": "奥肯定律常写作实际产出相对潜在产出的缺口与失业率偏离自然失业率成比例；产出损失率=奥肯系数×失业率缺口。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_natural_unemployment_flow_model",
+        "name": "自然失业率流量模型",
+        "law": "劳动市场流量模型中，自然失业率 u = s/(s+f)，s 为离职率，f 为失业者就业率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_accelerator_net_investment",
+        "name": "加速数与净投资",
+        "law": "加速数/资本产出比为 v 时，收入增加 ΔY 对应净投资增加 v×ΔY。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      }
+    ],
+    "中央银行": [
+      {
+        "id": "central_bank_bank_of_issue",
+        "name": "中央银行发行的银行职能",
+        "law": "中央银行“发行的银行”职能集中体现为垄断或集中发行货币。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_open_market_sale_bonds",
+        "name": "公开市场卖出债券",
+        "law": "中央银行在公开市场卖出政府债券，会回笼基础货币、减少银行准备金并紧缩货币供给。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_transparency_principle",
+        "name": "央行公开性原则",
+        "law": "中央银行公开性原则的目的在于信息披露、接受公共监督并增强货币政策告示效应，不以提高权威性为直接目的。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_deposit_business_features",
+        "name": "中央银行存款业务特点",
+        "law": "中央银行存款业务具有强制性、特殊性等特点，不属于一般商业存款的自愿性业务。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_reserve_requirement_subjects",
+        "name": "存款准备金缴存主体",
+        "law": "需向中央银行缴存存款准备金的通常是吸收存款的存款类金融机构；证券公司等非存款类机构一般不属缴存主体。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_reserve_ratio_tool",
+        "name": "存款准备率工具",
+        "law": "存款准备率通过影响商业银行可贷资金和放款能力发挥货币政策作用。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_clearing_methods",
+        "name": "央行清算方式",
+        "law": "中央银行常用清算方式包括全额实时结算、小额定时结算和净额批量结算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_open_market_operation_target",
+        "name": "公开市场操作目标",
+        "law": "中央银行公开市场买卖证券的操作目标通常是调节基础货币和银行体系流动性。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_accounting_report_requirements",
+        "name": "央行会计报表编制要求",
+        "law": "中央银行会计报表编制要求数字真实正确、内容完整、编报及时。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_monetary_statistics_parallel",
+        "name": "中国货币统计并行方式",
+        "law": "我国货币统计既单独编制货币供应量和基础货币统计表，也按 IMF 货币与金融统计框架编制货币概览和银行概览。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_monetary_survey_generation",
+        "name": "货币概览生成",
+        "law": "合并货币当局资产负债表和存款货币机构资产负债表，可生成货币概览。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_monetary_accounts_hierarchy",
+        "name": "货币账户层次",
+        "law": "货币账户层次关系通常为金融概览大于货币概览，货币概览大于货币当局资产负债表。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_monetary_policy_primary_goal",
+        "name": "货币政策首要目标",
+        "law": "货币政策的首要目标通常是币值稳定或物价稳定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_intermediate_targets",
+        "name": "货币政策中介指标",
+        "law": "货币政策中介指标可包括货币供给量、利率、贷款量等；准备金更偏操作工具或基础变量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_interest_rate_target_features",
+        "name": "利率中介指标特点",
+        "law": "利率作为货币政策中介指标数据易得、影响面广、与政策目标相关，但容易受非政策因素影响。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_broad_money_boundary",
+        "name": "广义货币供给构成边界",
+        "law": "广义货币供给包括现金和各类存款，但不包括银行准备金。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_excess_reserve_money_multiplier",
+        "name": "超额准备金与货币乘数",
+        "law": "超额准备金 = 实际准备金 - 存款×法定准备金率；货币乘数可按货币供给量与基础货币之比计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_central_bank_service_function",
+        "name": "央行服务职能",
+        "law": "中央银行经理国库、临时财政垫支、充当最后贷款人等体现其服务职能。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_central_bank_business_counterparties",
+        "name": "央行业务对象",
+        "law": "中央银行业务对象主要是一国政府与金融机构，不直接面向普通工商企业和个人。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      }
+    ],
+    "国际金融": [
+      {
+        "id": "macro_fx_demand_holder",
+        "name": "外汇需求者",
+        "law": "需要用本币购买某种外币以完成支付或捐赠的人，是该外币的需求者。外国人向美国捐款需要美元，因此是美元需求者。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_short_term_capital_flow_interest",
+        "name": "短期国际资本流动",
+        "law": "短期国际资本流动主要受各国利率水平差异影响。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "macro_indirect_quote_reciprocal",
+        "name": "间接标价倒数换算",
+        "law": "若间接标价下 1 单位本币 = a 单位外币，则 1 单位外币 = 1/a 单位本币。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "macroeconomics_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_bank_bond_purchase_monetary_effect",
+        "name": "银行购买公债货币效应",
+        "law": "银行购买公共债券的货币效应取决于购买对象、资金来源和央行操作等条件，不能一概判断为扩张或紧缩。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_external_debt_structure",
+        "name": "外债结构",
+        "law": "外债结构通常包括来源/持有者结构、期限结构、币种结构等，不包括企业意义上的资本结构。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_terms_of_trade_types",
+        "name": "贸易条件类型",
+        "law": "常见贸易条件包括价格贸易条件、收入贸易条件和要素贸易条件。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_preferential_trade_arrangements",
+        "name": "特惠贸易安排类型",
+        "law": "特惠贸易安排常见类型包括自由贸易区、关税同盟和共同市场。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_external_debt_liability_ratio",
+        "name": "外债负债率",
+        "law": "国际通用外债负债率指标通常为当年债务余额占 GNP 的百分比。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_fx_reserve_risk",
+        "name": "外汇储备风险构成",
+        "law": "外汇储备中的外汇资产受汇率和市场价格影响，风险性相对较大。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_iip_definition",
+        "name": "国际投资头寸表",
+        "law": "国际投资头寸表反映特定时点一国或地区对外金融资产和负债存量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_gdp_gnp_factor_income",
+        "name": "GDP与GNP要素净收入",
+        "law": "GNP = GDP + 来自国外的要素净收入。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_government_finance_balance_analysis",
+        "name": "政府财政状况差额分析",
+        "law": "政府部门财政状况分析可使用总差额和经常性收支差额等方法。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_forward_hedged_revenue",
+        "name": "远期锁汇收入",
+        "law": "使用远期合约套期保值时，锁定本币收入 = 外币金额 × 远期汇率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_china_fx_policy_dynamic",
+        "name": "中国外汇管理政策动态变化",
+        "law": "中国外汇管理政策与人民币自由兑换进程是逐步调整和开放的过程，并非始终保持不变。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_exchange_rate_short_capital_flow",
+        "name": "汇率变动影响短期资本流动",
+        "law": "汇率变动会显著影响短期资本流动：本币大幅贬值易引起资本外逃或短期资本流出，本币升值易吸引短期资本流入。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_bop_deficit_currency_weakness",
+        "name": "国际收支逆差与货币疲软",
+        "law": "一国国际收支出现巨额逆差通常会削弱本币，使货币趋于疲软。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_bop_surplus_currency_strength",
+        "name": "国际收支顺差与货币坚挺",
+        "law": "一国国际收支出现巨额顺差通常会支撑本币，使货币趋于坚挺。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_direct_quote_bop_model_direction",
+        "name": "直接标价法国际收支模型方向",
+        "law": "直接标价法下，国际收支模型通常推断汇率与本国物价同方向变动、与本国收入同方向变动、与本国利率反方向变动。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_reserve_currency_conditions",
+        "name": "储备货币条件",
+        "law": "充当国际储备资产的货币通常需要可自由兑换、在国际货币体系中占重要地位且购买力稳定，不要求货币面值或价值较高。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_international_reserve_characteristics",
+        "name": "国际储备特性",
+        "law": "国际储备强调可得性、流动性和普遍接受性，盈利性不是其必要特性。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_jamaica_system_differences",
+        "name": "牙买加体系区别",
+        "law": "牙买加体系相对布雷顿森林体系的重要变化包括黄金非货币化、储备货币多样化和汇率制度多样化，不包括国际收支调节单一化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_double_leasing_definition",
+        "name": "双重租赁定义",
+        "law": "双重租赁是指不同国家对租赁资产税收所有人的认定标准不同，从而产生跨国减税安排。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "mf_world_bank_group_boundary",
+        "name": "世界银行集团机构边界",
+        "law": "世界银行集团包括国际复兴开发银行、国际开发协会、国际金融公司等；国际货币基金组织不属于世界银行集团。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      }
+    ],
+    "财政学": [
+      {
+        "id": "public_finance_supply_side_tax",
+        "name": "供给学派税收观点",
+        "law": "供给学派认为高边际税率会阻碍物质资本和人力资本投资、减少资本积累；较低边际税率有利于鼓励投资和增加资本存量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_laffer_curve",
+        "name": "拉弗曲线含义",
+        "law": "拉弗曲线说明税率、税收收入与经济增长之间存在相互制约关系；高税率不一定带来高税收收入，理论上可能存在兼顾收入与增长的最优税率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_import_tax_types",
+        "name": "进口环节税种",
+        "law": "进口货物或物品通常征收关税、进口环节增值税，特定消费品征收消费税；营业税不属于进口货物征收税种。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_resource_taxable_resources",
+        "name": "资源税应税资源",
+        "law": "资源税的应税资源主要包括矿产资源等自然资源，不包括人力资源、风力/水力这类直接能力表述。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_central_local_functions",
+        "name": "中央与地方职能分配",
+        "law": "中央政府适合承担宏观稳定、收入再分配、跨区域公共事务等职能；消防等地方性公共服务通常由地方政府承担。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_power_responsibility_match",
+        "name": "财权财力与事权匹配",
+        "law": "中央与地方财权、财力划分应以政府间事权和支出责任划分为依据。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_local_government_dual_role",
+        "name": "地方政府财政政策双重角色",
+        "law": "地方政府既执行国家宏观财政政策，又可制定地方性财政政策。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_automatic_stabilizing_policy",
+        "name": "自动稳定财政政策",
+        "law": "自动稳定财政政策能随经济波动自动发生稳定作用，不需要临时相机抉择。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_contractionary_policy_tools",
+        "name": "紧缩性财政政策手段",
+        "law": "紧缩性财政政策通常通过增收节支实现。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_fiscal_imbalance_causes",
+        "name": "财政不平衡原因",
+        "law": "财政不平衡可能来自国有企业经营状况、意外事件、外部冲击等多种因素。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_fiscal_policy_goals",
+        "name": "财政政策目标",
+        "law": "财政政策通常追求充分就业、物价稳定、经济增长与公平分配。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_public_expenditure_micro_adjustment",
+        "name": "公共支出微观调节",
+        "law": "公共支出的微观化调节调整支出项目和项目金额结构，不以改变财政支出总量为目标。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_expansionary_policy_boundary",
+        "name": "扩张性财政政策适用条件",
+        "law": "扩张性财政政策适用于需求不足时刺激需求；若社会总需求已超过总供给，继续扩张不能恢复供需平衡。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_debt_scale_factors",
+        "name": "国债规模影响因素",
+        "law": "国债规模受财政政策选择、财政体制、居民/社会承债能力等影响；“收入集成”不是常规影响因素。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_debt_repayment_ratio",
+        "name": "国债偿还率",
+        "law": "国债偿还率通常指当年还本付息额占当年财政收入的比重。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_debt_dependency_ratio",
+        "name": "国债依存度",
+        "law": "国债依存度通常指当年国债发行额占当年财政支出的比例。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_bond_continuous_distribution",
+        "name": "国债连续经销方式",
+        "law": "政府通过国债经纪人在二级市场连续销售新发债券的方式称为连续经销方式。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_bond_simple_compound_coupon",
+        "name": "国债单利复利票面利率",
+        "law": "在实际收益率相等时，单利计息国债的票面利率一般不低于复利计息国债的票面利率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      }
+    ],
+    "公共财政": [
+      {
+        "id": "public_finance_local_public_goods_spillover",
+        "name": "地方公共产品外溢性",
+        "law": "地方公共产品的成本和收益外溢会影响地方政府供给效率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_income_distribution_fairness",
+        "name": "收入分配公平两层含义",
+        "law": "收入分配公平通常包括社会公平与经济公平两个层面。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_stabilization_tools_boundary",
+        "name": "财政稳定经济工具边界",
+        "law": "财政稳定经济的主要工具包括预算收支政策、内在稳定器和相机抉择政策，不包括发行货币。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_public_finance_functions",
+        "name": "公共财政职能",
+        "law": "社会主义市场经济下公共财政职能包括优化资源配置、维护市场统一、促进社会公平、实现国家长治久安。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_public_goods_categories",
+        "name": "公共产品类型",
+        "law": "公共产品类型通常包括纯公共产品、准公共产品和混合产品；“公益产品”不是标准分类。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_public_needs_features",
+        "name": "公共需求特征",
+        "law": "公共需求是社会公众共同需要，并非个体需求的简单数学加总；其满足一般依靠政府和公共机制，但不意味着成员享用完全无需任何代价。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "public_finance_market_pricing_fields",
+        "name": "市场定价适用领域",
+        "law": "竞争性行业应主要采用市场定价；自然垄断和公共事业领域价格常受政府规制。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "public_finance_abstract_patch_20260517"
+      }
+    ],
+    "货币金融": [
+      {
+        "id": "central_bank_gross_settlement",
+        "name": "全额结算定义",
+        "law": "支付系统对每笔转账业务逐笔一一对应结算，属于全额结算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_payment_credit_risk",
+        "name": "支付信用风险",
+        "law": "支付过程中一方拒绝或无力清偿债务导致另一方损失的可能性称为信用风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "central_bank_flow_of_funds_balance",
+        "name": "资金流量账户平衡",
+        "law": "资金流量账户按交易内容和部门记录资金流动，行列加总应满足会计平衡关系。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "central_banking_abstract_patch_20260517"
+      },
+      {
+        "id": "mf_bop_gap_balance",
+        "name": "国际收支缺口定义",
+        "law": "国际收支缺口通常指国际收支差额，即国际收支账户在一定时期内收入与支出的差额。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_debt_service_ratio_threshold",
+        "name": "外债偿债率警戒线",
+        "law": "偿债率指当年偿还外债本息额占当年商品与劳务出口收入的比例，国际上通常认为应保持在20%以下。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_long_run_money_neutrality",
+        "name": "货币长期中性",
+        "law": "在长期经济增长视角下，货币通常被认为是中性的，长期产出主要由实际因素决定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_keynes_classical_difference",
+        "name": "凯恩斯与古典货币理论差异",
+        "law": "凯恩斯理论相对古典理论的差异主要体现在名义工资刚性、市场不能自动出清和非自愿失业；货币增发导致物价上涨不是其特有差异。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_china_intermediate_target_after_1998",
+        "name": "1998年后我国货币政策中介目标",
+        "law": "1998年取消贷款规模管理后，我国货币政策中介目标主要转向货币供应量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_credit_expansion_money_supply",
+        "name": "信用扩张与货币供给",
+        "law": "现代信用活动与货币运动紧密相连，信用扩张通常意味着货币供给增加。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "mf_financial_deepening_definition",
+        "name": "金融深化",
+        "law": "爱德华·肖、罗纳德·麦金农关于发展中国家金融发展与经济发展的改革思想通常称为金融深化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      }
+    ],
+    "金融学": [
+      {
+        "id": "finance_direct_vs_indirect_credit",
+        "name": "直接信用与间接信用",
+        "law": "直接信用是资金供求双方直接融资；商业银行贷款通过金融中介完成，属于间接信用。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_fisher_equation_approx",
+        "name": "费雪方程近似",
+        "law": "名义利率约等于实际利率加预期通货膨胀率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_li_interest_unit_conversion",
+        "name": "厘的利率单位换算",
+        "law": "按我国习惯，年息1厘约为1%，月息1厘约为0.1%，拆息/日息1厘约为0.01%。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_deposit_rate_classification",
+        "name": "挂牌存款利率性质",
+        "law": "挂牌公告的定期储蓄存款利率通常属于固定利率、名义利率和官定利率，不属于浮动利率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_bank_credit_instrument_creation",
+        "name": "银行创造信用流通工具职能",
+        "law": "银行开出银行汇票、银行本票等信用工具，体现创造信用流通工具职能。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_international_financial_institutions",
+        "name": "国际金融机构边界",
+        "law": "IMF、IBRD、BIS 属于国际性金融机构；WTO 属于国际贸易组织，不是金融机构。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_rural_banking_reform_scope",
+        "name": "农村银行改革机构边界",
+        "law": "农村银行改革后的机构包括农村商业银行、农村合作银行、村镇银行等，不包括“中国农村发展银行”这一非标准机构。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_financial_intermediary_functions",
+        "name": "金融中介主要职能",
+        "law": "金融中介机构主要职能包括信用中介、支付中介和信用创造；转移价格风险更偏金融衍生工具功能。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_commercial_bank_basic_function",
+        "name": "商业银行基本职能",
+        "law": "商业银行最基本的职能是信用中介。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_financial_innovation_regulatory_avoidance",
+        "name": "自动转账制度创新动因",
+        "law": "自动转账制度等金融创新常被视为规避行政管制推动的创新。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_commercial_bank_nature",
+        "name": "商业银行性质",
+        "law": "商业银行是以盈利为目的、经营货币信用业务并承担资金融通职能的特殊企业。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_separated_banking_system",
+        "name": "分离银行制特点",
+        "law": "分离银行制下商业银行主要经营吸收存款和发放短期工商贷款业务，不综合经营证券、保险、信托等业务。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      }
+    ],
+    "金融衍生工具": [
+      {
+        "id": "finance_futures_vs_option_features",
+        "name": "期货与期权特征区别",
+        "law": "期货合约本身通常不包含期权式选择权；可赎回债券、认股权证等含有类似期权特征。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_futures_core_purpose",
+        "name": "期货交易核心目的",
+        "law": "期货交易的重要经济功能是套期保值、转移或减少价格风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_derivatives_functions",
+        "name": "金融衍生工具功能",
+        "law": "金融衍生工具基本功能包括避险保值、价格发现和改善资产管理，不包括保持资信度不变。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_stock_index_futures_cash_settlement",
+        "name": "股指期货交割方式",
+        "law": "股指期货通常根据股票指数进行现金交割。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_fx_put_option",
+        "name": "外汇看跌期权",
+        "law": "外汇看跌期权赋予买方按约定价格卖出外汇的权利，而不是买入外汇的权利。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_convertible_bond_call_feature",
+        "name": "可转换债券赎回条款",
+        "law": "可转换债券通常可附提前赎回条款，“不能被发行公司提前赎回”表述过绝对。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "finance_american_option_exercise",
+        "name": "美式期权执行时间",
+        "law": "美式期权可以在到期日或到期日之前的任一允许时间执行。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "finance_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_convertible_bond_composite",
+        "name": "可转换债券复合属性",
+        "law": "可转换债券可视为普通债券与转换期权的复合。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_derivative_contract_types",
+        "name": "衍生合约类型边界",
+        "law": "远期、期货、期权属于典型衍生合约类型；久期是利率敏感性指标，不是合约类型。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_derivative_market_features",
+        "name": "衍生品市场特点",
+        "law": "衍生金融工具市场具有跨期交易、杠杆效应、套期保值与投机套利共存等特点，并非低风险确定性市场。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_forward_contract_definition",
+        "name": "金融远期合约定义",
+        "law": "约定未来特定日期按既定价格买卖某项资产的合约是金融远期合约。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_fx_futures_margin",
+        "name": "外汇期货保证金制度",
+        "law": "外汇期货交易通常采取保证金制度。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_option_time_value",
+        "name": "期权时间价值",
+        "law": "期权时间价值 = 期权实际价格 - 期权内在价值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_bear_put_spread_payoff",
+        "name": "熊市看跌价差 payoff",
+        "law": "熊市看跌价差可由买入高执行价看跌期权、卖出低执行价看跌期权构成，到期 payoff 为 max(K_high-S,0)-max(K_low-S,0)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_initial_margin",
+        "name": "初始保证金",
+        "law": "期货交易中新开仓交易必须缴纳的保证金称为初始保证金。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_american_option_definition",
+        "name": "美式期权定义",
+        "law": "到期日前可以行使的期权是美式期权。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_interest_rate_futures_long_hedge",
+        "name": "利率期货买入套保",
+        "law": "未来将买入固定收益债券且担心利率下降导致债券价格上升时，可买入利率期货套期保值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_derivatives_participant_roles",
+        "name": "衍生品市场参与者功能分类",
+        "law": "衍生品市场参与者按功能通常包括套期保值者、套利者和投机者；“机构”不是功能分类。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_open_interest_change",
+        "name": "期货未平仓合约数变化",
+        "law": "期货交易后未平仓合约数可能增加、减少或不变，取决于交易双方开仓/平仓状态。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "ifx_put_option_rights_obligations",
+        "name": "外汇看跌期权权利义务",
+        "law": "外汇看跌期权买方享有按约定价格卖出外汇的权利，卖方承担相应买入外汇的义务，买方支付的期权费通常不可收回。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "international_finance_abstract_patch_20260517"
+      }
+    ],
+    "金融工程": [
+      {
+        "id": "fineng_call_option_intrinsic_value",
+        "name": "认购期权内在价值",
+        "law": "认购/看涨期权内在价值 = max(标的价格 S - 行权价格 K, 0)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_financial_engineering_definition",
+        "name": "金融工程定义",
+        "law": "金融工程是以科学化、程序化方法对金融问题进行设计、开发和运用，并进行金融工具创新的活动。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_put_call_parity_dividend_yield",
+        "name": "含股息看涨看跌平价",
+        "law": "含连续股息收益率的看涨看跌平价可用于由 C、P、S、K、r、T 反推隐含股息收益率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_gbm_expected_price",
+        "name": "几何布朗运动期望价格",
+        "law": "若股票价格服从几何布朗运动，短期预期价格可近似按 S·exp(μ·Δt) 计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      },
+      {
+        "id": "fineng_no_arbitrage_pricing_basis",
+        "name": "无套利定价基础",
+        "law": "现代金融衍生品定价理论通常以无套利为基础，即假设不存在无风险套利机会。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_engineering_abstract_patch_20260517"
+      }
+    ],
+    "商业银行": [
+      {
+        "id": "cbf_irrevocable_standby_lc_beneficiary",
+        "name": "不可撤销备用信用证受益人保护",
+        "law": "不可撤销备用信用证不能由开证银行单方撤销，相比可撤销备用信用证明显更有利于受益人。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_early_withdrawal_demand_rate",
+        "name": "定期储蓄提前支取计息",
+        "law": "定期储蓄存款提前支取时，支取部分按支取日挂牌公告的活期存款利率计付利息。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_special_mention_loan",
+        "name": "关注类贷款定义",
+        "law": "贷款五级分类中，借款人目前有能力偿还本息但存在可能不利影响因素的贷款是关注类贷款。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_business_outsourcing_boundary",
+        "name": "银行业务外包意义边界",
+        "law": "银行业务外包可获得技术比较优势、节约成本、集中管理资源，但不等于直接提高盈利能力。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_real_bills_doctrine",
+        "name": "真实票据理论",
+        "law": "真实票据理论主张商业银行资金用于短期、自偿性商业贷款。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_international_business_objectives",
+        "name": "银行国际业务经营目标",
+        "law": "银行国际业务经营目标包括安全性、流动性、盈利性，不包括固定性。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_cash_asset_management_principles",
+        "name": "商业银行现金资产管理原则",
+        "law": "商业银行现金资产管理原则包括总量适度、适时调节和安全保障，不包括盈利性原则。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_interbank_lending_purpose",
+        "name": "同业拆借主要目的",
+        "law": "银行同业拆借主要用于调剂准备金头寸和短期流动性。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_loan_policy_contents",
+        "name": "贷款政策内容边界",
+        "law": "贷款政策包括业务发展战略、贷款工作规程和权限划分、贷款规模与比率控制；借款担保是具体贷款条件。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_loan_pricing_principles",
+        "name": "贷款定价原则边界",
+        "law": "商业银行贷款定价原则可包括利润最大化、扩大市场份额、维护银行形象等，不包括减少贷款量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_credit_intermediation_boundary",
+        "name": "信用中介作用边界",
+        "law": "商业银行信用中介功能可使闲散货币转化为资本、闲置资本得到利用并续短为长；节约流通费用更偏支付中介。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_bill_discount_cash_proceeds",
+        "name": "商业票据贴现现金额",
+        "law": "商业票据贴现金额 = 票据面额 × (1 - 年贴现率 × 未到期月数/12)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "bp_capital_adequacy_risk_coverage",
+        "name": "资本充足率覆盖风险",
+        "law": "商业银行资本是否充分覆盖风险，取决于持有资本数量（资本充足率分子）和面临的实际风险水平（资本充足率分母）。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_interest_rate_sensitivity_test",
+        "name": "利率敏感性测试",
+        "law": "考察利率上升或下降一定基点对交易账户市值影响，属于敏感性测试。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_related_party_credit_ratio",
+        "name": "关联授信比例",
+        "law": "关联授信比例=全部关联方授信总额/资本净额；商业银行对所有关联方授信余额限制通常为资本净额的50%。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_branch_full_service_channel",
+        "name": "全方位网点营销渠道",
+        "law": "能为个人和公司提供各种产品和全面服务的营销渠道，属于全方位网点机构营销渠道。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_collateral_surplus_mortgage",
+        "name": "余额抵押条件",
+        "law": "抵押物价值大于其所担保债权余额部分时，可就同一财产向多个债权人抵押。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_loan_five_classification",
+        "name": "贷款五级分类",
+        "law": "借款人资不抵债通常属于可疑类贷款特征；贷款逾期90天以上至少应划为次级类。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_quick_ratio_judgement",
+        "name": "速动比率判断",
+        "law": "速动比率通常以1左右较合适，应收账款较多并不意味着速动比率应小于1。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_non_financing_guarantee_boundary",
+        "name": "非融资性担保边界",
+        "law": "非融资性担保包括投标保证、履约保证、质量保证等；借款保证属于融资相关保证，不属于非融资性保证业务。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_compliance_management_mechanisms",
+        "name": "合规管理机制",
+        "law": "合规管理基本机制包括合规绩效考核与问责、诚信举报、合规培训与教育等。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      }
+    ],
+    "金融市场": [
+      {
+        "id": "cbf_spot_futures_by_delivery_time",
+        "name": "现货期货市场划分",
+        "law": "现货市场与期货市场按交割时间划分。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_financial_internationalization_negative_effects",
+        "name": "金融业国际化消极影响边界",
+        "law": "金融业国际化可能加剧国内竞争、扩大金融风险、增加监管难度；推动金融市场稳定不是消极作用。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "mf_direct_securities_issuance",
+        "name": "证券直接发行",
+        "law": "证券发行者自行组织销售证券的发行模式属于直接发行；通过承销商或中介销售则属于间接发行、代理发行或承销发行等模式。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "monetary_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_asset_allocation_strategies",
+        "name": "资产配置主要策略",
+        "law": "资产配置的主要策略包括战略资产配置、动态资产配置、策略资产配置和混合资产配置。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_capm_model_identity",
+        "name": "资本资产定价模型CAPM",
+        "law": "Sharpe等提出的资本资产定价模型通常简称CAPM，是现代资产定价中最有影响力的模型之一。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_semi_strong_market_efficiency",
+        "name": "半强式有效市场",
+        "law": "半强式有效市场反映所有公开信息，技术分析和基本面分析通常无效，但内部信息仍可能有效。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_basis_weakening_hedge",
+        "name": "基差走弱与套保收益",
+        "law": "基差走弱时，多头套期保值组合收益通常增大，空头套期保值组合收益通常减少。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_securitization_product_types",
+        "name": "资产证券化产品类型",
+        "law": "ABS、CDO、CMBS、MBS都属于常见资产证券化产品；房地产或商业抵押贷款市场常见证券化产品是CMBS。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      }
+    ],
+    "财务管理": [
+      {
+        "id": "cbf_finance_vs_operating_lease",
+        "name": "融资租赁与经营租赁区别",
+        "law": "融资租赁与经营租赁主要区别在风险报酬是否转移、租赁期限和承租人权利，订金是否完全支付不是主要区别。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      },
+      {
+        "id": "cbf_dupont_core_roe",
+        "name": "杜邦分析核心指标",
+        "law": "杜邦财务分析体系的核心指标是净资产收益率 ROE。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "commercial_bank_finance_abstract_patch_20260517"
+      }
+    ],
+    "金融计算": [
+      {
+        "id": "fm_two_stage_dividend_valuation",
+        "name": "两阶段股利增长估值",
+        "law": "先给定下一期股利、再从第二期开始稳定增长的股票，可按P0=D1/(1+r)+[D2/(r-g)]/(1+r)估值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_effective_annual_rate_compounding",
+        "name": "名义利率与实际年利率",
+        "law": "一年内多次复利时，实际年利率=(1+名义年利率/复利次数)^复利次数-1。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_retention_growth_dividend_model",
+        "name": "留存收益增长股利模型",
+        "law": "留存比率=1-股利/EPS，增长率g=ROE×留存比率，股票价值可用D1/(股权资本成本-g)估算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_futures_carry_arbitrage",
+        "name": "期货持有成本套利",
+        "law": "若期货价格高于持有成本理论价，可做空期货、买入现货并融资；若期货价格低于理论价，则反向操作。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_reinvestment_pe_ratio",
+        "name": "再投资与市盈率",
+        "law": "在资本化率相同条件下，留存再投资收益率高于资本化率会提高估值；市盈率取决于再投资比例、项目回报率与资本成本的组合。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_modified_duration_price_change",
+        "name": "债券修正久期价格近似",
+        "law": "债券价格变动近似为ΔP≈-修正久期×Δy×P；收益率上升价格下降，收益率下降价格上升。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_dcf_recommendation_rule",
+        "name": "DCF估值投资建议",
+        "law": "若DCF估值低于市场价格，股票可能被高估，倾向卖出；若估值高于市场价格，股票可能被低估，倾向买入。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_capm_required_return",
+        "name": "CAPM必要收益率",
+        "law": "CAPM下必要收益率r=rf+β(rM-rf)；当β=1且α=0时，组合预期收益率等于市场预期收益率rM。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_constant_growth_required_return",
+        "name": "固定增长股利必要收益率",
+        "law": "固定增长股利模型中，必要收益率r=D1/P0+g。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "fm_fisher_real_rate_exact",
+        "name": "费雪实际利率精确式",
+        "law": "实际利率可按(1+名义利率)/(1+通胀率)-1计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "financial_markets_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_simple_interest_present_value",
+        "name": "单利现值",
+        "law": "单利条件下现值PV=FV/(1+r×n)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_effective_annual_rate",
+        "name": "有效年利率",
+        "law": "一年内多次复利时，有效年利率=(1+名义年利率/复利次数)^复利次数-1。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_capm_equity_required_return",
+        "name": "CAPM股权必要收益率",
+        "law": "CAPM下股权必要收益率r=rf+β(rM-rf)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_fisher_inflation_reverse",
+        "name": "费雪通胀反推",
+        "law": "名义收益率、实际收益率与通胀率满足1+名义收益率≈(1+实际收益率)(1+通胀率)，可反推出通胀率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_old_equipment_initial_cash_flow",
+        "name": "旧设备继续使用初始现金流",
+        "law": "继续使用旧设备的初始现金流出量通常包括丧失的变现净额及增量营运资本；变现净额需考虑变现价与账面价值差额的所得税影响。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_project_npv_ocf",
+        "name": "项目NPV经营现金流",
+        "law": "项目经营现金流可按(收入-变动成本-固定成本-折旧)(1-T)+折旧计算，NPV=初始投资负值+各期现金流折现值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_put_call_parity",
+        "name": "看跌看涨期权平价",
+        "law": "欧式期权平价关系可写为C=P+S-Ke^{-rt}，用于由同执行价看跌期权推算看涨期权价格。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_perpetual_bond_pricing",
+        "name": "永久债券定价",
+        "law": "永久债券理论价格=每期利息/市场利率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_portfolio_return_weighted_average",
+        "name": "组合收益率加权平均",
+        "law": "投资组合年收益率按各资产初始价值加权平均计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_normal_95_interval",
+        "name": "正态分布95%区间",
+        "law": "近似正态分布下，95%区间通常约为均值±2个标准差。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_annuity_loan_rate_reverse",
+        "name": "年金贷款利率反推",
+        "law": "等额年金还款贷款利率可由贷款现值等于各期还款现值之和反推。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_monthly_payment_present_value",
+        "name": "月供贷款现值",
+        "law": "月度还款可负担本金按月供年金现值计算：贷款额=月供×年金现值系数。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_collateral_loan_limit",
+        "name": "抵押贷款额度",
+        "law": "抵押贷款额通常按评估价值与抵押贷款率计算，审慎时以评估值而非市场价为基础。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_sales_cost_ratio_cash_impact",
+        "name": "销售成本比率现金影响",
+        "law": "销售成本比率变化对现金的影响可按收入规模与成本率差异计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      }
+    ],
+    "公司金融": [
+      {
+        "id": "cf_tender_offer_definition",
+        "name": "要约收购",
+        "law": "要约收购是指收购人向目标公司的股东发出购买其所持股份的意思表示，并按要约条件收购目标公司股份。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_modern_enterprise_system",
+        "name": "现代企业制度基础",
+        "law": "现代企业制度通常以公司制企业为主要基础，企业制度演进一般为业主型企业、合伙制企业、公司制企业。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_modern_corporation_features",
+        "name": "现代公司特征",
+        "law": "现代公司的重要特征包括股权分布广泛，以及所有权与控制权相分离。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "cf_mm_capital_structure_tax_shield",
+        "name": "MM资本结构理论",
+        "law": "含税且忽略破产成本、代理成本等摩擦时，MM理论认为债务税盾使企业价值随负债率提高而提高，极端情形下100%负债时企业价值最大。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_finance_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_owner_equity_formula",
+        "name": "所有者权益计算",
+        "law": "所有者权益=实收资本+资本公积+盈余公积+未分配利润；资产=负债+所有者权益。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_sales_cash_receipts_formula",
+        "name": "销售商品收现计算",
+        "law": "销售商品提供劳务收到的现金可由营业收入、应收账款变动、预收账款变动、退货支付等调整计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_asset_liability_ratio",
+        "name": "资产负债率",
+        "law": "资产负债率=负债总额/资产总额。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      }
+    ],
+    "银行理财与信贷": [
+      {
+        "id": "bp_qualified_investor_private_wealth",
+        "name": "私募理财合格投资者",
+        "law": "私募理财合格投资者通常需具备风险识别承受能力和2年以上投资经历；法人或组织净资产门槛一般为最近1年末不低于1000万元而非2000万元。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_collateral_management_flow",
+        "name": "押品管理流程",
+        "law": "押品管理通常按材料受理、审查、押品价值评估、抵质押权设立与变更、日常管理、返还与处置等流程推进。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_personal_credit_report_query",
+        "name": "个人征信查询申请",
+        "law": "委托他人提交个人征信查询申请的，不应限定只能由委托人本人领取；可按约定方式领取或接收。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_housing_fund_loan_exclusion",
+        "name": "公积金贷款禁入情形",
+        "law": "全国范围内已有2笔及以上公积金贷款记录，通常不可以再申请公积金个人住房贷款。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_commercial_property_loan_review",
+        "name": "个人商用房贷款审批",
+        "law": "个人商用房贷款审批重点看资料完整、借款人资信与还款来源、担保与权属等，不以户籍是否在贷款银行所在地为必要审批内容。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_financial_planner_privacy_boundary",
+        "name": "理财规划客户信息收集",
+        "law": "理财规划师收集客户信息应引导客户说明财务问题，但不能无边界询问客户隐私。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_financial_market_fund_intermediation",
+        "name": "金融市场资金融通功能",
+        "law": "金融市场通过多样金融产品和交易方式连接资金供给方与需求方，体现资金融通和集聚功能。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_client_financial_goals",
+        "name": "客户理财目标表述",
+        "law": "客户理财目标通常包括经济目标、人生价值目标和精神追求；“短暂目标”不是准确表述。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_loan_disbursement_operation_order",
+        "name": "贷款发放操作顺序",
+        "law": "贷款发放通常先由借款人提交提款申请及资料，银行受理，再进行发放审查、内部审批签字，最后办理提款手续。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_credit_investigation_5c",
+        "name": "贷款调查5C原则",
+        "law": "银行调查人员初次面谈可按国际信用5C标准原则集中获取客户信息。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_creditor_protection_limitation",
+        "name": "债权保护诉讼时效",
+        "law": "向人民法院申请保护债权的诉讼时效期间通常为3年。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_corporate_credit_management_principles",
+        "name": "公司信贷管理原则",
+        "law": "公司信贷管理强调诚信申贷、贷后管理等；“贷前管理原则”不是常见并列原则表述。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      },
+      {
+        "id": "bp_entrusted_payment_exclusion",
+        "name": "受托支付例外",
+        "law": "流动资金贷款中，新建信贷关系且借款人信用状况良好，不属于原则上必须采用受托支付的情形。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "banking_practitioner_abstract_patch_20260518"
+      }
+    ],
+    "基金投资": [
+      {
+        "id": "fund_dividend_nav_effect",
+        "name": "基金分红对份额净值影响",
+        "law": "基金分红会使基金资产净值减少，除权后基金份额净值通常下降。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_profit_accounting_period",
+        "name": "基金利润归属期间",
+        "law": "基金利润是基金在一定会计期间的经营成果。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_custody_agreement_definition",
+        "name": "托管协议定义",
+        "law": "基金管理人和基金托管人之间就基金托管事项、信息提供和监督等权责形成的协议，属于托管协议。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_custodian_nav_review_frequency",
+        "name": "基金净值复核频率",
+        "law": "基金托管人对基金资产净值、基金份额净值等进行复核，具体频率按法规和基金合同执行，相关题目常见口径为每年至少一次。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_entrusted_distribution",
+        "name": "委托募集",
+        "law": "基金管理人委托合格第三方销售机构募集基金的方式，形成委托募集。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund募集回访方式",
+        "name": "募集回访方式",
+        "law": "基金募集冷静期结束后，除基金销售推介人员外，募集机构可通过录音电话、电邮、信函等方式回访，且不得使用诱导性语言。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      }
+    ],
+    "债券与衍生品": [
+      {
+        "id": "fund_guaranteed_bond_classification",
+        "name": "保证债券分类",
+        "law": "按保证形式差异，保证债券可分为抵押债券、质押债券和担保债券。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_bond_embedded_terms",
+        "name": "债券嵌入条款",
+        "law": "债券期限相同但赎回、回售、嵌入期权等条款不同而导致收益率差异，属于条款差异。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_bond_dirty_clean_price",
+        "name": "债券全价与净价",
+        "law": "债券全价=净价+应计利息；应计利息按票息率、面值和上次付息日至结算日的时间比例计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_discount_bond_price_convergence",
+        "name": "折价债券价格收敛",
+        "law": "若票面利率低于到期收益率，债券折价交易；在收益率不变时，随到期临近价格通常向面值上升收敛。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_convertible_value_premium",
+        "name": "可转债转换价值与转换溢价",
+        "law": "可转债市场转换价值=标的股票价格×转换比例；转换溢价=可转债市场价格-转换价值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_bond_duration_price_sensitivity",
+        "name": "债券久期价格敏感性",
+        "law": "市场收益率变动时，债券价格近似变化额≈-久期×收益率变动×债券价格；久期越长价格敏感性越高。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_coupon_bond_reinvestment_risk",
+        "name": "息票债券再投资风险",
+        "law": "同期限、同到期收益率下，息票债券因中间现金流需再投资，通常比零息债券承担更高再投资风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_bond_default_risk_premium",
+        "name": "债券违约风险溢价",
+        "law": "公司债的违约风险溢价可用同期限公司债收益率减同期限无违约风险国债收益率近似衡量。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_forward_rate_expected_return",
+        "name": "远期利率与预期收益率",
+        "law": "在收益率曲线远期利率结构不变假设下，债券下一期预期收益率按相应持有期或远期利率推算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_bond_present_value_pricing",
+        "name": "债券定价现值公式",
+        "law": "债券价格等于未来各期票息和本金按到期收益率折现后的现值之和。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_protective_put_breakeven",
+        "name": "看跌期权保护性头寸保本价格",
+        "law": "购买股票并买入看跌期权的保护性头寸，保本股票价格通常为执行价减去期权费。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_option_hedge_ratio_meaning",
+        "name": "期权对冲比率含义",
+        "law": "期权对冲比率表示每1份期权对应需要持有或卖空的标的股票份额，用于构建无风险对冲组合。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      }
+    ],
+    "私募股权": [
+      {
+        "id": "fund_private_manager_staff_requirement",
+        "name": "私募基金管理人员要求",
+        "law": "私募基金管理人应具备规定数量的高级管理人员，并应设置合规风控负责人；具体人数按监管规则精确匹配。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_lbo_model_elements",
+        "name": "杠杆收购模型要素",
+        "law": "构建杠杆收购财务模型通常包括收购前模型、融资与交易假设、收购后模型等，交易参与主体通常不是模型主要输入。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_value_added_services",
+        "name": "增值服务价值",
+        "law": "基金增值服务可促进被投资企业发展、降低投资风险、提升企业价值和客户体验，因此相关价值多项并存。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_regional_equity_market_function",
+        "name": "区域性股权市场功能",
+        "law": "区域性股权市场服务多层次资本市场，重点促进中小微企业股权交易和融资。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_equity_repurchase_process",
+        "name": "股权回购流程",
+        "law": "股权回购的基本流程通常包括发起、协商、执行和变更登记。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      },
+      {
+        "id": "fund_pe_annual_report_submission",
+        "name": "股权投资基金年报报送",
+        "law": "股权投资基金管理人应在每个会计年度结束后规定月份内向协会报送经审计年度财报等材料；常见口径为4个月内。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "fund_qualification_abstract_patch_20260518"
+      }
+    ],
+    "投资学": [
+      {
+        "id": "inv_bjs_capm_empirical_slope",
+        "name": "BJS CAPM实证斜率",
+        "law": "Black、Jensen、Scholes 的实证研究发现证券市场线斜率通常小于 CAPM 预测斜率，属实证历史结论，精确使用。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_expected_holding_period_return",
+        "name": "股票预期持有期收益率",
+        "law": "股票预期持有期收益率可按期望期末价值加期望股利、减初始投资后除以初始投资计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_constant_growth_ddm",
+        "name": "固定增长股利贴现模型",
+        "law": "固定增长股利贴现模型中 P0=D1/(r-g)，其中 D1 为下一期股利，r 为必要收益率，g 为稳定增长率。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_single_period_stock_pv",
+        "name": "单期股票现值",
+        "law": "单期股票最高可支付价格=(期末预期售价+期间股利)/(1+要求收益率)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_geometric_average_return",
+        "name": "多期几何平均收益率",
+        "law": "多期几何平均收益率=[∏(1+r_t)]^(1/n)-1。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      },
+      {
+        "id": "inv_henriksson_market_timing_beta",
+        "name": "Henriksson市场时机实证结论",
+        "law": "Henriksson(1984)发现共同基金在市场扩张时期的β值通常略微下降，属实证历史结论，精确使用。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "investments_abstract_patch_20260518"
+      }
+    ],
+    "期货与衍生品": [
+      {
+        "id": "futures_margin_ratio_common",
+        "name": "期货保证金比例常见区间",
+        "law": "期货交易采取保证金制度，保证金通常按合约价值一定比例收取；资格考试常见口径为合约价值的5%至15%。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_cme_1972_fx_futures",
+        "name": "CME外汇期货起源",
+        "law": "芝加哥商业交易所 CME 于1972年5月推出外汇期货交易，这是现代金融期货发展的重要节点。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_fundamental_analysis_supply_demand",
+        "name": "基本面分析的经济学基础",
+        "law": "期货和大宗商品基本面分析主要以供求理论为经济学基础，通过供给、需求、库存、成本、政策等因素判断价格趋势。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_wave_theory_elliott",
+        "name": "波浪理论提出者",
+        "law": "技术分析中的波浪理论由艾略特提出；江恩理论、道氏理论和艾略特波浪理论属于不同技术分析体系。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_var_confidence_meaning",
+        "name": "VaR置信度含义",
+        "law": "VaR 表示在给定置信度和持有期内，正常市场波动下可能遭受的最大损失边界；90%置信度日VaR为300万元，表示有90%的把握一天内损失不超过300万元。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_drawdown_risk_control",
+        "name": "回撤与止损风控",
+        "law": "最大回撤衡量策略风险；交易前应明确止损与入场计划，并要求盈利期望覆盖止损风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_zhengzhou_exchange_products",
+        "name": "郑商所主要品种边界",
+        "law": "郑州商品交易所上市品种以农产品、能源化工等商品期货为主，白糖期货属于郑商所品种；铜期货、国债期货不属于郑商所典型品种。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_option_buyer_right",
+        "name": "期权买方权利",
+        "law": "期权赋予买方按约定条件购买或出售标的资产的权利，卖方承担相应义务。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_forward_advantage_flexibility",
+        "name": "远期合约灵活性优势",
+        "law": "远期合约相较标准化期货的主要优点是可依据交易双方需要灵活订立，但流动性和信用风险管理通常弱于交易所期货。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_cbot_1848_foundation",
+        "name": "CBOT成立节点",
+        "law": "1848年，芝加哥82位商人发起组建芝加哥期货交易所 CBOT。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      }
+    ],
+    "套期保值与价差交易": [
+      {
+        "id": "futures_hedging_lock_cost",
+        "name": "套期保值锁定生产成本",
+        "law": "生产经营者预计原材料价格上涨时，可通过期货或衍生品套期保值锁定采购成本、规避现货价格风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_basis_profit_short_hedge",
+        "name": "基差与卖出套期保值盈亏",
+        "law": "卖出套期保值中，基差变强通常有利；若已知合约吨数与净盈利，可由净盈利/总吨数反推平仓时基差变化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_calendar_spread_narrowing",
+        "name": "跨期价差缩小交易",
+        "law": "同一品种跨期交易中，若买入近月合约同时卖出远月合约，通常是在预期未来价差缩小或近月相对走强。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_spread_order_execution",
+        "name": "价差限价指令成交条件",
+        "law": "价差套利指令以价差为成交约束；买入近月、卖出远月且限定价差时，成交价差需满足指令限定的有利条件。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_fx_hedge_receivable_pound",
+        "name": "英镑应收款套保方向",
+        "law": "未来将收到英镑而担心英镑贬值时，应在期货市场卖出英镑期货合约进行套期保值。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_fx_hedge_payable_usd",
+        "name": "美元应付款套保方向",
+        "law": "未来需要支付美元且担心美元升值时，应买入美元远期或期货合约锁定购汇成本。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      }
+    ],
+    "期权与风险管理": [
+      {
+        "id": "futures_call_option_buyer_profit",
+        "name": "看涨期权买方净收益",
+        "law": "看涨期权买方净收益= max(标的价格-执行价格,0)×合约规模×手数 - 权利金总额。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_interest_rate_floor_payoff",
+        "name": "利率下限期权支付逻辑",
+        "law": "利率下限期权中，当市场参考利率低于协定下限利率时，卖方向买方支付差额；其保护的是利率下行风险。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "futures_fx_swap_definition",
+        "name": "外汇掉期定义",
+        "law": "外汇掉期是交易双方约定在两个不同起息日，以约定汇率进行方向相反的两次货币交换。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "futures_practitioner_abstract_patch_20260519"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@fame-gateway/runtime-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "HTTP and MCP runtime gateway for FAME Knowledge Agent Gateway",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/http-server.mjs",
+    "start": "node src/http-server.mjs",
+    "mcp": "node src/mcp-server.mjs",
+    "smoke": "node tests/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

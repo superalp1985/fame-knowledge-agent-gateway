@@ -1,0 +1,42 @@
+version: v0.1
+score_100:
+  accuracy:
+    weight: 30
+    checks:
+      - facts_preserved
+      - no_false_causality
+      - terminology_consistent
+  structure:
+    weight: 20
+    checks:
+      - clear_beginning_middle_end
+      - paragraph_function_clear
+      - transitions_support_logic
+  voice:
+    weight: 15
+    checks:
+      - matches_audience
+      - matches_medium
+      - controlled_emotion
+  imagery:
+    weight: 15
+    checks:
+      - imagery_serves_concept
+      - metaphors_are_mappable
+      - no_decorative_language_noise
+  memorability:
+    weight: 10
+    checks:
+      - has_core_sentence
+      - rhythm_supports_oral_delivery
+  restraint:
+    weight: 10
+    checks:
+      - no_overwriting
+      - no_empty_grand_words
+hard_fail:
+  - rhetoric_overrides_fact
+  - metaphor_distorts_concept
+  - emotional_claim_without_evidence
+  - style_mismatch_with_formal_context
+  - literary_language_hides_uncertainty

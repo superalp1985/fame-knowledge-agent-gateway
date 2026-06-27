@@ -1,0 +1,48 @@
+{
+  "subject": "语文",
+  "type": "routing_table",
+  "from": "language/sentence_patterns.json",
+  "to": "entries/语文.json → neurons/语文_neurons.json",
+  "trigger_keywords": [
+    "字音字形",
+    "词语辨析",
+    "病句修改",
+    "修辞手法",
+    "120个实词",
+    "18个虚词",
+    "特殊句式",
+    "词类活用",
+    "意象",
+    "表现手法",
+    "文学史",
+    "议论文论证方法",
+    "记叙文六要素",
+    "常用修辞",
+    "表达方式",
+    "记叙顺序",
+    "文言文基础",
+    "名著导读"
+  ],
+  "routes": [
+    {
+      "pattern_id": "pat_explanation_request",
+      "example": "什么是勾股定理",
+      "route_chain": "句法匹配(解释请求) → {subj}入口 → 按关键词匹配神经元 → 返回内容+例句"
+    },
+    {
+      "pattern_id": "pat_ability_query",
+      "example": "二次函数能求最大值吗",
+      "route_chain": "句法匹配(能力询问) → {subj}入口 → 查找对应规律 → 给出可行性判断"
+    }
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  }
+}

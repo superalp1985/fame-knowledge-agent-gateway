@@ -1,0 +1,100 @@
+version: v0.2
+principles:
+- id: hierarchy
+  goal: 控制观看顺序
+  levers:
+  - size
+  - contrast
+  - position
+  - whitespace
+  - grouping
+  fail_if:
+  - no_primary_focus
+  - too_many_dominant_elements
+- id: contrast
+  goal: 建立区分与可读性
+  levers:
+  - value
+  - saturation
+  - weight
+  - scale
+  - density
+  fail_if:
+  - low_text_contrast
+  - everything_high_contrast
+- id: alignment
+  goal: 建立秩序
+  levers:
+  - grid
+  - baseline
+  - edge_alignment
+  - center_axis
+  fail_if:
+  - random_positioning
+  - mixed_alignment_without_reason
+- id: proximity
+  goal: 表达归属关系
+  levers:
+  - group_gap
+  - internal_gap
+  - common_region
+  fail_if:
+  - heading_far_from_body
+  - groups_touch_each_other
+- id: consistency
+  goal: 降低认知成本
+  levers:
+  - font_roles
+  - color_roles
+  - icon_style
+  - chart_semantics
+  fail_if:
+  - same_level_different_style
+  - same_color_different_meaning
+default_style_profiles:
+  finance_governance:
+    mood:
+    - 稳重
+    - 清晰
+    - 克制
+    - 可信
+    avoid:
+    - 荧光色
+    - 重阴影
+    - 卡通过度
+    - 廉价模板感
+  teaching:
+    mood:
+    - 亲和
+    - 明晰
+    - 有节奏
+    avoid:
+    - 字太密
+    - 装饰抢戏
+    - 图例混乱
+  research_brief:
+    mood:
+    - 理性
+    - 证据导向
+    - 专业
+    avoid:
+    - 情绪化配色
+    - 空泛大图
+    - 无来源图表
+auto_fix:
+  no_primary_focus:
+  - increase_main_title_size
+  - reduce_secondary_opacity
+  - add_whitespace_around_focus
+  low_text_contrast:
+  - darken_background
+  - lighten_text
+  - add_text_plate
+  crowded_layout:
+  - split_page
+  - convert_text_to_diagram
+  - remove_decorations
+  font_missing:
+  - apply_cjk_font_stack
+  - rerender
+  - ocr_check_again

@@ -1,0 +1,49 @@
+version: v0.1
+modules:
+  WebResearchAdapter:
+    must:
+      - treat_web_as_temporary_evidence
+      - record_query_provider_results_sources
+      - separate_search_snippet_from_fetched_text
+      - attach_jianmu_constraints
+    must_not:
+      - write_external_content_into_knowledge_base_directly
+      - conclude_from_single_source
+  DocAdapterLite:
+    must:
+      - read_structure_before_summary
+      - preserve_file_path_warnings_chars
+      - attach_jianmu_constraints
+      - expose_truncation_or_extraction_failures
+    must_not:
+      - hide_unsupported_suffix
+      - pretend_pdf_ocr_success_when_not_done
+  LocalMultimodalFileAdapter:
+    must:
+      - classify_file_type_first
+      - hash_file
+      - record_safe_inline_boundary
+      - attach_jianmu_constraints
+    must_not:
+      - silently upload_large_files_without_policy
+  LocalizationWorker:
+    must:
+      - preserve_terms_and_meaning
+      - keep_subtitle_length_control
+      - attach_jianmu_constraints
+    must_not:
+      - change_facts_during_translation
+  OfficeExportWorker:
+    must:
+      - preserve_content_structure
+      - attach_jianmu_constraints
+      - record_export_mode
+    must_not:
+      - rewrite_analysis_without_request
+  EdgeTTSWorker:
+    must:
+      - preserve_script_text
+      - record_voice_rate
+      - attach_jianmu_constraints
+    must_not:
+      - change_script_meaning_for_speech

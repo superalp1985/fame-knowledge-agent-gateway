@@ -1,0 +1,228 @@
+{
+  "subject": "管理学",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "管理学规则层",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "战略管理": [
+      {
+        "id": "strategy_company_mission_change",
+        "name": "公司宗旨变化",
+        "law": "公司业务范围、经营领域和服务对象发生显著扩展，通常体现公司宗旨变化，而非仅经营哲学或战略层次变化。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_product_development",
+        "name": "产品开发战略",
+        "law": "在现有市场上推出新产品或改良产品以满足消费者新需求，属于产品开发战略。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_forward_integration",
+        "name": "前向一体化战略",
+        "law": "企业向产业链下游销售、渠道、终端等环节延伸，属于前向一体化战略。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_innovation_organization",
+        "name": "创新型战略组织",
+        "law": "强调高度灵活、多技术路径、标准化较低、避免单一路线停滞的组织，适合创新型战略组织。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      }
+    ],
+    "组织结构": [
+      {
+        "id": "strategy_internal_relationship_coordination",
+        "name": "组织内部关系协调",
+        "law": "调整组织结构内部管理关系时，重点考虑集权与分权、中层管理人员调整、协同与激励等，不属于外部融资问题。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_m_division_structure_advantage",
+        "name": "多事业部结构优缺点",
+        "law": "多事业部结构有利于业务成长、分部绩效衡量和减轻总部负担；产品或区域职能人员联系更直接通常不是其典型优点。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_regional_division_structure",
+        "name": "区域事业部结构",
+        "law": "当企业跨地区经营、各地区环境和需求差异显著时，适合采用区域事业部制结构。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      }
+    ],
+    "战略控制与风险": [
+      {
+        "id": "strategy_decision_tree_method",
+        "name": "决策树法",
+        "law": "在多种状态及概率下比较投资方案期望收益或净现值并择优，属于决策树法。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_flexible_budget",
+        "name": "弹性预算",
+        "law": "以实际业务量为基础编制并可随业务量变化调整的预算，属于弹性预算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_cultural_management_response",
+        "name": "文化管理应对战略稳定",
+        "law": "当新技术或新方法引发人员行为阻力、但整体战略仍较稳定时，应优先加强文化管理。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_financial_strategy_matrix",
+        "name": "财务战略矩阵",
+        "law": "投资资本回报率高于资本成本表示价值创造；可持续增长率高于销售增长率表示现金剩余。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      },
+      {
+        "id": "strategy_dispersed_equity_governance_risk",
+        "name": "股权结构分散治理风险",
+        "law": "大股东之间缺乏共同利益、相互制衡且股权结构分散，可能造成公司治理不稳定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "corporate_strategy_abstract_patch_20260518"
+      }
+    ]
+  }
+}

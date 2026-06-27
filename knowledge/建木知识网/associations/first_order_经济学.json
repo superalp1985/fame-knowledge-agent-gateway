@@ -1,0 +1,586 @@
+{
+  "subject": "经济学",
+  "type": "first_order_associations",
+  "version": "economics-from-futures-practitioner-2026-05-19",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "note": "一级联想只提供 working memory 材料，不投票、不平均、不继续展开。每个 from 最多 3 个 to。",
+  "associations": [
+    {
+      "from": "蛛网模型发散条件",
+      "to": [
+        "供给曲线",
+        "需求曲线",
+        "价格动态调整"
+      ],
+      "type": "first_order_same_model"
+    },
+    {
+      "from": "无差异曲线基本性质",
+      "to": [
+        "消费者偏好",
+        "边际替代率",
+        "效用函数"
+      ],
+      "type": "first_order_same_model"
+    },
+    {
+      "from": "支出法 GDP",
+      "to": [
+        "净出口",
+        "折旧与NDP",
+        "国民收入核算"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "中央银行发行的银行职能",
+      "to": [
+        "货币发行",
+        "中央银行职能",
+        "货币政策"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "厂商亏损仍生产条件",
+      "to": [
+        "平均可变成本",
+        "短期最优产出",
+        "MC 与 AVC 关系"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "完全竞争总收益曲线",
+      "to": [
+        "完全竞争长期供给曲线",
+        "短期最优产出",
+        "平均收益曲线与市场结构"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "外部性与庇古税",
+      "to": [
+        "市场失灵",
+        "社会边际成本",
+        "公共物品"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "帕累托效率与公平",
+      "to": [
+        "交换效率",
+        "生产效率",
+        "收入公平"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "囚徒困境",
+      "to": [
+        "博弈支付",
+        "纳什均衡",
+        "有限期重复博弈"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "MRS 与互利交换方向",
+      "to": [
+        "效用最大化与相对价格",
+        "无差异曲线基本性质",
+        "消费者偏好"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "挤出效应",
+      "to": [
+        "投资需求与利率关系",
+        "政府支出",
+        "利率"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "公开市场卖出债券",
+      "to": [
+        "中央银行发行的银行职能",
+        "货币政策",
+        "基础货币"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "通货膨胀率",
+      "to": [
+        "价格指数",
+        "抑制性通货膨胀",
+        "GDP平减指数与名义GDP"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "平衡预算乘数",
+      "to": [
+        "投资乘数",
+        "减税乘数",
+        "乘数-加速数经济周期"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "奥肯定律",
+      "to": [
+        "自然失业率流量模型",
+        "结构性失业",
+        "产出缺口"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "短期国际资本流动",
+      "to": [
+        "外汇需求者",
+        "间接标价倒数换算",
+        "利率水平"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "拉弗曲线含义",
+      "to": [
+        "自动稳定器与税收",
+        "供给学派税收观点",
+        "税率"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "自动稳定财政政策",
+      "to": [
+        "自动稳定器与税收",
+        "财政政策目标",
+        "财政稳定经济工具边界"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "中央与地方职能分配",
+      "to": [
+        "财权财力与事权匹配",
+        "地方政府财政政策双重角色",
+        "地方公共产品外溢性"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "国债依存度",
+      "to": [
+        "国债偿还率",
+        "国债规模影响因素",
+        "国债连续经销方式"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "外债负债率",
+      "to": [
+        "外债结构",
+        "贸易条件类型",
+        "特惠贸易安排类型"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "公共产品类型",
+      "to": [
+        "公共需求特征",
+        "地方公共产品外溢性",
+        "公共财政职能"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "货币政策首要目标",
+      "to": [
+        "货币政策中介指标",
+        "利率中介指标特点",
+        "货币主义政策指标"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "公开市场操作目标",
+      "to": [
+        "公开市场卖出债券",
+        "基础货币",
+        "存款准备率工具"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "货币概览生成",
+      "to": [
+        "货币账户层次",
+        "中国货币统计并行方式",
+        "资金流量账户平衡"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "超额准备金与货币乘数",
+      "to": [
+        "存款准备率工具",
+        "广义货币供给构成边界",
+        "基础货币"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "全额结算定义",
+      "to": [
+        "央行清算方式",
+        "支付信用风险",
+        "CHIPS"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "商业银行基本职能",
+      "to": [
+        "金融中介主要职能",
+        "直接信用与间接信用",
+        "商业银行性质"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "费雪方程近似",
+      "to": [
+        "通货膨胀率",
+        "利率中介指标特点",
+        "挂牌存款利率性质"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "金融衍生工具功能",
+      "to": [
+        "期货交易核心目的",
+        "期货与期权特征区别",
+        "股指期货交割方式"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "外汇看跌期权",
+      "to": [
+        "美式期权执行时间",
+        "可转换债券赎回条款",
+        "期货与期权特征区别"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "认购期权内在价值",
+      "to": [
+        "期权时间价值",
+        "美式期权执行时间",
+        "外汇看跌期权"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "熊市看跌价差 payoff",
+      "to": [
+        "认购期权内在价值",
+        "期权时间价值",
+        "外汇看跌期权"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "金融远期合约定义",
+      "to": [
+        "远期锁汇收入",
+        "外汇期货保证金制度",
+        "利率期货买入套保"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "无套利定价基础",
+      "to": [
+        "含股息看涨看跌平价",
+        "几何布朗运动期望价格",
+        "金融工程定义"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "同业拆借主要目的",
+      "to": [
+        "存款准备率工具",
+        "货币政策中介指标",
+        "商业银行现金资产管理原则"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "关注类贷款定义",
+      "to": [
+        "贷款政策内容边界",
+        "贷款定价原则边界",
+        "真实票据理论"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "不可撤销备用信用证受益人保护",
+      "to": [
+        "银行国际业务经营目标",
+        "金融业国际化消极影响边界",
+        "远期锁汇收入"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "商业票据贴现现金额",
+      "to": [
+        "同业拆借主要目的",
+        "定期储蓄提前支取计息",
+        "远期锁汇收入"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "国际收支逆差与货币疲软",
+      "to": [
+        "国际收支顺差与货币坚挺",
+        "直接标价法国际收支模型方向",
+        "汇率变动影响短期资本流动"
+      ],
+      "type": "first_order_opposite_pair"
+    },
+    {
+      "from": "储备货币条件",
+      "to": [
+        "国际储备特性",
+        "牙买加体系区别",
+        "中国外汇管理政策动态变化"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "外汇看跌期权权利义务",
+      "to": [
+        "认购期权内在价值",
+        "期权时间价值",
+        "远期锁汇收入"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "货币长期中性",
+      "to": [
+        "凯恩斯与古典货币理论差异",
+        "信用扩张与货币供给",
+        "1998年后我国货币政策中介目标"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "国际收支缺口定义",
+      "to": [
+        "国际收支逆差与货币疲软",
+        "国际收支顺差与货币坚挺",
+        "外债偿债率警戒线"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "金融深化",
+      "to": [
+        "信用扩张与货币供给",
+        "证券直接发行",
+        "金融中介主要职能"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "资本资产定价模型CAPM",
+      "to": [
+        "CAPM必要收益率",
+        "半强式有效市场",
+        "DCF估值投资建议"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "债券修正久期价格近似",
+      "to": [
+        "名义利率与实际年利率",
+        "费雪实际利率精确式",
+        "债券实际利率法"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "资产证券化产品类型",
+      "to": [
+        "资产配置主要策略",
+        "期货持有成本套利",
+        "基差走弱与套保收益"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "现代企业制度基础",
+      "to": [
+        "现代公司特征",
+        "要约收购",
+        "MM资本结构理论"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "项目NPV经营现金流",
+      "to": [
+        "旧设备继续使用初始现金流",
+        "单利现值",
+        "有效年利率"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "看跌看涨期权平价",
+      "to": [
+        "CAPM股权必要收益率",
+        "永久债券定价",
+        "项目NPV经营现金流"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "资本充足率覆盖风险",
+      "to": [
+        "关联授信比例",
+        "贷款五级分类",
+        "合规管理机制"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "贷款五级分类",
+      "to": [
+        "抵押贷款额度",
+        "押品管理流程",
+        "公司信贷管理原则"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "私募理财合格投资者",
+      "to": [
+        "理财规划客户信息收集",
+        "客户理财目标表述",
+        "金融市场资金融通功能"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "基金分红对份额净值影响",
+      "to": [
+        "基金利润归属期间",
+        "托管协议定义",
+        "基金净值复核频率"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "保证债券分类",
+      "to": [
+        "债券嵌入条款",
+        "资产负债率",
+        "所有者权益计算"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "增值服务价值",
+      "to": [
+        "区域性股权市场功能",
+        "股权回购流程",
+        "杠杆收购模型要素"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "债券全价与净价",
+      "to": [
+        "债券定价现值公式",
+        "债券久期价格敏感性",
+        "债券违约风险溢价"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "可转债转换价值与转换溢价",
+      "to": [
+        "看跌期权保护性头寸保本价格",
+        "期权对冲比率含义",
+        "债券定价现值公式"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "固定增长股利贴现模型",
+      "to": [
+        "股票预期持有期收益率",
+        "单期股票现值",
+        "多期几何平均收益率"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "基本面分析的经济学基础",
+      "to": [
+        "套期保值锁定生产成本",
+        "期货保证金比例常见区间",
+        "VaR置信度含义"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "波浪理论提出者",
+      "to": [
+        "基本面分析的经济学基础",
+        "回撤与止损风控",
+        "价差限价指令成交条件"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "英镑应收款套保方向",
+      "to": [
+        "美元应付款套保方向",
+        "外汇掉期定义",
+        "CME外汇期货起源"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "看涨期权买方净收益",
+      "to": [
+        "期权买方权利",
+        "利率下限期权支付逻辑",
+        "远期合约灵活性优势"
+      ],
+      "type": "first_order_same_domain"
+    }
+  ]
+}

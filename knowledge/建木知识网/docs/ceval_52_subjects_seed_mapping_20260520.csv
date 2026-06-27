@@ -1,0 +1,53 @@
+ceval_subject,english_name,chinese_name,category,jianmu_disciplines,mapped_route_count,direct_keyword_route_count,coverage_status,seed_keywords,source,source_tier
+computer_network,Computer Network,计算机网络,STEM,信息技术大类,30,4,missing_or_weak,网络|TCP|IP|路由|协议|以太网|数据链路,C-Eval official subject_mapping.json,official_benchmark_metadata
+operating_system,Operating System,操作系统,STEM,信息技术大类,30,3,missing_or_weak,操作系统|进程|线程|内存管理|死锁|调度,C-Eval official subject_mapping.json,official_benchmark_metadata
+computer_architecture,Computer Architecture,计算机组成,STEM,信息技术大类,30,3,missing_or_weak,计算机组成|CPU|指令|缓存|存储器,C-Eval official subject_mapping.json,official_benchmark_metadata
+college_programming,College Programming,大学编程,STEM,信息技术大类,30,28,covered,程序|算法|C语言|Python|递归|数组,C-Eval official subject_mapping.json,official_benchmark_metadata
+college_physics,College Physics,大学物理,STEM,自然科学大类,196,5,partial,力学|电磁|热力学|光学|大学物理,C-Eval official subject_mapping.json,official_benchmark_metadata
+college_chemistry,College Chemistry,大学化学,STEM,自然科学大类,196,34,covered,化学|反应|物质的量|电化学|有机化学,C-Eval official subject_mapping.json,official_benchmark_metadata
+advanced_mathematics,Advanced Mathematics,高等数学,STEM,数学大类,95,10,partial,极限|导数|积分|级数|微分方程,C-Eval official subject_mapping.json,official_benchmark_metadata
+probability_and_statistics,Probability and Statistics,概率统计,STEM,统计学大类|数学大类,164,69,covered,概率|分布|方差|假设检验|置信区间,C-Eval official subject_mapping.json,official_benchmark_metadata
+discrete_mathematics,Discrete Mathematics,离散数学,STEM,数学大类|信息技术大类,125,4,partial,离散|图论|集合|逻辑|组合,C-Eval official subject_mapping.json,official_benchmark_metadata
+electrical_engineer,Electrical Engineer,注册电气工程师,STEM,自然科学大类|数学大类,291,6,partial,电气|电路|变压器|继电保护,C-Eval official subject_mapping.json,official_benchmark_metadata
+metrology_engineer,Metrology Engineer,注册计量师,STEM,自然科学大类|数学大类,291,1,partial,计量|测量|误差|不确定度,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_mathematics,High School Mathematics,高中数学,STEM,数学大类,95,95,covered,函数|几何|代数|概率|导数|数学,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_physics,High School Physics,高中物理,STEM,自然科学大类,196,73,covered,物理|力|电路|光|热|运动,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_chemistry,High School Chemistry,高中化学,STEM,自然科学大类,196,36,covered,化学|元素|反应|溶液|酸碱,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_biology,High School Biology,高中生物,STEM,自然科学大类,196,24,covered,生物|细胞|遗传|生态|植物,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_mathematics,Middle School Mathematics,初中数学,STEM,数学大类,95,95,covered,函数|几何|代数|概率|导数|数学,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_biology,Middle School Biology,初中生物,STEM,自然科学大类,196,24,covered,生物|细胞|遗传|生态|植物,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_physics,Middle School Physics,初中物理,STEM,自然科学大类,196,73,covered,物理|力|电路|光|热|运动,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_chemistry,Middle School Chemistry,初中化学,STEM,自然科学大类,196,36,covered,化学|元素|反应|溶液|酸碱,C-Eval official subject_mapping.json,official_benchmark_metadata
+veterinary_medicine,Veterinary Medicine,兽医学,STEM,自然科学大类,196,3,partial,兽医|动物|疫病,C-Eval official subject_mapping.json,official_benchmark_metadata
+college_economics,College Economics,大学经济学,Social Science,经济学大类|金融学大类|税法与财政大类,757,168,covered,经济学|供给|需求|GDP|通货膨胀,C-Eval official subject_mapping.json,official_benchmark_metadata
+business_administration,Business Administration,工商管理,Social Science,管理学大类|会计学大类,1051,283,covered,工商管理|战略|组织|营销|管理,C-Eval official subject_mapping.json,official_benchmark_metadata
+marxism,Marxism,马克思主义基本原理,Social Science,人文社科大类|经济学大类,216,2,partial,马克思|剩余价值|辩证法|历史唯物主义,C-Eval official subject_mapping.json,official_benchmark_metadata
+mao_zedong_thought,Mao Zedong Thought,毛泽东思想和中国特色社会主义理论体系概论,Social Science,人文社科大类,103,0,partial,毛泽东思想|中国特色社会主义|邓小平|习近平,C-Eval official subject_mapping.json,official_benchmark_metadata
+education_science,Education Science,教育学,Social Science,人文社科大类,103,0,partial,教育学|课程|教学|德育,C-Eval official subject_mapping.json,official_benchmark_metadata
+teacher_qualification,Teacher Qualification,教师资格,Social Science,人文社科大类,103,0,partial,教师资格|教育知识|班级管理,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_politics,High School Politics,高中政治,Social Science,人文社科大类|经济学大类|法学与监管大类,309,73,covered,政治|经济生活|哲学|法律|公民,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_geography,High School Geography,高中地理,Social Science,自然科学大类|人文社科大类,299,15,partial,地理|气候|地形|城市|人口,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_politics,Middle School Politics,初中政治,Social Science,人文社科大类|法学与监管大类,196,72,covered,政治|经济生活|哲学|法律|公民,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_geography,Middle School Geography,初中地理,Social Science,自然科学大类|人文社科大类,299,15,partial,地理|气候|地形|城市|人口,C-Eval official subject_mapping.json,official_benchmark_metadata
+modern_chinese_history,Modern Chinese History,近代史纲要,Humanities,人文社科大类,103,3,partial,近代史|鸦片战争|辛亥革命|五四运动,C-Eval official subject_mapping.json,official_benchmark_metadata
+ideological_and_moral_cultivation,Ideological and Moral Cultivation,思想道德修养与法律基础,Humanities,人文社科大类|法学与监管大类,196,1,partial,思想道德|法律基础|人生观|法治,C-Eval official subject_mapping.json,official_benchmark_metadata
+logic,Logic,逻辑学,Humanities,人文社科大类|数学大类,198,2,partial,逻辑|命题|推理|三段论,C-Eval official subject_mapping.json,official_benchmark_metadata
+law,Law,法学,Humanities,法学与监管大类|人文社科大类,196,94,covered,法学|民法|刑法|行政法|合同,C-Eval official subject_mapping.json,official_benchmark_metadata
+chinese_language_and_literature,Chinese Language and Literature,中国语言文学,Humanities,人文社科大类,103,6,partial,文学|诗歌|小说|修辞,C-Eval official subject_mapping.json,official_benchmark_metadata
+art_studies,Art Studies,艺术学,Humanities,人文社科大类,103,0,partial,艺术|美术|音乐|戏剧,C-Eval official subject_mapping.json,official_benchmark_metadata
+professional_tour_guide,Professional Tour Guide,导游资格,Humanities,人文社科大类,103,0,partial,导游|旅游|景区|政策法规,C-Eval official subject_mapping.json,official_benchmark_metadata
+legal_professional,Legal Professional,法律职业资格,Humanities,法学与监管大类,93,9,partial,法律职业|司法考试|民法|刑法|诉讼,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_chinese,High School Chinese,高中语文,Humanities,人文社科大类,103,4,partial,语文|文言文|诗歌|阅读|作文,C-Eval official subject_mapping.json,official_benchmark_metadata
+high_school_history,High School History,高中历史,Humanities,人文社科大类,103,97,covered,历史|朝代|革命|战争|制度,C-Eval official subject_mapping.json,official_benchmark_metadata
+middle_school_history,Middle School History,初中历史,Humanities,人文社科大类,103,97,covered,历史|朝代|革命|战争|制度,C-Eval official subject_mapping.json,official_benchmark_metadata
+civil_servant,Civil Servant,公务员,Other,人文社科大类|法学与监管大类|管理学大类,242,0,partial,公务员|行政能力|申论|常识判断,C-Eval official subject_mapping.json,official_benchmark_metadata
+sports_science,Sports Science,体育学,Other,通识/待人工复核大类,77,1,missing_or_weak,体育|运动|训练,C-Eval official subject_mapping.json,official_benchmark_metadata
+plant_protection,Plant Protection,植物保护,Other,自然科学大类,196,0,partial,植物保护|病虫害|农药,C-Eval official subject_mapping.json,official_benchmark_metadata
+basic_medicine,Basic Medicine,基础医学,Other,通识/待人工复核大类|自然科学大类,273,0,partial,基础医学|解剖|生理|病理,C-Eval official subject_mapping.json,official_benchmark_metadata
+clinical_medicine,Clinical Medicine,临床医学,Other,通识/待人工复核大类|自然科学大类,273,0,partial,临床医学|诊断|治疗|内科|外科,C-Eval official subject_mapping.json,official_benchmark_metadata
+urban_and_rural_planner,Urban and Rural Planner,注册城乡规划师,Other,通识/待人工复核大类|法学与监管大类,170,2,partial,城乡规划|城市规划|用地,C-Eval official subject_mapping.json,official_benchmark_metadata
+accountant,Accountant,注册会计师,Other,会计学大类|税法与财政大类|法学与监管大类,1213,1017,covered,会计|审计|财务报表|注册会计师,C-Eval official subject_mapping.json,official_benchmark_metadata
+fire_engineer,Fire Engineer,注册消防工程师,Other,通识/待人工复核大类|自然科学大类,273,1,partial,消防|火灾|防火|灭火,C-Eval official subject_mapping.json,official_benchmark_metadata
+environmental_impact_assessment_engineer,Environmental Impact Assessment Engineer,环境影响评价工程师,Other,通识/待人工复核大类|自然科学大类,273,1,partial,环境影响评价|环评|污染,C-Eval official subject_mapping.json,official_benchmark_metadata
+tax_accountant,Tax Accountant,税务师,Other,税法与财政大类|会计学大类|法学与监管大类,1213,121,covered,税务师|增值税|企业所得税|个人所得税,C-Eval official subject_mapping.json,official_benchmark_metadata
+physician,Physician,医师资格,Other,通识/待人工复核大类|自然科学大类,273,0,partial,医师资格|临床|诊断|治疗,C-Eval official subject_mapping.json,official_benchmark_metadata

@@ -1,0 +1,266 @@
+{
+  "tree_id": "language_tree_root",
+  "name": "语言大树 (Language Backbone)",
+  "description": "连接中文自然语言与建木知识网的中枢桥梁，基于CC-CEDICT/vocab + 现代汉语语法体系构建",
+  "version": "1.0",
+  "created": "2026-05-10",
+  "fame_initial": "all_zero",
+  "structure": {
+    "root": "语言中枢",
+    "layers": [
+      {
+        "id": "lang_layer_0_entry",
+        "name": "入口层: 中文自然语言入口",
+        "type": "entry",
+        "children": [
+          "lang_layer_1_lexicon",
+          "lang_layer_1_grammar",
+          "lang_layer_1_semantics"
+        ]
+      },
+      {
+        "id": "lang_layer_1_lexicon",
+        "name": "词汇层 (Lexicon)",
+        "type": "concrete",
+        "parent": "lang_layer_0_entry",
+        "rule_ref": "lang_rule_lexical_mapping",
+        "children": [
+          "lang_neuron_高频词",
+          "lang_neuron_专业词",
+          "lang_neuron_抽象词"
+        ]
+      },
+      {
+        "id": "lang_layer_1_grammar",
+        "name": "语法层 (Grammar)",
+        "type": "concrete",
+        "parent": "lang_layer_0_entry",
+        "rule_ref": "lang_rule_syntax_pattern",
+        "children": [
+          "lang_neuron_句型模式",
+          "lang_neuron_虚词规则",
+          "lang_neuron_语序约束"
+        ]
+      },
+      {
+        "id": "lang_layer_1_semantics",
+        "name": "语义层 (Semantics)",
+        "type": "concrete",
+        "parent": "lang_layer_0_entry",
+        "rule_ref": "lang_rule_semantic_mapping",
+        "children": [
+          "lang_neuron_多义消歧",
+          "lang_neuron_隐喻映射",
+          "lang_neuron_情感负载"
+        ]
+      }
+    ],
+    "abstraction_rules": [
+      {
+        "id": "lang_rule_lexical_mapping",
+        "name": "词汇映射规律",
+        "rule": "中文词 → 英语对应词 → 建木知识域映射",
+        "examples": [
+          "加速 → accelerate/speedup → 迷龙算法域",
+          "收敛 → converge → SCAC量化域",
+          "凭证 → voucher → 会计系统域"
+        ]
+      },
+      {
+        "id": "lang_rule_syntax_pattern",
+        "name": "句型结构规律",
+        "rule": "SVO语序 + Topic-Comment结构 + 时间状语前置",
+        "examples": [
+          "SVO: 我(主)+运行(动)+测试(宾) → 动作定位",
+          "Topic-Comment: 这个算法，(它)适合MCU → 话题-说明结构"
+        ]
+      },
+      {
+        "id": "lang_rule_semantic_mapping",
+        "name": "语义映射规律",
+        "rule": "中文表达 → 语义意图 → 知识检索",
+        "examples": [
+          "能不能...? → 能力询问 → 可行性分析节点",
+          "帮我... → 执行请求 → 工具调用节点",
+          "你觉得...? → 意见征求 → 推理引擎启动"
+        ]
+      }
+    ],
+    "specific_neurons": [
+      {
+        "id": "lang_neuron_hf_vocab",
+        "name": "高频核心词汇",
+        "type": "lexicon",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "jieba_dict_2026_full",
+        "total_entries": 584429,
+        "bins": "L1罕见(291)→L9超高频(186), 全部词性标注",
+        "file": "language/vocab_bins/vocab_index.json",
+        "route": "查词→按频率级定位→返回词条+词性+频次"
+      },
+      {
+        "id": "lang_neuron_tech_vocab",
+        "name": "技术领域词汇",
+        "type": "lexicon",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "domains": [
+          "算法",
+          "嵌入系统",
+          "金融",
+          "会计",
+          "AI"
+        ],
+        "file": "language/vocab_technical.json"
+      },
+      {
+        "id": "lang_neuron_sentence_patterns",
+        "name": "句法模式表",
+        "type": "grammar",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "patterns": [
+          {
+            "name": "能力询问",
+            "template": "{能/可以/能不能}+{动作}+{条件}?"
+          },
+          {
+            "name": "状态查询",
+            "template": "{N}+{怎么样/如何/什么}+{状态}?"
+          },
+          {
+            "name": "因果推理",
+            "template": "{事件A}→{所以/因此/于是}→{事件B}?"
+          },
+          {
+            "name": "假设推演",
+            "template": "如果+{条件}→{那么/则}→{结果}?"
+          },
+          {
+            "name": "对比选择",
+            "template": "{A}+还是+{B}+{更/比较}+{属性}?"
+          }
+        ],
+        "file": "language/sentence_patterns.json"
+      },
+      {
+        "id": "lang_neuron_disambiguation",
+        "name": "多义词消歧映射",
+        "type": "semantics",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "entries": [
+          {
+            "word": "表",
+            "senses": [
+              "表格/table→数据域",
+              "手表/watch→物品域",
+              "表达/express→动词域"
+            ]
+          },
+          {
+            "word": "加速",
+            "senses": [
+              "速度提升/speedup→迷龙域",
+              "加速度/acceleration→物理域"
+            ]
+          },
+          {
+            "word": "权重",
+            "senses": [
+              "模型参数/weight→AI域",
+              "重要性/importance→决策域"
+            ]
+          },
+          {
+            "word": "路由",
+            "senses": [
+              "网络路径/routing→网络域",
+              "知识路径/routing→建木域"
+            ]
+          }
+        ],
+        "file": "language/disambiguation.json"
+      },
+      {
+        "id": "lang_neuron_emotional_load",
+        "name": "情感负载映射",
+        "type": "semantics",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "description": "将中文情感表达映射到FAME八维偏置",
+        "mappings": [
+          {
+            "expression": "辛苦了",
+            "fame_shift": "μ+0.1, ε+0.2"
+          },
+          {
+            "expression": "不对/错了",
+            "fame_shift": "δ+0.3"
+          },
+          {
+            "expression": "有意思/好玩",
+            "fame_shift": "χ+0.2"
+          },
+          {
+            "expression": "好的/没问题",
+            "fame_shift": "κ+0.1"
+          },
+          {
+            "expression": "累/烦/慢",
+            "fame_shift": "ρ+0.2, λ+0.1"
+          }
+        ],
+        "file": "language/emotional_load.json"
+      }
+    ]
+  },
+  "stats": {
+    "total_neurons": 351,
+    "total_rules": 67,
+    "total_associations": 25,
+    "routing_tables": 10,
+    "updated": "2026-05-10 fully populated"
+  }
+}

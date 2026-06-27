@@ -1,0 +1,13 @@
+version: v0.1
+fields:
+  ticket_id: 修正单编号
+  artifact_path: 目标文件
+  issue_type: 问题类型
+  severity: P0/P1/P2/P3
+  evidence: 证据
+  fix_strategy: 修正策略
+  patch_steps: 具体修正步骤
+  requires_rerender: true
+  requires_recheck: true
+  retry_count: 0
+  max_retries: 3

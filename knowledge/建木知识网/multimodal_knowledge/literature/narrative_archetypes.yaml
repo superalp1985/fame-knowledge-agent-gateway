@@ -1,0 +1,28 @@
+version: v0.1
+purpose: Literary narrative archetypes for courses, reports, scripts, and videos.
+archetypes:
+  problem_to_method:
+    use_for: [course_opening, research_brief, policy_training]
+    pattern: 问题出现 -> 旧方法不足 -> 新框架登场 -> 方法落地
+    good_for: 把抽象理论变成学习动机
+    avoid: 制造夸张危机
+  case_to_principle:
+    use_for: [teaching_case, video_script, ppt_section]
+    pattern: 具体案例 -> 关键矛盾 -> 抽象原则 -> 可迁移方法
+    good_for: 干部培训、财经课程
+    avoid: 案例替代统计证据
+  journey_of_understanding:
+    use_for: [longform_script, documentary_style]
+    pattern: 误解 -> 观察 -> 追问 -> 证据 -> 重建理解
+    good_for: 调查研究和纪录片式讲述
+    avoid: 故弄玄虚
+  contrast_and_resolution:
+    use_for: [policy_comparison, reform_story]
+    pattern: 两种状态对比 -> 差距来源 -> 解决路径 -> 新状态
+    good_for: 政策改革、管理优化
+    avoid: 非黑即白
+  risk_warning:
+    use_for: [compliance_training, budget_governance]
+    pattern: 轻微信号 -> 风险累积 -> 后果显现 -> 防控清单
+    good_for: 风险、审计、合规课程
+    avoid: 恐吓式表达

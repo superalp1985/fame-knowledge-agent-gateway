@@ -1,0 +1,6 @@
+group,label,card_count,source_count,source_names,source_tiers
+legal_exam,法考法学,116,2,中华人民共和国司法部-国家统一法律职业资格考试|国家法律法规数据库,official_exam_outline|official_law_database
+politics_history,政治历史,360,2,教育部-普通高中思想政治课程标准(2017年版2020年修订)|教育部-义务教育历史课程标准,official_curriculum_standard|official_curriculum_standard
+computer,计算机,180,2,教育部-普通高等学校本科专业类教学质量国家标准（计算机类）|408考研大纲-计算机学科专业基础综合（参考）,official_major_standard|exam_outline_reference
+medicine,医学,135,2,国家医学考试中心|国家卫生健康委员会,official_exam_body|official_health_authority
+engineering,工程资格,180,5,住房城乡建设部-注册城乡规划师|应急管理部消防救援局/消防政策法规入口|生态环境部-环境影响评价|国家市场监督管理总局-计量|中国人事考试网-职业资格考试大纲入口,official_engineering_authority|official_fire_authority|official_environment_authority|official_metrology_authority|official_exam_body

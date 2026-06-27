@@ -1,0 +1,27 @@
+version: v0.1
+policy:
+  literature_is_expression_layer: true
+  fact_priority_over_style: true
+  rhetoric_requires_mapping: true
+  emotion_requires_evidence: true
+  formal_context_requires_restraint: true
+lookup_order:
+  - route_index
+  - text_research rules
+  - literature foundations
+  - rhetoric/style rules
+  - narrative archetypes
+  - target module constraints
+  - quality rubric
+applies_to:
+  - course_pack
+  - ppt_draft
+  - video_plan
+  - animation_plan
+  - web_research
+  - doc_analysis
+  - office_export
+  - localization
+  - tts
+  - music
+  - weavemuse

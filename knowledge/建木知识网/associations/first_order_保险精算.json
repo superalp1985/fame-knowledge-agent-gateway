@@ -1,0 +1,46 @@
+{
+  "subject": "保险精算",
+  "type": "first_order_associations",
+  "version": "actuarial-from-china-actuary-2026-05-17",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "note": "一级联想只提供 working memory 材料，不投票、不平均、不继续展开。每个 from 最多 3 个 to。",
+  "associations": [
+    {
+      "from": "全离散终身寿险均衡保费",
+      "to": [
+        "精算现值",
+        "亏损随机变量",
+        "等价原则"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "毛保费费用加载公式",
+      "to": [
+        "纯保费",
+        "费用附加",
+        "利润附加"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "溢额再保险赔款分摊",
+      "to": [
+        "自留额",
+        "分保额",
+        "比例分摊"
+      ],
+      "type": "first_order_same_formula"
+    },
+    {
+      "from": "Bühlmann 信度估计",
+      "to": [
+        "信度因子",
+        "过程方差",
+        "结构方差"
+      ],
+      "type": "first_order_same_formula"
+    }
+  ]
+}

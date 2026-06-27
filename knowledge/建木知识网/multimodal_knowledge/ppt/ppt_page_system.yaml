@@ -1,0 +1,81 @@
+version: v0.2
+slide_types:
+- id: cover
+  required:
+  - title
+  - subtitle_or_context
+  - author
+  - date
+  avoid:
+  - too_many_logos
+  - busy_background
+- id: agenda
+  required:
+  - 3_to_5_sections
+  - progress_logic
+  avoid:
+  - long_paragraphs
+- id: executive_summary
+  required:
+  - one_sentence_conclusion
+  - three_supporting_points
+  avoid:
+  - background_before_conclusion
+- id: framework
+  required:
+  - model_name
+  - components
+  - relationships
+  avoid:
+  - floating_boxes_without_edges
+- id: process
+  required:
+  - steps
+  - direction
+  - start_end_or_loop
+  avoid:
+  - unclear_sequence
+- id: comparison
+  required:
+  - same_dimensions
+  - parallel_layout
+  - decision_point
+  avoid:
+  - asymmetric_evidence
+- id: data_insight
+  required:
+  - chart
+  - insight_title
+  - source
+  - highlight
+  avoid:
+  - chart_without_takeaway
+- id: case
+  required:
+  - background
+  - action
+  - result
+  - lesson
+  avoid:
+  - story_without_point
+- id: conclusion
+  required:
+  - recap
+  - action
+  - next_step
+  avoid:
+  - new_concept_at_end
+hard_limits:
+  title_max_cn_chars: 24
+  body_lines_max: 5
+  body_line_cn_chars_max: 24
+  min_font_pt_projected: 18
+quality_dimensions:
+- accuracy
+- storyline
+- slide_function
+- visual_hierarchy
+- readability
+- chart_fit
+- consistency
+- delivery_readiness

@@ -1,0 +1,33 @@
+version: v0.1
+rubrics:
+  ppt:
+    accuracy: 20
+    storyline: 15
+    page_function: 15
+    visual_hierarchy: 15
+    readability: 15
+    chart_fit: 10
+    consistency: 10
+  video:
+    accuracy: 15
+    narrative_flow: 15
+    timeline_sync: 15
+    visual_readability: 15
+    subtitle_safety: 10
+    audio_mix: 10
+    pacing: 10
+    style_consistency: 10
+  music_audio:
+    voice_intelligibility: 25
+    emotion_match: 20
+    mix_balance: 20
+    segment_structure: 15
+    loop_and_ending: 10
+    style_fit: 10
+  visual_art:
+    focus: 20
+    hierarchy: 20
+    composition: 15
+    color: 15
+    typography: 15
+    style_fit: 15

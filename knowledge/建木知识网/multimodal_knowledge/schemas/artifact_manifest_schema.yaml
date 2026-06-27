@@ -1,0 +1,17 @@
+version: v0.1
+fields:
+  task_id: 任务编号
+  topic: 主题
+  audience: 目标受众
+  style_profile: 风格配置
+  language_tree_nodes: 关联语言树节点
+  artifacts:
+  - research_brief
+  - outline
+  - script
+  - ppt
+  - video
+  - audio
+  - source_list
+  quality_reports: 每个产物的审查报告
+  final_status: final|preview|fail

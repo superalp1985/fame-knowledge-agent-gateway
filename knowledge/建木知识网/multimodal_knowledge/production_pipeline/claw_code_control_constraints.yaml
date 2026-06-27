@@ -1,0 +1,111 @@
+version: v0.1
+updated_at: 2026-05-22T09:18:00+08:00
+purpose: Machine-readable control constraints for Claw Code as Jianmu Agent Studio orchestrator.
+status_baseline:
+  project_stage: v0.1_local_workbench_plus_quality_foundation
+  main_gateway: FastAPI API Gateway
+  main_orchestrator: Claw Code
+  ui_direction: Tauri shell after CLI/file pipeline stabilizes
+  knowledge_root: [REDACTED_LOCAL_PATH]
+  multimodal_knowledge_root: [REDACTED_LOCAL_PATH]
+  route_count: 2714
+  latest_file_count_observed: 124
+  encoding_bad_count: 0
+  quality_gate_smoke:
+    gates: 14
+    module_routing_ok: true
+mandatory_chain:
+  - deterministic_knowledge_routing
+  - prompt_constraint_injection
+  - explicit_content_kind_module_routing
+  - module_output_contract
+  - module_quality_gate
+  - unified_manifest_quality_report_memory
+hard_rules:
+  - do_not_generate_freely_without_jianmu_routing
+  - knowledge_first
+  - structure_before_style
+  - style_after_structure
+  - text_only_generation_allowed_false_for_multimodal_outputs
+  - quality_gate_before_final
+  - preview_is_not_final
+  - external_web_is_temporary_evidence_not_knowledge_base
+  - no_single_source_for_key_claim
+  - no_hidden_read_or_ocr_failure
+  - no_api_key_echo_or_memory
+  - heavy_workers_outside_gateway_main_process
+  - cloud_failure_must_not_break_local_fallback
+  - fallback_outputs_must_be_labeled_preview_or_fallback
+  - plan_change_requires_boss_confirmation
+startup_required_reads:
+  docs:
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+  runtime_code:
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+  knowledge_rules:
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+    - [REDACTED_LOCAL_PATH]
+routing_evidence_required_fields:
+  - query
+  - lookup_order
+  - route_index_hits
+  - multimodal_association_hits
+  - deterministic_pre_generation_routing
+course_bundle_steps:
+  - id: course_pack
+    owns: [research, outline, script, seed_slides, sources, routing_evidence]
+  - id: ppt_draft
+    owns: [ppt_request, ppt_draft_md]
+    worker: PptDraftWorker
+    downstream: PPTAgent/DeepPresenter
+  - id: video_plan
+    owns: [video_script, video_plan, storyboard, subtitles]
+    worker: VideoPlanWorker
+    downstream: PresentAgent-2/TTS/ffmpeg
+  - id: animation_plan
+    owns: [animation_brief, animation_plan]
+    downstream: Code2Video/Manim
+  - id: localization
+    owns: [localized_script, subtitles, language_pack]
+  - id: image_generate
+    owns: [cover, illustration, visual_assets, prompt_board]
+  - id: office_export
+    owns: [word, html, office_package]
+  - id: music_generate
+    owns: [bgm_loop, music_plan]
+  - id: weavemuse_compose
+    owns: [motif, midi, wav, composition_plan]
+  - id: edge_tts
+    owns: [tts_audio, tts_text, tts_constraints]
+functional_modules_required:
+  - WebResearchAdapter
+  - DocAdapterLite
+  - LocalMultimodalFileAdapter
+  - LocalizationWorker
+  - OfficeExportWorker
+  - EdgeTTSWorker
+  - PptDraftWorker
+  - VideoPlanWorker
+  - ImageGenerationWorker
+  - MusicGenerationWorker/WeaveMuseWorker
+  - AnimationPlanWorker
+current_priority:
+  p0:
+    - fix_end_to_end_utf8_font_chinese_rendering
+    - eliminate_real_question_mark_garbled_output_in_our_artifacts_and_ui
+  p1:
+    - quality_engine
+    - director_layer
+    - auto_revision_loop
+  p2:
+    - content_visual_video_refinement
+    - explicit_quality_gate_reporting

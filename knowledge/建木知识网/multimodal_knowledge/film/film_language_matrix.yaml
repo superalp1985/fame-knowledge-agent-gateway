@@ -1,0 +1,41 @@
+version: v0.2
+language_dimensions:
+  shot_size:
+  - extreme_wide
+  - wide
+  - medium
+  - close_up
+  - extreme_close_up
+  camera_angle:
+  - eye_level
+  - high_angle
+  - low_angle
+  - top_down
+  - dutch_angle
+  movement:
+  - static
+  - pan
+  - tilt
+  - dolly
+  - zoom
+  - tracking
+  editing:
+  - continuity
+  - montage
+  - match_cut
+  - jump_cut
+  - parallel_cut
+  - cutaway
+  sound:
+  - dialogue
+  - voiceover
+  - ambience
+  - foley
+  - music
+  - silence
+use_in_education_video:
+  wide: 交代主题场景
+  close_up: 强调关键词或数据
+  montage: 压缩案例过程
+  cutaway: 解释旁白中的抽象概念
+  silence: 给结论留空间

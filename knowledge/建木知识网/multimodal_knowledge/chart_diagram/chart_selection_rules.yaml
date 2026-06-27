@@ -1,0 +1,41 @@
+version: v0.2
+relation_to_chart:
+  compare_categories:
+  - bar
+  - horizontal_bar
+  time_trend:
+  - line
+  - area_when_cumulative
+  part_to_whole:
+  - stacked_bar
+  - 100_percent_bar
+  - pie_only_if_few_categories
+  distribution:
+  - histogram
+  - boxplot
+  correlation:
+  - scatter
+  flow:
+  - sankey
+  - funnel
+  - process_flow
+  hierarchy:
+  - tree
+  - pyramid
+  - treemap
+  causal_logic:
+  - causal_loop
+  - fishbone
+  - driver_tree
+required_metadata:
+- title_as_insight
+- unit
+- source
+- time_range
+- highlight_rule
+avoid:
+- 3d_chart
+- rainbow_palette_without_semantics
+- dual_axis_by_default
+- chart_junk
+- unlabeled_units

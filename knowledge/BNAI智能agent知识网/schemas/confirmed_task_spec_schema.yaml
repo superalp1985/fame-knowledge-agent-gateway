@@ -1,0 +1,68 @@
+version: v0.1
+purpose: schema for the task spec produced after chat-first requirement discovery and before confirmed full path production
+fields:
+  task_title:
+    required: true
+    description: human-readable task title
+  task_type:
+    required: true
+    enum:
+      - normal_answer
+      - course_package
+      - ppt_deck
+      - report_document
+      - video_package
+      - mixed_artifact_package
+      - image_asset
+      - audio_asset
+  user_goal:
+    required: true
+    description: what the user wants to accomplish
+  audience:
+    required: false
+    default: inferred_from_context
+  artifact_kinds:
+    required: true
+    allowed:
+      - document
+      - ppt
+      - video
+      - pdf
+      - image
+      - audio
+      - source_list
+  deliverables:
+    required: true
+    item_fields:
+      kind: artifact kind
+      label: user-visible deliverable name
+      format: markdown|pptx|pdf|mp4|png|wav|plan
+      budget: pages/slides/minutes/words when known
+  style_profile:
+    required: false
+    examples:
+      - finance_governance
+      - teaching_clear
+      - executive_briefing
+      - research_brief
+      - public_communication
+  source_policy:
+    required: true
+    fields:
+      local_knowledge_first: true
+      web_allowed: boolean
+      source_fidelity_required: boolean
+      citation_required: boolean
+  open_questions:
+    required: false
+    description: questions that should be asked before full production if material
+  confirmation:
+    required: true
+    fields:
+      user_confirmed: boolean
+      confirmed_at: local timestamp when available
+production_rules:
+  draft_only_before_confirmation: true
+  full_path_must_regenerate: true
+  cannot_skip_knowledge_routing: true
+  cannot_skip_universal_harness: true

@@ -1,0 +1,27 @@
+version: v0.2
+defaults:
+  会计学:
+    visual: tables_and_process
+    ppt: framework_process_data
+    video: step_explanation
+    music: neutral_teaching_bed
+  经济学:
+    visual: charts_and_causal_diagrams
+    ppt: concept_data_comparison
+    video: mechanism_animation
+    music: calm_foundation
+  管理会计:
+    visual: value_chain_and_control_loop
+    ppt: process_framework
+    video: case_process
+    music: steady_progression
+  税法:
+    visual: rule_tree_and_exception_table
+    ppt: comparison_taxonomy
+    video: case_explainer
+    music: neutral_teaching_bed
+  金融:
+    visual: risk_return_chart
+    ppt: data_insight
+    video: market_mechanism
+    music: low_tension_to_resolution

@@ -1,0 +1,10 @@
+policy,correct,acc,fb,chg,saved,lost,net
+C14,548,0.40713224368499257,0,333,0,0,0
+negative_only_fallback,544,0.40416047548291234,35,298,10,14,-4
+formula_question_fallback,484,0.35958395245170877,333,0,67,131,-64
+formula_options_fallback,543,0.4034175334323923,22,311,6,11,-5
+numeric_options_fallback,538,0.399702823179792,76,257,19,29,-10
+route_noise_negative_fallback,549,0.4078751857355126,12,321,4,3,1
+route_noise_formula_fallback,539,0.40044576523031206,145,188,35,44,-9
+strict_symbol_guard,536,0.39821693907875183,77,256,18,30,-12
+concept_formula_guard,496,0.3684992570579495,256,77,49,101,-52

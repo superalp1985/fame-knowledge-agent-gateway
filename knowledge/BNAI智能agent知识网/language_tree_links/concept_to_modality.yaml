@@ -1,0 +1,13 @@
+version: v0.2
+required_modalities_for_every_concept:
+- text
+- ppt
+- video
+- music_audio
+- art_visual
+- chart_diagram
+- narrative
+- design_system
+- quality_checks
+- anti_patterns
+rule: No language-tree node is allowed to stay text-only in multimodal generation. Any visual/layout output must also resolve design_system bottom tokens.

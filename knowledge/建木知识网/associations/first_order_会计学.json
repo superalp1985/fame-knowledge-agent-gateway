@@ -1,0 +1,262 @@
+{
+  "subject": "会计学",
+  "type": "first_order_associations",
+  "version": "accounting-from-cma-2026-05-19",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "note": "一级联想只提供 working memory 材料，不投票、不平均、不继续展开。每个 from 最多 3 个 to。",
+  "associations": [
+    {
+      "from": "长期股权投资初始计量",
+      "to": [
+        "企业合并",
+        "权益法",
+        "初始投资成本"
+      ],
+      "type": "first_order_same_structure"
+    },
+    {
+      "from": "同一控制下企业合并初始计量",
+      "to": [
+        "长期股权投资",
+        "企业合并商誉",
+        "最终控制方口径"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "资产减值与资产组",
+      "to": [
+        "可收回金额",
+        "未来现金流量现值",
+        "商誉减值测试"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "商誉减值测试",
+      "to": [
+        "资产组",
+        "企业合并商誉",
+        "可收回金额"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "债券实际利率法",
+      "to": [
+        "摊余成本",
+        "应付债券",
+        "可转换公司债券"
+      ],
+      "type": "first_order_same_structure"
+    },
+    {
+      "from": "可转换公司债券权益成份",
+      "to": [
+        "债券实际利率法",
+        "金融负债",
+        "所有者权益"
+      ],
+      "type": "first_order_same_structure"
+    },
+    {
+      "from": "累积带薪缺勤",
+      "to": [
+        "职工薪酬",
+        "短期薪酬",
+        "管理费用"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "利润分享计划",
+      "to": [
+        "职工薪酬",
+        "短期薪酬",
+        "应付职工薪酬"
+      ],
+      "type": "first_order_same_logic"
+    },
+    {
+      "from": "城市维护建设税计税基础",
+      "to": [
+        "消费税征税范围",
+        "消费税金银珠宝范围",
+        "税收滞纳金"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "车辆购置税计税价格",
+      "to": [
+        "车辆购置税退税",
+        "从价房产税",
+        "房产税地价并入规则"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "税务行政处罚听证门槛",
+      "to": [
+        "税务行政处罚设定权限",
+        "宪法纳税义务",
+        "非居民企业核定征收所得税"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "分期付款无形资产初始计量",
+      "to": [
+        "可转债负债权益拆分",
+        "债券实际利率法期初摊余成本",
+        "资产未来现金流量预计期限"
+      ],
+      "type": "first_order_same_present_value"
+    },
+    {
+      "from": "投资性房地产成本模式转公允价值模式",
+      "to": [
+        "出租房地产改扩建期间列报",
+        "会计政策变更",
+        "留存收益调整"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "同控合并长投成本含原商誉",
+      "to": [
+        "同控分步取得控制资本公积",
+        "长期股权投资初始计量",
+        "同一控制下企业合并初始计量"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "低价售房职工福利长期递延",
+      "to": [
+        "自产产品发放职工福利",
+        "累积带薪缺勤",
+        "利润分享计划"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "留存收益构成",
+      "to": [
+        "弥补亏损后的所有者权益变动",
+        "所有者权益计算",
+        "利润分配"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "成本模式投资性房地产减值后账面价值",
+      "to": [
+        "投资性房地产成本模式转公允价值模式",
+        "公允价值模式投资性房地产处置损益",
+        "资产减值与资产组"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "研发支出研究开发阶段区分",
+      "to": [
+        "无形资产摊销方法选择",
+        "在研无形资产减值测试",
+        "分期付款无形资产初始计量"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "权益法初始利得与投资收益",
+      "to": [
+        "权益法净利润公允价值调整",
+        "非现金资产取得权益法长投损益",
+        "长投部分处置权益法转成本法"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "记账本位币作为统一计量尺度",
+      "to": [
+        "境外经营含义",
+        "外币报表折算",
+        "功能货币"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "通货膨胀会计模式选择原则",
+      "to": [
+        "记账本位币作为统一计量尺度",
+        "高级财务会计",
+        "成本效益原则"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "税法折旧大于会计折旧递延所得税负债",
+      "to": [
+        "债券实际利率法期初摊余成本",
+        "成本模式投资性房地产减值后账面价值",
+        "资产未来现金流量预计期限"
+      ],
+      "type": "first_order_same_calculation"
+    },
+    {
+      "from": "管理会计与财务会计核心区别",
+      "to": [
+        "成本会计",
+        "责任会计",
+        "预算管理"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "产品质量保证预计负债计税基础",
+      "to": [
+        "税法折旧大于会计折旧递延所得税负债",
+        "所得税暂时性差异",
+        "预计负债"
+      ],
+      "type": "first_order_same_standard"
+    },
+    {
+      "from": "股份有限公司最低注册资本旧法口径",
+      "to": [
+        "公司法资本制度",
+        "有限责任公司注册资本",
+        "证券发行条件"
+      ],
+      "type": "first_order_same_law"
+    },
+    {
+      "from": "车船税法定免税项目",
+      "to": [
+        "车辆购置税计税价格",
+        "车辆购置税退税",
+        "税务行政处罚听证门槛"
+      ],
+      "type": "first_order_same_tax"
+    },
+    {
+      "from": "采购管理部门价值链目标",
+      "to": [
+        "管理会计与财务会计核心区别",
+        "成本管理",
+        "供应链管理"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "管理会计职业道德客观诚信",
+      "to": [
+        "管理会计与财务会计核心区别",
+        "审计职业道德",
+        "内部控制"
+      ],
+      "type": "first_order_same_ethics"
+    }
+  ]
+}

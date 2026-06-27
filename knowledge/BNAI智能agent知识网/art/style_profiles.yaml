@@ -1,0 +1,53 @@
+version: v0.1
+profiles:
+  finance_governance:
+    mood:
+    - 稳重
+    - 可信
+    - 清晰
+    - 克制
+    palette:
+    - navy
+    - gray
+    - white
+    - single_accent
+    avoid:
+    - neon
+    - cartoon
+    - heavy_shadow
+    - overdramatic_music
+  teaching_clear:
+    mood:
+    - 明快
+    - 亲和
+    - 结构清晰
+    palette:
+    - clean_primary
+    - soft_secondary
+    avoid:
+    - dense_text
+    - unexplained_chart
+    - fast_motion
+  research_brief:
+    mood:
+    - 理性
+    - 专业
+    - 证据导向
+    palette:
+    - low_saturation
+    - data_highlight
+    avoid:
+    - decorative_image
+    - emotional_music
+    - unsourced_chart
+  cinematic_story:
+    mood:
+    - 张力
+    - 沉浸
+    - 情绪明确
+    palette:
+    - controlled_contrast
+    - motif_color
+    avoid:
+    - random_style_shift
+    - flat_pacing

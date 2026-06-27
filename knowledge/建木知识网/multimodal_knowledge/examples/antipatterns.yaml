@@ -1,0 +1,37 @@
+version: v0.1
+antipatterns:
+- id: slide_wall_of_text
+  domain: ppt
+  symptom: 一页文字过密
+  fix:
+  - split_slide
+  - extract_keywords
+  - move_detail_to_notes
+- id: chart_without_message
+  domain: chart
+  symptom: 图表没有洞察标题
+  fix:
+  - rewrite_title_as_insight
+  - highlight_key_data
+  - remove_noise
+- id: random_template_skin
+  domain: visual
+  symptom: 模板好看但不服务主题
+  fix:
+  - choose_style_profile
+  - reduce_decoration
+  - align_with_narrative
+- id: ppt_autoplay_video
+  domain: video
+  symptom: 视频只是自动播放 PPT
+  fix:
+  - storyboard_by_narration
+  - add_scene_goals
+  - add_motion_cues
+- id: bgm_over_voice
+  domain: audio
+  symptom: 背景音乐压旁白
+  fix:
+  - duck_music
+  - eq_voice_band
+  - simplify_arrangement

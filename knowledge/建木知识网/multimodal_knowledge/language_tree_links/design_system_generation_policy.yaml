@@ -1,0 +1,34 @@
+version: v0.1
+updated_at: 2026-05-22T10:00:00+08:00
+purpose: Runtime policy for connecting every language-tree route to design-system semantics and bottom-level tokens.
+policy:
+  design_system_is_not_optional_for_visual_outputs: true
+  every_visual_output_requires_design_system_mapping: true
+  every_aesthetic_word_requires_parameter_binding: true
+  every_design_decision_must_end_at_bottom_token: true
+  external_sources_are_untrusted_fact_sources_only: true
+required_lookup_order:
+  - language_tree_route
+  - first_order_association
+  - design_system_semantic_tree
+  - design_system_abstraction_to_expression
+  - quantified_design_systems_doc
+  - design_system_tokens_index
+  - modality_specific_rules
+  - quality_gate
+required_files:
+  semantic_tree: [REDACTED_LOCAL_PATH]
+  quantified_doc: [REDACTED_LOCAL_PATH]
+  token_index: [REDACTED_LOCAL_PATH]
+  route_overlay: [REDACTED_LOCAL_PATH]
+  abstraction_mapping: [REDACTED_LOCAL_PATH]
+hard_gates:
+  - color_has_hex_or_token
+  - type_has_size_line_height_weight
+  - spacing_has_px_or_rem
+  - grid_has_columns_breakpoint_or_margin
+  - radius_has_px
+  - motion_has_duration_and_easing
+  - semantic_role_before_raw_value
+  - no_final_if_bottom_token_missing
+  - no_final_if_aesthetic_term_unbound

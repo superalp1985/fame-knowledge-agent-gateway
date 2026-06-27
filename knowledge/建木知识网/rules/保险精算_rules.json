@@ -1,0 +1,126 @@
+{
+  "subject": "保险精算",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "保险精算学科的规律抽象层——寿险、非寿险、信度理论、再保险与准备金",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "寿险精算": [
+      {
+        "id": "actuarial_life_premium_discrete_whole_life",
+        "name": "全离散终身寿险均衡保费",
+        "law": "全离散终身寿险净均衡年缴保费可由给定 A_x 和 d 按 π = d·A_x/(1-A_x)·保额计算。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "actuarial_pension_service_split",
+        "name": "养老金服务年限分段给付",
+        "law": "分段给付养老金按各工龄区间的月给付额×对应年数×12 汇总。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      }
+    ],
+    "非寿险精算": [
+      {
+        "id": "actuarial_binomial_sd",
+        "name": "二项分布标准差",
+        "law": "若 X~Bin(n,p)，则标准差为 sqrt(np(1-p))。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "actuarial_gross_premium_loading",
+        "name": "毛保费费用加载公式",
+        "law": "毛保费 = (纯保费 + 固定费用) / (1 - 可变费用率 - 利润附加率)。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      },
+      {
+        "id": "actuarial_surplus_reinsurance_recovery",
+        "name": "溢额再保险赔款分摊",
+        "law": "溢额再保险按保险金额中超过自留额、且不超过分保限额的比例分摊赔款；低于自留额时再保险人不赔。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      }
+    ],
+    "信度理论": [
+      {
+        "id": "actuarial_buhlmann_credibility",
+        "name": "Bühlmann 信度估计",
+        "law": "Bühlmann 估计通常形如 Z·样本均值 + (1-Z)·总体均值，Z 由过程方差和结构方差决定。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "china_actuary_abstract_patch_20260517"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "description": "中文句法模式 → 语义意图 → 建木路由映射",
+  "version": "1.0",
+  "fame_initial": "all_zero",
+  "patterns": [
+    {
+      "id": "pat_ability_query",
+      "name": "能力询问",
+      "template_regex": "(能|可以|能不能|可否|是否可)",
+      "intent": "feasibility_check",
+      "route_to": "建木路由→专业知识域→可行性分析",
+      "examples": ["这个算法能用在单片机上吗？", "能不能做防抖测试？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_execution_request",
+      "name": "执行请求",
+      "template_regex": "(帮我|给我|帮我做|帮忙|写下|写个|画个|生成)",
+      "intent": "tool_trigger",
+      "route_to": "工具调用→写文件/画图/编译/搜索",
+      "examples": ["帮我写个测试脚本", "画个速度对比图"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_opinion_query",
+      "name": "意见征求",
+      "template_regex": "(你觉得|你怎么看|你认为|有道理么|怎么样)",
+      "intent": "reasoning_trigger",
+      "route_to": "推理引擎→查建木知识网→综合分析",
+      "examples": ["你觉得这个方案可行吗？", "这个市场逻辑怎么样？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_explanation_request",
+      "name": "解释请求",
+      "template_regex": "(什么是|解释|为什么|原理|怎么来的|怎么用)",
+      "intent": "knowledge_retrieval",
+      "route_to": "建木路由→查语义大树→具体知识→组织输出",
+      "examples": ["什么是查表式思维？", "为什么cold20速度这么快？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_comparison_request",
+      "name": "对比请求",
+      "template_regex": "(对比|比较|区别|vs|还是|哪个更)",
+      "intent": "comparative_analysis",
+      "route_to": "建木联想→跨域通道→对比分析→输出",
+      "examples": ["迷龙和传统LUT优化对比", "M0还是M4更合适？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_hypothesis_query",
+      "name": "假设推演",
+      "template_regex": "(如果.*那么|假如|假设|万一)",
+      "intent": "hypothetical_reasoning",
+      "route_to": "推理引擎→沙箱预演→概率评估→输出",
+      "examples": ["如果噪声std=10，命中率掉多少？", "假如用8-bit替代32-bit呢？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_status_check",
+      "name": "状态确认",
+      "template_regex": "(好了没|完成了么|怎么样了|到哪了|还有.*么)",
+      "intent": "progress_check",
+      "route_to": "建木路由→查当前任务状态→report",
+      "examples": ["那篇文章写好了吗？", "测试跑完了没有？"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    },
+    {
+      "id": "pat_correction_feedback",
+      "name": "纠错/否定反馈",
+      "template_regex": "(不对|错了|不是|停|等等|不是这样子|你搞错了)",
+      "intent": "error_correction",
+      "route_to": "逆三戳触发→暂停当前路径→重新路由→纠正",
+      "examples": ["不对，不是那个文件夹", "停了，方向偏了"],
+      "fame": {"μ":0.0, "χ":0.0, "ε":0.0, "κ":0.0, "ν":0.0, "δ":0.0, "ρ":0.0, "λ":0.0}
+    }
+  ],
+  "route_priority": "follow_tree → fallback_llm",
+  "note": "匹配顺序从上到下，命中第一个即停止（L3优先原则）"
+}

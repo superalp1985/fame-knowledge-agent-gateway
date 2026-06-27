@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-06-27T14:50:51.945Z",
+  "source": "knowledge_backup",
+  "target": "knowledge",
+  "copiedFiles": 619,
+  "copiedBytes": 27412376,
+  "copiedByExtension": {
+    ".md": 385,
+    ".yaml": 85,
+    ".json": 94,
+    ".txt": 3,
+    ".csv": 40,
+    ".jsonl": 12
+  },
+  "skippedFiles": 362,
+  "skippedByReason": {
+    "text_file_too_large": 4,
+    "directory_blocked": 19,
+    "path_fragment_blocked": 7,
+    "extension_not_public_text": 323,
+    "file_name_blocked": 9
+  },
+  "redactions": {
+    "key_value_secret": 60,
+    "local_windows_path": 817,
+    "private_api_url": 1,
+    "personal_name_cn": 3
+  },
+  "roots": {
+    "BNAI智能agent知识网": 139,
+    "建木知识网": 480
+  },
+  "warnings": [
+    "This is a sanitized public knowledge base prepared from local knowledge_backup.",
+    "Run a dedicated secret scan and license review before publishing a release.",
+    "Generated reports are evidence, not a legal or security guarantee."
+  ]
+}

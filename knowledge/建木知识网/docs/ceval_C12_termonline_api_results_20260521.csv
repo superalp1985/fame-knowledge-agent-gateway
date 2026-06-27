@@ -1,0 +1,121 @@
+api_url,card_id,error,group,result_count,results_json,status,subject,term
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+http[REDACTED_LOCAL_PATH]
+,ceval_card.clinical_medicine.001.男性,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,男性
+,ceval_card.electrical_engineer.017.计算,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,计算
+,ceval_card.metrology_engineer.012.测量结果,HTTP Error 429: Too Many Requests,engineering,,,err,metrology_engineer,测量结果
+,ceval_card.physician.022.子宫,HTTP Error 429: Too Many Requests,medicine,,,err,physician,子宫
+,ceval_card.ideological_and_moral_cultivation.003.爱国主义,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,爱国主义
+,ceval_card.operating_system.037.状态,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,状态
+,ceval_card.computer_architecture.009.直接,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,直接
+,ceval_card.clinical_medicine.002.女性,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,女性
+,ceval_card.ideological_and_moral_cultivation.001.人生目的,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,人生目的
+,ceval_card.electrical_engineer.015.10kV,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,10kV
+,ceval_card.computer_network.007.数据链路层,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,数据链路层
+,ceval_card.legal_exam.law.001.下列选项中,HTTP Error 429: Too Many Requests,legal_exam,,,err,law,下列选项中
+,ceval_card.fire_engineer.003.错误的是,HTTP Error 429: Too Many Requests,engineering,,,err,fire_engineer,错误的是
+,ceval_card.clinical_medicine.032.贫血,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,贫血
+http[REDACTED_LOCAL_PATH]
+,ceval_card.mao_zedong_thought.004.毛泽东思想,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,毛泽东思想
+,ceval_card.physician.016.出血,HTTP Error 429: Too Many Requests,medicine,,,err,physician,出血
+,ceval_card.marxism.026.的观点,HTTP Error 429: Too Many Requests,politics_history,,,err,marxism,的观点
+,ceval_card.modern_chinese_history.023.农民,HTTP Error 429: Too Many Requests,politics_history,,,err,modern_chinese_history,农民
+,ceval_card.legal_exam.legal_professional.002.下列哪一说法是正确的,HTTP Error 429: Too Many Requests,legal_exam,,,err,legal_professional,下列哪一说法是正确的
+,ceval_card.middle_school_history.003.英国,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,英国
+,ceval_card.mao_zedong_thought.001.实事求是,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,实事求是
+,ceval_card.ideological_and_moral_cultivation.012.理想信念,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,理想信念
+,ceval_card.operating_system.033.存储管理,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,存储管理
+http[REDACTED_LOCAL_PATH]
+,ceval_card.ideological_and_moral_cultivation.005.人生价值,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,人生价值
+,ceval_card.computer_network.003.传输层,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,传输层
+,ceval_card.middle_school_history.041.美国,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,美国
+,ceval_card.computer_network.038.报文段,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,报文段
+,ceval_card.computer_network.027.序号,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,序号
+,ceval_card.electrical_engineer.024.5kV,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,5kV
+,ceval_card.middle_school_history.005.法国,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,法国
+,ceval_card.computer_architecture.002.内存,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,内存
+,ceval_card.high_school_politics.001.这说明,HTTP Error 429: Too Many Requests,politics_history,,,err,high_school_politics,这说明
+,ceval_card.legal_exam.law.002.对此,HTTP Error 429: Too Many Requests,legal_exam,,,err,law,对此
+,ceval_card.middle_school_history.017.唐朝,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,唐朝
+http[REDACTED_LOCAL_PATH]
+,ceval_card.legal_exam.law.003.下列说法正确的是,HTTP Error 429: Too Many Requests,legal_exam,,,err,law,下列说法正确的是
+,ceval_card.computer_network.018.流量控制,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,流量控制
+,ceval_card.physician.003.查体,HTTP Error 429: Too Many Requests,medicine,,,err,physician,查体
+,ceval_card.college_programming.039.在C,HTTP Error 429: Too Many Requests,computer,,,err,college_programming,在C
+,ceval_card.physician.039.医生,HTTP Error 429: Too Many Requests,medicine,,,err,physician,医生
+,ceval_card.electrical_engineer.027.110kV,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,110kV
+,ceval_card.computer_network.004.网络层,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,网络层
+,ceval_card.middle_school_history.001.上海,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,上海
+,ceval_card.computer_architecture.038.32位,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,32位
+,ceval_card.clinical_medicine.008.血气分析,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,血气分析
+,ceval_card.environmental_impact_assessment_engineer.019.的规定,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,的规定
+,ceval_card.computer_architecture.020.通用寄存器,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,通用寄存器
+,ceval_card.high_school_politics.002.这表明,HTTP Error 429: Too Many Requests,politics_history,,,err,high_school_politics,这表明
+,ceval_card.operating_system.027.系统调用,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,系统调用
+,ceval_card.metrology_engineer.001.测量标准,HTTP Error 429: Too Many Requests,engineering,,,err,metrology_engineer,测量标准
+,ceval_card.clinical_medicine.038.支气管扩张,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,支气管扩张
+http[REDACTED_LOCAL_PATH]
+,ceval_card.middle_school_history.043.北京,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,北京
+,ceval_card.computer_network.037.分组,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,分组
+,ceval_card.environmental_impact_assessment_engineer.022.依据,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,依据
+,ceval_card.environmental_impact_assessment_engineer.004.中华人民共和国环境保护法,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,中华人民共和国环境保护法
+,ceval_card.fire_engineer.007.不正确的是,HTTP Error 429: Too Many Requests,engineering,,,err,fire_engineer,不正确的是
+,ceval_card.electrical_engineer.028.220kV,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,220kV
+,ceval_card.mao_zedong_thought.010.重要思想,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,重要思想
+,ceval_card.operating_system.039.部分,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,部分
+,ceval_card.mao_zedong_thought.008.邓小平理论,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,邓小平理论
+http[REDACTED_LOCAL_PATH]
+,ceval_card.modern_chinese_history.004.民族资产阶级,HTTP Error 429: Too Many Requests,politics_history,,,err,modern_chinese_history,民族资产阶级
+,ceval_card.ideological_and_moral_cultivation.027.情感,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,情感
+,ceval_card.operating_system.002.在Unix中,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,在Unix中
+,ceval_card.physician.007.呕吐,HTTP Error 429: Too Many Requests,medicine,,,err,physician,呕吐
+,ceval_card.clinical_medicine.009.再生障碍性贫血,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,再生障碍性贫血
+,ceval_card.ideological_and_moral_cultivation.011.人生观,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,人生观
+,ceval_card.mao_zedong_thought.002.三个代表,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,三个代表
+,ceval_card.computer_network.006.应用层,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,应用层
+,ceval_card.middle_school_politics.017.合作,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_politics,合作
+,ceval_card.environmental_impact_assessment_engineer.008.规划环境影响评价条例,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,规划环境影响评价条例
+,ceval_card.computer_architecture.042.磁盘,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,磁盘
+,ceval_card.metrology_engineer.002.检定证书,HTTP Error 429: Too Many Requests,engineering,,,err,metrology_engineer,检定证书
+http[REDACTED_LOCAL_PATH]
+,ceval_card.clinical_medicine.019.急性白血病,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,急性白血病
+,ceval_card.clinical_medicine.037.急性淋巴细胞性白血病,HTTP Error 429: Too Many Requests,medicine,,,err,clinical_medicine,急性淋巴细胞性白血病
+,ceval_card.operating_system.005.信号量,HTTP Error 429: Too Many Requests,computer,,,err,operating_system,信号量
+,ceval_card.ideological_and_moral_cultivation.006.信仰,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,信仰
+,ceval_card.physician.021.体检,HTTP Error 429: Too Many Requests,medicine,,,err,physician,体检
+,ceval_card.middle_school_politics.028.人民代表大会,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_politics,人民代表大会
+,ceval_card.ideological_and_moral_cultivation.010.为人民服务,HTTP Error 429: Too Many Requests,politics_history,,,err,ideological_and_moral_cultivation,为人民服务
+,ceval_card.environmental_impact_assessment_engineer.025.不符合,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,不符合
+,ceval_card.legal_exam.legal_professional.004.下列哪一选项是错误的,HTTP Error 429: Too Many Requests,legal_exam,,,err,legal_professional,下列哪一选项是错误的
+,ceval_card.mao_zedong_thought.007.人民当家作主,HTTP Error 429: Too Many Requests,politics_history,,,err,mao_zedong_thought,人民当家作主
+,ceval_card.computer_network.011.路由器,HTTP Error 429: Too Many Requests,computer,,,err,computer_network,路由器
+,ceval_card.middle_school_history.025.鸦片战争,HTTP Error 429: Too Many Requests,politics_history,,,err,middle_school_history,鸦片战争
+,ceval_card.computer_architecture.016.间接,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,间接
+,ceval_card.physician.009.腹痛,HTTP Error 429: Too Many Requests,medicine,,,err,physician,腹痛
+,ceval_card.computer_architecture.008.立即,HTTP Error 429: Too Many Requests,computer,,,err,computer_architecture,立即
+,ceval_card.electrical_engineer.044.波长为,HTTP Error 429: Too Many Requests,engineering,,,err,electrical_engineer,波长为
+http[REDACTED_LOCAL_PATH]
+,ceval_card.environmental_impact_assessment_engineer.009.建设项目环境保护管理条例,HTTP Error 429: Too Many Requests,engineering,,,err,environmental_impact_assessment_engineer,建设项目环境保护管理条例
+,ceval_card.marxism.020.唯物主义的,HTTP Error 429: Too Many Requests,politics_history,,,err,marxism,唯物主义的

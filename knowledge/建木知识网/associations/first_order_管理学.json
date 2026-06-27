@@ -1,0 +1,36 @@
+{
+  "subject": "管理学",
+  "type": "first_order_associations",
+  "max_hops": 1,
+  "max_candidates": 3,
+  "associations": [
+    {
+      "from": "公司宗旨变化",
+      "to": [
+        "产品开发战略",
+        "前向一体化战略",
+        "创新型战略组织"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "多事业部结构优缺点",
+      "to": [
+        "区域事业部结构",
+        "组织内部关系协调",
+        "股权结构分散治理风险"
+      ],
+      "type": "first_order_same_domain"
+    },
+    {
+      "from": "决策树法",
+      "to": [
+        "弹性预算",
+        "财务战略矩阵",
+        "文化管理应对战略稳定"
+      ],
+      "type": "first_order_same_domain"
+    }
+  ],
+  "version": "management-from-corporate-strategy-2026-05-18"
+}

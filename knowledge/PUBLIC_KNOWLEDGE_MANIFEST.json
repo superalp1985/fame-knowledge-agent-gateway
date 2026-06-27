@@ -1,0 +1,3716 @@
+[
+  {
+    "path": "建木知识网/agent/.learnings/ERRORS.md",
+    "extension": ".md",
+    "bytes": 808,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/.learnings/LEARNINGS.md",
+    "extension": ".md",
+    "bytes": 824,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/DEVLOG.md",
+    "extension": ".md",
+    "bytes": 523,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/animation_worker_protocol_v0.1.md",
+    "extension": ".md",
+    "bytes": 1154,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/api_endpoints_v0.1.md",
+    "extension": ".md",
+    "bytes": 1989,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/api_gateway_v0.1.md",
+    "extension": ".md",
+    "bytes": 2128,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/architecture_v0.1.md",
+    "extension": ".md",
+    "bytes": 1986,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/architecture_v0.2.md",
+    "extension": ".md",
+    "bytes": 2678,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/architecture_v0.3.md",
+    "extension": ".md",
+    "bytes": 3467,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/artifact_manifest_v0.1.md",
+    "extension": ".md",
+    "bytes": 1693,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/backend_contracts_v0.1.md",
+    "extension": ".md",
+    "bytes": 946,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/backend_hardening_v0.1.md",
+    "extension": ".md",
+    "bytes": 1956,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/candidate_repo_review_20260521.md",
+    "extension": ".md",
+    "bytes": 4553,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/candidate_repos_20260521.md",
+    "extension": ".md",
+    "bytes": 1586,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/chat_ui_v0.1.md",
+    "extension": ".md",
+    "bytes": 1106,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/clawbot_bridge_v0.1.md",
+    "extension": ".md",
+    "bytes": 1220,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/contract_governance_v0.1.md",
+    "extension": ".md",
+    "bytes": 1334,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/contract_validation_v0.1.md",
+    "extension": ".md",
+    "bytes": 1059,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/control_console_v0.1.md",
+    "extension": ".md",
+    "bytes": 1667,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/course_production_router_v0.1.md",
+    "extension": ".md",
+    "bytes": 1524,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/dashboard_api_v0.1.md",
+    "extension": ".md",
+    "bytes": 709,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/delivery_exports_v0.2.md",
+    "extension": ".md",
+    "bytes": 1349,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/DESIGN_SYSTEM_KNOWLEDGE_AUDIT_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 4428,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/doc_adapter_lite_v0.1.md",
+    "extension": ".md",
+    "bytes": 955,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/FINAL_ALIGNMENT_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 4356,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/github_repo_search_20260521.json",
+    "extension": ".json",
+    "bytes": 101,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/github_repo_search_functional_20260521.json",
+    "extension": ".json",
+    "bytes": 67146,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/handoff_audit_v0.1.md",
+    "extension": ".md",
+    "bytes": 1198,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/INDEX.md",
+    "extension": ".md",
+    "bytes": 3331,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/llm_tool_planner_v0.1.md",
+    "extension": ".md",
+    "bytes": 1288,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/localization_worker_protocol_v0.1.md",
+    "extension": ".md",
+    "bytes": 1208,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/module_integration_matrix_v0.1.md",
+    "extension": ".md",
+    "bytes": 707,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/MULTIMODAL_KNOWLEDGE_DECISIONS_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 14857,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/MULTIMODAL_QUALITY_RESEARCH_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 6760,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/open_source_survey_v0.1.md",
+    "extension": ".md",
+    "bytes": 2688,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/ppt_worker_protocol_v0.1.md",
+    "extension": ".md",
+    "bytes": 1005,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/REFINEMENT_START_2026-05-21.md",
+    "extension": ".md",
+    "bytes": 3038,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/REFINEMENT_TEST_MATRIX_2026-05-21.md",
+    "extension": ".md",
+    "bytes": 2063,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/task_query_api_v0.1.md",
+    "extension": ".md",
+    "bytes": 1516,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/task_store_v0.1.md",
+    "extension": ".md",
+    "bytes": 989,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/try_it_v0.1.md",
+    "extension": ".md",
+    "bytes": 2110,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/ui_prototype_v0.1.md",
+    "extension": ".md",
+    "bytes": 1692,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/video_worker_protocol_v0.1.md",
+    "extension": ".md",
+    "bytes": 971,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/web_research_adapter_v0.1.md",
+    "extension": ".md",
+    "bytes": 885,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/web_search_api_keys_v0.1.md",
+    "extension": ".md",
+    "bytes": 1693,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/docs/worker_registry_v0.1.md",
+    "extension": ".md",
+    "bytes": 901,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/package.json",
+    "extension": ".json",
+    "bytes": 348,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/README.md",
+    "extension": ".md",
+    "bytes": 2048,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/requirements.txt",
+    "extension": ".txt",
+    "bytes": 45,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/shared/_smoke_test.txt",
+    "extension": ".txt",
+    "bytes": 24,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/skills/jianmu-ppt-master/SKILL.md",
+    "extension": ".md",
+    "bytes": 3234,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/agent/src/README.md",
+    "extension": ".md",
+    "bytes": 212,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/cross_domain.json",
+    "extension": ".json",
+    "bytes": 29298,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_保险精算.json",
+    "extension": ".json",
+    "bytes": 1136,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_法学.json",
+    "extension": ".json",
+    "bytes": 1722,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_管理学.json",
+    "extension": ".json",
+    "bytes": 866,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_会计学.json",
+    "extension": ".json",
+    "bytes": 7137,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_经济学.json",
+    "extension": ".json",
+    "bytes": 14860,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/first_order_统计学.json",
+    "extension": ".json",
+    "bytes": 1208,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_地理.json",
+    "extension": ".json",
+    "bytes": 762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_化学.json",
+    "extension": ".json",
+    "bytes": 762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_会计学.json",
+    "extension": ".json",
+    "bytes": 1039,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_历史.json",
+    "extension": ".json",
+    "bytes": 780,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_生物.json",
+    "extension": ".json",
+    "bytes": 765,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_数学.json",
+    "extension": ".json",
+    "bytes": 777,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_思想政治.json",
+    "extension": ".json",
+    "bytes": 768,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_物理.json",
+    "extension": ".json",
+    "bytes": 762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_信息技术.json",
+    "extension": ".json",
+    "bytes": 777,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_英语.json",
+    "extension": ".json",
+    "bytes": 762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/lang_语文.json",
+    "extension": ".json",
+    "bytes": 762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_地理.json",
+    "extension": ".json",
+    "bytes": 1552,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_化学.json",
+    "extension": ".json",
+    "bytes": 1783,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_会计学.json",
+    "extension": ".json",
+    "bytes": 4761,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_历史.json",
+    "extension": ".json",
+    "bytes": 1456,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_生物.json",
+    "extension": ".json",
+    "bytes": 1594,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_数学.json",
+    "extension": ".json",
+    "bytes": 2719,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_思想政治.json",
+    "extension": ".json",
+    "bytes": 1222,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_物理.json",
+    "extension": ".json",
+    "bytes": 2179,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_信息技术.json",
+    "extension": ".json",
+    "bytes": 1416,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_英语.json",
+    "extension": ".json",
+    "bytes": 1261,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/associations/route_语文.json",
+    "extension": ".json",
+    "bytes": 1203,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/backbone.json",
+    "extension": ".json",
+    "bytes": 7656,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_52_subjects_seed_mapping_20260520.csv",
+    "extension": ".csv",
+    "bytes": 11228,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_52_subjects_seed_mapping_report_20260520.md",
+    "extension": ".md",
+    "bytes": 5367,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_52_subjects_strategy_20260520.md",
+    "extension": ".md",
+    "bytes": 2701,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C10_authority_search_fetch_report_20260521.md",
+    "extension": ".md",
+    "bytes": 816,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C10_authority_search_fetch_results_20260521.csv",
+    "extension": ".csv",
+    "bytes": 15487,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C10_small_fetch_results_20260521.csv",
+    "extension": ".csv",
+    "bytes": 8,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C11_error_driven_improvement_tasks_20260521.csv",
+    "extension": ".csv",
+    "bytes": 39931,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C11_val_baseline_report_20260521.md",
+    "extension": ".md",
+    "bytes": 2303,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12_termonline_api_report_20260521.md",
+    "extension": ".md",
+    "bytes": 845,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12_termonline_api_results_20260521.csv",
+    "extension": ".csv",
+    "bytes": 12936,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12_termonline_probe_20260521.csv",
+    "extension": ".csv",
+    "bytes": 848,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12_termonline_probe_report_20260521.md",
+    "extension": ".md",
+    "bytes": 703,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12b_termonline_report_20260521.md",
+    "extension": ".md",
+    "bytes": 712,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C12b_termonline_results_20260521.csv",
+    "extension": ".csv",
+    "bytes": 87032,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13_termonline_alignment_report_20260521.md",
+    "extension": ".md",
+    "bytes": 3617,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13_termonline_alignment_weight_sweep_20260521.csv",
+    "extension": ".csv",
+    "bytes": 382,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13b_termonline_strict_ablation_report_20260521.md",
+    "extension": ".md",
+    "bytes": 3622,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13b_termonline_strict_ablation_weight_sweep_20260521.csv",
+    "extension": ".csv",
+    "bytes": 384,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13c_chinese_ngram_tokenizer_report_20260521.md",
+    "extension": ".md",
+    "bytes": 3292,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13c_chinese_ngram_tokenizer_weight_sweep_20260521.csv",
+    "extension": ".csv",
+    "bytes": 155,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C13c_vs_C11_changed_predictions_20260521.csv",
+    "extension": ".csv",
+    "bytes": 62736,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C14_guard_policy_sweep_20260521.csv",
+    "extension": ".csv",
+    "bytes": 517,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C14_guarded_ngram_alignment_report_20260521.md",
+    "extension": ".md",
+    "bytes": 3886,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C15_changed_hurt_analysis_report_20260521.md",
+    "extension": ".md",
+    "bytes": 2993,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C15_contrast_guard_task_table_20260521.csv",
+    "extension": ".csv",
+    "bytes": 50122,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C15_hurt_review_pack_20260521.csv",
+    "extension": ".csv",
+    "bytes": 42213,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C16_guard_refinement_policy_sweep_20260521.csv",
+    "extension": ".csv",
+    "bytes": 608,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C16_negative_route_noise_guard_report_20260521.md",
+    "extension": ".md",
+    "bytes": 2011,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C2_semantic_tree_bridge_coverage_20260520.csv",
+    "extension": ".csv",
+    "bytes": 84944,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C2_semantic_tree_bridge_coverage_report_20260520.md",
+    "extension": ".md",
+    "bytes": 21763,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C2_subject_semantic_bridge_seed_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 62083,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C3_C4_sidecar_shadow_report_20260520.md",
+    "extension": ".md",
+    "bytes": 2708,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C3_semantic_seed_routes_report_20260520.md",
+    "extension": ".md",
+    "bytes": 2314,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C3_semantic_seed_routes_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 527116,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C4_rich_seed_routes_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 341520,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C4_rich_seed_routes_with_examples_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1212,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C4_rich_sidecar_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1825,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C5_knowledge_cards_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1473,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C5_knowledge_cards_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 350451,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C6_authority_ready_cards_merged_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 131590,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C6_authority_ready_cards_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1310,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C6_authority_ready_cards_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 123941,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C6_authority_ready_merged_sidecar_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1151,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C7_authoritative_source_pack_manifest_20260520.csv",
+    "extension": ".csv",
+    "bytes": 784,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C7_authoritative_source_pack_manifest_v2_20260520.csv",
+    "extension": ".csv",
+    "bytes": 1176,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C7_authoritative_source_pack_report_20260520.md",
+    "extension": ".md",
+    "bytes": 885,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C8_authority_snippets_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1074,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C8_authority_snippets_summary_20260520.csv",
+    "extension": ".csv",
+    "bytes": 183,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C9_authority_html_link_candidates_20260520.csv",
+    "extension": ".csv",
+    "bytes": 35,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C9_authority_text_search_jobs_20260520.csv",
+    "extension": ".csv",
+    "bytes": 381893,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C9_authority_text_search_jobs_report_20260520.md",
+    "extension": ".md",
+    "bytes": 773,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_C9_authority_text_source_probe_20260520.csv",
+    "extension": ".csv",
+    "bytes": 820,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_dataset_index_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1960,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_jianmu_sidecar_v1_report_20260520.md",
+    "extension": ".md",
+    "bytes": 607,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/ceval_jianmu_sidecar_v2_rich_report_20260520.md",
+    "extension": ".md",
+    "bytes": 767,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/jianmu_agent_studio_v0.1_plan.md",
+    "extension": ".md",
+    "bytes": 4550,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_abstraction_regularity_bridge_design_20260520.md",
+    "extension": ".md",
+    "bytes": 1684,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_abstraction_regularity_bridge_draft_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 3691,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_abstraction_regularity_inventory_20260520.csv",
+    "extension": ".csv",
+    "bytes": 121736,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_first_order_inventory_20260520.csv",
+    "extension": ".csv",
+    "bytes": 17401,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_accounting_first_order_bridge_H3_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 7323,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_accounting_H3_20260520.csv",
+    "extension": ".csv",
+    "bytes": 829657,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_accounting_H3_report_20260520.md",
+    "extension": ".md",
+    "bytes": 1922,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_accounting_nodes_H3_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 111240,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_first_order_bridge_H4_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 36350,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_first_order_bridge_H5_refined_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 90500,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_H4_20260520.csv",
+    "extension": ".csv",
+    "bytes": 1799620,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_H4_report_20260520.md",
+    "extension": ".md",
+    "bytes": 3309,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_H5_refined_20260520.csv",
+    "extension": ".csv",
+    "bytes": 2020879,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_H5_refined_report_20260520.md",
+    "extension": ".md",
+    "bytes": 5894,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_H6_final_sidecar_20260520.csv",
+    "extension": ".csv",
+    "bytes": 2130938,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_nodes_H4_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 386247,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_nodes_H5_refined_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 561394,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_all_subjects_nodes_H6_final_sidecar_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 633871,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_finance_first_order_bridge_H2_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 6746,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_finance_H2_20260520.csv",
+    "extension": ".csv",
+    "bytes": 863835,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_finance_H2_report_20260520.md",
+    "extension": ".md",
+    "bytes": 2183,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_finance_nodes_H2_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 78336,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_H6_final_sidecar_summary_20260520.json",
+    "extension": ".json",
+    "bytes": 180,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_H6_high_count_node_split_plan_20260520.csv",
+    "extension": ".csv",
+    "bytes": 34071,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_H6_retrieval_integration_spec_20260520.json",
+    "extension": ".json",
+    "bytes": 1421,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_H6_review_and_integration_report_20260520.md",
+    "extension": ".md",
+    "bytes": 5160,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_H6_review_audit_20260520.csv",
+    "extension": ".csv",
+    "bytes": 570261,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_mapping_draft_20260520.csv",
+    "extension": ".csv",
+    "bytes": 574627,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_rebuild_design_20260520.md",
+    "extension": ".md",
+    "bytes": 5813,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_hierarchy_sample_modules_20260520.md",
+    "extension": ".md",
+    "bytes": 11043,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_language_association_inventory_20260520.csv",
+    "extension": ".csv",
+    "bytes": 13933,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_language_association_inventory_report_20260520.md",
+    "extension": ".md",
+    "bytes": 951,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_language_route_bridge_design_20260520.md",
+    "extension": ".md",
+    "bytes": 4904,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_route_distribution_20260520.csv",
+    "extension": ".csv",
+    "bytes": 6413,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_route_inventory_20260520.csv",
+    "extension": ".csv",
+    "bytes": 1347000,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_route_inventory_report_20260520.md",
+    "extension": ".md",
+    "bytes": 3330,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/docs/knowledge_routing_bridge_draft_20260520.jsonl",
+    "extension": ".jsonl",
+    "bytes": 5578,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/地理.json",
+    "extension": ".json",
+    "bytes": 567,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/化学.json",
+    "extension": ".json",
+    "bytes": 567,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/会计学.json",
+    "extension": ".json",
+    "bytes": 980,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/历史.json",
+    "extension": ".json",
+    "bytes": 583,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/生物.json",
+    "extension": ".json",
+    "bytes": 568,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/数学.json",
+    "extension": ".json",
+    "bytes": 584,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/思想政治.json",
+    "extension": ".json",
+    "bytes": 593,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/物理.json",
+    "extension": ".json",
+    "bytes": 565,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/信息技术.json",
+    "extension": ".json",
+    "bytes": 607,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/英语.json",
+    "extension": ".json",
+    "bytes": 565,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/entries/语文.json",
+    "extension": ".json",
+    "bytes": 587,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/cc_cedict.txt",
+    "extension": ".txt",
+    "bytes": 223,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/sentence_patterns.json",
+    "extension": ".json",
+    "bytes": 3892,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_超高频.json",
+    "extension": ".json",
+    "bytes": 6158,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_高频.json",
+    "extension": ".json",
+    "bytes": 40993,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_极高频.json",
+    "extension": ".json",
+    "bytes": 29056,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_中低频.json",
+    "extension": ".json",
+    "bytes": 1057011,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_中高频.json",
+    "extension": ".json",
+    "bytes": 97129,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_bin_中频.json",
+    "extension": ".json",
+    "bytes": 357941,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_bins/vocab_index.json",
+    "extension": ".json",
+    "bytes": 8398,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/language/vocab_technical.json",
+    "extension": ".json",
+    "bytes": 3746,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/leaderboard_data.json",
+    "extension": ".json",
+    "bytes": 335,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/meta/snapshot.json",
+    "extension": ".json",
+    "bytes": 1378,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/meta/trim_log.json",
+    "extension": ".json",
+    "bytes": 247,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/00_index.md",
+    "extension": ".md",
+    "bytes": 1457,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/00_research_sources.md",
+    "extension": ".md",
+    "bytes": 4192,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/01_design_principles.md",
+    "extension": ".md",
+    "bytes": 381,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/02_language_tree_binding.md",
+    "extension": ".md",
+    "bytes": 260,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/animation_principles.md",
+    "extension": ".md",
+    "bytes": 111,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/animation_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 104,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/explainer_animation.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/manim_patterns.md",
+    "extension": ".md",
+    "bytes": 82,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/motion_design.md",
+    "extension": ".md",
+    "bytes": 122,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/motion_language_advanced.md",
+    "extension": ".md",
+    "bytes": 1092,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/animation/motion_semantics.yaml",
+    "extension": ".yaml",
+    "bytes": 417,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/accessibility_rules.md",
+    "extension": ".md",
+    "bytes": 1078,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/accessibility_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 389,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/aesthetics_rubric.md",
+    "extension": ".md",
+    "bytes": 133,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/art_rulebook.yaml",
+    "extension": ".yaml",
+    "bytes": 1844,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/color_theory.md",
+    "extension": ".md",
+    "bytes": 239,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/color_typography_accessibility.md",
+    "extension": ".md",
+    "bytes": 1644,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/composition.md",
+    "extension": ".md",
+    "bytes": 283,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/design_principles_full.md",
+    "extension": ".md",
+    "bytes": 3518,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/gestalt_and_composition.md",
+    "extension": ".md",
+    "bytes": 1508,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/style_profiles.yaml",
+    "extension": ".yaml",
+    "bytes": 896,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/style_systems.md",
+    "extension": ".md",
+    "bytes": 1456,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/typography.md",
+    "extension": ".md",
+    "bytes": 259,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/art/visual_hierarchy.md",
+    "extension": ".md",
+    "bytes": 213,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/audio_mix_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 322,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/audio_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 117,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/mixing_basics.md",
+    "extension": ".md",
+    "bytes": 85,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/narration.md",
+    "extension": ".md",
+    "bytes": 125,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/sound_design_advanced.md",
+    "extension": ".md",
+    "bytes": 1068,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/audio/sound_design.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/chart_selection_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 670,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/chart_selection.md",
+    "extension": ".md",
+    "bytes": 173,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/data_visualization_advanced.md",
+    "extension": ".md",
+    "bytes": 1627,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/data_visualization_rubric.md",
+    "extension": ".md",
+    "bytes": 137,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/diagram_grammar.md",
+    "extension": ".md",
+    "bytes": 110,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/echarts_templates.yaml",
+    "extension": ".yaml",
+    "bytes": 63,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/chart_diagram/mermaid_templates.yaml",
+    "extension": ".yaml",
+    "bytes": 80,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/design_systems/bottom_level_completeness_audit.md",
+    "extension": ".md",
+    "bytes": 6835,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/design_systems/design_system_semantic_tree.yaml",
+    "extension": ".yaml",
+    "bytes": 5137,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/design_systems/design_system_tokens_index.yaml",
+    "extension": ".yaml",
+    "bytes": 5547,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/design_systems/quantified_design_systems_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 29281,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/examples/antipatterns.yaml",
+    "extension": ".yaml",
+    "bytes": 815,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/examples/example_and_antipattern_library.md",
+    "extension": ".md",
+    "bytes": 1565,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/examples/high_quality_patterns.md",
+    "extension": ".md",
+    "bytes": 2066,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/examples/high_quality_patterns.yaml",
+    "extension": ".yaml",
+    "bytes": 453,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/cinematic_language.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/film_language_matrix.yaml",
+    "extension": ".yaml",
+    "bytes": 685,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/film_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 145,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/montage.md",
+    "extension": ".md",
+    "bytes": 92,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/narrative_structure.md",
+    "extension": ".md",
+    "bytes": 104,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/pacing_and_tension.md",
+    "extension": ".md",
+    "bytes": 107,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/scene_design.md",
+    "extension": ".md",
+    "bytes": 89,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/film/visual_motifs.md",
+    "extension": ".md",
+    "bytes": 113,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/abstraction_to_expression.yaml",
+    "extension": ".yaml",
+    "bytes": 748,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/concept_to_modality.yaml",
+    "extension": ".yaml",
+    "bytes": 346,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/design_system_abstraction_to_expression.yaml",
+    "extension": ".yaml",
+    "bytes": 4018,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/design_system_first_order_overlay.yaml",
+    "extension": ".yaml",
+    "bytes": 2971686,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/design_system_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 1246,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/domain_to_modality_defaults.yaml",
+    "extension": ".yaml",
+    "bytes": 734,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/literature_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 588,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/multimodal_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 1164,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/language_tree_links/README.md",
+    "extension": ".md",
+    "bytes": 220,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/literary_foundations.md",
+    "extension": ".md",
+    "bytes": 1188,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/literary_module_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 1136,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/literary_prompt_templates.md",
+    "extension": ".md",
+    "bytes": 970,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/literary_quality_rubric.yaml",
+    "extension": ".yaml",
+    "bytes": 962,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/narrative_archetypes.yaml",
+    "extension": ".yaml",
+    "bytes": 1259,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/literature/rhetoric_and_style.md",
+    "extension": ".md",
+    "bytes": 1294,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/arrangement.md",
+    "extension": ".md",
+    "bytes": 114,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/emotion_mapping.md",
+    "extension": ".md",
+    "bytes": 206,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/harmony.md",
+    "extension": ".md",
+    "bytes": 144,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/how_music_works.md",
+    "extension": ".md",
+    "bytes": 122,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/melody.md",
+    "extension": ".md",
+    "bytes": 108,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/music_cue_library.yaml",
+    "extension": ".yaml",
+    "bytes": 1264,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/music_for_video.md",
+    "extension": ".md",
+    "bytes": 126,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/music_professional_system.md",
+    "extension": ".md",
+    "bytes": 2428,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/music_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 142,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/music/rhythm.md",
+    "extension": ".md",
+    "bytes": 123,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/narrative_director_full.md",
+    "extension": ".md",
+    "bytes": 1904,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/narrative_patterns.yaml",
+    "extension": ".yaml",
+    "bytes": 1119,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/narrative_rubric.md",
+    "extension": ".md",
+    "bytes": 171,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/narrative_structure.md",
+    "extension": ".md",
+    "bytes": 241,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/rhetoric_and_explanation.md",
+    "extension": ".md",
+    "bytes": 211,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/narrative/teaching_storytelling.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/photography/camera_visual_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 636,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/photography/photography_fundamentals.md",
+    "extension": ".md",
+    "bytes": 1708,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/chart_and_diagram_rules.md",
+    "extension": ".md",
+    "bytes": 226,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/how_ppt_works.md",
+    "extension": ".md",
+    "bytes": 279,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/layout_principles.md",
+    "extension": ".md",
+    "bytes": 185,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/ppt_page_system.yaml",
+    "extension": ".yaml",
+    "bytes": 1377,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/ppt_professional_system.md",
+    "extension": ".md",
+    "bytes": 2486,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/ppt_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 150,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/slide_types.yaml",
+    "extension": ".yaml",
+    "bytes": 130,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/ppt/storytelling_in_slides.md",
+    "extension": ".md",
+    "bytes": 138,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/asset_binding.md",
+    "extension": ".md",
+    "bytes": 144,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/audio_verification_loop.md",
+    "extension": ".md",
+    "bytes": 125,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/auto_fix_work_orders.md",
+    "extension": ".md",
+    "bytes": 1340,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/auto_revision_protocol.md",
+    "extension": ".md",
+    "bytes": 134,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/auto_revision_recipes.yaml",
+    "extension": ".yaml",
+    "bytes": 1103,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/claw_code_control_constraints_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 10131,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/claw_code_control_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 3506,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/director_quality_loop_full.md",
+    "extension": ".md",
+    "bytes": 1695,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/module_quality_gates.yaml",
+    "extension": ".yaml",
+    "bytes": 2213,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/multimodal_rubric_detailed.yaml",
+    "extension": ".yaml",
+    "bytes": 656,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/quality_gate.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/quality_score_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 624,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/review_to_fix_mapping.yaml",
+    "extension": ".yaml",
+    "bytes": 1022,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/timeline_protocol.md",
+    "extension": ".md",
+    "bytes": 114,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/production_pipeline/visual_verification_loop.md",
+    "extension": ".md",
+    "bytes": 123,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/README_FOR_AGENT.md",
+    "extension": ".md",
+    "bytes": 2161,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/review_prompts/audio_music_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1019,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/review_prompts/content_narrative_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1078,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/review_prompts/ppt_vision_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1807,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/review_prompts/README.md",
+    "extension": ".md",
+    "bytes": 438,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/review_prompts/video_keyframe_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1154,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/schemas/artifact_manifest_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 360,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/schemas/auto_fix_ticket_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 312,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/schemas/review_result_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 491,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/text_research/longform_analysis_rules.md",
+    "extension": ".md",
+    "bytes": 1160,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/text_research/module_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 1439,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/text_research/research_methodology.md",
+    "extension": ".md",
+    "bytes": 1115,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/text_research/research_prompt_template.md",
+    "extension": ".md",
+    "bytes": 809,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/text_research/source_quality_rubric.yaml",
+    "extension": ".yaml",
+    "bytes": 1110,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/editing_rhythm.md",
+    "extension": ".md",
+    "bytes": 159,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/how_video_works.md",
+    "extension": ".md",
+    "bytes": 169,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/motion_graphics.md",
+    "extension": ".md",
+    "bytes": 147,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/shot_language.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/subtitle_rules.md",
+    "extension": ".md",
+    "bytes": 133,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/timeline_principles.md",
+    "extension": ".md",
+    "bytes": 190,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/video_professional_system.md",
+    "extension": ".md",
+    "bytes": 1961,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/video_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 161,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/multimodal_knowledge/video/video_scene_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 718,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/地理_neurons.json",
+    "extension": ".json",
+    "bytes": 7533,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/化学_neurons.json",
+    "extension": ".json",
+    "bytes": 9931,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/会计学_neurons.json",
+    "extension": ".json",
+    "bytes": 40980,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/历史_neurons.json",
+    "extension": ".json",
+    "bytes": 7007,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/生物_neurons.json",
+    "extension": ".json",
+    "bytes": 9135,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/数学_neurons.json",
+    "extension": ".json",
+    "bytes": 17524,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/思想政治_neurons.json",
+    "extension": ".json",
+    "bytes": 4202,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/物理_neurons.json",
+    "extension": ".json",
+    "bytes": 12793,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/信息技术_neurons.json",
+    "extension": ".json",
+    "bytes": 5876,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/英语_neurons.json",
+    "extension": ".json",
+    "bytes": 4981,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/语文_neurons.json",
+    "extension": ".json",
+    "bytes": 4763,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/FinEval_Accounting_neurons.json",
+    "extension": ".json",
+    "bytes": 183687,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/neurons/FinEval_neurons.json",
+    "extension": ".json",
+    "bytes": 973227,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/实验报告_建木v2.0.md",
+    "extension": ".md",
+    "bytes": 8849,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/accounting_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 2600,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/advanced_financial_accounting_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 2149,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/banking_practitioner_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 66396,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/central_banking_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 6314,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/central_banking_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 12073,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/certified_management_accountant_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 2219,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/certified_practising_accountant_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 1719,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/china_actuary_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 7020,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/china_actuary_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 18308,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/commercial_bank_finance_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 4799,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/commercial_bank_finance_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 9355,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/content.json",
+    "extension": ".json",
+    "bytes": 8087,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/corporate_finance_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 17629,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/corporate_strategy_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 10552,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/CURRENT_STATUS.md",
+    "extension": ".md",
+    "bytes": 909,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/economic_law_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 9912,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/experiment_log.md",
+    "extension": ".md",
+    "bytes": 10399,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/experiment_results.json",
+    "extension": ".json",
+    "bytes": 37218,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/finance_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 5877,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/finance_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 10854,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/financial_engineering_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 5420,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/financial_engineering_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 13219,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/financial_markets_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 20424,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round1_cma_20260519.md",
+    "extension": ".md",
+    "bytes": 1966,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round2_tax_20260519.md",
+    "extension": ".md",
+    "bytes": 2538,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3a_finance_20260520.md",
+    "extension": ".md",
+    "bytes": 3289,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3b_fe_cf_20260520.md",
+    "extension": ".md",
+    "bytes": 3542,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3c_actuary_markets_20260520.md",
+    "extension": ".md",
+    "bytes": 2840,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3d_investments_markets_20260520.md",
+    "extension": ".md",
+    "bytes": 2840,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3e_finance_corporate_20260520.md",
+    "extension": ".md",
+    "bytes": 3415,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3f_accounting_cost_20260520.md",
+    "extension": ".md",
+    "bytes": 3965,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/formula_parser_round3g_practitioner_law_20260520.md",
+    "extension": ".md",
+    "bytes": 4937,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/fund_qualification_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 35769,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/futures_practitioner_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 3069,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/global_regression_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 34603,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/intermediate_financial_accounting_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 2345,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/international_finance_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 3565,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/international_finance_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 6909,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/investments_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 12213,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_design.md",
+    "extension": ".md",
+    "bytes": 7530,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_goal_plan.md",
+    "extension": ".md",
+    "bytes": 2779,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_pipeline_design.md",
+    "extension": ".md",
+    "bytes": 4011,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round1_report.md",
+    "extension": ".md",
+    "bytes": 3121,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round10_finance_report.md",
+    "extension": ".md",
+    "bytes": 4155,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round11_financial_management_report.md",
+    "extension": ".md",
+    "bytes": 4358,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round12_corporate_finance_report.md",
+    "extension": ".md",
+    "bytes": 5187,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round13_cost_accounting_report.md",
+    "extension": ".md",
+    "bytes": 2269,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round14_management_accounting_report.md",
+    "extension": ".md",
+    "bytes": 2020,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round15_advanced_financial_accounting_report.md",
+    "extension": ".md",
+    "bytes": 2079,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round16_intermediate_financial_accounting_report.md",
+    "extension": ".md",
+    "bytes": 2756,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round17_certified_practising_accountant_report.md",
+    "extension": ".md",
+    "bytes": 2373,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round18_tax_law_report.md",
+    "extension": ".md",
+    "bytes": 2695,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round19_certified_management_accountant_report.md",
+    "extension": ".md",
+    "bytes": 2399,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round2_report.md",
+    "extension": ".md",
+    "bytes": 2618,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round20_investments_report.md",
+    "extension": ".md",
+    "bytes": 2412,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round21_financial_markets_report.md",
+    "extension": ".md",
+    "bytes": 2382,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round22_financial_engineering_report.md",
+    "extension": ".md",
+    "bytes": 2630,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round23_commercial_bank_finance_report.md",
+    "extension": ".md",
+    "bytes": 2478,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round24_banking_practitioner_qualification_certificate_report.md",
+    "extension": ".md",
+    "bytes": 2554,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round25_securities_practitioner_qualification_certificate_report.md",
+    "extension": ".md",
+    "bytes": 2619,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round26_fund_qualification_certificate_report.md",
+    "extension": ".md",
+    "bytes": 1866,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round27_futures_practitioner_qualification_certificate_report.md",
+    "extension": ".md",
+    "bytes": 1699,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round28_central_banking_report.md",
+    "extension": ".md",
+    "bytes": 1435,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round29_monetary_finance_report.md",
+    "extension": ".md",
+    "bytes": 1736,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round3_report.md",
+    "extension": ".md",
+    "bytes": 2014,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round30_macroeconomics_report.md",
+    "extension": ".md",
+    "bytes": 1497,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round31_microeconomics_report.md",
+    "extension": ".md",
+    "bytes": 1714,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round32_international_economics_report.md",
+    "extension": ".md",
+    "bytes": 1501,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round33_econometrics_report.md",
+    "extension": ".md",
+    "bytes": 2109,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round34_statistics_report.md",
+    "extension": ".md",
+    "bytes": 1762,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round35_china_actuary_report.md",
+    "extension": ".md",
+    "bytes": 2121,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round36_insurance_report.md",
+    "extension": ".md",
+    "bytes": 1928,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round37_international_finance_report.md",
+    "extension": ".md",
+    "bytes": 1494,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round38_financial_engineering_report.md",
+    "extension": ".md",
+    "bytes": 1275,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round39_financial_markets_report.md",
+    "extension": ".md",
+    "bytes": 1255,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round4_report.md",
+    "extension": ".md",
+    "bytes": 2702,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round40_investments_report.md",
+    "extension": ".md",
+    "bytes": 1475,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round41_public_finance_report.md",
+    "extension": ".md",
+    "bytes": 2182,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round42_tax_law_report.md",
+    "extension": ".md",
+    "bytes": 1250,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round43_economic_law_report.md",
+    "extension": ".md",
+    "bytes": 1668,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round44_corporate_strategy_and_risk_management_report.md",
+    "extension": ".md",
+    "bytes": 1708,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round45_political_economy_report.md",
+    "extension": ".md",
+    "bytes": 1369,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round5_report.md",
+    "extension": ".md",
+    "bytes": 3021,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round7_report.md",
+    "extension": ".md",
+    "bytes": 3148,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round8_report.md",
+    "extension": ".md",
+    "bytes": 3268,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/leaderboard_round9_auditing_report.md",
+    "extension": ".md",
+    "bytes": 4159,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/macroeconomics_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 6988,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/macroeconomics_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 13039,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/management_accounting_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 1917,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/microeconomics_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 7943,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/microeconomics_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 17330,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/monetary_finance_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 17345,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/patch_blacklist_20260517.md",
+    "extension": ".md",
+    "bytes": 42711,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase1_generation_quality.md",
+    "extension": ".md",
+    "bytes": 1058,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase1_jianmu_connection_report.md",
+    "extension": ".md",
+    "bytes": 5675,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase1_route_test_report.json",
+    "extension": ".json",
+    "bytes": 18384,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_freegrowth_v1_report.md",
+    "extension": ".md",
+    "bytes": 3069,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_s4body_200step_report.md",
+    "extension": ".md",
+    "bytes": 3196,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_s4body_50step_report.md",
+    "extension": ".md",
+    "bytes": 3141,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_s4body_freegrowth_patch_report.md",
+    "extension": ".md",
+    "bytes": 3400,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_s4body_slowprune_v2_report.md",
+    "extension": ".md",
+    "bytes": 2995,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/phase2_s4body_warmup_v3_report.md",
+    "extension": ".md",
+    "bytes": 2623,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/project_progress_20260518.md",
+    "extension": ".md",
+    "bytes": 4098,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/public_finance_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 8295,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/public_finance_rule_audit_20260517.md",
+    "extension": ".md",
+    "bytes": 16124,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/s4body_mechanism_alignment.md",
+    "extension": ".md",
+    "bytes": 2195,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/sample_questions.json",
+    "extension": ".json",
+    "bytes": 29879,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/securities_practitioner_rule_audit_20260519.md",
+    "extension": ".md",
+    "bytes": 2809,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/statistics_abstract_patch_preview_20260517.md",
+    "extension": ".md",
+    "bytes": 6743,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/statistics_abstraction_candidates_20260517.md",
+    "extension": ".md",
+    "bytes": 9597,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/tax_law_rule_audit_20260518.md",
+    "extension": ".md",
+    "bytes": 14870,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/reports/tokens.json",
+    "extension": ".json",
+    "bytes": 1028,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/route_index.json",
+    "extension": ".json",
+    "bytes": 2164694,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/保险精算_rules.json",
+    "extension": ".json",
+    "bytes": 3632,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/地理_rules.json",
+    "extension": ".json",
+    "bytes": 1458,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/法学_rules.json",
+    "extension": ".json",
+    "bytes": 15151,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/管理学_rules.json",
+    "extension": ".json",
+    "bytes": 7014,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/化学_rules.json",
+    "extension": ".json",
+    "bytes": 2135,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/会计学_rules.json",
+    "extension": ".json",
+    "bytes": 54711,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/会计语言抽象.json",
+    "extension": ".json",
+    "bytes": 3563,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/经济学_rules.json",
+    "extension": ".json",
+    "bytes": 163612,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/历史_rules.json",
+    "extension": ".json",
+    "bytes": 1945,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/生物_rules.json",
+    "extension": ".json",
+    "bytes": 1564,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/数学_rules.json",
+    "extension": ".json",
+    "bytes": 2993,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/思想政治_rules.json",
+    "extension": ".json",
+    "bytes": 1412,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/统计学_rules.json",
+    "extension": ".json",
+    "bytes": 13158,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/物理_rules.json",
+    "extension": ".json",
+    "bytes": 2194,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/信息技术_rules.json",
+    "extension": ".json",
+    "bytes": 1569,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/英语_rules.json",
+    "extension": ".json",
+    "bytes": 1356,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/rules/语文_rules.json",
+    "extension": ".json",
+    "bytes": 1786,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/sparsity/dynamic_sparsity_full_report.md",
+    "extension": ".md",
+    "bytes": 3718,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/sparsity/dynamic_sparsity_report.md",
+    "extension": ".md",
+    "bytes": 3789,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/sparsity/s4_integration/experiment_log.md",
+    "extension": ".md",
+    "bytes": 10399,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/sparsity/s4_integration/s4_full_alignment_design.md",
+    "extension": ".md",
+    "bytes": 3488,
+    "root": "建木知识网"
+  },
+  {
+    "path": "建木知识网/sparsity/s4_integration/s4_integration_design.md",
+    "extension": ".md",
+    "bytes": 8581,
+    "root": "建木知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/00_index.md",
+    "extension": ".md",
+    "bytes": 2286,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/00_research_sources.md",
+    "extension": ".md",
+    "bytes": 4192,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/01_design_principles.md",
+    "extension": ".md",
+    "bytes": 381,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/02_language_tree_binding.md",
+    "extension": ".md",
+    "bytes": 260,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/animation_principles.md",
+    "extension": ".md",
+    "bytes": 111,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/animation_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 104,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/explainer_animation.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/manim_patterns.md",
+    "extension": ".md",
+    "bytes": 82,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/motion_design.md",
+    "extension": ".md",
+    "bytes": 122,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/motion_language_advanced.md",
+    "extension": ".md",
+    "bytes": 1092,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/animation/motion_semantics.yaml",
+    "extension": ".yaml",
+    "bytes": 417,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/accessibility_rules.md",
+    "extension": ".md",
+    "bytes": 1078,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/accessibility_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 389,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/aesthetics_rubric.md",
+    "extension": ".md",
+    "bytes": 133,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/art_rulebook.yaml",
+    "extension": ".yaml",
+    "bytes": 1844,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/color_theory.md",
+    "extension": ".md",
+    "bytes": 239,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/color_typography_accessibility.md",
+    "extension": ".md",
+    "bytes": 1644,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/composition.md",
+    "extension": ".md",
+    "bytes": 283,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/design_principles_full.md",
+    "extension": ".md",
+    "bytes": 3518,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/gestalt_and_composition.md",
+    "extension": ".md",
+    "bytes": 1508,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/style_profiles.yaml",
+    "extension": ".yaml",
+    "bytes": 896,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/style_systems.md",
+    "extension": ".md",
+    "bytes": 1456,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/typography.md",
+    "extension": ".md",
+    "bytes": 259,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/art/visual_hierarchy.md",
+    "extension": ".md",
+    "bytes": 213,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/audio_mix_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 322,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/audio_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 117,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/mixing_basics.md",
+    "extension": ".md",
+    "bytes": 85,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/narration.md",
+    "extension": ".md",
+    "bytes": 125,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/sound_design_advanced.md",
+    "extension": ".md",
+    "bytes": 1068,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/audio/sound_design.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/chart_selection_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 670,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/chart_selection.md",
+    "extension": ".md",
+    "bytes": 173,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/data_visualization_advanced.md",
+    "extension": ".md",
+    "bytes": 1627,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/data_visualization_rubric.md",
+    "extension": ".md",
+    "bytes": 137,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/diagram_grammar.md",
+    "extension": ".md",
+    "bytes": 110,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/echarts_templates.yaml",
+    "extension": ".yaml",
+    "bytes": 63,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/chart_diagram/mermaid_templates.yaml",
+    "extension": ".yaml",
+    "bytes": 80,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/design_systems/bottom_level_completeness_audit.md",
+    "extension": ".md",
+    "bytes": 6835,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/design_systems/design_system_semantic_tree.yaml",
+    "extension": ".yaml",
+    "bytes": 5137,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/design_systems/design_system_tokens_index.yaml",
+    "extension": ".yaml",
+    "bytes": 5547,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/design_systems/quantified_design_systems_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 29281,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/examples/antipatterns.yaml",
+    "extension": ".yaml",
+    "bytes": 815,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/examples/example_and_antipattern_library.md",
+    "extension": ".md",
+    "bytes": 1565,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/examples/high_quality_patterns.md",
+    "extension": ".md",
+    "bytes": 2066,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/examples/high_quality_patterns.yaml",
+    "extension": ".yaml",
+    "bytes": 453,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/cinematic_language.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/film_language_matrix.yaml",
+    "extension": ".yaml",
+    "bytes": 685,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/film_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 145,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/montage.md",
+    "extension": ".md",
+    "bytes": 92,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/narrative_structure.md",
+    "extension": ".md",
+    "bytes": 104,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/pacing_and_tension.md",
+    "extension": ".md",
+    "bytes": 107,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/scene_design.md",
+    "extension": ".md",
+    "bytes": 89,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/film/visual_motifs.md",
+    "extension": ".md",
+    "bytes": 113,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/knowledge_hierarchy.md",
+    "extension": ".md",
+    "bytes": 8758,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/abstraction_to_expression.yaml",
+    "extension": ".yaml",
+    "bytes": 748,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/concept_to_modality.yaml",
+    "extension": ".yaml",
+    "bytes": 346,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/design_system_abstraction_to_expression.yaml",
+    "extension": ".yaml",
+    "bytes": 4018,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/design_system_first_order_overlay.yaml",
+    "extension": ".yaml",
+    "bytes": 2971686,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/design_system_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 1246,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/domain_to_modality_defaults.yaml",
+    "extension": ".yaml",
+    "bytes": 734,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/literature_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 588,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/multimodal_generation_policy.yaml",
+    "extension": ".yaml",
+    "bytes": 1164,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/language_tree_links/README.md",
+    "extension": ".md",
+    "bytes": 220,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/literary_foundations.md",
+    "extension": ".md",
+    "bytes": 1188,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/literary_module_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 1136,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/literary_prompt_templates.md",
+    "extension": ".md",
+    "bytes": 970,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/literary_quality_rubric.yaml",
+    "extension": ".yaml",
+    "bytes": 962,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/narrative_archetypes.yaml",
+    "extension": ".yaml",
+    "bytes": 1259,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/literature/rhetoric_and_style.md",
+    "extension": ".md",
+    "bytes": 1294,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/arrangement.md",
+    "extension": ".md",
+    "bytes": 114,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/emotion_mapping.md",
+    "extension": ".md",
+    "bytes": 206,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/harmony.md",
+    "extension": ".md",
+    "bytes": 144,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/how_music_works.md",
+    "extension": ".md",
+    "bytes": 122,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/melody.md",
+    "extension": ".md",
+    "bytes": 108,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/music_cue_library.yaml",
+    "extension": ".yaml",
+    "bytes": 1264,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/music_for_video.md",
+    "extension": ".md",
+    "bytes": 126,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/music_professional_system.md",
+    "extension": ".md",
+    "bytes": 2428,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/music_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 142,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/music/rhythm.md",
+    "extension": ".md",
+    "bytes": 123,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/narrative_director_full.md",
+    "extension": ".md",
+    "bytes": 1904,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/narrative_patterns.yaml",
+    "extension": ".yaml",
+    "bytes": 1119,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/narrative_rubric.md",
+    "extension": ".md",
+    "bytes": 171,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/narrative_structure.md",
+    "extension": ".md",
+    "bytes": 241,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/rhetoric_and_explanation.md",
+    "extension": ".md",
+    "bytes": 211,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/narrative/teaching_storytelling.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/photography/camera_visual_rules.yaml",
+    "extension": ".yaml",
+    "bytes": 636,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/photography/photography_fundamentals.md",
+    "extension": ".md",
+    "bytes": 1708,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/chart_and_diagram_rules.md",
+    "extension": ".md",
+    "bytes": 226,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/how_ppt_works.md",
+    "extension": ".md",
+    "bytes": 279,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/layout_principles.md",
+    "extension": ".md",
+    "bytes": 185,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/ppt_page_system.yaml",
+    "extension": ".yaml",
+    "bytes": 1377,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/ppt_professional_system.md",
+    "extension": ".md",
+    "bytes": 2486,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/ppt_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 150,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/slide_types.yaml",
+    "extension": ".yaml",
+    "bytes": 130,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/ppt/storytelling_in_slides.md",
+    "extension": ".md",
+    "bytes": 138,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/artifact_taxonomy.md",
+    "extension": ".md",
+    "bytes": 2406,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/asset_binding.md",
+    "extension": ".md",
+    "bytes": 144,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/audio_verification_loop.md",
+    "extension": ".md",
+    "bytes": 125,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/auto_fix_work_orders.md",
+    "extension": ".md",
+    "bytes": 1340,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/auto_revision_protocol.md",
+    "extension": ".md",
+    "bytes": 134,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/auto_revision_recipes.yaml",
+    "extension": ".yaml",
+    "bytes": 1103,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/chat_first_confirmed_production_contract.md",
+    "extension": ".md",
+    "bytes": 2018,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/claw_code_control_constraints_2026-05-22.md",
+    "extension": ".md",
+    "bytes": 10131,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/claw_code_control_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 3506,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/director_quality_loop_full.md",
+    "extension": ".md",
+    "bytes": 1695,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/module_quality_gates.yaml",
+    "extension": ".yaml",
+    "bytes": 2213,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/multimodal_rubric_detailed.yaml",
+    "extension": ".yaml",
+    "bytes": 656,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/quality_gate.md",
+    "extension": ".md",
+    "bytes": 128,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/quality_score_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 624,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/review_to_fix_mapping.yaml",
+    "extension": ".yaml",
+    "bytes": 2185,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/reviewer_registry.yaml",
+    "extension": ".yaml",
+    "bytes": 2276,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/timeline_protocol.md",
+    "extension": ".md",
+    "bytes": 114,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/production_pipeline/visual_verification_loop.md",
+    "extension": ".md",
+    "bytes": 123,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/README_FOR_AGENT.md",
+    "extension": ".md",
+    "bytes": 3196,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/review_prompts/audio_music_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1019,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/review_prompts/content_narrative_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1078,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/review_prompts/ppt_vision_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1807,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/review_prompts/README.md",
+    "extension": ".md",
+    "bytes": 438,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/review_prompts/video_keyframe_review_prompt.md",
+    "extension": ".md",
+    "bytes": 1154,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/schemas/artifact_manifest_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 2890,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/schemas/auto_fix_ticket_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 312,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/schemas/confirmed_task_spec_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 1746,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/schemas/review_result_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 491,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/text_research/longform_analysis_rules.md",
+    "extension": ".md",
+    "bytes": 1160,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/text_research/module_constraints.yaml",
+    "extension": ".yaml",
+    "bytes": 1439,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/text_research/research_methodology.md",
+    "extension": ".md",
+    "bytes": 1115,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/text_research/research_prompt_template.md",
+    "extension": ".md",
+    "bytes": 809,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/text_research/source_quality_rubric.yaml",
+    "extension": ".yaml",
+    "bytes": 1110,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/tool_aware_reasoning.md",
+    "extension": ".md",
+    "bytes": 7489,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/tool_capability_map.yaml",
+    "extension": ".yaml",
+    "bytes": 11364,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/editing_rhythm.md",
+    "extension": ".md",
+    "bytes": 159,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/how_video_works.md",
+    "extension": ".md",
+    "bytes": 169,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/motion_graphics.md",
+    "extension": ".md",
+    "bytes": 147,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/shot_language.md",
+    "extension": ".md",
+    "bytes": 167,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/subtitle_rules.md",
+    "extension": ".md",
+    "bytes": 133,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/timeline_principles.md",
+    "extension": ".md",
+    "bytes": 190,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/video_professional_system.md",
+    "extension": ".md",
+    "bytes": 1961,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/video_quality_rubric.md",
+    "extension": ".md",
+    "bytes": 161,
+    "root": "BNAI智能agent知识网"
+  },
+  {
+    "path": "BNAI智能agent知识网/video/video_scene_schema.yaml",
+    "extension": ".yaml",
+    "bytes": 718,
+    "root": "BNAI智能agent知识网"
+  }
+]

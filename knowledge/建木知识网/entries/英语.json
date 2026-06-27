@@ -1,0 +1,26 @@
+{
+  "subject": "英语",
+  "en": "English",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "语法体系",
+    "词汇分类",
+    "阅读理解",
+    "写作表达"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/英语_rules.json",
+  "specific_neurons_ref": "neurons/英语_neurons.json",
+  "language_associations": "associations/lang_英语.json"
+}

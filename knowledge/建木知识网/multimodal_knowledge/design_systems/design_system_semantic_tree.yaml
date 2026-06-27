@@ -1,0 +1,104 @@
+version: v0.1
+updated_at: 2026-05-22T10:00:00+08:00
+purpose: Semantic tree for quantified design-system knowledge in Jianmu multimodal knowledge network.
+principle: Design system knowledge must connect abstract regularities, semantic roles, modality output, and bottom-level token [REDACTED]
+root: 设计系统量化知识
+layers:
+  abstraction_layer:
+    description: Why a visual/product decision exists.
+    nodes:
+      信息层级:
+        regularities: [主次关系, 注意力顺序, 结论先行, 认知负荷控制]
+        measurable_controls: [font_size_delta, font_weight_delta, contrast_delta, spacing_delta, position_priority]
+      语义反馈:
+        regularities: [成功, 风险, 警告, 禁用, 进行中, 重点操作]
+        measurable_controls: [semantic_color_token, icon_redundancy, text_redundancy, opacity, border_style]
+      品牌气质:
+        regularities: [克制, 稳定, 科技, 温暖, 活力, 正式]
+        measurable_controls: [palette_family, saturation_range, accent_area_ratio, radius_range, motion_duration_range]
+      信息密度:
+        regularities: [数据密集, 教学讲解, 叙事展示, 管理后台, 视频大屏]
+        measurable_controls: [grid_columns, spacing_scale, type_scale, line_height, content_blocks_per_screen]
+      可访问性:
+        regularities: [可读性, 非颜色冗余, 高对比, 大字号, 可扫描]
+        measurable_controls: [contrast_ratio, min_font_size, line_height_ratio, color_plus_text_or_icon]
+  system_layer:
+    description: Which authority system provides the most suitable constraints.
+    nodes:
+      Material Design 3:
+        role: dynamic_color_and_expressive_components
+        best_for: [course_ppt, teaching_ui, mobile_like_cards, soft_visual_hierarchy]
+        token_groups: [palette, typescale, shape, motion]
+      IBM Carbon:
+        role: enterprise_data_dense_interface
+        best_for: [finance_governance, dashboard, management_backend, formal_report]
+        token_groups: [grid, spacing, type_scale, color_scale]
+      Ant Design:
+        role: enterprise_product_and_middle_backend
+        best_for: [admin_console, business_operation_ui, product_status_feedback]
+        token_groups: [hsb_palette, twelve_color_families, neutral_transparency, functional_color]
+      Fluent 2:
+        role: platform_token_language_and_theme
+        best_for: [cross_platform_ui, accessibility_theme, light_dark_high_contrast]
+        token_groups: [global_token, alias_token, theme_token]
+  semantic_token_layer:
+    description: Meaning before raw value.
+    nodes:
+      primary_action:
+        preferred_tokens: [Carbon blue60, Material primary40, Ant blue.primary]
+        allowed_values: ['#0f62fe', '#6750a4', '#1677ff']
+        constraints: [single_primary_per_screen, accent_area_lte_15_percent]
+      risk_error:
+        preferred_tokens: [Carbon red60, Material error40]
+        allowed_values: ['#da1e28', '#b3261e']
+        constraints: [must_pair_with_text_or_icon, no_red_only_meaning]
+      success_pass:
+        preferred_tokens: [Carbon green60]
+        allowed_values: ['#198038']
+        constraints: [must_not_imply_profit_without_evidence]
+      warning_attention:
+        preferred_tokens: [Carbon yellow30, Carbon yellow40]
+        allowed_values: ['#f1c21b', '#d2a106']
+        constraints: [avoid_large_background, pair_with_label]
+      formal_surface:
+        preferred_tokens: [Carbon gray10, Carbon coolGray10, Material neutral98]
+        allowed_values: ['#f4f4f4', '#f2f4f8', '#fef7ff']
+        constraints: [high_readability, low_decoration]
+  modality_binding_layer:
+    description: How design system knowledge binds to output modality.
+    nodes:
+      ppt:
+        uses: [type_scale, spacing, accent_area_ratio, card_radius, hierarchy]
+        required_bottom_tokens: [title_size, body_size, line_height, page_margin, card_radius, accent_color]
+      ui:
+        uses: [grid, semantic_color, component_token, state_token, spacing]
+        required_bottom_tokens: [breakpoint, columns, spacing, text_color, background_color, border_color]
+      report:
+        uses: [neutral_palette, type_scale, table_spacing, heading_hierarchy]
+        required_bottom_tokens: [heading_size, body_size, caption_size, table_padding, border_color]
+      video_infographic:
+        uses: [large_type, contrast, motion_duration, easing, safe_area]
+        required_bottom_tokens: [title_min_px, subtitle_min_px, transition_ms, easing_curve]
+      data_dashboard:
+        uses: [Carbon_grid, Carbon_spacing, status_color, dense_type]
+        required_bottom_tokens: [columns, gutter_margin, chart_color, label_size, body_size]
+  bottom_token_layer:
+    description: Final executable layer; every design decision must end here.
+    required_fields:
+      - token_name
+      - numeric_value_or_hex
+      - unit
+      - source_system
+      - semantic_role
+      - modality
+      - allowed_context
+      - forbidden_context
+      - quality_gate
+lookup_order:
+  - language_tree_route
+  - abstraction_layer
+  - system_layer
+  - semantic_token_layer
+  - modality_binding_layer
+  - bottom_token_layer
+  - quality_gate

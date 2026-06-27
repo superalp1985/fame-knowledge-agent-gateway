@@ -1,0 +1,51 @@
+version: v0.1
+mapping:
+  mojibake:
+    severity: P0
+    fix:
+    - apply_cjk_font_stack
+    - rerender
+    - ocr_check
+    final_allowed: false
+  text_overflow:
+    severity: P0
+    fix:
+    - summarize
+    - split_slide
+    - rerender
+    final_allowed: false
+  weak_hierarchy:
+    severity: P2
+    fix:
+    - increase_primary_focus
+    - reduce_secondary_weight
+    - add_grouping
+    final_allowed: false
+  chart_without_message:
+    severity: P1
+    fix:
+    - rewrite_insight_title
+    - highlight_key_point
+    - add_source_unit
+    final_allowed: false
+  subtitle_overlap:
+    severity: P1
+    fix:
+    - move_subtitle_safe_area
+    - shorten_line
+    - add_caption_plate
+    final_allowed: false
+  bgm_over_voice:
+    severity: P1
+    fix:
+    - duck_music
+    - lower_bgm
+    - eq_voice_band
+    final_allowed: false
+  style_inconsistent:
+    severity: P2
+    fix:
+    - apply_style_profile
+    - normalize_fonts
+    - normalize_palette
+    final_allowed: false

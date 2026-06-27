@@ -1,0 +1,66 @@
+{
+  "edition_id": "english",
+  "route_group": "language-tree-hub",
+  "routes": [
+    {
+      "id": "route-language-intent-to-scope",
+      "name": "Intent to Scope",
+      "subject": "language-tree-hub",
+      "domain": "intent",
+      "type": "routing",
+      "status": "seed",
+      "content": "Transform the active goal into project_id, subject, route_id, task_id and context budget before loading professional knowledge.",
+      "keywords": ["intent", "scope", "route", "context"],
+      "fame": {
+        "mu": 0.56,
+        "chi": 0.58,
+        "epsilon": 0.72,
+        "kappa": 0.52,
+        "nu": 0.24,
+        "delta": 0.08,
+        "rho": 0.2,
+        "lambda": 0.08
+      }
+    },
+    {
+      "id": "route-language-abstraction-to-association",
+      "name": "Abstraction to Association",
+      "subject": "language-tree-hub",
+      "domain": "semantics",
+      "type": "association",
+      "status": "seed",
+      "content": "Lift a local problem into a reusable abstraction, then search adjacent professional branches only when the abstraction suggests useful transfer.",
+      "keywords": ["abstraction", "association", "transfer", "semantics"],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.7,
+        "epsilon": 0.68,
+        "kappa": 0.42,
+        "nu": 0.33,
+        "delta": 0.15,
+        "rho": 0.31,
+        "lambda": 0.12
+      }
+    },
+    {
+      "id": "route-language-validation-feedback",
+      "name": "Validation Feedback",
+      "subject": "language-tree-hub",
+      "domain": "validation",
+      "type": "feedback",
+      "status": "seed",
+      "content": "Convert tests, tool results, user review and failure lessons into FAME edge updates without deleting raw memory.",
+      "keywords": ["validation", "feedback", "FAME", "full memory"],
+      "fame": {
+        "mu": 0.54,
+        "chi": 0.52,
+        "epsilon": 0.7,
+        "kappa": 0.5,
+        "nu": 0.28,
+        "delta": 0.12,
+        "rho": 0.18,
+        "lambda": 0.16
+      }
+    }
+  ]
+}

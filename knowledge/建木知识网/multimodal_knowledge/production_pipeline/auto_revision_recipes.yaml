@@ -1,0 +1,50 @@
+version: v0.2
+recipes:
+- issue: text_overflow
+  detect:
+  - bbox overflow
+  - line count too high
+  fix:
+  - split_slide
+  - summarize_to_keywords
+  - increase_canvas_or_reduce_noncritical_text
+- issue: mojibake
+  detect:
+  - question_mark_pollution_token
+  - replacement_character_token
+  - bowdlerized_glyph_token
+  - glyph missing
+  fix:
+  - replace_cjk_font_stack
+  - re-render
+  - fail_if_persist
+- issue: weak_visual_hierarchy
+  detect:
+  - multiple dominant blocks
+  - low contrast
+  - no clear title
+  fix:
+  - increase_title_weight
+  - reduce_secondary_contrast
+  - add_grouping
+- issue: subtitle_blocks_subject
+  detect:
+  - subtitle bbox overlaps subject bbox
+  fix:
+  - move_to_safe_area
+  - add_caption_plate
+  - shorten_subtitle
+- issue: bgm_masks_voice
+  detect:
+  - voice intelligibility low
+  - music rms too high
+  fix:
+  - duck_music
+  - eq_voice_band
+  - simplify_arrangement
+- issue: timeline_mismatch
+  detect:
+  - narration cue and visual cue mismatch
+  fix:
+  - recalculate_scene_durations_from_voice
+  - bind_visual_to_sentence

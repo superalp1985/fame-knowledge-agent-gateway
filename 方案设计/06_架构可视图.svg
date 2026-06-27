@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+  <defs>
+    <style>
+      .title{font:700 30px Arial, sans-serif;fill:#172033}
+      .sub{font:400 15px Arial, sans-serif;fill:#4a5568}
+      .box{fill:#ffffff;stroke:#2b4c7e;stroke-width:2;rx:8}
+      .box2{fill:#f3f7fb;stroke:#557a46;stroke-width:2;rx:8}
+      .box3{fill:#fff8ed;stroke:#a35d00;stroke-width:2;rx:8}
+      .box4{fill:#f7f2ff;stroke:#6b46c1;stroke-width:2;rx:8}
+      .text{font:600 17px Arial, sans-serif;fill:#1f2937}
+      .small{font:400 13px Arial, sans-serif;fill:#374151}
+      .arrow{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="980" fill="#fbfcfe"/>
+  <text x="54" y="58" class="title">FAME 工程图谱记忆组织器</text>
+  <text x="56" y="86" class="sub">工程进度同步 + 建木知识网全局控制 + 抽象联想创造 + 动态真实性路由 + 上下文健康</text>
+
+  <rect x="60" y="118" width="260" height="74" class="box4"/>
+  <text x="82" y="150" class="text">外部 Agent 插件入口</text>
+  <text x="82" y="174" class="small">MCP / API / CLI / IDE / Workflow</text>
+
+  <rect x="60" y="218" width="260" height="92" class="box"/>
+  <text x="82" y="254" class="text">用户意图 / 工程任务</text>
+  <text x="82" y="281" class="small">当前目标、阶段、约束、交付物</text>
+
+  <rect x="395" y="112" width="310" height="300" class="box2"/>
+  <text x="425" y="146" class="text">建木知识网思考链</text>
+  <text x="425" y="178" class="small">基本概念 -> 一级联想</text>
+  <text x="425" y="205" class="small">抽象层 -> 规律层</text>
+  <text x="425" y="232" class="small">工具层 -> 表达层</text>
+  <text x="425" y="259" class="small">工程约束 -> 质量门</text>
+  <text x="425" y="286" class="small">返修规则 -> manifest</text>
+  <text x="425" y="335" class="small">按科目、领域、route_id 按需遍历</text>
+  <text x="425" y="362" class="small">不把一级联想当素材库全量塞入上下文</text>
+
+  <rect x="780" y="105" width="330" height="330" class="box3"/>
+  <text x="810" y="140" class="text">FAMEEdgeState 动态路由层</text>
+  <text x="810" y="174" class="small">mu 有效正反馈</text>
+  <text x="810" y="198" class="small">chi 探索价值</text>
+  <text x="810" y="222" class="small">epsilon 目标贴合</text>
+  <text x="810" y="246" class="small">kappa 置信度</text>
+  <text x="810" y="270" class="small">nu 风险不确定</text>
+  <text x="810" y="294" class="small">delta 逻辑冲突</text>
+  <text x="810" y="318" class="small">rho 资源压力</text>
+  <text x="810" y="342" class="small">lambda 失败教训</text>
+  <text x="810" y="382" class="small">xi 惯性 + freshness 时效</text>
+
+  <rect x="1180" y="145" width="260" height="92" class="box"/>
+  <text x="1210" y="181" class="text">路线评分与裁剪</text>
+  <text x="1210" y="208" class="small">选路线、限上下文、控风险</text>
+
+  <rect x="1180" y="265" width="260" height="120" class="box3"/>
+  <text x="1210" y="302" class="text">GoalGate 找球门</text>
+  <text x="1210" y="332" class="small">定义成功条件和质量门</text>
+  <text x="1210" y="358" class="small">输出 GoalPath 与剪枝原因</text>
+
+  <rect x="80" y="500" width="310" height="270" class="box4"/>
+  <text x="110" y="535" class="text">工程现场图谱</text>
+  <text x="110" y="570" class="small">文件 / 模块 / 函数 / 调用链</text>
+  <text x="110" y="596" class="small">任务 / 阶段 / 进度</text>
+  <text x="110" y="622" class="small">工具调用 / MCP / worker</text>
+  <text x="110" y="648" class="small">测试 / 构建 / 运行状态</text>
+  <text x="110" y="674" class="small">失败 / 冲突 / 修复</text>
+  <text x="110" y="700" class="small">manifest / artifact / review</text>
+  <text x="110" y="726" class="small">日志 / 摘要 / lessons</text>
+
+  <rect x="500" y="500" width="260" height="120" class="box"/>
+  <text x="530" y="570" class="text">权限与质量门</text>
+  <text x="530" y="545" class="small">preview 不是 final</text>
+  <text x="530" y="571" class="small">高风险进入人工确认</text>
+
+  <rect x="500" y="650" width="260" height="120" class="box4"/>
+  <text x="530" y="688" class="text">Enforcement Kernel</text>
+  <text x="530" y="718" class="small">LLM 只能提交 ProposedAction</text>
+  <text x="530" y="744" class="small">签发 ApprovedAction 才能执行</text>
+
+  <rect x="810" y="500" width="310" height="150" class="box"/>
+  <text x="840" y="538" class="text">按需工具说明书 + 一次性调用</text>
+  <text x="840" y="570" class="small">常驻 tool summary index</text>
+  <text x="840" y="596" class="small">调用前读取完整 manual</text>
+  <text x="840" y="622" class="small">执行后只留 ToolCallSummary</text>
+
+  <rect x="1180" y="500" width="260" height="270" class="box2"/>
+  <text x="1210" y="535" class="text">日志摘要与上下文释放</text>
+  <text x="1210" y="570" class="small">完整 trace 写入日志</text>
+  <text x="1210" y="596" class="small">关键经验写入 summary</text>
+  <text x="1210" y="622" class="small">FAME delta 更新边状态</text>
+  <text x="1210" y="648" class="small">解决后不全量留上下文</text>
+  <text x="1210" y="674" class="small">需要时按摘要检索展开</text>
+
+  <rect x="810" y="735" width="310" height="130" class="box3"/>
+  <text x="840" y="772" class="text">Agent 时钟 / 提醒 / 自我迭代</text>
+  <text x="840" y="804" class="small">ClockEvent 设置恢复点</text>
+  <text x="840" y="830" class="small">检查 stale route / 高 lambda 失败</text>
+  <text x="840" y="856" class="small">输出 reflection summary 和修正建议</text>
+
+  <rect x="395" y="735" width="330" height="130" class="box2"/>
+  <text x="425" y="772" class="text">Knowledge Workbench</text>
+  <text x="425" y="804" class="small">Route Graph / FAME Heatmap</text>
+  <text x="425" y="830" class="small">Project Overlay / Failure Map</text>
+  <text x="425" y="856" class="small">Traversal Debug / Patch 审核</text>
+
+  <rect x="60" y="790" width="260" height="100" class="box"/>
+  <text x="90" y="825" class="text">模块化调试接口</text>
+  <text x="90" y="852" class="small">health / explain / dry-run</text>
+  <text x="90" y="878" class="small">replay / metrics / trace</text>
+
+  <path class="arrow" d="M190 192 L190 218"/>
+  <path class="arrow" d="M320 264 L395 191"/>
+  <path class="arrow" d="M705 260 L780 260"/>
+  <path class="arrow" d="M1110 191 L1180 191"/>
+  <path class="arrow" d="M1308 237 L1308 265"/>
+  <path class="arrow" d="M1308 385 L1308 500"/>
+  <path class="arrow" d="M1180 635 L1120 590"/>
+  <path class="arrow" d="M810 590 L760 710"/>
+  <path class="arrow" d="M630 650 L630 620"/>
+  <path class="arrow" d="M760 710 L810 590"/>
+  <path class="arrow" d="M500 560 L390 635"/>
+  <path class="arrow" d="M235 500 L235 237"/>
+  <path class="arrow" d="M390 635 L780 390"/>
+  <path class="arrow" d="M1120 590 L1180 590"/>
+  <path class="arrow" d="M1310 770 L1120 800"/>
+  <path class="arrow" d="M965 735 L965 650"/>
+  <path class="arrow" d="M810 800 L390 635"/>
+  <path class="arrow" d="M725 800 L810 800"/>
+  <path class="arrow" d="M395 800 L320 840"/>
+  <path class="arrow" d="M725 800 L1180 325"/>
+
+  <text x="58" y="875" class="small">核心公式：E_t = clip(E_{t-1} + (1 - xi) * r_t, 0, 1)，kappa_eff = kappa * freshness * evidence_factor * conflict_penalty</text>
+  <text x="58" y="906" class="small">触发控制：delta 高、nu 高且 kappa 低、lambda 多次失败、rho 资源压力高、权限边界命中，均进入审查或人工确认。</text>
+  <text x="58" y="937" class="small">工具策略：LLM 只能提交 ProposedAction；Enforcement Kernel 签发 ApprovedAction 后，工具网关才执行。</text>
+  <text x="58" y="963" class="small">产品定位：作为 Agent 万用外部插件运行，知识网通过可视化工作台补充，所有模块保留调试接口。</text>
+</svg>

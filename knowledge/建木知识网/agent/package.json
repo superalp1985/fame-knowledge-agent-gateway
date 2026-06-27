@@ -1,0 +1,15 @@
+{
+  "name": "jianmu-agent-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Jianmu Agent Studio local tool runtime",
+  "scripts": {
+    "marp": "marp",
+    "pptx-demo": "node scripts/pptx_demo.mjs"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "4.4.0",
+    "pptxgenjs": "4.0.1"
+  },
+  "devDependencies": {}
+}

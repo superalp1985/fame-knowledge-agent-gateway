@@ -1,0 +1,44 @@
+version: v0.1
+purpose: Runtime module quality gates for Jianmu Agent Studio.
+principle: Every module must have an explicit gate; no module output is final merely because a file exists.
+runtime_source: [REDACTED_LOCAL_PATH]
+common_rules:
+  - knowledge_constraints_required
+  - source_trace_required_for_research
+  - module_owner_must_be_known
+  - preview_is_not_final
+  - hard_fail_requires_revision_or_human_review
+modules:
+  course_pack:
+    required_artifact_kinds: [research, outline, script, slides_md, sources, routing_evidence]
+    hard_fail: [missing_routing_evidence, missing_sources, untraced_external_claim]
+  module_routing:
+    required_artifact_kinds: [module_routing_json, module_routing_md]
+    hard_fail: [unknown_content_owner, missing_worker_contract]
+  ppt_draft:
+    required_artifact_kinds: [ppt_request, ppt_draft_md]
+    hard_fail: [text_overflow, unreadable_layout, style_over_structure]
+  video_plan:
+    required_artifact_kinds: [video_script, video_plan, video_storyboard_html, video_subtitles_srt]
+    hard_fail: [audio_visual_desync, subtitle_unreadable, missing_scene_purpose]
+  animation_plan:
+    required_artifact_kinds: [animation_brief, animation_plan]
+    hard_fail: [decorative_motion_only, unsafe_code_execution, unclear_mechanism]
+  localization:
+    required_artifact_kinds: [localization_source, language_pack]
+    hard_fail: [fact_mutation, term_inconsistency, subtitle_overlength]
+  image_generate:
+    required_artifact_kinds: [image_plan, image_prompt_board_html]
+    hard_fail: [unreadable_text, low_contrast, decorative_noise]
+  office_export:
+    required_artifact_kinds: [office_markdown, office_html, office_constraints]
+    hard_fail: [content_mutation, structure_loss]
+  music_generate:
+    required_artifact_kinds: [music_plan, music_wav]
+    hard_fail: [masks_narration, unloopable, wrong_emotion]
+  weavemuse_compose:
+    required_artifact_kinds: [weavemuse_plan, weavemuse_brief, weavemuse_midi, weavemuse_wav]
+    hard_fail: [no_motif, no_section_structure, masks_narration]
+  edge_tts:
+    required_artifact_kinds: [tts_text, tts_constraints]
+    hard_fail: [meaning_changed, voice_missing, timing_untraceable]

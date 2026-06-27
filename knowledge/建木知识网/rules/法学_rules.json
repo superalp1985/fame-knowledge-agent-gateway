@@ -1,0 +1,451 @@
+{
+  "subject": "法学",
+  "type": "abstraction_layer",
+  "layer": "rules",
+  "description": "法学规则层",
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "rules": {
+    "经济法": [
+      {
+        "id": "econlaw_legal_fact_scope",
+        "name": "法律事实范围",
+        "law": "法律事实既可以是人的行为，也可以是自然事件；其特点是能引起法律关系产生、变更或消灭。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_bill_debtor_acceptor",
+        "name": "票据债务人",
+        "law": "票据关系中，汇票的承兑人是票据债务人之一，负有到期付款责任。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_bill_amount_mismatch_invalid",
+        "name": "票据金额大小写不一致",
+        "law": "票据金额大小写不一致的，票据通常无效。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_bankruptcy_pending_litigation",
+        "name": "破产程序中未结诉讼",
+        "law": "破产申请受理后，已经开始而尚未终结的有关债务人的民事诉讼或仲裁应中止，待管理人接管债务人财产后继续进行。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_bankruptcy_administrator_qualification",
+        "name": "破产管理人资格",
+        "law": "与债务人不存在利害关系且未处于法定限制期间的律师事务所、会计师事务所等中介机构，可依法担任破产管理人。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_foreign_investment_transition_period",
+        "name": "外商投资法组织形式过渡期",
+        "law": "外商投资法施行前已设立的外商投资企业，可在法定过渡期内继续保留原企业组织形式等，常见口径为5年。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_property_right_object",
+        "name": "物权客体",
+        "law": "民法典物权编所称物通常指有体物；权利在法律规定情形下也可作为物权客体。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_movable_property_right_boundary",
+        "name": "动产物权类型边界",
+        "law": "建设用地使用权属于不动产用益物权，不属于动产物权。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_regional_equity_market_trade",
+        "name": "区域性股权市场交易方式",
+        "law": "区域性股权市场可采用协议转让等方式进行交易。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_listed_company_quarter_report_deadline",
+        "name": "上市公司季报披露期限",
+        "law": "上市公司季度报告通常应在会计年度前三个月、九个月结束后一个月内编制披露。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_listed_company_guarantee_disclosure",
+        "name": "上市公司对外担保披露时点",
+        "law": "上市公司对外担保事项达到披露标准时，通常在董事会或股东大会形成决议时及时披露。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      },
+      {
+        "id": "econlaw_unlisted_public_company_boundary",
+        "name": "非上市公众公司边界",
+        "law": "非上市公众公司包括股票向特定对象发行或转让导致股东累计超过200人的股份有限公司，以及依法公开转让股票的股份有限公司等；相关公开转让通常需经证监会核准并在全国股转系统进行。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "economic_law_abstract_patch_20260518"
+      }
+    ],
+    "证券法": [
+      {
+        "id": "seclaw_financial_opening_principle",
+        "name": "金融业对外开放原则",
+        "law": "金融业对外开放措施在监管口径中强调宜快不宜慢、宜早不宜迟，体现稳妥但积极推进开放的原则。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_public_offering_200_boundary",
+        "name": "公开发行证券人数边界",
+        "law": "向特定对象发行证券累计超过二百人的，通常构成公开发行；依法实施员工持股计划的员工人数按规则可不计入特定对象累计人数。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_unapproved_stock_bond_issuance_crime",
+        "name": "擅自发行股票债券责任",
+        "law": "未经国家主管部门批准，擅自发行股票或者公司、企业债券，数额巨大、后果严重或者有其他严重情节的，对责任人员可处五年以下有期徒刑或者拘役，并处罚金。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_fundraising_fraud_prosecution_threshold",
+        "name": "集资诈骗追诉标准",
+        "law": "以非法占有为目的，使用诈骗方法非法集资，达到刑事立案追诉标准的应追诉；常见个人数额口径为十万元以上。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_acquisition_announcement_offer_penalty",
+        "name": "上市公司收购公告要约义务罚则",
+        "law": "收购人未按证券法履行上市公司收购公告、发出收购要约等义务的，责令改正、给予警告，并可处五十万元以上五百万元以下罚款。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_sponsor_rep_regulatory_measure_suspension",
+        "name": "保荐代表人监管措施暂停受理",
+        "law": "保荐代表人在连续两个自然年内被监管部门采取措施次数累计超过规定次数的，证监会可在一定期限内不接受其具体负责推荐的事项；常见口径为六个月。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_service_agency_trading_blackout",
+        "name": "证券服务机构承销期买卖限制",
+        "law": "制作审计报告、法律意见书等证券申报文件的证券服务机构和人员，在该证券承销期内及期满后六个月内，不得买卖该证券。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "seclaw_disqualified_exchange_head_five_year",
+        "name": "证券交易所负责人任职限制",
+        "law": "证券交易场所、证券登记结算机构人员或证券公司董监高因违法违纪被免职的，自解除职务之日起五年内通常不得担任证券交易所负责人。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      }
+    ],
+    "证券公司合规": [
+      {
+        "id": "sec_compliance_off_balance_sheet_business",
+        "name": "表外业务定义",
+        "law": "商业银行表外业务是指按现行会计准则不计入资产负债表内、不形成现实资产负债，但能够引起当期损益变动的业务。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "sec_compliance_staff_business_change_registration",
+        "name": "证券从业登记变更期限",
+        "law": "证券公司登记人员从事业务类别发生变化的，证券公司应自变化之日起五个工作日内为其办理变更登记。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "sec_compliance_asset_management_no_promised_return",
+        "name": "受托投资管理不得承诺收益",
+        "law": "证券公司受托投资管理业务应与自营业务严格分离、独立运作，不得在合同中承诺收益或保本。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      },
+      {
+        "id": "sec_compliance_officer_part_time_boundary",
+        "name": "合规管理人员兼职边界",
+        "law": "证券公司应配备与职责相适应的合规管理人员；合规管理人员并非绝对不得兼任任何职务，关键是避免利益冲突并保障独立履职。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      }
+    ],
+    "期货与衍生品法": [
+      {
+        "id": "futures_derivatives_law_effective_date",
+        "name": "期货和衍生品法施行日期",
+        "law": "《中华人民共和国期货和衍生品法》由全国人大常委会通过后，自2022年8月1日起施行。",
+        "layer": "abstract",
+        "fame": {
+          "μ": 0.0,
+          "χ": 0.0,
+          "ε": 0.0,
+          "κ": 0.0,
+          "ν": 0.0,
+          "δ": 0.0,
+          "ρ": 0.0,
+          "λ": 0.0
+        },
+        "source": "securities_practitioner_abstract_patch_20260519"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+version: v0.1
+purpose: Source credibility and research quality scoring for Jianmu longform/research modules.
+score_100:
+  authority:
+    weight: 25
+    checks:
+      - official_or_primary_source
+      - author_or_institution_identified
+      - publication_date_present
+  relevance:
+    weight: 20
+    checks:
+      - directly_answers_research_question
+      - matches_time_region_policy_scope
+      - not_only_background_noise
+  evidence:
+    weight: 25
+    checks:
+      - data_or_document_supports_claim
+      - key_claim_has_more_than_one_source
+      - counter_evidence_considered
+  traceability:
+    weight: 15
+    checks:
+      - url_or_file_path_recorded
+      - quoted_or_summarized_content_separated
+      - uncertainty_recorded
+  usability:
+    weight: 15
+    checks:
+      - can_feed_outline_script_ppt_video
+      - produces_actionable_findings
+      - includes_followup_questions
+hard_fail:
+  - no_source_for_key_claim
+  - source_date_missing_for_time_sensitive_claim
+  - opinion_presented_as_fact
+  - external_source_written_to_knowledge_base_without_review

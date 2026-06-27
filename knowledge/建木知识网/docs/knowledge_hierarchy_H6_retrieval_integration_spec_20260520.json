@@ -1,0 +1,31 @@
+{
+  "version": "H6_20260520",
+  "mode": "sidecar_first_no_main_flow_mutation",
+  "inputs": [
+    "knowledge_hierarchy_all_subjects_H5_refined_20260520.csv",
+    "knowledge_hierarchy_all_subjects_nodes_H5_refined_20260520.jsonl",
+    "knowledge_hierarchy_all_subjects_first_order_bridge_H5_refined_20260520.jsonl"
+  ],
+  "route_order": [
+    "language intent from sentence_patterns",
+    "technical vocab trigger from language_triggers",
+    "discipline/module/upper_concept shortlist",
+    "route_index candidate retrieval",
+    "first_order expansion by relation type",
+    "exception guard filter before answer anchor",
+    "LLM/rule final answer using protected evidence"
+  ],
+  "guards": {
+    "negative_question": "do not extract numeric answer from negative-question middle evidence",
+    "multi_number": "require semantic option alignment when >=4 numbers appear",
+    "legacy_or_exam口径": "prefer route-specific exception over general formula",
+    "standard_vs_exam_conflict": "do not emit calc anchor with conflicting standard formula"
+  },
+  "activation_recommendation": "shadow_mode_first: log hierarchy hits and candidate expansions without changing final answer; enable only after regression shows bad=0",
+  "next_manual_checks": [
+    "review_audit rows",
+    "high_count split rows",
+    "exception_gap rows",
+    "sample shadow retrieval on representative subjects"
+  ]
+}

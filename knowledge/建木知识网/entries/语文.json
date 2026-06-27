@@ -1,0 +1,26 @@
+{
+  "subject": "语文",
+  "en": "Chinese Language & Literature",
+  "type": "professional_entry",
+  "layer": "entry",
+  "parent": "建木中枢/专业入口",
+  "domains": [
+    "语言文字",
+    "文学鉴赏",
+    "写作方法",
+    "文化常识"
+  ],
+  "fame": {
+    "μ": 0.0,
+    "χ": 0.0,
+    "ε": 0.0,
+    "κ": 0.0,
+    "ν": 0.0,
+    "δ": 0.0,
+    "ρ": 0.0,
+    "λ": 0.0
+  },
+  "abstract_rules_ref": "rules/语文_rules.json",
+  "specific_neurons_ref": "neurons/语文_neurons.json",
+  "language_associations": "associations/lang_语文.json"
+}

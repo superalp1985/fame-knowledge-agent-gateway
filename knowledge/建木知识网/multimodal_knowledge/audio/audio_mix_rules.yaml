@@ -1,0 +1,19 @@
+version: v0.1
+priority:
+- voice
+- critical_sfx
+- music
+- ambience
+- silence
+rules:
+  voice_first: true
+  music_ducking: true
+  sfx_sparse: true
+  fade_required: true
+  silence_allowed_as_emphasis: true
+fail_if:
+- voice_unintelligible
+- music_masks_voice
+- sfx_too_frequent
+- abrupt_cutoff
+- volume_jump

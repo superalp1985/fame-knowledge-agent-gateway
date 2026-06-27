@@ -1,0 +1,26 @@
+version: v0.1
+required_fields:
+- artifact_type
+- final_allowed
+- overall_score
+- issues
+- next_action
+issue_fields:
+- severity
+- category
+- evidence
+- rule_violated
+- auto_fixable
+- suggested_fix
+severity:
+  P0: 阻断 final，通常直接 fail 或强制自动修正
+  P1: 阻断 final，需要修正后重审
+  P2: 影响质量，建议自动修正
+  P3: 优化建议，不阻断 preview
+next_action:
+- final
+- preview
+- auto_fix
+- rerender
+- manual_review
+- fail

@@ -1,0 +1,58 @@
+version: v0.1
+purpose: Map Jianmu artifact kinds to reviewer modules, quality gates, and review prompts.
+principle: Preview artifacts do not become final until their mapped reviewer returns final_allowed=true.
+runtime_source: src/runtime-manager/task-output-package.mjs
+fields:
+  artifact_type: Canonical artifact kind from artifact_taxonomy.md.
+  reviewer: Runtime reviewer id to run or simulate.
+  reviewer_module: Module family from module_quality_gates.yaml.
+  quality_gate: Primary hard-fail gate to check first.
+  review_prompt: Knowledge prompt/schema used by reviewer.
+  final_allowed: Boolean result written by reviewer. Preview reports must set false.
+  next_action: preview | revise | human_review | final.
+reviewers:
+  document:
+    reviewer: document_structure_review
+    reviewer_module: course_pack
+    quality_gate: knowledge_constraints_required
+    review_prompt: review_result_schema.yaml
+  ppt:
+    reviewer: ppt_vision_review
+    reviewer_module: ppt_draft
+    quality_gate: text_overflow
+    review_prompt: review_prompts/ppt_vision_review_prompt.md
+  image:
+    reviewer: image_visual_review
+    reviewer_module: image_generate
+    quality_gate: unreadable_text
+    review_prompt: review_prompts/image_review_prompt.md
+  video:
+    reviewer: video_sync_review
+    reviewer_module: video_plan
+    quality_gate: audio_visual_desync
+    review_prompt: review_prompts/video_review_prompt.md
+  audio:
+    reviewer: audio_timing_review
+    reviewer_module: edge_tts
+    quality_gate: meaning_changed
+    review_prompt: review_prompts/audio_review_prompt.md
+  music:
+    reviewer: music_fit_review
+    reviewer_module: music_generate
+    quality_gate: masks_narration
+    review_prompt: review_prompts/music_review_prompt.md
+  pdf:
+    reviewer: office_export_review
+    reviewer_module: office_export
+    quality_gate: content_mutation
+    review_prompt: review_result_schema.yaml
+  unknown:
+    reviewer: manual_review
+    reviewer_module: unknown
+    quality_gate: hard_fail_requires_revision_or_human_review
+    review_prompt: review_result_schema.yaml
+runtime_rules:
+  - unreviewed_artifacts_default_to_preview
+  - quality_report_must_include_reviewer_mapping
+  - final_dir_requires_final_allowed_true
+  - missing_reviewer_mapping_routes_to_manual_review

@@ -1,0 +1,35 @@
+stateDiagram-v2
+  [*] --> PluginIngress
+  PluginIngress: 外部 Agent / IDE / CLI / Workflow
+  PluginIngress --> Intent
+  Intent: R0 意图识别
+  Intent --> Route: R1 定位 subject/domain/route
+  Route --> Abstraction: R2 抽象判型
+  Abstraction --> FAMEScore: R3 FAME 动态路线评分
+  FAMEScore --> GoalGate: 定义球门
+  GoalGate: GoalGate / success condition / quality gates
+  GoalGate --> GoalPath: scoped beam traversal
+  GoalPath: GoalPath + 剪枝原因
+  GoalPath --> ContextTrim: R4 上下文裁剪
+  ContextTrim --> ToolPlan: R5 工具候选
+  ToolPlan --> Gate: R6 权限与质量门
+  Gate --> ToolManual: 通过
+  ToolManual: 按需读取工具说明书
+  ToolManual --> Enforcement: 提交 ProposedAction
+  Enforcement: 强制检查 state/scope/route/manual/FAME/permission/quality
+  Enforcement --> Execute: ApprovedAction + approval_token
+  Enforcement --> HumanConfirm: 阻断或高风险
+  Gate --> HumanConfirm: 高风险/冲突/权限
+  HumanConfirm --> Execute: 确认
+  HumanConfirm --> LogOnly: 暂停或降级
+  Execute --> Review: R8 结果审查
+  Review --> Fix: 未通过
+  Fix --> FAMEUpdate
+  Review --> FAMEUpdate: 通过
+  FAMEUpdate --> SummaryWrite: R9 FAME 更新
+  SummaryWrite --> ContextRelease: R10 摘要写回
+  ContextRelease --> ClockSchedule: 设置提醒/恢复点/自我迭代
+  ClockSchedule --> KnowledgePatch: 可选补充知识网
+  KnowledgePatch: KnowledgePatchProposal / Review
+  KnowledgePatch --> [*]
+  LogOnly --> SummaryWrite

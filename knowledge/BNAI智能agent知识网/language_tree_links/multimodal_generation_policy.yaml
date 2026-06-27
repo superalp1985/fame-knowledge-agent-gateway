@@ -1,0 +1,31 @@
+version: v0.3
+policy:
+  language_tree_is_trunk: true
+  every_concept_requires_multimodal_association: true
+  text_only_generation_allowed: false
+  knowledge_first: true
+  style_after_structure: true
+  design_system_required_for_visual_outputs: true
+  every_aesthetic_term_requires_parameter_binding: true
+  every_design_decision_must_end_at_bottom_token: true
+  quality_gate_before_final: true
+required_lookup_order:
+- language_tree node
+- first_order_association
+- abstract regularity
+- professional knowledge domain
+- design_system_semantic_tree
+- design_system_first_order_overlay
+- design_system_abstraction_to_expression
+- expression pattern
+- bottom_level_token
+- quality rubric
+- auto revision recipe
+required_design_system_files:
+- design_systems/design_system_semantic_tree.yaml
+- design_systems/quantified_design_systems_2026-05-22.md
+- design_systems/design_system_tokens_index.yaml
+- design_systems/bottom_level_completeness_audit.md
+- language_tree_links/design_system_first_order_overlay.yaml
+- language_tree_links/design_system_abstraction_to_expression.yaml
+- language_tree_links/design_system_generation_policy.yaml
