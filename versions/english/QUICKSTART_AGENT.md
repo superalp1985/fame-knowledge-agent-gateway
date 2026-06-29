@@ -21,6 +21,14 @@ Language Tree normalization
 -> failure_signature and negative FAME lesson when needed
 ~~~
 
+Before adding or changing knowledge, read:
+
+~~~text
+versions/english/docs/agent-protocol/07_fame-and-knowledge-extension.md
+~~~
+
+Do not write directly into the core knowledge net. Create a KnowledgePatchProposal first, keep raw/private material in project memory or asset storage, and promote only reviewed generic routes, rules or lessons.
+
 For PowerShell Chinese mojibake, do not assume file corruption. Run:
 
 ~~~bash

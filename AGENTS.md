@@ -27,6 +27,7 @@ FAME Knowledge Agent Gateway 是 Agent 的外部知识、工程记忆和工具�
 - `versions/chinese-open/QUICKSTART_AGENT.md`
 - `versions/chinese-open/docs/07_Agent协议与最小接入.md`
 - `versions/chinese-open/docs/agent-protocol/`
+- `versions/chinese-open/docs/agent-protocol/09_fame-and-knowledge-extension.md`
 - `versions/chinese-open/docs/04_Agent接入工作流.md`
 - `versions/chinese-open/docs/08_常见Agent接入片段.md`
 
@@ -35,6 +36,7 @@ English:
 - `versions/english/QUICKSTART_AGENT.md`
 - `versions/english/docs/agent-protocol.md`
 - `versions/english/docs/agent-protocol/`
+- `versions/english/docs/agent-protocol/07_fame-and-knowledge-extension.md`
 - `versions/english/docs/common-agent-snippets.md`
 
 ## 快速命令

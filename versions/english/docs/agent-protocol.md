@@ -67,3 +67,15 @@ npm run connect:english -- --agent other --agent-name OpenClaw --json
 ~~~
 
 The same preset list as chinese-open is supported: Codex, Cursor, Claude Desktop, Claude Code, OpenAI Agents SDK, Gemini CLI, OpenHands, SWE-agent, Aider, Cline, Roo Code, Continue, LangGraph, AutoGen, CrewAI, Dify, Generic Agent and Other.
+
+## FAME And Knowledge Extension
+
+Read `agent-protocol/07_fame-and-knowledge-extension.md` for:
+
+- FAME parameter meanings
+- route scoring
+- FAME update candidates
+- negative lessons and failure signatures
+- knowledge graph extension hierarchy
+- KnowledgePatchProposal
+- private project-memory promotion rules

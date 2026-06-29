@@ -30,6 +30,7 @@
 - `agent-protocol/06_enforcement-rules.md`：强制规则。
 - `agent-protocol/07_cli-and-wizard.md`：CLI、Workbench 接入和 Agent 预设。
 - `agent-protocol/08_ecosystem-mapping.md`：MCP、OpenAI Agents SDK、LangGraph、LlamaIndex 映射。
+- `agent-protocol/09_fame-and-knowledge-extension.md`：FAME 参数、路线评分、知识网扩展和 KnowledgePatchProposal。
 
 生态映射见 `agent-protocol/08_ecosystem-mapping.md`：MCP、OpenAI Agents SDK、LangGraph / LangMem、LlamaIndex、AutoGen / CrewAI 都统一走本协议。
 
