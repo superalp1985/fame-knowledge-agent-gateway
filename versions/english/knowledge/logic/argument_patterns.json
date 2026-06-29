@@ -1,0 +1,108 @@
+{
+  "edition_id": "english",
+  "subject": "logic",
+  "patterns": [
+    {
+      "id": "argument-claim-evidence-warrant",
+      "label": "主张-证据-担保",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "claim",
+        "evidence",
+        "warrant",
+        "qualifier",
+        "rebuttal"
+      ],
+      "summary": "把自然语言论证拆成结论、证据、连接规则、置信限定和可能反驳。",
+      "agent_use": "方案评审、工具调用前判断、知识录入前来源审查。",
+      "fame_effects": {
+        "strong_evidence": {
+          "epsilon": 0.08,
+          "rho": 0.04
+        },
+        "weak_warrant": {
+          "epsilon": -0.08,
+          "risk": 0.05
+        },
+        "unanswered_rebuttal": {
+          "chi": -0.06,
+          "risk": 0.08
+        }
+      }
+    },
+    {
+      "id": "argument-premise-conclusion",
+      "label": "前提-结论链",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "premises",
+        "inference_steps",
+        "conclusion",
+        "missing_steps"
+      ],
+      "summary": "把推理拆成前提、推理步骤和结论，暴露跳步和未证明前提。",
+      "agent_use": "检查 Agent 是否从足够前提推出行动计划。",
+      "fame_effects": {
+        "valid_chain": {
+          "mu": 0.05,
+          "epsilon": 0.05
+        },
+        "missing_step": {
+          "epsilon": -0.08,
+          "risk": 0.06
+        }
+      }
+    },
+    {
+      "id": "argument-pro-con-risk",
+      "label": "赞成-反对-风险",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "pros",
+        "cons",
+        "risks",
+        "reversibility",
+        "decision"
+      ],
+      "summary": "面向工程决策，把收益、代价、风险、可逆性和决策结果分开记录。",
+      "agent_use": "选择是否执行高风险工具、是否晋升工程记忆为核心知识。",
+      "fame_effects": {
+        "reversible": {
+          "risk": -0.05
+        },
+        "irreversible": {
+          "risk": 0.12
+        },
+        "decision_with_tests": {
+          "kappa": 0.06,
+          "epsilon": 0.06
+        }
+      }
+    },
+    {
+      "id": "argument-hypothesis-test",
+      "label": "假设-预测-测试",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "hypothesis",
+        "prediction",
+        "test",
+        "observed_result",
+        "revision"
+      ],
+      "summary": "调试和失败复盘时，为每个候选原因列出可区分预测和最小测试。",
+      "agent_use": "调试、PowerShell 错误定位、工具调用失败复盘。",
+      "fame_effects": {
+        "confirmed": {
+          "mu": 0.06,
+          "epsilon": 0.08
+        },
+        "falsified": {
+          "delta": -0.08,
+          "rho": 0.03
+        }
+      }
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

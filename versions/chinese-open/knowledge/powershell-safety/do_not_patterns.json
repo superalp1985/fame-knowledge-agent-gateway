@@ -1,0 +1,46 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "powershell-safety",
+  "patterns": [
+    {
+      "id": "ps-dont-cross-shell-delete",
+      "label": "不要跨 shell 删除",
+      "bad_pattern": "PowerShell 枚举路径后拼接给 cmd /c、bash 或其它 shell 删除。",
+      "why": "不同 shell 的转义、通配符和路径规则不同，容易误删或越界。",
+      "safer_route": "用 PowerShell 原生命令端到端处理，并先 Resolve-Path 验证边界。",
+      "fame": { "delta": -0.75, "risk": 0.95 }
+    },
+    {
+      "id": "ps-dont-recursive-without-boundary",
+      "label": "不要无边界递归",
+      "bad_pattern": "直接 Remove-Item -Recurse -Force 一个计算出来的路径。",
+      "why": "计算路径可能为空、越界或包含意外通配符。",
+      "safer_route": "先解析绝对路径，确认 StartsWith allowed root，再执行。",
+      "fame": { "delta": -0.7, "risk": 0.95 }
+    },
+    {
+      "id": "ps-dont-assume-env-persistent",
+      "label": "不要假设环境变量永久生效",
+      "bad_pattern": "设置 $env:NAME 后认为新进程、未来终端或系统级环境都能读取。",
+      "why": "$env:NAME 默认只影响当前进程和子进程。",
+      "safer_route": "明确进程、用户或机器作用域；临时任务在同一命令链中执行。",
+      "fame": { "delta": -0.25, "risk": 0.4 }
+    },
+    {
+      "id": "ps-dont-long-output-to-context",
+      "label": "不要把长输出塞进上下文",
+      "bad_pattern": "直接输出完整日志、完整文件或完整目录树给 Agent。",
+      "why": "会污染上下文，降低后续推理质量。",
+      "safer_route": "限制行数、提取关键字段或写入外部记忆，只回传摘要。",
+      "fame": { "delta": -0.35, "risk": 0.55 }
+    },
+    {
+      "id": "ps-dont-guess-cmdlet-parameters",
+      "label": "不要猜 cmdlet 参数",
+      "bad_pattern": "凭经验假设某个参数支持多路径、通配符或管道输入。",
+      "why": "cmdlet 参数集不同，容易出现绑定错误。",
+      "safer_route": "不确定时先 Get-Help、读取工具说明或做只读探测。",
+      "fame": { "delta": -0.25, "risk": 0.45 }
+    }
+  ]
+}

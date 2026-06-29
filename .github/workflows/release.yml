@@ -1,0 +1,86 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag. Defaults to package.json version.
+        required: false
+        type: string
+      prerelease:
+        description: Mark this release as a prerelease.
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: workbench/package-lock.json
+
+      - name: Build release assets
+        run: npm run build:release-assets
+        env:
+          FAME_KNOWLEDGE_SOURCE: public
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fame-release-assets
+          path: |
+            .tmp/release/fame-knowledge-agent-gateway-v*-portable.zip
+            .tmp/release/*.sha256
+            .tmp/release/install.ps1
+            .tmp/release/RELEASE_NOTES.md
+            .tmp/release/release-assets.json
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_TAG: ${{ inputs.tag }}
+          INPUT_PRERELEASE: ${{ inputs.prerelease }}
+        run: |
+          set -euo pipefail
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            TAG="${GITHUB_REF_NAME}"
+          elif [ -n "${INPUT_TAG}" ]; then
+            TAG="${INPUT_TAG}"
+          else
+            TAG="v$(node -p "JSON.parse(require('fs').readFileSync('package.json','utf8')).version")"
+          fi
+
+          ASSETS=(
+            .tmp/release/fame-knowledge-agent-gateway-v*-portable.zip
+            .tmp/release/*.sha256
+            .tmp/release/install.ps1
+            .tmp/release/release-assets.json
+          )
+
+          PRERELEASE_ARGS=()
+          if [ "${INPUT_PRERELEASE:-false}" = "true" ]; then
+            PRERELEASE_ARGS+=(--prerelease)
+          fi
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "${ASSETS[@]}" --clobber
+            gh release edit "$TAG" --title "$TAG" --notes-file .tmp/release/RELEASE_NOTES.md "${PRERELEASE_ARGS[@]}"
+          else
+            gh release create "$TAG" "${ASSETS[@]}" --title "$TAG" --notes-file .tmp/release/RELEASE_NOTES.md --target "$GITHUB_SHA" "${PRERELEASE_ARGS[@]}"
+          fi

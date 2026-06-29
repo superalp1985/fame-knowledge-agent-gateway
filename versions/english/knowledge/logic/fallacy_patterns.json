@@ -1,0 +1,120 @@
+{
+  "edition_id": "english",
+  "subject": "logic",
+  "patterns": [
+    {
+      "id": "fallacy-equivocation",
+      "label": "偷换概念",
+      "abstraction_level": "L4_method",
+      "trigger": "同一词在上下文中含义变化，但推理仍当作同一个概念。",
+      "agent_detection": [
+        "检查关键词是否有多个学科含义。",
+        "回到语言树 lexicon 层做术语归一。",
+        "要求每个核心术语绑定 canonical term。"
+      ],
+      "fame_effect": {
+        "chi": -0.08,
+        "risk": 0.06
+      },
+      "route_refs": [
+        "route-language-intent-to-scope",
+        "route-logic-argument-check"
+      ]
+    },
+    {
+      "id": "fallacy-hasty-generalization",
+      "label": "草率概括",
+      "abstraction_level": "L4_method",
+      "trigger": "从少量样本、单次测试或局部成功推出一般结论。",
+      "agent_detection": [
+        "检查样本数量和覆盖范围。",
+        "寻找反例或边界条件。",
+        "把结论降级为候选经验，不直接晋升核心规则。"
+      ],
+      "fame_effect": {
+        "rho": -0.08,
+        "epsilon": -0.06,
+        "risk": 0.05
+      },
+      "route_refs": [
+        "route-negative-fame-lesson"
+      ]
+    },
+    {
+      "id": "fallacy-false-cause",
+      "label": "错误因果",
+      "abstraction_level": "L4_method",
+      "trigger": "把时间先后、相关性或同时出现误当成因果关系。",
+      "agent_detection": [
+        "列出替代解释。",
+        "设计区分性测试。",
+        "避免把未验证猜测写成事实。"
+      ],
+      "fame_effect": {
+        "epsilon": -0.08,
+        "risk": 0.08
+      },
+      "route_refs": [
+        "route-logic-failure-diagnosis"
+      ]
+    },
+    {
+      "id": "fallacy-affirming-consequent",
+      "label": "肯定后件",
+      "abstraction_level": "L4_method",
+      "trigger": "如果 A 则 B；观察到 B；于是断定 A。",
+      "agent_detection": [
+        "检查是否存在其它原因也能导致 B。",
+        "用溯因推理列出候选解释。",
+        "通过测试区分 A 和其它解释。"
+      ],
+      "fame_effect": {
+        "epsilon": -0.07,
+        "risk": 0.06
+      },
+      "route_refs": [
+        "route-logic-failure-diagnosis"
+      ]
+    },
+    {
+      "id": "fallacy-missing-premise",
+      "label": "缺失前提",
+      "abstraction_level": "L5_operation",
+      "trigger": "结论需要额外前提，但行动计划没有验证该前提。",
+      "agent_detection": [
+        "把结论拆成前提-推理-结论链。",
+        "标注每个前提的来源和验证状态。",
+        "未验证前提进入待办或 ProposedAction 风险说明。"
+      ],
+      "fame_effect": {
+        "epsilon": -0.09,
+        "risk": 0.08
+      },
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-logic-tool-precheck"
+      ]
+    },
+    {
+      "id": "fallacy-context-collapse",
+      "label": "上下文坍缩",
+      "abstraction_level": "L5_operation",
+      "trigger": "把不同项目、版本、时间或作用域下的经验混用。",
+      "agent_detection": [
+        "检查 project_id、subject、route_id、task_id 是否一致。",
+        "检查来源日期和版本。",
+        "跨作用域引用必须经过语言树抽象层。"
+      ],
+      "fame_effect": {
+        "chi": -0.08,
+        "rho": -0.06,
+        "risk": 0.08
+      },
+      "route_refs": [
+        "route-language-intent-to-scope",
+        "route-knowledge-taxonomy-entry"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

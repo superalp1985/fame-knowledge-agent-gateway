@@ -1,36 +1,5 @@
 {
-  "id": "professional-design",
   "edition_id": "english",
-  "type": "ProfessionalKnowledgeBranch",
-  "label": "Design",
-  "status": "placeholder",
-  "hub_ref": "language-tree-hub",
-  "planned_subjects": [
-    "visual-hierarchy",
-    "layout-and-composition",
-    "typography",
-    "color-and-accessibility",
-    "interaction-design",
-    "design-systems",
-    "product-workflows",
-    "information-architecture",
-    "multimodal-presentation"
-  ],
-  "seed_routes": [
-    {
-      "id": "route-design-intent-to-interface",
-      "name": "Intent to Interface",
-      "status": "placeholder",
-      "fame": {
-        "mu": 0.5,
-        "chi": 0.58,
-        "epsilon": 0.62,
-        "kappa": 0.4,
-        "nu": 0.32,
-        "delta": 0.12,
-        "rho": 0.28,
-        "lambda": 0.1
-      }
-    }
-  ]
+  "status": "future_subject_placeholder",
+  "note": "Design can be expanded later under the same Language Tree routing rules."
 }

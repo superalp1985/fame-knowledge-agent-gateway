@@ -1,0 +1,24 @@
+services:
+  fame-gateway:
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${FAME_DOCKER_BASE_IMAGE:-mcr.microsoft.com/devcontainers/javascript-node:24-bookworm}
+    image: fame-knowledge-agent-gateway:local
+    environment:
+      FAME_GATEWAY_HOST: 0.0.0.0
+      FAME_GATEWAY_PORT: 5191
+      FAME_WORKBENCH_PORT: 5178
+      FAME_OPEN_BROWSER: "0"
+      FAME_SKIP_INSTALL: "1"
+      FAME_START_MODE: preview
+    ports:
+      - "5178:5178"
+      - "5191:5191"
+    volumes:
+      - fame-runtime-store:/app/runtime_store
+      - fame-logs:/app/logs
+
+volumes:
+  fame-runtime-store:
+  fame-logs:

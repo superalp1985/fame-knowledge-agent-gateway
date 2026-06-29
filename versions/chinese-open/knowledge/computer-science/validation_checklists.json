@@ -1,0 +1,58 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "computer-science",
+  "checklists": [
+    {
+      "id": "cs-check-engineering-task",
+      "label": "工程任务检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": ["route-cs-spec-to-test"],
+      "items": [
+        { "id": "eng-goal", "question": "用户目标和完成标准是否明确？" },
+        { "id": "eng-scope", "question": "项目、模块、文件和知识路线作用域是否明确？" },
+        { "id": "eng-existing-change", "question": "是否识别并保护用户已有改动？" },
+        { "id": "eng-test", "question": "是否有测试、构建、截图或人工复核路径？" },
+        { "id": "eng-memory", "question": "执行结果是否写成摘要、证据和工程记忆？" }
+      ]
+    },
+    {
+      "id": "cs-check-kg-indexing",
+      "label": "知识图谱与索引检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": ["route-cs-kg-indexing"],
+      "items": [
+        { "id": "kg-light-node", "question": "图节点是否保持轻量，只保存摘要和引用？" },
+        { "id": "kg-content-store", "question": "详细内容是否进入 database、rules 或 indexes？" },
+        { "id": "kg-source", "question": "来源和许可证状态是否登记？" },
+        { "id": "kg-scope", "question": "是否支持按 project_id、subject、route_id 裁剪？" },
+        { "id": "kg-sync", "question": "用户手动编辑图谱时，数据库索引是否有同步策略？" }
+      ]
+    },
+    {
+      "id": "cs-check-agent-memory",
+      "label": "Agent 工程记忆检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": ["route-cs-agent-memory-loop"],
+      "items": [
+        { "id": "memory-project", "question": "工程记忆是否绑定 project_id 和 task_id？" },
+        { "id": "memory-tool-events", "question": "工具事件是否记录工具名、摘要、结果和证据？" },
+        { "id": "memory-full-retention", "question": "是否保留全量记忆，同时只向上下文返回摘要？" },
+        { "id": "memory-isolation", "question": "工程 overlay 是否与核心知识网隔离？" },
+        { "id": "memory-promotion", "question": "晋升为核心知识前是否通过逻辑一致性和许可证检查？" }
+      ]
+    },
+    {
+      "id": "cs-check-open-source-release",
+      "label": "开源发布检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": ["route-cs-open-source-release-gate"],
+      "items": [
+        { "id": "release-license", "question": "许可证、NOTICE 和第三方来源是否清楚？" },
+        { "id": "release-secret", "question": "是否扫描密钥、私有路径、数据库和原始日志？" },
+        { "id": "release-docs", "question": "README、使用手册、贡献、安全和路线图是否同步？" },
+        { "id": "release-tests", "question": "专用检查、release check、构建或 smoke test 是否通过？" },
+        { "id": "release-residual-risk", "question": "未解决风险是否记录为非阻塞项或 issue？" }
+      ]
+    }
+  ]
+}

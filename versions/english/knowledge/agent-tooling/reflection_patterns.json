@@ -1,0 +1,158 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "label": "Agent 反思迭代与失败回写模式",
+  "source_refs": [
+    "reflexion-paper",
+    "self-refine-paper",
+    "react-paper"
+  ],
+  "purpose": "把失败、部分成功和用户纠偏转成下一次可避免的路线更新，同时保留全量记忆但只把摘要带回上下文。",
+  "reflection_policy": {
+    "trigger_on": [
+      "tool_failure",
+      "partial_success",
+      "test_failure",
+      "user_correction",
+      "repeated_uncertainty",
+      "context_over_budget"
+    ],
+    "do_not_delete_memory": true,
+    "raw_trace_location": "project-memory overlay or runtime database",
+    "context_return_form": "short reflection summary + route refs + next smallest test",
+    "must_update": [
+      "failure_signature",
+      "candidate_cause",
+      "next_test",
+      "fame_update_candidate"
+    ]
+  },
+  "patterns": [
+    {
+      "id": "reflect-after-tool-failure",
+      "label": "工具失败后反思",
+      "route_refs": [
+        "route-logic-failure-diagnosis",
+        "route-negative-fame-lesson",
+        "route-math-evidence-update"
+      ],
+      "steps": [
+        "记录观察事实：命令、工具名、参数摘要、错误类型和可复现条件。",
+        "分离猜测和证据，不把未验证原因当事实。",
+        "生成 1 到 3 个候选原因，并给出区分性最小测试。",
+        "更新负值 FAME lesson 候选，标记风险和复发条件。",
+        "下一步只执行最小验证动作，避免连续大范围试错。"
+      ],
+      "output_fields": [
+        "failure_signature",
+        "observed_evidence",
+        "candidate_causes",
+        "next_small_test",
+        "fame_update_candidate"
+      ]
+    },
+    {
+      "id": "reflect-after-partial-success",
+      "label": "部分成功后补证据",
+      "route_refs": [
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "把已成功部分和未验证部分分开。",
+        "补齐可观察验收标准。",
+        "把不确定内容标记为 pending，不允许包装成完成。",
+        "记录下一步验证路径和上下文预算。"
+      ],
+      "output_fields": [
+        "done_items",
+        "unverified_items",
+        "evidence_gap",
+        "next_validation"
+      ]
+    },
+    {
+      "id": "reflect-user-correction",
+      "label": "用户纠偏后路线校正",
+      "route_refs": [
+        "route-language-intent-to-scope",
+        "route-language-abstraction-transfer",
+        "route-math-evidence-update"
+      ],
+      "steps": [
+        "提取用户纠偏对应的真实目标或边界。",
+        "回到语言树中枢重新确定 subject、route_id 和抽象层级。",
+        "记录误选路线的原因，降低对应边的 chi 或 rho。",
+        "如果纠偏揭示更好的抽象层，把它加入联想候选但必须绑定验证钩子。"
+      ],
+      "output_fields": [
+        "corrected_intent",
+        "wrong_route_signature",
+        "new_route_refs",
+        "fame_update_candidate"
+      ]
+    },
+    {
+      "id": "self-refine-before-final",
+      "label": "完成前自检改稿",
+      "route_refs": [
+        "route-agent-usability-evaluation",
+        "route-cs-spec-to-test",
+        "route-logic-argument-check"
+      ],
+      "steps": [
+        "按用户目标检查是否有证据支撑。",
+        "检查是否遗漏强制工作流、数据库同步、上下文健康或失败教训。",
+        "检查是否有过度联想、无来源引入或污染核心知识网。",
+        "只修改真实缺陷，不为形式反复改写。"
+      ],
+      "output_fields": [
+        "acceptance_status",
+        "missing_evidence",
+        "final_fix",
+        "residual_risk"
+      ]
+    },
+    {
+      "id": "resume-reflection",
+      "label": "恢复点反思",
+      "route_refs": [
+        "route-cs-agent-memory-loop",
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "读取最近恢复点摘要和 route refs。",
+        "确认当前用户最新目标是否改变。",
+        "只加载下一步需要的 subject 文件和 content refs。",
+        "继续前写明当前目标、下一步动作和验证方式。"
+      ],
+      "output_fields": [
+        "current_goal",
+        "loaded_refs",
+        "next_action",
+        "validation_plan"
+      ]
+    }
+  ],
+  "reflection_summary_schema": {
+    "type": "object",
+    "required": [
+      "task_id",
+      "trigger",
+      "summary",
+      "route_refs",
+      "next_small_test",
+      "fame_update_candidate"
+    ],
+    "properties": {
+      "task_id": "string",
+      "trigger": "string",
+      "summary": "string",
+      "route_refs": "string[]",
+      "failure_signature": "string|null",
+      "next_small_test": "string",
+      "fame_update_candidate": "object",
+      "raw_trace_ref": "string"
+    }
+  }
+}

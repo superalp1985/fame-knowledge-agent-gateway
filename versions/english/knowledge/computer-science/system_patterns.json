@@ -1,0 +1,101 @@
+{
+  "edition_id": "english",
+  "subject": "computer-science",
+  "patterns": [
+    {
+      "id": "cs-pattern-light-graph-heavy-store",
+      "label": "轻图谱重存储",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "graph_node",
+        "content_unit",
+        "rule_ref",
+        "asset_ref",
+        "source_ref"
+      ],
+      "summary": "图谱保存结构、摘要、FAME 和引用；详细内容、日志、多模态资产放外部存储。",
+      "agent_use": "避免大知识网把上下文和可视化拖垮。",
+      "related_subjects": [
+        "language-tree-hub",
+        "mathematics",
+        "agent-tooling"
+      ]
+    },
+    {
+      "id": "cs-pattern-scope-index-route",
+      "label": "作用域-索引-路线",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "scope_keys",
+        "subject_index",
+        "alias_index",
+        "route_index",
+        "context_pack"
+      ],
+      "summary": "先确定作用域，再查索引和路线，最后生成小上下文包。",
+      "agent_use": "让 Agent 在大项目中按需读取，不全量遍历。",
+      "related_subjects": [
+        "language-tree-hub",
+        "mathematics"
+      ]
+    },
+    {
+      "id": "cs-pattern-agent-memory-overlay",
+      "label": "Agent 工程记忆 Overlay",
+      "abstraction_level": "L4_method",
+      "slots": [
+        "project_id",
+        "task_id",
+        "tool_events",
+        "evidence",
+        "lessons",
+        "promotion_status"
+      ],
+      "summary": "工程过程作为 overlay 记录，核心知识网只接收审核后的通用经验。",
+      "agent_use": "既保留全量工程记忆，又不污染通用知识。",
+      "related_subjects": [
+        "agent-tooling",
+        "logic"
+      ]
+    },
+    {
+      "id": "cs-pattern-test-evidence",
+      "label": "测试证据包",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "command",
+        "status",
+        "key_output",
+        "artifact_refs",
+        "failure_summary",
+        "next_step"
+      ],
+      "summary": "把测试或构建输出压缩成证据包，完整日志外置。",
+      "agent_use": "支持 FAME 更新、发布检查和用户复核。",
+      "related_subjects": [
+        "mathematics",
+        "agent-tooling"
+      ]
+    },
+    {
+      "id": "cs-pattern-open-source-governance",
+      "label": "开源治理模式",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "license",
+        "notice",
+        "security",
+        "contribution",
+        "release_check",
+        "source_registry"
+      ],
+      "summary": "把开源要求转成许可证、NOTICE、安全、贡献、检查脚本和来源登记。",
+      "agent_use": "让项目可持续被社区补知识，而不是一次性私有工程。",
+      "related_subjects": [
+        "logic",
+        "agent-tooling"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

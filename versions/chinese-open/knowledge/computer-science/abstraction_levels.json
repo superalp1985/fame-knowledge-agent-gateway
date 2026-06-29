@@ -1,0 +1,41 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "computer-science",
+  "levels": [
+    {
+      "id": "L0_meta",
+      "label": "计算系统观",
+      "agent_use": "判断问题是算法、工程、系统、数据、AI、安全、HCI 还是治理问题。"
+    },
+    {
+      "id": "L1_discipline",
+      "label": "计算机科学",
+      "agent_use": "进入计算机科学总分支。"
+    },
+    {
+      "id": "L2_field",
+      "label": "计算机方向",
+      "agent_use": "选择理论、软件、系统、数据、AI、安全、HCI 或职业实践。"
+    },
+    {
+      "id": "L3_topic",
+      "label": "计算主题",
+      "agent_use": "定位算法、测试、数据库、知识图谱、智能体等主题。"
+    },
+    {
+      "id": "L4_method",
+      "label": "工程方法",
+      "agent_use": "选择设计、实现、测试、索引、验证、发布或安全策略。"
+    },
+    {
+      "id": "L5_operation",
+      "label": "执行动作",
+      "agent_use": "把方法转成文件编辑、命令执行、测试、构建和回写。"
+    },
+    {
+      "id": "L6_case",
+      "label": "工程案例",
+      "agent_use": "记录开源案例、失败模式和可复用工程经验。"
+    }
+  ]
+}

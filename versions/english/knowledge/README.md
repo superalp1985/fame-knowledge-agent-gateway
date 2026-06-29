@@ -1,21 +1,31 @@
-# English Knowledge Seed
+# English Open Knowledge Net
 
-The English knowledge seed is organized around a central Language Tree Hub.
+The English edition is now mechanism-aligned with the Chinese open edition. It keeps the same route ids, scenario ids, content refs, schemas, golden tasks and evaluation flow, while using English documentation and summaries.
 
-```text
-Language Tree Hub
--> Professional Knowledge
-   -> Programming
-   -> Design
-```
+## Subject Structure
 
-This directory is not a retrieval dump. It is a routeable knowledge structure for agents:
+~~~text
+language-tree-hub/
+logic/
+mathematics/
+computer-science/
+agent-tooling/
+powershell-safety/
+database/
+indexes/
+rules/
+~~~
 
-- start from language and goal semantics
-- scope by subject and route
-- traverse abstraction and association edges
-- evaluate FAME route parameters
-- pack only the context needed for the current task
-- retain full traces and lessons outside the active model context
+## Read Order For Agents
 
-Detailed knowledge content will be added after subject-by-subject review.
+1. route_index.json
+2. indexes/subject_index.json
+3. language-tree-hub/core.json
+4. language-tree-hub/lexicon_seed.json
+5. language-tree-hub/thought_modes.json
+6. indexes/scoping_index.json
+7. agent-tooling/stability_scenarios.json
+8. agent-tooling/tool_gateway_policies.json
+9. agent-tooling/action_templates.json
+
+Do not load the full graph. Start from the Language Tree Hub, choose a thinking layer, route by subject and route_id, and keep long logs in project memory or databases.

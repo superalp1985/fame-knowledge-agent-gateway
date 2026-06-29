@@ -1,0 +1,96 @@
+{
+  "edition_id": "english",
+  "subject": "computer-science",
+  "methods": [
+    {
+      "id": "cs-method-spec-to-tests",
+      "label": "规格到测试",
+      "abstraction_level": "L4_method",
+      "use_when": "用户目标需要转成可验证工程交付。",
+      "steps": [
+        "提取用户目标和完成标准。",
+        "写出可观察行为或输出。",
+        "选择单元、集成、端到端、截图或发布检查。",
+        "实现前先确认测试或验证路径。",
+        "执行后写回证据摘要。"
+      ],
+      "agent_value": "减少 Agent 做完但无法证明完成的问题。",
+      "related_routes": [
+        "route-cs-spec-to-test",
+        "route-logic-tool-precheck"
+      ]
+    },
+    {
+      "id": "cs-method-scope-first-change",
+      "label": "作用域优先改动",
+      "abstraction_level": "L4_method",
+      "use_when": "需要修改代码、文档、知识网或配置。",
+      "steps": [
+        "确定 project_id、subject、route_id、task_id。",
+        "读取相关文件和索引，不全量扫无关目录。",
+        "识别用户已有改动并避免覆盖。",
+        "只改完成任务必要的文件。",
+        "用检查脚本验证。"
+      ],
+      "agent_value": "降低误改、上下文膨胀和用户改动被覆盖风险。",
+      "related_routes": [
+        "route-language-intent-to-scope",
+        "route-cs-engineering-knowledge"
+      ]
+    },
+    {
+      "id": "cs-method-indexed-knowledge",
+      "label": "索引化知识组织",
+      "abstraction_level": "L4_method",
+      "use_when": "知识量变大，需要保持图谱轻量但可查找。",
+      "steps": [
+        "图谱节点只保存摘要和引用。",
+        "详细内容进入 database/content_units。",
+        "术语进入 alias 或 semantic index。",
+        "规则进入 rules。",
+        "大资产进入数据库或对象存储，图谱只保留预览和索引。"
+      ],
+      "agent_value": "保护上下文健康，同时保持知识网可扩展。",
+      "related_routes": [
+        "route-cs-kg-indexing",
+        "route-math-graph-traversal"
+      ]
+    },
+    {
+      "id": "cs-method-agent-memory-loop",
+      "label": "Agent 工程记忆闭环",
+      "abstraction_level": "L4_method",
+      "use_when": "任务需要跨多步执行、测试和复盘。",
+      "steps": [
+        "启动时读取作用域和相关路线。",
+        "执行前生成上下文包和 ProposedAction。",
+        "执行后写 ToolResultSummary。",
+        "失败写 negative lesson，成功写证据摘要。",
+        "只把通用经验经审核晋升为核心知识。"
+      ],
+      "agent_value": "让 Agent 可恢复、可审计、可迭代，不依赖单次上下文。",
+      "related_routes": [
+        "route-cs-agent-memory-loop",
+        "route-negative-fame-lesson"
+      ]
+    },
+    {
+      "id": "cs-method-release-gate",
+      "label": "发布门禁",
+      "abstraction_level": "L4_method",
+      "use_when": "准备开源发布或重要版本更新。",
+      "steps": [
+        "运行专用结构检查。",
+        "运行 release check。",
+        "检查许可证和来源登记。",
+        "检查私有路径、密钥和未清理日志。",
+        "记录测试结果和残余风险。"
+      ],
+      "agent_value": "把开源准备从口头要求变成可执行门槛。",
+      "related_routes": [
+        "route-cs-open-source-release-gate"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

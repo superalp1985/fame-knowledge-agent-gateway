@@ -1,0 +1,48 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "levels": [
+    {
+      "id": "L0_meta",
+      "label": "元组织层",
+      "question": "这个请求属于哪类知识组织和 Agent 工作模式？",
+      "example": "把用户目标转成作用域、路由和上下文预算。"
+    },
+    {
+      "id": "L1_discipline",
+      "label": "学科入口层",
+      "question": "主要进入哪个学科或工具分支？",
+      "example": "PowerShell 安全语法、Agent 工具调取、逻辑。"
+    },
+    {
+      "id": "L2_field",
+      "label": "方向层",
+      "question": "分支里的二级方向是什么？",
+      "example": "PowerShell 的引号规则或解析规则。"
+    },
+    {
+      "id": "L3_topic",
+      "label": "主题层",
+      "question": "当前问题落在哪个主题簇？",
+      "example": "变量展开、原生命令参数传递。"
+    },
+    {
+      "id": "L4_method",
+      "label": "方法层",
+      "question": "应该采用什么规则、算法或推理方式？",
+      "example": "先查工具说明，再校验 schema。"
+    },
+    {
+      "id": "L5_operation",
+      "label": "操作层",
+      "question": "Agent 此刻该做什么动作？",
+      "example": "生成 ProposedAction，等待 ApprovedAction 或执行只读命令。"
+    },
+    {
+      "id": "L6_case",
+      "label": "案例层",
+      "question": "有没有成功或失败的工程记忆可参考？",
+      "example": "New-Item 参数误用导致目录创建失败。"
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "label": "Agent 易用性与少犯错评测指标",
+  "source_refs": [
+    "agentbench-paper",
+    "swe-agent-paper",
+    "toolformer-paper",
+    "openhands"
+  ],
+  "purpose": "把 Agent 是否好用、是否少犯错、是否节省上下文转成可记录、可比较、可回写 FAME 的指标。",
+  "measurement_policy": {
+    "scope_keys": [
+      "edition_id",
+      "project_id",
+      "subject",
+      "route_id",
+      "task_id"
+    ],
+    "window": "per_task_and_rolling_20_tasks",
+    "full_memory_retention": true,
+    "store_raw_events_in": "project-memory overlay or runtime database",
+    "store_graph_view_as": "metric summary, route refs, FAME update candidates",
+    "do_not_store_private_payload_in_core_graph": true
+  },
+  "scorecard_formula": "0.18*tool_success_rate + 0.14*evidence_backed_completion_rate + 0.12*route_selection_accuracy + 0.12*recovery_success_rate + 0.10*context_token_savings + 0.10*abstraction_transfer_success_rate + 0.08*association_hit_rate - 0.10*schema_error_rate - 0.08*failure_recurrence_rate - 0.08*user_intervention_rate",
+  "metrics": [
+    {
+      "id": "tool_success_rate",
+      "label": "工具成功率",
+      "direction": "higher_is_better",
+      "formula": "successful_tool_calls / max(1, attempted_tool_calls)",
+      "data_sources": [
+        "ToolResultSummary",
+        "runtime tool events"
+      ],
+      "target": ">= 0.90 after stabilization",
+      "fame_update": {
+        "increase": [
+          "mu",
+          "chi",
+          "rho"
+        ],
+        "decrease_on_failure": [
+          "risk"
+        ]
+      }
+    },
+    {
+      "id": "schema_error_rate",
+      "label": "工具 schema 错误率",
+      "direction": "lower_is_better",
+      "formula": "schema_or_argument_errors / max(1, attempted_tool_calls)",
+      "data_sources": [
+        "Tool Gateway validation",
+        "tool error summaries"
+      ],
+      "target": "<= 0.05",
+      "fame_update": {
+        "increase_on_error": [
+          "risk"
+        ],
+        "decrease_on_error": [
+          "kappa",
+          "chi"
+        ]
+      }
+    },
+    {
+      "id": "unsafe_action_block_rate",
+      "label": "高风险动作拦截率",
+      "direction": "context_dependent",
+      "formula": "blocked_unsafe_actions / max(1, unsafe_action_candidates)",
+      "data_sources": [
+        "ApprovedAction audit",
+        "Tool Gateway policy decisions"
+      ],
+      "target": "高风险误拦截低，真实风险必须拦截",
+      "fame_update": {
+        "increase": [
+          "epsilon",
+          "kappa"
+        ],
+        "increase_on_noise": [
+          "risk"
+        ]
+      }
+    },
+    {
+      "id": "failure_recurrence_rate",
+      "label": "失败复发率",
+      "direction": "lower_is_better",
+      "formula": "repeated_failures_with_same_signature / max(1, failures)",
+      "data_sources": [
+        "negative FAME lessons",
+        "failure signatures"
+      ],
+      "target": "<= 0.15",
+      "fame_update": {
+        "increase_on_recurrence": [
+          "risk"
+        ],
+        "decrease_on_recurrence": [
+          "rho",
+          "kappa"
+        ]
+      }
+    },
+    {
+      "id": "context_token_savings",
+      "label": "上下文节省率",
+      "direction": "higher_is_better",
+      "formula": "1 - actual_context_tokens / max(1, baseline_full_context_tokens)",
+      "data_sources": [
+        "ContextPack",
+        "scope index",
+        "task trace"
+      ],
+      "target": ">= 0.40 on large projects",
+      "fame_update": {
+        "increase": [
+          "kappa",
+          "rho"
+        ],
+        "decrease_on_overload": [
+          "chi"
+        ]
+      }
+    },
+    {
+      "id": "recovery_success_rate",
+      "label": "中断恢复成功率",
+      "direction": "higher_is_better",
+      "formula": "successful_resumes / max(1, resume_attempts)",
+      "data_sources": [
+        "resume checkpoints",
+        "project-memory overlay"
+      ],
+      "target": ">= 0.85",
+      "fame_update": {
+        "increase": [
+          "rho",
+          "epsilon"
+        ],
+        "decrease_on_failure": [
+          "risk"
+        ]
+      }
+    },
+    {
+      "id": "user_intervention_rate",
+      "label": "用户纠偏率",
+      "direction": "lower_is_better",
+      "formula": "user_corrections_or_manual_unblocks / max(1, task_steps)",
+      "data_sources": [
+        "conversation trace",
+        "approval audit"
+      ],
+      "target": "持续下降，不追求零纠偏",
+      "fame_update": {
+        "increase_on_intervention": [
+          "risk"
+        ],
+        "decrease_on_intervention": [
+          "mu",
+          "chi"
+        ]
+      }
+    },
+    {
+      "id": "route_selection_accuracy",
+      "label": "路由选择准确率",
+      "direction": "higher_is_better",
+      "formula": "validated_route_choices / max(1, route_choices)",
+      "data_sources": [
+        "route_index",
+        "validation hooks",
+        "task outcome"
+      ],
+      "target": ">= 0.80",
+      "fame_update": {
+        "increase": [
+          "mu",
+          "chi"
+        ],
+        "decrease_on_wrong_route": [
+          "kappa"
+        ]
+      }
+    },
+    {
+      "id": "evidence_backed_completion_rate",
+      "label": "带证据完成率",
+      "direction": "higher_is_better",
+      "formula": "completed_tasks_with_test_or_observation_evidence / max(1, completed_tasks)",
+      "data_sources": [
+        "test results",
+        "tool observations",
+        "manual acceptance"
+      ],
+      "target": ">= 0.90 for engineering tasks",
+      "fame_update": {
+        "increase": [
+          "epsilon",
+          "kappa"
+        ],
+        "decrease_on_claim_only": [
+          "rho"
+        ]
+      }
+    },
+    {
+      "id": "abstraction_transfer_success_rate",
+      "label": "抽象迁移成功率",
+      "direction": "higher_is_better",
+      "formula": "successful_cross_subject_transfers / max(1, attempted_cross_subject_transfers)",
+      "data_sources": [
+        "LanguageTree association routes",
+        "validation hooks"
+      ],
+      "target": "先稳定，再扩大联想预算",
+      "fame_update": {
+        "increase": [
+          "nu",
+          "mu"
+        ],
+        "decrease_on_bad_transfer": [
+          "risk"
+        ]
+      }
+    },
+    {
+      "id": "association_hit_rate",
+      "label": "横向联想命中率",
+      "direction": "higher_is_better",
+      "formula": "useful_association_routes / max(1, association_routes_loaded)",
+      "data_sources": [
+        "association_rules",
+        "association_playbooks",
+        "task outcome"
+      ],
+      "target": ">= 0.50 before increasing max_association_edges",
+      "fame_update": {
+        "increase": [
+          "nu",
+          "rho"
+        ],
+        "decrease_on_noise": [
+          "chi"
+        ]
+      }
+    },
+    {
+      "id": "approval_bypass_rate",
+      "label": "审批绕过率",
+      "direction": "lower_is_better",
+      "formula": "sensitive_actions_without_approval / max(1, sensitive_action_candidates)",
+      "data_sources": [
+        "Tool Gateway policy decisions",
+        "ApprovedAction audit"
+      ],
+      "target": "0 for high-risk actions",
+      "fame_update": {
+        "increase_on_error": [
+          "risk"
+        ],
+        "decrease_on_error": [
+          "kappa",
+          "epsilon"
+        ]
+      }
+    },
+    {
+      "id": "capability_boundary_match_rate",
+      "label": "能力边界匹配率",
+      "direction": "higher_is_better",
+      "formula": "tool_calls_with_valid_capability_boundary / max(1, attempted_tool_calls)",
+      "data_sources": [
+        "MCP capability registry",
+        "ProposedAction"
+      ],
+      "target": ">= 0.95 after stabilization",
+      "fame_update": {
+        "increase": [
+          "chi",
+          "kappa",
+          "rho"
+        ],
+        "decrease_on_error": [
+          "mu"
+        ]
+      }
+    },
+    {
+      "id": "resume_memory_success_rate",
+      "label": "恢复记忆成功率",
+      "direction": "higher_is_better",
+      "formula": "successful_resume_from_checkpoint_or_store / max(1, resume_attempts)",
+      "data_sources": [
+        "checkpoint/store",
+        "project-memory overlay"
+      ],
+      "target": ">= 0.90 for long tasks",
+      "fame_update": {
+        "increase": [
+          "rho",
+          "epsilon"
+        ],
+        "decrease_on_failure": [
+          "risk"
+        ]
+      }
+    }
+  ],
+  "gates": [
+    {
+      "id": "gate-no-evidence-no-complete",
+      "label": "没有证据不得宣称完成",
+      "condition": "engineering_task && no_test_or_observation_evidence",
+      "decision": "require_more_validation_or_mark_partial"
+    },
+    {
+      "id": "gate-recurrent-failure-reflect",
+      "label": "重复失败必须反思",
+      "condition": "same_failure_signature_count >= 2",
+      "decision": "enter route-agent-reflection-improvement before next risky action"
+    },
+    {
+      "id": "gate-context-over-budget-scope",
+      "label": "上下文超预算必须裁剪",
+      "condition": "actual_context_tokens > context_budget",
+      "decision": "return to route-language-intent-to-scope and lazy-load refs only"
+    },
+    {
+      "id": "gate-no-contract-no-risky-tool",
+      "label": "没有动作契约不得执行风险工具",
+      "condition": "risky_tool_call && missing_tool_action_contract",
+      "decision": "return route-agent-tool-action-contract before execution"
+    },
+    {
+      "id": "gate-no-goalpost-no-expansion",
+      "label": "没有球门不得扩展上下文",
+      "condition": "context_expansion_requested && missing_goal_post",
+      "decision": "return route-language-goal-backcasting before loading more refs"
+    }
+  ]
+}

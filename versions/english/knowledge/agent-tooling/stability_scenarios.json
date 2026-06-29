@@ -1,0 +1,331 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "label": "Tool-call stability scenario matrix",
+  "purpose": "Convert frequent agent engineering actions into prechecked, routed, validated and reviewable scenarios.",
+  "global_required_routes": [
+    "route-language-goal-backcasting",
+    "route-language-global-situation-model",
+    "route-agent-tool-action-contract",
+    "route-agent-stability-preflight",
+    "route-agent-tool-result-summary",
+    "route-agent-mcp-capability-boundary",
+    "route-agent-guardrail-human-review",
+    "route-agent-checkpoint-store-memory"
+  ],
+  "scenarios": [
+    {
+      "id": "scenario-powershell-destructive-delete",
+      "label": "PowerShell Recursive Delete Review",
+      "operation_type": "delete",
+      "risk_level": "high",
+      "trigger": "The task needs to delete, move, clear or recursively mutate filesystem paths.",
+      "required_routes": [
+        "route-powershell-command-review",
+        "route-powershell-safe-command",
+        "route-agent-tool-action-contract",
+        "route-negative-fame-lesson"
+      ],
+      "required_checks": [
+        "Confirm working_directory.",
+        "Confirm target absolute path with Resolve-Path or equivalent.",
+        "Confirm target stays inside allowed_root.",
+        "Do not enumerate in PowerShell and then delete through cmd/bash.",
+        "High-risk actions require ApprovedAction."
+      ],
+      "failure_signatures": [
+        "ps-failure-cross-shell-delete",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-jsonl-knowledge-edit",
+      "label": "JSONL Knowledge Base Edit",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "trigger": "The task needs to add, update or sync content_units.jsonl, route_index.json, alias_index.json or similar structured knowledge files.",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-database-sync",
+        "route-logic-knowledge-consistency"
+      ],
+      "required_checks": [
+        "Keep JSONL as one object per line.",
+        "Parse every line after writing.",
+        "Ensure route, content and source refs exist.",
+        "Sync content_index, subject_index and alias_index.",
+        "Run check:english and release checks."
+      ],
+      "failure_signatures": [
+        "tool-failure-json-string-edit",
+        "tool-failure-knowledge-index-drift"
+      ],
+      "expected_summary_pattern": "result-pattern-file-edit"
+    },
+    {
+      "id": "scenario-git-dirty-worktree",
+      "label": "Git Dirty Worktree Protection",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "trigger": "Before editing, moving, deleting files or committing.",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test"
+      ],
+      "required_checks": [
+        "Read git status --short.",
+        "Identify untracked files and unknown changes in touched files.",
+        "Do not reset, checkout or overwrite user changes.",
+        "After edits, list changed_files and validation results."
+      ],
+      "failure_signatures": [
+        "tool-failure-dirty-worktree-overwrite",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-file-edit"
+    },
+    {
+      "id": "scenario-node-npm-build",
+      "label": "Node/npm Test and Build",
+      "operation_type": "build",
+      "risk_level": "low",
+      "trigger": "The task needs to run npm scripts, build, lint, test or install dependencies.",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Confirm the package.json directory.",
+        "Confirm script meaning and side effects.",
+        "Treat dependency install or lockfile edits as mutating actions.",
+        "Record exit code, key output and artifacts."
+      ],
+      "failure_signatures": [
+        "tool-failure-wrong-working-directory",
+        "tool-failure-test-claim-without-evidence"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-python-runtime",
+      "label": "Python Runtime Decision",
+      "operation_type": "execute",
+      "risk_level": "low",
+      "trigger": "The task needs to run Python, install packages, import modules or generate data.",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Confirm interpreter path and version.",
+        "Confirm virtual environment or bundled runtime.",
+        "Confirm module path and working directory.",
+        "Package installs or side-effect scripts require a proposal.",
+        "Record encoding and key error summary."
+      ],
+      "failure_signatures": [
+        "tool-failure-wrong-working-directory",
+        "tool-failure-runtime-assumption"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-network-source-import",
+      "label": "Network Download and Source Import",
+      "operation_type": "network",
+      "risk_level": "medium",
+      "trigger": "The task needs to download, scrape or import external material or open-source cases.",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-open-source-release-gate",
+        "route-logic-knowledge-consistency"
+      ],
+      "required_checks": [
+        "Record URL, snapshot date, purpose and destination.",
+        "Register source_registry or data_sources.",
+        "Unknown license keeps only summary and link.",
+        "Large or ShareAlike content stays isolated from core knowledge."
+      ],
+      "failure_signatures": [
+        "tool-failure-network-import-pollution"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-external-agent-integration",
+      "label": "External Agent Integration",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "An external agent is connecting to the English open knowledge net for the first time or needs usability validation.",
+      "required_routes": [
+        "route-agent-integration-usability-test",
+        "route-language-goal-backcasting",
+        "route-agent-tool-action-contract",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Read docs/agent-protocol.md.",
+        "Use lexicon_seed for semantic normalization.",
+        "Generate the minimal ContextPack.",
+        "Create a read-only tool action contract.",
+        "Write ToolResultSummary."
+      ],
+      "failure_signatures": [
+        "tool-failure-skip-doc",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-powershell-encoding-mojibake",
+      "label": "PowerShell Chinese Encoding Diagnosis",
+      "operation_type": "read",
+      "risk_level": "low",
+      "trigger": "PowerShell, terminal, command output or logs display Chinese mojibake and the agent must distinguish display issues, pipe decoding and real file damage.",
+      "required_routes": [
+        "route-powershell-encoding-output",
+        "route-powershell-command-review",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Record PowerShell version, Console.OutputEncoding and $OutputEncoding.",
+        "Verify screen output, JSON output and UTF-8 file roundtrip with a Chinese probe.",
+        "Do not decide that source files are damaged from terminal mojibake alone.",
+        "When writing files, explicitly use UTF-8 and read back.",
+        "ToolResultSummary records whether evidence came from terminal, JSON or file."
+      ],
+      "failure_signatures": [
+        "ps-failure-output-encoding-mojibake",
+        "tool-failure-terminal-mojibake-misdiagnosis"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-local-agent-connect-check",
+      "label": "Local Agent Connection State Check",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "The user wants to select a local agent and know whether it has connected to the English open edition.",
+      "required_routes": [
+        "route-agent-local-connect-check",
+        "route-agent-integration-usability-test",
+        "route-agent-tool-gateway-policy",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Select agent type: codex, cursor, claude-desktop, claude-code, openai-agents, gemini-cli, openhands, swe-agent, aider, cline, roo-code, continue, langgraph, autogen, crewai, dify, generic or other.",
+        "Check QUICKSTART_AGENT, AGENTS, route CLI, doctor and real eval availability.",
+        "Generate agent_start_prompt, connection message and next_command.",
+        "The graphical path must wait for user confirmation after the agent replies.",
+        "Output connected/not_connected with blockers.",
+        "Do not rewrite user agent configuration unless explicitly requested."
+      ],
+      "failure_signatures": [
+        "tool-failure-skip-doc",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-mcp-tool-boundary",
+      "label": "MCP Tool Capability Boundary Check",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "An external agent connects through MCP or a similar protocol and must separate resources, prompts and tools.",
+      "required_routes": [
+        "route-agent-mcp-capability-boundary",
+        "route-agent-tool-action-contract",
+        "route-agent-tool-gateway-policy"
+      ],
+      "required_checks": [
+        "Separate resources, prompts and tools.",
+        "Read tool schema and output contract.",
+        "Confirm each tool side effect and permission boundary.",
+        "If the boundary is missing, allow read-only probing only."
+      ],
+      "failure_signatures": [
+        "tool-failure-capability-boundary-confusion",
+        "tool-failure-skip-doc"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-guardrail-human-review",
+      "label": "Sensitive Action Approval Check",
+      "operation_type": "approval",
+      "risk_level": "high",
+      "trigger": "The tool action touches deletion, release, secrets, external writes or non-reversible side effects.",
+      "required_routes": [
+        "route-agent-guardrail-human-review",
+        "route-agent-tool-proposed-action",
+        "route-agent-tool-gateway-policy"
+      ],
+      "required_checks": [
+        "Create ProposedAction.",
+        "Decide whether ApprovedAction is required.",
+        "Record user approval or rejection.",
+        "Block execution when approval state is missing."
+      ],
+      "failure_signatures": [
+        "tool-failure-approval-bypass",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-powershell-native-command",
+      "label": "PowerShell Native Command Argument Check",
+      "operation_type": "execute",
+      "risk_level": "medium",
+      "trigger": "PowerShell invokes git, node, npm, python, docker, curl or another external program.",
+      "required_routes": [
+        "route-powershell-native-command-boundary",
+        "route-powershell-command-review",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Confirm working directory.",
+        "Confirm argument boundary and quoting rules.",
+        "Confirm exit code and error stream.",
+        "Prefer JSON or concise summaries as evidence."
+      ],
+      "failure_signatures": [
+        "tool-failure-native-command-argument-drift",
+        "tool-failure-wrong-working-directory"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-agent-resume-memory",
+      "label": "Agent Resume Memory Check",
+      "operation_type": "resume",
+      "risk_level": "medium",
+      "trigger": "A long task was interrupted, paused for approval, failed at a tool call or resumed from a thread.",
+      "required_routes": [
+        "route-agent-checkpoint-store-memory",
+        "route-agent-reminder-clock",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "Read checkpoint/thread summary.",
+        "Confirm last stable evidence.",
+        "List unresolved blockers.",
+        "Generate the smallest next action instead of replaying full logs."
+      ],
+      "failure_signatures": [
+        "tool-failure-memory-resume-loss",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    }
+  ]
+}

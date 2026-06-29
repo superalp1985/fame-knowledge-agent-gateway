@@ -1,0 +1,88 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "powershell-safety",
+  "checklist": [
+    {
+      "id": "ps-review-scope",
+      "label": "作用域",
+      "question": "命令目标路径、项目、环境变量和外部服务是否限定在当前任务作用域内？",
+      "required_for": [
+        "write",
+        "delete",
+        "move",
+        "network",
+        "execute"
+      ]
+    },
+    {
+      "id": "ps-review-quoting",
+      "label": "引号",
+      "question": "字符串是否需要变量展开？单引号、双引号、here-string 是否选择正确？",
+      "required_for": [
+        "all"
+      ]
+    },
+    {
+      "id": "ps-review-path",
+      "label": "路径",
+      "question": "路径是否含空格、通配符、中文或特殊字符？是否应使用 LiteralPath？",
+      "required_for": [
+        "read",
+        "write",
+        "delete",
+        "move"
+      ]
+    },
+    {
+      "id": "ps-review-native",
+      "label": "原生命令",
+      "question": "参数是否会被 PowerShell 提前解析？是否需要调整传参方式？",
+      "required_for": [
+        "execute",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "ps-review-destructive",
+      "label": "破坏性操作",
+      "question": "删除、移动、覆盖、递归操作是否已有 ProposedAction/ApprovedAction 和回滚策略？",
+      "required_for": [
+        "delete",
+        "move",
+        "write"
+      ]
+    },
+    {
+      "id": "ps-review-output",
+      "label": "输出控制",
+      "question": "输出是否过长？是否需要摘要、行数限制或结构化 JSON？",
+      "required_for": [
+        "all"
+      ]
+    },
+    {
+      "id": "ps-review-secret",
+      "label": "敏感信息",
+      "question": "命令或输出是否包含密钥、token、私有路径或用户数据？",
+      "required_for": [
+        "network",
+        "execute",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "ps-review-encoding",
+      "label": "中文编码",
+      "question": "命令输出、文件写入或 JSON 证据是否需要显式 UTF-8？是否已经区分终端显示乱码和文件真实损坏？",
+      "required_for": [
+        "read",
+        "write",
+        "execute",
+        "test",
+        "build"
+      ]
+    }
+  ]
+}

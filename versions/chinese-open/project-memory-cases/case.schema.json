@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fame.local/schemas/chinese-open-project-memory-case.schema.json",
+  "title": "FAME Chinese Open Project Memory Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "source_project",
+    "source_urls",
+    "license",
+    "project_goal",
+    "problem",
+    "route_refs",
+    "tool_events",
+    "evidence",
+    "lessons",
+    "fame_updates",
+    "promotion_status"
+  ],
+  "properties": {
+    "case_id": { "type": "string" },
+    "source_project": { "type": "string" },
+    "source_urls": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    },
+    "license": { "type": "string" },
+    "project_goal": { "type": "string" },
+    "problem": { "type": "string" },
+    "route_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tool_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tool", "summary", "outcome"],
+        "properties": {
+          "tool": { "type": "string" },
+          "summary": { "type": "string" },
+          "outcome": { "enum": ["success", "failure", "partial", "skipped"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "lessons": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "fame_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["route_ref", "delta", "reason"],
+        "properties": {
+          "route_ref": { "type": "string" },
+          "delta": { "type": "number", "minimum": -1, "maximum": 1 },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "promotion_status": {
+      "enum": ["overlay_only", "candidate_for_rule", "candidate_for_route", "promoted", "rejected"]
+    }
+  },
+  "additionalProperties": false
+}

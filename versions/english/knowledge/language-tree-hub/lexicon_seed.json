@@ -1,0 +1,108 @@
+{
+  "edition_id": "english",
+  "subject": "language-tree-hub",
+  "status": "manual_seed",
+  "policy": "Self-authored core terminology. External lexical resources remain candidates until license review.",
+  "terms": [
+    {
+      "canonical": "Language Tree Hub",
+      "aliases": [
+        "language tree",
+        "semantic tree",
+        "language hub"
+      ],
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "abstraction_level": "L0_meta",
+      "summary": "Natural-language entry point for intent, semantics, association and expression."
+    },
+    {
+      "canonical": "Route",
+      "aliases": [
+        "knowledge route",
+        "routing path"
+      ],
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "abstraction_level": "L4_method",
+      "summary": "Executable path from task intent to subject, rules, context pack and validation."
+    },
+    {
+      "canonical": "Scope",
+      "aliases": [
+        "scoping",
+        "boundary"
+      ],
+      "subject_refs": [
+        "language-tree-hub",
+        "agent-tooling"
+      ],
+      "abstraction_level": "L4_method",
+      "summary": "Limits context and graph traversal by project_id, subject, route_id and task_id."
+    },
+    {
+      "canonical": "Project Memory",
+      "aliases": [
+        "external memory",
+        "overlay memory"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L6_case",
+      "summary": "External overlay that records process, evidence, decisions, tool results and lessons."
+    },
+    {
+      "canonical": "Tool Calling",
+      "aliases": [
+        "function calling",
+        "tool use"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "Schema, approval, execution and write-back process around external capabilities."
+    },
+    {
+      "canonical": "PowerShell Safety",
+      "aliases": [
+        "PowerShell syntax",
+        "PowerShell common failures"
+      ],
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "abstraction_level": "L2_field",
+      "summary": "Rules that reduce Windows shell mistakes around quoting, path handling and destructive operations."
+    },
+    {
+      "canonical": "PowerShell Chinese Encoding",
+      "aliases": [
+        "Chinese mojibake",
+        "encoding issue",
+        "UTF-8 output"
+      ],
+      "subject_refs": [
+        "powershell-safety",
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "Route for diagnosing Chinese output, file encoding, pipe decoding and evidence reliability."
+    },
+    {
+      "canonical": "Local Agent Connection",
+      "aliases": [
+        "agent connect",
+        "connection wizard"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "Select a local agent type and check that route, doctor, eval and connection prompt are available."
+    }
+  ]
+}

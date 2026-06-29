@@ -1,0 +1,105 @@
+{
+  "edition_id": "english",
+  "subject": "mathematics",
+  "patterns": [
+    {
+      "id": "math-pattern-variable-constraint-goal",
+      "label": "变量-约束-目标",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "variables",
+        "constraints",
+        "objective",
+        "assumptions",
+        "validation"
+      ],
+      "summary": "把工程问题拆成变量、约束、目标函数、假设和验证方式。",
+      "agent_use": "用于任务规划、路线选择、工具调用风险判断。",
+      "fame_effects": {
+        "clear_objective": {
+          "chi": 0.05,
+          "kappa": 0.05
+        },
+        "missing_constraints": {
+          "risk": 0.08,
+          "epsilon": -0.06
+        }
+      }
+    },
+    {
+      "id": "math-pattern-graph-route-scoping",
+      "label": "图路线作用域裁剪",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "start_node",
+        "target_goal",
+        "scope_keys",
+        "edge_budget",
+        "validation_route"
+      ],
+      "summary": "在知识网中限定起点、目标、作用域、边预算和验证路线，避免图爆炸。",
+      "agent_use": "用于知识网找球门、3D/2D 图导航和上下文裁剪。",
+      "fame_effects": {
+        "scoped_route": {
+          "kappa": 0.06,
+          "risk": -0.05
+        },
+        "unscoped_traversal": {
+          "risk": 0.12,
+          "chi": -0.06
+        }
+      }
+    },
+    {
+      "id": "math-pattern-evidence-update",
+      "label": "证据更新",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "prior",
+        "evidence",
+        "likelihood",
+        "posterior",
+        "update_reason"
+      ],
+      "summary": "把测试、工具结果和人工反馈转成路线置信更新，不删除失败样本。",
+      "agent_use": "用于 FAME 参数更新和工程记忆复盘。",
+      "fame_effects": {
+        "strong_success": {
+          "mu": 0.05,
+          "epsilon": 0.08,
+          "rho": 0.04
+        },
+        "repeated_failure": {
+          "mu": -0.08,
+          "delta": -0.12,
+          "risk": 0.08
+        }
+      }
+    },
+    {
+      "id": "math-pattern-score-with-penalty",
+      "label": "带惩罚项评分",
+      "abstraction_level": "L5_operation",
+      "slots": [
+        "positive_terms",
+        "negative_terms",
+        "weights",
+        "normalization",
+        "decision"
+      ],
+      "summary": "用加权正项、风险惩罚和归一化比较候选路线或方案。",
+      "agent_use": "用于 route_score、工具策略选择和候选方案排序。",
+      "fame_effects": {
+        "balanced_score": {
+          "kappa": 0.05,
+          "epsilon": 0.04
+        },
+        "unjustified_weights": {
+          "risk": 0.06,
+          "epsilon": -0.05
+        }
+      }
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

@@ -1,0 +1,121 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "policy": {
+    "max_subject_hops": 2,
+    "max_association_edges": 12,
+    "require_validation_hook": true,
+    "prefer_scoped_routes": true,
+    "do_not_full_graph_load": true
+  },
+  "rules": [
+    {
+      "id": "assoc-intent-engineering-to-cs",
+      "label": "工程意图到计算机科学",
+      "signals": ["实现", "测试", "构建", "发布", "开源", "代码", "索引", "数据库", "可视化"],
+      "source_layer": "intent",
+      "target_subject": "computer-science",
+      "route_refs": ["route-cs-engineering-knowledge", "route-cs-spec-to-test"],
+      "validation_refs": ["route-logic-tool-precheck"],
+      "summary": "工程类目标先进入计算机科学分支，再按测试、索引、Agent 记忆或发布门禁选路。"
+    },
+    {
+      "id": "assoc-abstract-graph-to-math-cs",
+      "label": "图结构抽象到数学和计算机科学",
+      "signals": ["图谱", "节点", "边", "路径", "遍历", "找球门", "联想", "聚类"],
+      "source_layer": "semantic_abstraction",
+      "target_subject": "mathematics",
+      "secondary_subject": "computer-science",
+      "route_refs": ["route-math-graph-traversal", "route-cs-kg-indexing"],
+      "validation_refs": ["route-logic-knowledge-consistency"],
+      "summary": "图结构问题先用数学图遍历确定路线，再用计算机科学索引和知识图谱工程落地。"
+    },
+    {
+      "id": "assoc-tool-risk-to-logic-cs",
+      "label": "工具风险到逻辑和工程治理",
+      "signals": ["调用工具", "写文件", "删除", "移动", "下载", "执行", "报错"],
+      "source_layer": "grammar",
+      "target_subject": "logic",
+      "secondary_subject": "computer-science",
+      "route_refs": ["route-logic-tool-precheck", "route-cs-agent-memory-loop"],
+      "validation_refs": ["route-agent-tool-proposed-action"],
+      "summary": "工具风险先经逻辑前置条件检查，再进入工程记忆和工具治理闭环。"
+    },
+    {
+      "id": "assoc-command-to-action-template",
+      "label": "命令意图到 Action 模板",
+      "signals": ["命令", "PowerShell", "shell", "运行", "测试", "构建", "写入", "删除", "移动"],
+      "source_layer": "grammar",
+      "target_subject": "agent-tooling",
+      "secondary_subject": "powershell-safety",
+      "route_refs": ["route-agent-action-template-selection", "route-powershell-command-review", "route-agent-tool-gateway-policy"],
+      "validation_refs": ["route-logic-tool-precheck"],
+      "summary": "命令类目标先选择 Action 模板，再做 PowerShell 审查和 Tool Gateway 策略判断。"
+    },
+    {
+      "id": "assoc-evidence-to-math",
+      "label": "证据和反馈到数学更新",
+      "signals": ["测试通过", "失败", "复发", "评分", "权重", "置信", "证据"],
+      "source_layer": "validation",
+      "target_subject": "mathematics",
+      "route_refs": ["route-math-evidence-update", "route-math-route-optimization"],
+      "validation_refs": ["route-logic-failure-diagnosis"],
+      "summary": "测试和反馈通过数学证据更新影响 FAME 参数，再由逻辑失败诊断保留教训。"
+    },
+    {
+      "id": "assoc-open-source-to-cs-logic",
+      "label": "开源目标到治理和一致性",
+      "signals": ["开源", "许可证", "README", "贡献", "发布", "安全", "NOTICE"],
+      "source_layer": "intent",
+      "target_subject": "computer-science",
+      "secondary_subject": "logic",
+      "route_refs": ["route-cs-open-source-release-gate", "route-logic-knowledge-consistency"],
+      "validation_refs": ["route-cs-open-source-release-gate"],
+      "summary": "开源相关目标进入发布门禁和知识一致性检查，确保来源、许可证和文档同步。"
+    },
+    {
+      "id": "assoc-open-problem-to-multi-path",
+      "label": "开放问题到多路径横向联想",
+      "signals": ["方案", "想法", "联想", "创造", "怎么做", "有没有更好", "不确定", "路线"],
+      "source_layer": "semantic_abstraction",
+      "target_subject": "language-tree-hub",
+      "secondary_subject": "mathematics",
+      "route_refs": ["route-language-multi-path-association", "route-math-route-optimization", "route-math-graph-traversal"],
+      "validation_refs": ["route-logic-argument-check", "route-cs-spec-to-test"],
+      "summary": "开放或创造性问题先生成多条候选路线，再用路线评分、风险和验证钩子筛选。"
+    },
+    {
+      "id": "assoc-concrete-task-to-abstraction-transfer",
+      "label": "具体任务到抽象迁移",
+      "signals": ["抽象", "迁移", "类比", "本质", "模式", "原则", "通用"],
+      "source_layer": "semantic_abstraction",
+      "target_subject": "language-tree-hub",
+      "secondary_subject": "logic",
+      "route_refs": ["route-language-abstraction-transfer", "route-language-abstraction-to-association"],
+      "validation_refs": ["route-logic-knowledge-consistency"],
+      "summary": "需要抽象思维时，把具体任务提升到方法和学科层，再落回可验证动作。"
+    },
+    {
+      "id": "assoc-failure-to-reflection",
+      "label": "失败到反思迭代",
+      "signals": ["失败", "报错", "没成功", "卡住", "复发", "纠偏", "不对"],
+      "source_layer": "validation",
+      "target_subject": "agent-tooling",
+      "secondary_subject": "logic",
+      "route_refs": ["route-agent-reflection-improvement", "route-logic-failure-diagnosis", "route-negative-fame-lesson"],
+      "validation_refs": ["route-math-evidence-update"],
+      "summary": "失败和纠偏触发反思摘要、最小下一步测试、负值 FAME 教训和证据更新。"
+    },
+    {
+      "id": "assoc-agent-quality-to-evaluation",
+      "label": "Agent 质量到指标评测",
+      "signals": ["好用", "少犯错", "评测", "指标", "成功率", "上下文", "复发率"],
+      "source_layer": "validation",
+      "target_subject": "agent-tooling",
+      "secondary_subject": "computer-science",
+      "route_refs": ["route-agent-usability-evaluation", "route-cs-spec-to-test", "route-cs-agent-memory-loop"],
+      "validation_refs": ["route-math-evidence-update"],
+      "summary": "Agent 质量问题进入指标评测，按项目和路线聚合工具成功率、上下文节省和失败复发。"
+    }
+  ]
+}

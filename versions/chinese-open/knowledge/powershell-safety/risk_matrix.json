@@ -1,0 +1,41 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "powershell-safety",
+  "risk_levels": [
+    {
+      "level": "read_only",
+      "examples": ["Get-Content", "Get-ChildItem", "Test-Path", "rg --files"],
+      "requires_proposed_action": false,
+      "requires_approved_action": false,
+      "required_checks": ["输出长度控制", "敏感信息过滤", "结果摘要"]
+    },
+    {
+      "level": "low",
+      "examples": ["npm run test", "node script.mjs", "New-Item 创建声明目录"],
+      "requires_proposed_action": false,
+      "requires_approved_action": false,
+      "required_checks": ["工作目录明确", "预期输出明确", "失败摘要"]
+    },
+    {
+      "level": "medium",
+      "examples": ["写入文件", "复制文件", "下载资料", "执行已知脚本"],
+      "requires_proposed_action": true,
+      "requires_approved_action": false,
+      "required_checks": ["作用域", "来源", "回滚策略", "验证命令"]
+    },
+    {
+      "level": "high",
+      "examples": ["移动文件", "递归删除", "覆盖大量文件", "下载可执行文件"],
+      "requires_proposed_action": true,
+      "requires_approved_action": true,
+      "required_checks": ["绝对路径边界", "人工确认", "回滚或重建策略", "执行后审计"]
+    },
+    {
+      "level": "critical",
+      "examples": ["发布远程版本", "修改凭据", "清空目录", "工作区外破坏性操作"],
+      "requires_proposed_action": true,
+      "requires_approved_action": true,
+      "required_checks": ["强制拒绝或显式人工批准", "双重确认", "完整审计", "残余风险记录"]
+    }
+  ]
+}

@@ -1,39 +1,38 @@
-# English Edition
+# FAME English Open Edition
 
-This is the seed for a pure English edition of FAME Knowledge Agent Gateway.
+This edition is aligned with the Chinese open edition in mechanism, route ids, scenario ids, golden tasks and evaluation flow.
 
-The English edition keeps the same agent plugin mechanisms as the Chinese edition, but starts with a simplified public knowledge structure for tomorrow's subject-by-subject expansion:
+## One-minute Start
 
-```text
-Language Tree Hub
--> Professional Knowledge
-   -> Programming
-   -> Design
-```
+~~~bash
+npm run connect:english -- --agent codex
+npm run doctor:english
+npm run route:english -- --goal "edit JSONL knowledge and sync indexes" --compact
+~~~
 
-## Current Status
+## Positioning
 
-- Language Tree Hub: seed structure only.
-- Programming: placeholder branch.
-- Design: placeholder branch.
-- Detailed subject mapping: pending manual review.
+This is a universal external plugin substrate for agents. It is not plain retrieval. It combines a Language Tree Hub, scoped route traversal, FAME route parameters, project memory overlay, Tool Gateway enforcement, one-shot tool manual checks and ToolResultSummary write-back.
 
-## Non-Negotiable Mechanisms
+## Structure
 
-- The knowledge graph remains route-first, not plain retrieval.
-- Language is the central coordination layer for abstraction, expression and cross-domain association.
-- FAME parameters stay on routes and edges to record usefulness, uncertainty, conflict, cost and lessons.
-- Project memory is an overlay and does not pollute the core knowledge net.
-- Tool execution must pass through `ProposedAction -> ApprovedAction -> Tool Gateway`.
-- Context packing uses summaries, refs and scoped lazy loading while retaining full memory externally.
-- Multimodal raw payloads stay in the asset database or object store; the graph keeps only preview/index references.
+~~~text
+language-tree-hub/     semantic center and thinking layers
+logic/                 argument, precondition and consistency checks
+mathematics/           graph traversal, route scoring and evidence update
+computer-science/      programming, testing, indexing and release gates
+agent-tooling/         tool governance, connection and recurrence guards
+powershell-safety/     Windows shell safety and Chinese encoding diagnosis
+database/              detailed content units and source/data registries
+indexes/               subject, alias and scoping indexes
+~~~
 
-## Seed Files
+## Verification
 
-```text
-knowledge/language-tree-hub/
-knowledge/professional-knowledge/programming/
-knowledge/professional-knowledge/design/
-```
+~~~bash
+npm run doctor:english
+npm run eval:english
+npm run check:english
+~~~
 
-Run future English indexing work against this directory only after the English edition has its own generator profile.
+The English edition intentionally keeps programming and tool-call knowledge practical and compact. Broad subject expansion should happen gradually through reviewed community contributions.

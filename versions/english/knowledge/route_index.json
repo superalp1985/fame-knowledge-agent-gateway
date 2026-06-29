@@ -1,10 +1,11 @@
 {
   "edition_id": "english",
-  "status": "seed",
+  "status": "clean_open_seed",
   "stats": {
-    "manual": 5,
-    "generated": 0
+    "manual_routes": 48,
+    "generated_routes": 0
   },
+  "fame_score_formula": "0.22*mu + 0.18*chi + 0.20*epsilon + 0.12*kappa + 0.10*nu + 0.08*rho - 0.06*abs(delta) - 0.04*risk",
   "routes": [
     {
       "id": "route-language-intent-to-scope",
@@ -12,49 +13,1372 @@
       "subject": "language-tree-hub",
       "domain": "intent",
       "type": "routing",
-      "content": "Transform the active goal into project_id, subject, route_id, task_id and context budget before loading professional knowledge.",
-      "keywords": ["intent", "scope", "route", "context"],
-      "priority": 1
+      "content": "Translate the user goal into edition_id, project_id, subject, route_id, task_id and context budget before loading subject knowledge.",
+      "keywords": [
+        "intent",
+        "scope",
+        "context",
+        "route"
+      ],
+      "content_refs": [
+        "cu-language-tree-001",
+        "cu-route-scope-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.75,
+        "epsilon": 0.65,
+        "kappa": 0.65,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.55,
+        "risk": 0.2
+      }
     },
     {
       "id": "route-language-abstraction-to-association",
-      "name": "Abstraction to Association",
+      "name": "Abstraction to Association Transfer",
       "subject": "language-tree-hub",
       "domain": "semantics",
       "type": "association",
-      "content": "Lift a local problem into a reusable abstraction, then search adjacent professional branches only when the abstraction suggests useful transfer.",
-      "keywords": ["abstraction", "association", "transfer", "semantics"],
-      "priority": 1
+      "content": "Lift a local problem to an abstraction layer, search adjacent subjects for transferable methods, and attach validation conditions.",
+      "keywords": [
+        "abstraction",
+        "association",
+        "transfer",
+        "goal gate"
+      ],
+      "content_refs": [
+        "cu-language-tree-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.68,
+        "epsilon": 0.55,
+        "kappa": 0.52,
+        "nu": 0.75,
+        "delta": 0,
+        "rho": 0.4,
+        "risk": 0.35
+      }
     },
     {
-      "id": "route-language-validation-feedback",
-      "name": "Validation Feedback",
+      "id": "route-language-multi-path-association",
+      "name": "Multi-path Lateral Association",
       "subject": "language-tree-hub",
-      "domain": "validation",
+      "domain": "route-search",
+      "type": "association",
+      "content": "For open problems, generate several candidate routes from the Language Tree and rank them by budget, FAME, risk and validation hooks. Failed routes become reflection or negative FAME lessons.",
+      "keywords": [
+        "multi-path",
+        "association",
+        "Tree of Thoughts",
+        "backtracking"
+      ],
+      "content_refs": [
+        "cu-language-multi-path-association-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.62,
+        "kappa": 0.62,
+        "nu": 0.82,
+        "delta": 0.02,
+        "rho": 0.46,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "route-language-abstraction-transfer",
+      "name": "Abstraction Transfer Landing",
+      "subject": "language-tree-hub",
+      "domain": "semantic-abstraction",
+      "type": "abstraction",
+      "content": "Raise a concrete task to method, topic and subject layers, transfer a verifiable structure laterally, then land it back into the smallest executable action.",
+      "keywords": [
+        "abstraction transfer",
+        "analogy",
+        "semantics",
+        "validation"
+      ],
+      "content_refs": [
+        "cu-language-abstraction-transfer-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.78,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.26
+      }
+    },
+    {
+      "id": "route-knowledge-taxonomy-entry",
+      "name": "Knowledge Taxonomy Entry",
+      "subject": "language-tree-hub",
+      "domain": "knowledge-authoring",
+      "type": "routing",
+      "content": "When adding knowledge, locate the subject level and abstraction level first, then write summary, source, content_ref and initial FAME values.",
+      "keywords": [
+        "authoring",
+        "taxonomy",
+        "abstraction level",
+        "source"
+      ],
+      "content_refs": [
+        "cu-route-scope-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-logic-argument-check",
+      "name": "Argument and Consistency Check",
+      "subject": "logic",
+      "domain": "reasoning",
+      "type": "validation",
+      "content": "Separate claim, reason, evidence, hidden premise and counterexample before deciding whether a proposal is executable or needs more evidence.",
+      "keywords": [
+        "logic",
+        "argument",
+        "counterexample",
+        "consistency"
+      ],
+      "content_refs": [
+        "cu-logic-argument-001"
+      ],
+      "priority": 2,
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-logic-tool-precheck",
+      "name": "Logical Tool Precheck",
+      "subject": "logic",
+      "domain": "agent-reasoning",
+      "type": "validation",
+      "content": "Before tool use, check goal, premise, schema, scope, side effect, validation method and unproven assumptions.",
+      "keywords": [
+        "logic",
+        "tool call",
+        "precondition",
+        "ProposedAction"
+      ],
+      "content_refs": [
+        "cu-logic-tool-precheck-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-logic-failure-diagnosis",
+      "name": "Failure Diagnosis Logic",
+      "subject": "logic",
+      "domain": "failure-diagnosis",
+      "type": "lesson",
+      "content": "Split a failure into observed facts, candidate causes, distinguishing tests, repair action and FAME update candidates.",
+      "keywords": [
+        "failure",
+        "diagnosis",
+        "abduction",
+        "counterexample",
+        "FAME"
+      ],
+      "content_refs": [
+        "cu-logic-failure-diagnosis-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "route-logic-knowledge-consistency",
+      "name": "Knowledge Authoring Consistency",
+      "subject": "logic",
+      "domain": "knowledge-governance",
+      "type": "validation",
+      "content": "Before adding knowledge, check subject level, abstraction level, source, license, detail location and FAME rationale.",
+      "keywords": [
+        "knowledge governance",
+        "source",
+        "license",
+        "consistency"
+      ],
+      "content_refs": [
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-math-modeling-abstraction",
+      "name": "Modeling Abstraction",
+      "subject": "mathematics",
+      "domain": "modeling",
+      "type": "abstraction",
+      "content": "Map a problem into variables, assumptions, relations, objective and validation method before selecting a computation or proof.",
+      "keywords": [
+        "modeling",
+        "variable",
+        "assumption",
+        "validation"
+      ],
+      "content_refs": [
+        "cu-math-modeling-001"
+      ],
+      "priority": 3,
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.5,
+        "epsilon": 0.65,
+        "kappa": 0.45,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "route-math-graph-traversal",
+      "name": "Graph Traversal Goal Gate",
+      "subject": "mathematics",
+      "domain": "graph-theory",
+      "type": "routing",
+      "content": "Search candidate knowledge routes by scope, edge budget, FAME score, risk and context budget.",
+      "keywords": [
+        "graph traversal",
+        "goal gate",
+        "scope",
+        "budget"
+      ],
+      "content_refs": [
+        "cu-math-graph-traversal-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-math-evidence-update",
+      "name": "Evidence-driven Parameter Update",
+      "subject": "mathematics",
+      "domain": "probability-statistics",
       "type": "feedback",
-      "content": "Convert tests, tool results, user review and failure lessons into FAME edge updates without deleting raw memory.",
-      "keywords": ["validation", "feedback", "FAME", "full memory"],
-      "priority": 1
+      "content": "Use tests, tool results, human feedback and failure samples to update FAME parameters.",
+      "keywords": [
+        "evidence",
+        "Bayesian update",
+        "metrics",
+        "FAME"
+      ],
+      "content_refs": [
+        "cu-math-evidence-update-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
     },
     {
-      "id": "route-programming-spec-to-implementation",
-      "name": "Specification to Implementation",
-      "subject": "programming",
+      "id": "route-math-route-optimization",
+      "name": "Route Scoring and Optimization",
+      "subject": "mathematics",
+      "domain": "optimization",
+      "type": "selection",
+      "content": "Compare candidate routes by goal fit, constraints, weights, risk penalty and context cost.",
+      "keywords": [
+        "optimization",
+        "route score",
+        "tradeoff",
+        "context cost"
+      ],
+      "content_refs": [
+        "cu-math-route-optimization-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-cs-engineering-knowledge",
+      "name": "Engineering Knowledge Boundary",
+      "subject": "computer-science",
       "domain": "software-engineering",
-      "type": "placeholder",
-      "content": "Placeholder route for turning English specifications into verified implementation work.",
-      "keywords": ["programming", "specification", "implementation", "testing"],
-      "priority": 2
+      "type": "routing",
+      "content": "Keep graph structure, routes, sources, summaries and index references in the graph; store long content, assets and logs in databases or external stores.",
+      "keywords": [
+        "knowledge graph",
+        "database",
+        "index",
+        "boundary"
+      ],
+      "content_refs": [
+        "cu-cs-kg-001"
+      ],
+      "priority": 2,
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.6,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.25
+      }
     },
     {
-      "id": "route-design-intent-to-interface",
-      "name": "Intent to Interface",
-      "subject": "design",
-      "domain": "product-design",
-      "type": "placeholder",
-      "content": "Placeholder route for turning user intent into interface structure, visual hierarchy and validation rubrics.",
-      "keywords": ["design", "intent", "interface", "visual hierarchy"],
-      "priority": 2
+      "id": "route-cs-spec-to-test",
+      "name": "Specification to Test",
+      "subject": "computer-science",
+      "domain": "software-engineering",
+      "type": "validation",
+      "content": "Turn a user goal into observable behavior, acceptance criteria and a test path, then write evidence summary after execution.",
+      "keywords": [
+        "specification",
+        "test",
+        "acceptance criteria",
+        "evidence"
+      ],
+      "content_refs": [
+        "cu-cs-spec-to-test-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-cs-kg-indexing",
+      "name": "Knowledge Graph and Index Engineering",
+      "subject": "computer-science",
+      "domain": "knowledge-graph",
+      "type": "routing",
+      "content": "Use light graph, content database, rule store, alias index, semantic index and scoped search to support large knowledge nets.",
+      "keywords": [
+        "indexing",
+        "knowledge graph",
+        "scoping",
+        "retrieval"
+      ],
+      "content_refs": [
+        "cu-cs-kg-indexing-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.48,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-cs-agent-memory-loop",
+      "name": "Agent Project Memory Loop",
+      "subject": "computer-science",
+      "domain": "agent-systems",
+      "type": "feedback",
+      "content": "Write goals, tool events, test evidence, failure lessons and resume points into a project memory overlay.",
+      "keywords": [
+        "project memory",
+        "overlay",
+        "trace",
+        "resume"
+      ],
+      "content_refs": [
+        "cu-cs-agent-memory-loop-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-cs-open-source-release-gate",
+      "name": "Open-source Release Gate",
+      "subject": "computer-science",
+      "domain": "open-source-governance",
+      "type": "enforcement",
+      "content": "Before release, check licenses, source registry, secrets, paths, docs, edition checks and residual risk.",
+      "keywords": [
+        "open source",
+        "license",
+        "release check",
+        "security"
+      ],
+      "content_refs": [
+        "cu-cs-open-source-release-gate-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-tool-doc-first",
+      "name": "Tool Manual First",
+      "subject": "agent-tooling",
+      "domain": "tool-calling",
+      "type": "rule",
+      "content": "For an unfamiliar or schema-sensitive tool, read the tool description and parameter contract once before the call.",
+      "keywords": [
+        "tool manual",
+        "schema",
+        "one-shot",
+        "precheck"
+      ],
+      "content_refs": [
+        "cu-agent-tool-proposed-action-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.75,
+        "kappa": 0.75,
+        "nu": 0.25,
+        "delta": 0.05,
+        "rho": 0.65,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "route-agent-action-template-selection",
+      "name": "Action Template Selection",
+      "subject": "agent-tooling",
+      "domain": "tool-governance",
+      "type": "routing",
+      "content": "Select read-only, file edit, test/build, network download or destructive filesystem templates by operation type and risk.",
+      "keywords": [
+        "action template",
+        "risk",
+        "operation type"
+      ],
+      "content_refs": [
+        "cu-agent-action-template-selection-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "route-agent-tool-proposed-action",
+      "name": "ProposedAction Before Tool Execution",
+      "subject": "agent-tooling",
+      "domain": "tool-governance",
+      "type": "enforcement",
+      "content": "Represent any mutating tool call as a ProposedAction with goal, scope, args, risk, validation and rollback.",
+      "keywords": [
+        "ProposedAction",
+        "tool gateway",
+        "scope"
+      ],
+      "content_refs": [
+        "cu-agent-tool-proposed-action-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.35,
+        "delta": 0.05,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-agent-tool-gateway-policy",
+      "name": "Tool Gateway Policy Execution",
+      "subject": "agent-tooling",
+      "domain": "tool-gateway",
+      "type": "enforcement",
+      "content": "Apply doc-first, mutation proposal, high-risk approval and result summary policies according to tool risk.",
+      "keywords": [
+        "Tool Gateway",
+        "policy",
+        "approval"
+      ],
+      "content_refs": [
+        "cu-agent-tool-gateway-policy-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-tool-result-summary",
+      "name": "ToolResultSummary Write-back",
+      "subject": "agent-tooling",
+      "domain": "memory",
+      "type": "feedback",
+      "content": "After every tool run, write status, evidence, error, next step and FAME update candidates, while keeping long logs outside context.",
+      "keywords": [
+        "ToolResultSummary",
+        "summary",
+        "evidence",
+        "context"
+      ],
+      "content_refs": [
+        "cu-agent-tool-result-summary-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.65,
+        "chi": 0.7,
+        "epsilon": 0.75,
+        "kappa": 0.65,
+        "nu": 0.3,
+        "delta": 0,
+        "rho": 0.55,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "route-agent-reflection-improvement",
+      "name": "Reflection Iteration and Failure Write-back",
+      "subject": "agent-tooling",
+      "domain": "reflection-memory",
+      "type": "feedback",
+      "content": "After failure, partial success or user correction, create reflection summary, failure signature, minimal next test and FAME update candidates.",
+      "keywords": [
+        "reflection",
+        "failure signature",
+        "self improvement"
+      ],
+      "content_refs": [
+        "cu-agent-reflection-improvement-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.5,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-agent-usability-evaluation",
+      "name": "Agent Usability Evaluation",
+      "subject": "agent-tooling",
+      "domain": "evaluation",
+      "type": "validation",
+      "content": "Measure tool success rate, context token savings, failure recurrence reduction, route hit rate and manual correction rate.",
+      "keywords": [
+        "evaluation",
+        "metrics",
+        "tool success"
+      ],
+      "content_refs": [
+        "cu-agent-usability-metrics-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-powershell-command-review",
+      "name": "PowerShell Command Review Flow",
+      "subject": "powershell-safety",
+      "domain": "shell-safety",
+      "type": "validation",
+      "content": "Before running a PowerShell command, check cmdlet, parameters, quoting, pipeline, current directory, target path, streams and side effects.",
+      "keywords": [
+        "PowerShell",
+        "command review",
+        "quoting",
+        "path"
+      ],
+      "content_refs": [
+        "cu-ps-command-review-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-powershell-safe-command",
+      "name": "PowerShell Safe Command Pattern",
+      "subject": "powershell-safety",
+      "domain": "shell-safety",
+      "type": "rule",
+      "content": "Prefer native PowerShell cmdlets and LiteralPath, keep destructive actions in one shell, and verify resolved paths before recursion.",
+      "keywords": [
+        "PowerShell",
+        "LiteralPath",
+        "Remove-Item",
+        "safety"
+      ],
+      "content_refs": [
+        "cu-ps-quoting-001",
+        "cu-ps-filesystem-safety-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.8,
+        "epsilon": 0.8,
+        "kappa": 0.72,
+        "nu": 0.25,
+        "delta": 0.02,
+        "rho": 0.65,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-negative-fame-lesson",
+      "name": "Negative FAME Lesson Route",
+      "subject": "agent-tooling",
+      "domain": "failure-memory",
+      "type": "lesson",
+      "content": "Retain failed, conflicting or low-usefulness routes as lessons for pruning, recurrence prevention and later review.",
+      "keywords": [
+        "negative lesson",
+        "failure",
+        "FAME",
+        "pruning"
+      ],
+      "content_refs": [
+        "cu-agent-tool-result-summary-001",
+        "cu-ps-new-item-path-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.45,
+        "delta": -0.35,
+        "rho": 0.5,
+        "risk": 0.45
+      }
+    },
+    {
+      "id": "route-language-thought-layer-selection",
+      "name": "Thinking Layer Selection",
+      "subject": "language-tree-hub",
+      "domain": "thinking-layer",
+      "type": "routing",
+      "content": "Choose meta, subject, topic, concept, method, operation or case layer before route traversal so the agent knows whether to reason broadly or execute narrowly.",
+      "keywords": [
+        "thinking layer",
+        "abstraction",
+        "route depth"
+      ],
+      "content_refs": [
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001",
+        "cu-language-context-pack-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.74,
+        "epsilon": 0.7,
+        "kappa": 0.66,
+        "nu": 0.5,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-language-semantic-adaptation",
+      "name": "Semantic Adaptation and Term Normalization",
+      "subject": "language-tree-hub",
+      "domain": "semantic-normalization",
+      "type": "abstraction",
+      "content": "Normalize user wording, aliases, Chinese-English terms and tool names to canonical terms before subject and route selection.",
+      "keywords": [
+        "semantic adaptation",
+        "canonical term",
+        "alias"
+      ],
+      "content_refs": [
+        "cu-language-semantic-adaptation-001",
+        "cu-language-lexical-semantic-relations-001",
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.66,
+        "kappa": 0.62,
+        "nu": 0.56,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-language-directory-index",
+      "name": "Text Directory Index",
+      "subject": "language-tree-hub",
+      "domain": "navigation",
+      "type": "routing",
+      "content": "Expose the knowledge net as an expandable subject directory synchronized with graph and database edits.",
+      "keywords": [
+        "directory",
+        "index",
+        "tree view"
+      ],
+      "content_refs": [
+        "cu-language-directory-index-001",
+        "cu-cs-kg-indexing-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.64,
+        "nu": 0.45,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-agent-one-shot-tool-use",
+      "name": "One-shot Tool-use Contract",
+      "subject": "agent-tooling",
+      "domain": "tool-calling",
+      "type": "rule",
+      "content": "Keep tool documentation and command logic out of long-lived context; read the manual at call time and retain only the summary.",
+      "keywords": [
+        "one-shot tool use",
+        "manual",
+        "context hygiene"
+      ],
+      "content_refs": [
+        "cu-agent-one-shot-tool-use-001",
+        "cu-agent-tool-manifest-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "route-agent-reminder-clock",
+      "name": "Self-set Clock and Reminder",
+      "subject": "agent-tooling",
+      "domain": "memory-management",
+      "type": "feedback",
+      "content": "Let agents schedule checkpoints and resume prompts so long tasks do not silently stall and prior memory can guide self-iteration.",
+      "keywords": [
+        "clock",
+        "reminder",
+        "checkpoint"
+      ],
+      "content_refs": [
+        "cu-agent-reminder-clock-001",
+        "cu-agent-memory-overlay-boundary-001",
+        "cu-logic-temporal-invariant-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.66,
+        "nu": 0.46,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-agent-mechanism-enforcement",
+      "name": "Mechanism Enforcement",
+      "subject": "agent-tooling",
+      "domain": "runtime-governance",
+      "type": "enforcement",
+      "content": "Make the workflow mandatory through route checks, Tool Gateway decisions, doctor/eval scripts and connector prompts so the model cannot casually skip it.",
+      "keywords": [
+        "enforcement",
+        "guardrail",
+        "doctor",
+        "eval"
+      ],
+      "content_refs": [
+        "cu-agent-mechanism-enforcement-001",
+        "cu-agent-tool-gateway-policy-001",
+        "cu-agent-tool-proposed-action-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-database-sync",
+      "name": "Database and Knowledge-net Sync",
+      "subject": "agent-tooling",
+      "domain": "sync-governance",
+      "type": "validation",
+      "content": "Manual graph edits create database sync items for assets, content indexes and FAME history; writes still need review and approval.",
+      "keywords": [
+        "database sync",
+        "manual edit",
+        "asset index"
+      ],
+      "content_refs": [
+        "cu-agent-database-sync-001",
+        "cu-cs-database-schema-versioning-001",
+        "cu-cs-kg-light-graph-heavy-store-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-language-goal-backcasting",
+      "name": "Goal Gate Backcasting",
+      "subject": "language-tree-hub",
+      "domain": "goal-framing",
+      "type": "routing",
+      "content": "Start from success criteria, evidence, forbidden outcomes and context budget, then work backward to the minimal route set.",
+      "keywords": [
+        "goal gate",
+        "backcasting",
+        "done criteria"
+      ],
+      "content_refs": [
+        "cu-language-goal-backcasting-001",
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-language-global-situation-model",
+      "name": "Global Situation Model",
+      "subject": "language-tree-hub",
+      "domain": "global-thinking",
+      "type": "abstraction",
+      "content": "Before action, review goal, constraints, resources, risks, history and stop conditions so the agent keeps the big picture.",
+      "keywords": [
+        "global situation",
+        "constraints",
+        "risk",
+        "big picture"
+      ],
+      "content_refs": [
+        "cu-language-global-situation-model-001",
+        "cu-language-context-pack-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "route-agent-tool-action-contract",
+      "name": "Tool Action Contract",
+      "subject": "agent-tooling",
+      "domain": "tool-calling",
+      "type": "enforcement",
+      "content": "Compress a tool intent into one contract: tool, operation, scope, expected signal, validation, rollback and approval need.",
+      "keywords": [
+        "tool action contract",
+        "scope",
+        "validation"
+      ],
+      "content_refs": [
+        "cu-agent-tool-action-contract-001",
+        "cu-agent-tool-proposed-action-001",
+        "cu-logic-tool-precheck-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-stability-preflight",
+      "name": "High-frequency Pitfall Preflight",
+      "subject": "agent-tooling",
+      "domain": "tool-stability",
+      "type": "validation",
+      "content": "Check PowerShell, Git, Node/npm, Python, structured data, network import, working directory and database sync before executing.",
+      "keywords": [
+        "preflight",
+        "failure signature",
+        "stability"
+      ],
+      "content_refs": [
+        "cu-agent-stability-preflight-001",
+        "cu-agent-error-signature-map-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-integration-usability-test",
+      "name": "Agent Integration Usability Test",
+      "subject": "agent-tooling",
+      "domain": "integration-evaluation",
+      "type": "validation",
+      "content": "Verify an external agent can read the protocol, select routes, build a ContextPack, form an action contract and write ToolResultSummary.",
+      "keywords": [
+        "agent integration",
+        "usability",
+        "plugin"
+      ],
+      "content_refs": [
+        "cu-agent-integration-usability-001",
+        "cu-agent-effect-smoke-scenarios-001",
+        "cu-agent-usability-metrics-001",
+        "cu-agent-ecosystem-mapping-001",
+        "cu-agent-practical-bridge-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-powershell-encoding-output",
+      "name": "PowerShell Chinese Encoding Output Route",
+      "subject": "powershell-safety",
+      "domain": "encoding-and-output",
+      "type": "validation",
+      "content": "When PowerShell output looks garbled, distinguish terminal display, pipe decoding and real file corruption with UTF-8/JSON/file roundtrip evidence.",
+      "keywords": [
+        "PowerShell",
+        "encoding",
+        "mojibake",
+        "UTF-8"
+      ],
+      "content_refs": [
+        "cu-ps-encoding-output-001",
+        "cu-agent-real-eval-encoding-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "route-agent-local-connect-check",
+      "name": "Local Agent Connection Check",
+      "subject": "agent-tooling",
+      "domain": "integration-evaluation",
+      "type": "validation",
+      "content": "Let the user select a local agent preset or custom agent, generate the connection message, and confirm connected/not_connected with blockers.",
+      "keywords": [
+        "local agent",
+        "connection",
+        "wizard",
+        "preset"
+      ],
+      "content_refs": [
+        "cu-agent-local-connect-001",
+        "cu-agent-integration-usability-001",
+        "cu-agent-practical-bridge-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.04,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-mcp-capability-boundary",
+      "name": "MCP Capability Discovery and Tool Boundary",
+      "subject": "agent-tooling",
+      "domain": "protocol-capability",
+      "type": "routing",
+      "content": "When an external agent connects, separate resources, prompts and tools, then build a capability boundary from schema, permissions, side effects and scope.",
+      "keywords": [
+        "MCP",
+        "capability discovery",
+        "resources",
+        "prompts",
+        "tools",
+        "tool boundary"
+      ],
+      "content_refs": [
+        "cu-agent-mcp-capability-boundary-001",
+        "cu-agent-tool-permission-scope-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "route-agent-guardrail-human-review",
+      "name": "Guardrail and Human Review Route",
+      "subject": "agent-tooling",
+      "domain": "runtime-governance",
+      "type": "enforcement",
+      "content": "Sensitive tool calls pass through guardrails that allow, rewrite, block or ask the user, preserving approval state and resume points.",
+      "keywords": [
+        "guardrails",
+        "human review",
+        "approval",
+        "block",
+        "rewrite"
+      ],
+      "content_refs": [
+        "cu-agent-guardrail-human-review-001",
+        "cu-agent-output-validation-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "route-agent-checkpoint-store-memory",
+      "name": "Checkpoint/Store Project Memory Route",
+      "subject": "agent-tooling",
+      "domain": "memory-management",
+      "type": "feedback",
+      "content": "Separate short-term checkpoints, long-term stores, project overlays and core knowledge; keep full memory externally and graph only summaries, route refs and FAME evidence.",
+      "keywords": [
+        "checkpoint",
+        "store",
+        "project memory",
+        "external memory",
+        "resume"
+      ],
+      "content_refs": [
+        "cu-agent-checkpoint-store-memory-001",
+        "cu-agent-thread-resume-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-agent-computer-interface-loop",
+      "name": "Agent-Computer Interface Engineering Loop",
+      "subject": "agent-tooling",
+      "domain": "software-engineering-agent",
+      "type": "routing",
+      "content": "Engineering agents observe repository state, scope work, edit, test, summarize errors and choose the next action through a repeatable repo-navigation/edit/test loop.",
+      "keywords": [
+        "Agent-Computer Interface",
+        "repo navigation",
+        "edit",
+        "test",
+        "ToolResultSummary"
+      ],
+      "content_refs": [
+        "cu-agent-computer-interface-loop-001",
+        "cu-agent-repo-navigation-edit-test-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "route-cs-ci-security-release-hardening",
+      "name": "CI Security and Release Hardening",
+      "subject": "computer-science",
+      "domain": "release-engineering",
+      "type": "enforcement",
+      "content": "Before release, check CI permissions, secrets, third-party actions, artifact provenance, license boundaries and package scope.",
+      "keywords": [
+        "CI",
+        "GitHub Actions",
+        "secrets",
+        "release assets",
+        "provenance"
+      ],
+      "content_refs": [
+        "cu-cs-ci-security-hardening-001",
+        "cu-cs-release-artifact-provenance-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "route-powershell-native-command-boundary",
+      "name": "PowerShell Native Command Boundary",
+      "subject": "powershell-safety",
+      "domain": "native-command-interop",
+      "type": "validation",
+      "content": "Before calling git, node, npm, python, docker or other native commands from PowerShell, verify argument parsing, cwd, exit code, encoding and structured output.",
+      "keywords": [
+        "PowerShell",
+        "native command",
+        "argument boundary",
+        "structured output",
+        "exit code"
+      ],
+      "content_refs": [
+        "cu-ps-native-command-boundary-001",
+        "cu-ps-structured-output-preference-001"
+      ],
+      "priority": 1,
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.14
+      }
     }
   ]
 }

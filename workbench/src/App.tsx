@@ -21,6 +21,7 @@ import {
   ChevronDown,
   ChevronRight,
   Clock3,
+  Copy,
   Crosshair,
   FileText,
   GitBranch,
@@ -35,6 +36,7 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   Save,
+  Send,
   Trash2,
 } from 'lucide-react'
 import './App.css'
@@ -99,9 +101,21 @@ import {
   buildThinkingStages,
   previewApprovedAction,
 } from './agentRuntime'
-import type { FameEdgeState, FameKey, KnowledgePatchProposal, RouteNode, Scope } from './model'
+import type {
+  AgentActionProposal,
+  AgentThinkingStage,
+  ApprovedActionPreview,
+  ContextPackPreview,
+  FameEdgeState,
+  FameKey,
+  GoalPath,
+  KnowledgePatchProposal,
+  RouteNode,
+  Scope,
+  SemanticAssociationProposal,
+} from './model'
 
-type ViewMode = 'universe' | 'directory' | 'route' | 'agent' | 'project' | 'assets' | 'v13' | 'fame' | 'traversal' | 'patch' | 'debug'
+type ViewMode = 'overbrain' | 'universe' | 'directory' | 'route' | 'agent' | 'project' | 'assets' | 'v13' | 'fame' | 'traversal' | 'patch' | 'debug'
 
 type SearchResultKind =
   | 'universe-node'
@@ -146,6 +160,286 @@ type RuntimeAssetSyncItem = MultimodalAssetSyncItem & {
 type RuntimeDataStatus = 'loading' | 'ready' | 'error'
 
 type DirectorySyncStatus = 'clean' | 'synced' | 'pending' | 'review' | 'outbox' | 'blocked'
+
+type LocalAgentId =
+  | 'codex'
+  | 'cursor'
+  | 'claude-desktop'
+  | 'claude-code'
+  | 'openai-agents'
+  | 'gemini-cli'
+  | 'openhands'
+  | 'swe-agent'
+  | 'aider'
+  | 'cline'
+  | 'roo-code'
+  | 'continue'
+  | 'langgraph'
+  | 'autogen'
+  | 'crewai'
+  | 'dify'
+  | 'generic'
+  | 'other'
+
+type OpenEditionId = 'chinese-open' | 'english'
+
+type LocalAgentConnectState = {
+  edition: OpenEditionId
+  selectedAgent: LocalAgentId
+  status: 'not_checked' | 'ready' | 'sent' | 'confirmed'
+  confirmedAt: string
+  customAgentName: string
+}
+
+const localAgentStatusLabels: Record<LocalAgentConnectState['status'], string> = {
+  not_checked: 'not checked',
+  ready: 'ready',
+  sent: 'message sent',
+  confirmed: 'confirmed',
+}
+
+const openEditionProfiles: Record<OpenEditionId, {
+  label: string
+  shortLabel: string
+  connectScript: string
+  routeScript: string
+  doctorScript: string
+  evalScript: string
+  protocolPath: string
+  quickstartPath: string
+  ack: string
+}> = {
+  'chinese-open': {
+    label: '中文开源版',
+    shortLabel: '中文',
+    connectScript: 'connect:chinese-open',
+    routeScript: 'route:chinese-open',
+    doctorScript: 'doctor:chinese-open',
+    evalScript: 'eval:chinese-open',
+    protocolPath: 'versions/chinese-open/docs/07_Agent协议与最小接入.md',
+    quickstartPath: 'versions/chinese-open/QUICKSTART_AGENT.md',
+    ack: '已接入 FAME 中文开源版',
+  },
+  english: {
+    label: 'English open edition',
+    shortLabel: 'EN',
+    connectScript: 'connect:english',
+    routeScript: 'route:english',
+    doctorScript: 'doctor:english',
+    evalScript: 'eval:english',
+    protocolPath: 'versions/english/docs/agent-protocol.md',
+    quickstartPath: 'versions/english/QUICKSTART_AGENT.md',
+    ack: 'Connected to FAME English open edition',
+  },
+}
+
+const localAgentProfiles: Record<LocalAgentId, { label: string; command: string; hint: string; mode: string }> = {
+  codex: {
+    label: 'Codex',
+    command: 'npm run connect:chinese-open -- --agent codex',
+    hint: '读取 AGENTS.md；每次工程任务前先跑 compact route。',
+    mode: 'coding',
+  },
+  cursor: {
+    label: 'Cursor',
+    command: 'npm run connect:chinese-open -- --agent cursor',
+    hint: '把 QUICKSTART_AGENT.md 摘要放入项目规则。',
+    mode: 'ide',
+  },
+  'claude-desktop': {
+    label: 'Claude Desktop',
+    command: 'npm run connect:chinese-open -- --agent claude-desktop',
+    hint: '用 MCP resources/tool/prompt 三入口接入。',
+    mode: 'mcp',
+  },
+  'claude-code': {
+    label: 'Claude Code',
+    command: 'npm run connect:chinese-open -- --agent claude-code',
+    hint: '把 FAME 路由命令作为工具调用前置检查。',
+    mode: 'cli',
+  },
+  'openai-agents': {
+    label: 'OpenAI Agents SDK',
+    command: 'npm run connect:chinese-open -- --agent openai-agents',
+    hint: '把 Tool Gateway 映射成 guardrail / tracing / summary。',
+    mode: 'sdk',
+  },
+  'gemini-cli': {
+    label: 'Gemini CLI',
+    command: 'npm run connect:chinese-open -- --agent gemini-cli',
+    hint: '把 compact route 放在终端工具调用前。',
+    mode: 'cli',
+  },
+  openhands: {
+    label: 'OpenHands',
+    command: 'npm run connect:chinese-open -- --agent openhands',
+    hint: '软件工程 Agent 先接路线、作用域和工具结果摘要。',
+    mode: 'coding',
+  },
+  'swe-agent': {
+    label: 'SWE-agent',
+    command: 'npm run connect:chinese-open -- --agent swe-agent',
+    hint: '补丁/测试循环前先读取失败签名和验证路线。',
+    mode: 'coding',
+  },
+  aider: {
+    label: 'Aider',
+    command: 'npm run connect:chinese-open -- --agent aider',
+    hint: '编辑文件前先 route，执行后写 ToolResultSummary。',
+    mode: 'coding',
+  },
+  cline: {
+    label: 'Cline',
+    command: 'npm run connect:chinese-open -- --agent cline',
+    hint: 'VS Code Agent 通过 MCP/CLI 接入路线和工具闸门。',
+    mode: 'ide',
+  },
+  'roo-code': {
+    label: 'Roo Code',
+    command: 'npm run connect:chinese-open -- --agent roo-code',
+    hint: 'IDE 工具调用前先生成 ProposedAction。',
+    mode: 'ide',
+  },
+  continue: {
+    label: 'Continue',
+    command: 'npm run connect:chinese-open -- --agent continue',
+    hint: '把 FAME prompt 和 route CLI 放进自定义助手上下文。',
+    mode: 'ide',
+  },
+  langgraph: {
+    label: 'LangGraph',
+    command: 'npm run connect:chinese-open -- --agent langgraph',
+    hint: '把工程记忆 overlay 映射到 checkpoint/store。',
+    mode: 'workflow',
+  },
+  autogen: {
+    label: 'AutoGen',
+    command: 'npm run connect:chinese-open -- --agent autogen',
+    hint: '多 Agent 协作前统一走 route、scope、summary。',
+    mode: 'multi-agent',
+  },
+  crewai: {
+    label: 'CrewAI',
+    command: 'npm run connect:chinese-open -- --agent crewai',
+    hint: '把 task/tool 前置成 FAME 工具动作契约。',
+    mode: 'multi-agent',
+  },
+  dify: {
+    label: 'Dify',
+    command: 'npm run connect:chinese-open -- --agent dify',
+    hint: 'Workflow/Agent 节点前置调用 route:chinese-open。',
+    mode: 'workflow',
+  },
+  generic: {
+    label: 'Generic Agent',
+    command: 'npm run connect:chinese-open -- --agent generic',
+    hint: '先读协议，再用 route:chinese-open --compact 做工具前置决策。',
+    mode: 'generic',
+  },
+  other: {
+    label: 'Other / 自定义',
+    command: 'npm run connect:chinese-open -- --agent other --agent-name "<自定义 Agent 名称>"',
+    hint: '适合 OpenClaw、爱马仕/Hermes 或任何新工具型 Agent。',
+    mode: 'custom',
+  },
+}
+
+function localAgentLabel(agent: LocalAgentId, customAgentName: string) {
+  const profile = localAgentProfiles[agent]
+  if (agent === 'other' && customAgentName.trim()) return customAgentName.trim()
+  return profile.label
+}
+
+function localAgentCommand(edition: OpenEditionId, agent: LocalAgentId, customAgentName: string) {
+  const editionProfile = openEditionProfiles[edition]
+  if (agent !== 'other') return `npm run ${editionProfile.connectScript} -- --agent ${agent}`
+  const name = customAgentName.trim() || '<custom Agent name>'
+  return `npm run ${editionProfile.connectScript} -- --agent other --agent-name "${name}"`
+}
+
+function buildLocalAgentMessage(edition: OpenEditionId, agent: LocalAgentId, confirmedAt: string, customAgentName: string) {
+  const editionProfile = openEditionProfiles[edition]
+  const agentLabel = localAgentLabel(agent, customAgentName)
+  const intro = confirmedAt
+    ? `FAME ${editionProfile.label} connection confirmed: ${agentLabel} has been confirmed by the user.`
+    : `FAME ${editionProfile.label} connection request: the user selected ${agentLabel}. Reply "${editionProfile.ack}" after you accept the protocol.`
+  return [
+    intro,
+    `Read first: ${editionProfile.quickstartPath} and ${editionProfile.protocolPath}.`,
+    'Required loop: Language Tree normalization -> scoped route -> ContextPack -> ProposedAction when needed -> Tool Gateway -> ToolResultSummary.',
+    'For PowerShell Chinese mojibake, use route-powershell-encoding-output before deciding a file is damaged.',
+    `Next command: npm run ${editionProfile.routeScript} -- --goal "<user goal>" --compact`,
+    `User confirmation time: ${confirmedAt || 'waiting for Agent reply and user confirmation'}`,
+  ].join('\n')
+}
+
+function buildAgentConfigSnippet(
+  edition: OpenEditionId,
+  agent: LocalAgentId,
+  customAgentName: string,
+  kind:
+    | 'prompt'
+    | 'mcp'
+    | 'rules'
+    | 'cli'
+    | 'sdk'
+    | 'workflow',
+) {
+  const editionProfile = openEditionProfiles[edition]
+  const agentName = localAgentLabel(agent, customAgentName)
+  if (kind === 'mcp') {
+    return JSON.stringify({
+      mcpServers: {
+        'fame-knowledge-agent-gateway': {
+          command: 'npm',
+          args: ['run', 'gateway:mcp'],
+          env: {
+            FAME_MCP_API_KEY: 'dev-fame-agent-key',
+            FAME_EDITION: edition,
+          },
+        },
+      },
+    }, null, 2)
+  }
+  if (kind === 'rules') {
+    return [
+      `Use FAME ${editionProfile.label} for this project.`,
+      `Before tool calls, run: npm run ${editionProfile.routeScript} -- --goal "<goal>" --compact`,
+      'Load only returned route_ids, summaries and required refs.',
+      'Mutating tools require ProposedAction; high-risk tools require ApprovedAction.',
+      'After execution, write ToolResultSummary with evidence and next steps.',
+    ].join('\n')
+  }
+  if (kind === 'cli') {
+    return [
+      `npm run ${editionProfile.doctorScript}`,
+      `npm run ${editionProfile.connectScript} -- --agent ${agent === 'other' ? `other --agent-name "${agentName}"` : agent} --json`,
+      `npm run ${editionProfile.routeScript} -- --goal "<goal>" --compact`,
+      `npm run ${editionProfile.evalScript}`,
+    ].join('\n')
+  }
+  if (kind === 'sdk') {
+    return [
+      'const route = await run(`npm run ' + editionProfile.routeScript + ' -- --goal "${goal}" --compact`)',
+      'if (route.blockers.length) return block(route.blockers)',
+      'if (route.requires_approved_action) return askUserForApproval(route.proposed_action_id)',
+      'if (route.requires_proposed_action) await requireProposedAction(route)',
+      'const result = await toolCall()',
+      'await writeToolResultSummary(result)',
+    ].join('\n')
+  }
+  if (kind === 'workflow') {
+    return [
+      'resolve_goal',
+      `-> run ${editionProfile.routeScript} --compact`,
+      '-> pack ContextPack into workflow state',
+      '-> enforce Tool Gateway decision',
+      '-> execute tool only when allowed',
+      '-> write ToolResultSummary and project memory overlay',
+    ].join('\n')
+  }
+  return buildLocalAgentMessage(edition, agent, '', customAgentName)
+}
 
 const emptyV13Runtime: V13RuntimePayload = {
   manifest: {
@@ -267,6 +561,7 @@ const emptyKnowledgeGraph: KnowledgeGraphPayload = {
 }
 
 const viewLabels: Record<ViewMode, string> = {
+  overbrain: 'Agent 外脑',
   universe: '3D Knowledge Universe',
   directory: 'Knowledge Directory',
   route: '2D Detail',
@@ -1094,6 +1389,344 @@ function createProposal(base: KnowledgePatchProposal[], form: HTMLFormElement) {
   ]
 }
 
+type DefenseStatus = 'go' | 'review' | 'stop'
+
+function defenseStatusLabel(status: DefenseStatus) {
+  if (status === 'go') return 'green'
+  if (status === 'review') return 'amber'
+  return 'red'
+}
+
+function severityFromEdge(edge: FameEdgeState) {
+  return Math.min(1, edge.fame.lambda * 0.44 + edge.fame.delta * 0.28 + edge.fame.nu * 0.16 + edge.evidence.failure_count * 0.08 + edge.evidence.conflict_count * 0.1)
+}
+
+function AgentOverbrainStage({
+  actionPreview,
+  actionProposal,
+  goalPath,
+  contextPack,
+  runtime,
+  selectedProject,
+  currentFameEdges,
+  pendingAssetSyncCount,
+  syncOutboxPendingCount,
+  scacContractionRate,
+  posteriorEntropyDropAvg,
+  proposals,
+  assetSyncQueue,
+  semanticProposals,
+  thinkingStages,
+  localAgentStatus,
+  localAgentLabelText,
+  onOpenView,
+}: {
+  actionPreview: ApprovedActionPreview
+  actionProposal: AgentActionProposal
+  goalPath: GoalPath
+  contextPack: ContextPackPreview
+  runtime: V13RuntimePayload
+  selectedProject?: ProjectMemoryProject
+  currentFameEdges: FameEdgeState[]
+  pendingAssetSyncCount: number
+  syncOutboxPendingCount: number
+  scacContractionRate: number
+  posteriorEntropyDropAvg: number
+  proposals: KnowledgePatchProposal[]
+  assetSyncQueue: RuntimeAssetSyncItem[]
+  semanticProposals: SemanticAssociationProposal[]
+  thinkingStages: AgentThinkingStage[]
+  localAgentStatus: LocalAgentConnectState['status']
+  localAgentLabelText: string
+  onOpenView: (view: ViewMode) => void
+}) {
+  const passFeedback = runtime.physicalFeedback.filter((event) => event.status === 'pass').length
+  const totalFeedback = runtime.physicalFeedback.length
+  const toolSuccessRate = totalFeedback === 0 ? 0 : passFeedback / totalFeedback
+  const failedOrBlockedFeedback = runtime.physicalFeedback.filter((event) => event.status === 'fail' || event.status === 'blocked')
+  const negativeEdges = currentFameEdges
+    .filter((edge) => edgeRiskLevel(edge) === 'risk' || edgeRiskLevel(edge) === 'lesson' || edge.fame.lambda >= 0.58 || edge.fame.delta >= 0.55)
+    .sort((a, b) => severityFromEdge(b) - severityFromEdge(a))
+  const failureLessons = selectedProject?.failureLessons ?? []
+  const retainedFailureMemories = runtime.fullMemoryRetention.filter((item) => item.memory_type === 'failure_lesson')
+  const failureRecurrenceCount = failureLessons.length + negativeEdges.filter((edge) => edge.evidence.failure_count > 0).length
+  const contextRatio = goalPath.gate.context_budget === 0 ? 0 : contextPack.estimated_tokens / goalPath.gate.context_budget
+  const contextStatus: DefenseStatus = contextRatio <= 0.72 ? 'go' : contextRatio <= 0.92 ? 'review' : 'stop'
+  const gatewayStatus: DefenseStatus = actionPreview.approved
+    ? actionPreview.checks.some((check) => check.status === 'warn')
+      ? 'review'
+      : 'go'
+    : 'stop'
+  const syncPressure = pendingAssetSyncCount + syncOutboxPendingCount
+  const syncStatus: DefenseStatus = syncPressure === 0 ? 'go' : syncPressure <= 4 ? 'review' : 'stop'
+  const agentStatus: DefenseStatus = localAgentStatus === 'confirmed' ? 'go' : localAgentStatus === 'sent' || localAgentStatus === 'ready' ? 'review' : 'stop'
+  const defenseCards = [
+    {
+      id: 'gateway',
+      label: '安全阻断',
+      value: actionPreview.approved ? 'PASS' : 'STOP',
+      detail: actionPreview.approved ? actionPreview.approval_token : actionPreview.blocked_reason,
+      status: gatewayStatus,
+    },
+    {
+      id: 'tool',
+      label: '工具成功率',
+      value: `${Math.round(toolSuccessRate * 100)}%`,
+      detail: `${passFeedback}/${totalFeedback || 1} feedback pass`,
+      status: toolSuccessRate >= 0.72 ? 'go' : toolSuccessRate >= 0.5 ? 'review' : 'stop',
+    },
+    {
+      id: 'context',
+      label: '上下文健康',
+      value: `${contextPack.estimated_tokens}/${goalPath.gate.context_budget}`,
+      detail: contextPack.summary_ref,
+      status: contextStatus,
+    },
+    {
+      id: 'memory',
+      label: '失败复发',
+      value: `${failureRecurrenceCount}`,
+      detail: `${failureLessons.length} lessons / ${negativeEdges.length} hot edges`,
+      status: failureRecurrenceCount === 0 ? 'go' : failureRecurrenceCount <= 4 ? 'review' : 'stop',
+    },
+    {
+      id: 'sync',
+      label: '同步压力',
+      value: `${syncPressure}`,
+      detail: `asset ${pendingAssetSyncCount} / outbox ${syncOutboxPendingCount}`,
+      status: syncStatus,
+    },
+    {
+      id: 'agent',
+      label: 'Agent 接入',
+      value: localAgentStatus,
+      detail: localAgentLabelText,
+      status: agentStatus,
+    },
+  ] satisfies Array<{ id: string; label: string; value: string; detail: string; status: DefenseStatus }>
+  const approvalSteps = [
+    { id: 'scope', label: 'Scope', detail: `${actionProposal.scope.project_id}/${actionProposal.scope.subject}`, state: 'done' },
+    { id: 'pack', label: 'ContextPack', detail: `${contextPack.estimated_tokens} tokens`, state: contextStatus === 'stop' ? 'blocked' : 'done' },
+    { id: 'proposal', label: 'ProposedAction', detail: actionProposal.intended_tool_id, state: 'done' },
+    { id: 'approval', label: 'ApprovedAction', detail: actionPreview.approved ? 'token issued' : actionPreview.required_next_step, state: actionPreview.approved ? 'done' : 'blocked' },
+    { id: 'result', label: 'ToolResultSummary', detail: `${runtime.fullMemoryRetention.filter((item) => item.memory_type === 'tool_summary').length} retained`, state: actionPreview.approved ? 'ready' : 'waiting' },
+    { id: 'writeback', label: 'Memory Writeback', detail: `${proposals.length + syncOutboxPendingCount} queued`, state: syncStatus === 'stop' ? 'blocked' : 'ready' },
+  ]
+  const failureHotZones = [
+    ...failureLessons.map((lesson) => ({
+      id: lesson.lesson_id,
+      label: lesson.failure_category,
+      route: lesson.route_id,
+      summary: lesson.summary,
+      heat: Math.min(1, Number(lesson.fame_delta.lambda ?? 0.62) + Number(lesson.fame_delta.delta ?? 0.12)),
+    })),
+    ...negativeEdges.slice(0, 5).map((edge) => ({
+      id: edge.edge_id,
+      label: edgeRiskLabel(edge),
+      route: edge.scope.route_id,
+      summary: `${edge.source_id} -> ${edge.target_id}`,
+      heat: severityFromEdge(edge),
+    })),
+    ...failedOrBlockedFeedback.slice(0, 3).map((event) => ({
+      id: event.event_id,
+      label: event.feedback_type,
+      route: event.route_id,
+      summary: event.required_next_step,
+      heat: Math.min(1, event.kappa_scac * 0.55 + (event.status === 'blocked' ? 0.3 : 0.18)),
+    })),
+  ].sort((a, b) => b.heat - a.heat).slice(0, 8)
+  const immuneSignals = [
+    ...runtime.routePosterior.candidates.slice(0, 4).map((candidate) => ({
+      id: candidate.route_id,
+      label: candidate.label,
+      detail: candidate.policy_pass ? 'policy pass' : 'policy blocked',
+      value: candidate.posterior,
+      state: candidate.policy_pass ? 'pass' : 'blocked',
+    })),
+    ...runtime.physicalFeedback.slice(0, 4).map((event) => ({
+      id: event.event_id,
+      label: event.feedback_type,
+      detail: event.required_next_step,
+      value: Math.max(0, event.posterior_entropy_before - event.posterior_entropy_after),
+      state: event.status,
+    })),
+  ]
+  const activeThoughtStages = thinkingStages.slice(0, 5)
+  const syncPreview = [
+    ...assetSyncQueue.slice(0, 3).map((item) => ({ id: item.sync_id, label: item.operation, detail: item.reason, status: item.status })),
+    ...runtime.syncOutbox.filter((event) => event.status !== 'applied' && event.status !== 'replayed').slice(0, 3).map((event) => ({
+      id: event.outbox_id,
+      label: event.operation,
+      detail: event.reason,
+      status: event.status,
+    })),
+  ]
+
+  return (
+    <section className="overbrain-stage" data-agent-overbrain="ready">
+      <div className="overbrain-hero">
+        <div className="overbrain-title">
+          <ShieldCheck size={22} />
+          <div>
+            <strong>Agent 外脑控制台</strong>
+            <span>防御态势 / 动态免疫 / 动作契约 / 工程记忆</span>
+          </div>
+        </div>
+        <div className="overbrain-actions">
+          <button type="button" onClick={() => onOpenView('agent')}><BrainCircuit size={15} />接入</button>
+          <button type="button" onClick={() => onOpenView('traversal')}><Crosshair size={15} />找球门</button>
+          <button type="button" onClick={() => onOpenView('v13')}><Activity size={15} />v13</button>
+          <button type="button" onClick={() => onOpenView('fame')}><Radar size={15} />FAME</button>
+        </div>
+      </div>
+
+      <div className="defense-card-grid">
+        {defenseCards.map((card) => (
+          <article className={`defense-card defense-${card.status}`} key={card.id}>
+            <div className={`stoplight stoplight-${card.status}`} aria-label={defenseStatusLabel(card.status)} />
+            <div>
+              <strong>{card.label}</strong>
+              <b>{card.value}</b>
+              <span>{card.detail}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="overbrain-layout">
+        <section className="overbrain-band approval-band">
+          <header>
+            <strong>动作契约审批流</strong>
+            <span>{actionProposal.intended_adapter} / {actionProposal.action_id}</span>
+          </header>
+          <div className="approval-flow">
+            {approvalSteps.map((step) => (
+              <article className={`flow-step flow-${step.state}`} key={step.id}>
+                <b>{step.label}</b>
+                <span>{step.detail}</span>
+              </article>
+            ))}
+          </div>
+          <div className="approval-check-strip">
+            {actionPreview.checks.map((check) => (
+              <span className={`check-dot check-${check.status}`} key={check.check_id}>{check.label}: {check.status}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="overbrain-band immune-band">
+          <header>
+            <strong>动态免疫网</strong>
+            <span>SCAC {numberText(scacContractionRate)} / entropy drop {numberText(posteriorEntropyDropAvg)}</span>
+          </header>
+          <div className="immune-grid">
+            {immuneSignals.map((signal) => (
+              <article className={`immune-card immune-${signal.state}`} key={signal.id}>
+                <strong>{signal.label}</strong>
+                <div className="immune-meter"><i style={{ width: `${Math.min(100, Math.max(6, signal.value * 100))}%` }} /></div>
+                <span>{signal.detail}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="overbrain-band failure-band">
+          <header>
+            <strong>失败签名热力区</strong>
+            <span>{retainedFailureMemories.length} retained memories</span>
+          </header>
+          <div className="failure-heat-list">
+            {failureHotZones.length > 0 ? failureHotZones.map((item) => (
+              <article key={item.id}>
+                <div>
+                  <strong>{item.label}</strong>
+                  <span>{item.route}</span>
+                </div>
+                <p>{item.summary}</p>
+                <div className="heat-track"><i style={{ width: `${Math.max(6, item.heat * 100)}%` }} /></div>
+              </article>
+            )) : (
+              <article>
+                <div><strong>no active failure signature</strong><span>clean</span></div>
+                <p>当前作用域没有高热失败签名。</p>
+                <div className="heat-track"><i style={{ width: '6%' }} /></div>
+              </article>
+            )}
+          </div>
+        </section>
+
+        <section className="overbrain-band thought-band">
+          <header>
+            <strong>思考路线与联想</strong>
+            <span>{semanticProposals.length} semantic proposals</span>
+          </header>
+          <div className="thought-rail">
+            {activeThoughtStages.map((stage, index) => (
+              <article key={stage.mode}>
+                <b>{String(index + 1).padStart(2, '0')}</b>
+                <div>
+                  <strong>{stage.mode}</strong>
+                  <span>{stage.guardrail}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="semantic-strip">
+            {semanticProposals.slice(0, 4).map((proposal) => (
+              <button key={proposal.proposal_id} type="button" onClick={() => onOpenView('agent')}>
+                {proposal.anchor_label} / {proposal.score}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="overbrain-band sync-band">
+          <header>
+            <strong>记忆写回与数据库同步</strong>
+            <span>{syncPreview.length} visible queue</span>
+          </header>
+          <div className="sync-preview-list">
+            {syncPreview.length > 0 ? syncPreview.map((item) => (
+              <article key={item.id}>
+                <strong>{item.label}</strong>
+                <span>{item.status}</span>
+                <p>{item.detail}</p>
+              </article>
+            )) : (
+              <article>
+                <strong>clean</strong>
+                <span>synced</span>
+                <p>当前没有待处理的知识网或资产数据库同步项。</p>
+              </article>
+            )}
+          </div>
+        </section>
+
+        <section className="overbrain-band context-band">
+          <header>
+            <strong>上下文节流</strong>
+            <span>{contextPack.scope_key}</span>
+          </header>
+          <div className="context-budget-ring">
+            <b>{Math.round(contextRatio * 100)}%</b>
+            <div><i style={{ width: `${Math.min(100, contextRatio * 100)}%` }} /></div>
+          </div>
+          <div className="context-mini-columns">
+            <article>
+              <strong>retain</strong>
+              {contextPack.retained_items.slice(0, 4).map((item, itemIndex) => <span key={`${item}-${itemIndex}`}>{item}</span>)}
+            </article>
+            <article>
+              <strong>release</strong>
+              {contextPack.released_items.slice(0, 4).map((item, itemIndex) => <span key={`${item}-${itemIndex}`}>{item}</span>)}
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  )
+}
+
 function EdgeInspector({ edge }: { edge: FameEdgeState }) {
   const riskLevel = edgeRiskLevel(edge)
   return (
@@ -1390,7 +2023,7 @@ function LocalRouteGraph({
 }
 
 function App() {
-  const [view, setView] = useState<ViewMode>('universe')
+  const [view, setView] = useState<ViewMode>('overbrain')
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>('local-language-tree')
   const [selectedEdgeId, setSelectedEdgeId] = useState<string>('local-edge-language-shard')
   const [selectedUniverseNode, setSelectedUniverseNode] = useState<UniverseNode>(universeNodes[0])
@@ -1410,6 +2043,21 @@ function App() {
   const [routeDraft, setRouteDraft] = useState<RouteDraft | null>(null)
   const [focusedRouteEntryId, setFocusedRouteEntryId] = useState<string | null>(null)
   const [v13Focus, setV13Focus] = useState<V13Focus>('fame')
+  const [firstRunOpen, setFirstRunOpen] = useState(() => {
+    try {
+      return window.localStorage.getItem('fame:first-run-complete') !== '1'
+    } catch {
+      return true
+    }
+  })
+  const [configSnippetKind, setConfigSnippetKind] = useState<'prompt' | 'mcp' | 'rules' | 'cli' | 'sdk' | 'workflow'>('prompt')
+  const [localAgentConnect, setLocalAgentConnect] = useState<LocalAgentConnectState>({
+    edition: 'chinese-open',
+    selectedAgent: 'codex',
+    status: 'not_checked',
+    confirmedAt: '',
+    customAgentName: 'OpenClaw',
+  })
   const [expandedDirectoryKeys, setExpandedDirectoryKeys] = useState<Set<string>>(
     () => new Set(['root:knowledge-meta', 'root:建木知识网']),
   )
@@ -1466,12 +2114,12 @@ function App() {
   const draftFameEdges = routeDraft?.scopeKey === scopeKey ? routeDraft.edges : localFameEdges
   const currentRouteNodes = view === 'project'
     ? projectRouteNodes
-    : view === 'route' || view === 'agent' || view === 'traversal' || view === 'fame' || view === 'patch' || view === 'v13'
+    : view === 'overbrain' || view === 'route' || view === 'agent' || view === 'traversal' || view === 'fame' || view === 'patch' || view === 'v13'
     ? draftRouteNodes
     : routeNodes
   const currentFameEdges = view === 'project'
     ? projectFameEdges
-    : view === 'route' || view === 'agent' || view === 'traversal' || view === 'fame' || view === 'patch' || view === 'v13'
+    : view === 'overbrain' || view === 'route' || view === 'agent' || view === 'traversal' || view === 'fame' || view === 'patch' || view === 'v13'
     ? draftFameEdges
     : fameEdges
   const goalPath = useMemo(
@@ -1539,6 +2187,28 @@ function App() {
   const contextPack = useMemo(
     () => buildContextPackPreview(selectedScope, selectedRouteNode, goalPath, semanticProposals),
     [goalPath, selectedRouteNode, selectedScope, semanticProposals],
+  )
+  const selectedLocalAgentProfile = localAgentProfiles[localAgentConnect.selectedAgent]
+  const selectedLocalAgentLabel = localAgentLabel(localAgentConnect.selectedAgent, localAgentConnect.customAgentName)
+  const selectedEditionProfile = openEditionProfiles[localAgentConnect.edition]
+  const selectedLocalAgentCommand = localAgentCommand(localAgentConnect.edition, localAgentConnect.selectedAgent, localAgentConnect.customAgentName)
+  const localAgentMessage = useMemo(
+    () => buildLocalAgentMessage(
+      localAgentConnect.edition,
+      localAgentConnect.selectedAgent,
+      localAgentConnect.confirmedAt,
+      localAgentConnect.customAgentName,
+    ),
+    [localAgentConnect.confirmedAt, localAgentConnect.customAgentName, localAgentConnect.edition, localAgentConnect.selectedAgent],
+  )
+  const agentConfigSnippet = useMemo(
+    () => buildAgentConfigSnippet(
+      localAgentConnect.edition,
+      localAgentConnect.selectedAgent,
+      localAgentConnect.customAgentName,
+      configSnippetKind,
+    ),
+    [configSnippetKind, localAgentConnect.customAgentName, localAgentConnect.edition, localAgentConnect.selectedAgent],
   )
   useEffect(() => {
     let cancelled = false
@@ -2055,6 +2725,93 @@ function App() {
     )
   }
 
+  const selectOpenEdition = (edition: OpenEditionId) => {
+    setLocalAgentConnect((current) => ({
+      ...current,
+      edition,
+      status: 'not_checked',
+      confirmedAt: '',
+    }))
+  }
+
+  const selectLocalAgent = (agentId: LocalAgentId) => {
+    setLocalAgentConnect((current) => ({
+      edition: current.edition,
+      selectedAgent: agentId,
+      status: 'not_checked',
+      confirmedAt: '',
+      customAgentName: current.customAgentName,
+    }))
+  }
+
+  const updateCustomAgentName = (value: string) => {
+    setLocalAgentConnect((current) => ({
+      ...current,
+      selectedAgent: 'other',
+      customAgentName: value,
+      status: 'not_checked',
+      confirmedAt: '',
+    }))
+  }
+
+  const confirmLocalAgentConnect = () => {
+    setLocalAgentConnect((current) => ({
+      ...current,
+      status: 'confirmed',
+      confirmedAt: new Date().toISOString(),
+    }))
+  }
+
+  const resetLocalAgentConnect = () => {
+    setLocalAgentConnect((current) => ({
+      ...current,
+      status: 'not_checked',
+      confirmedAt: '',
+    }))
+  }
+
+  const markLocalAgentReady = () => {
+    setLocalAgentConnect((current) => ({
+      ...current,
+      status: current.status === 'confirmed' ? 'confirmed' : 'ready',
+    }))
+  }
+
+  const sendLocalAgentMessage = () => {
+    try {
+      void navigator.clipboard?.writeText(localAgentMessage).catch(() => undefined)
+    } catch {
+      // Clipboard may be blocked when the Workbench is not focused; the wizard state still records the handoff.
+    }
+    setLocalAgentConnect((current) => ({
+      ...current,
+      status: current.status === 'confirmed' ? 'confirmed' : 'sent',
+    }))
+  }
+
+  const copyAgentConfigSnippet = () => {
+    try {
+      void navigator.clipboard?.writeText(agentConfigSnippet).catch(() => undefined)
+    } catch {
+      // Clipboard may be blocked; the snippet remains visible for manual copy.
+    }
+  }
+
+  const completeFirstRunWizard = () => {
+    try {
+      window.localStorage.setItem('fame:first-run-complete', '1')
+    } catch {
+      // localStorage may be blocked in strict browser modes.
+    }
+    setFirstRunOpen(false)
+    setView('agent')
+  }
+
+  const reopenFirstRunWizard = () => {
+    setFirstRunOpen(true)
+    setView('agent')
+  }
+
   const openSearchResult = (result: SearchResult) => {
     if (result.kind === 'v13-runtime') {
       setV13Focus(result.v13Target ?? 'fame')
@@ -2139,6 +2896,9 @@ function App() {
           <strong>{defaultScope.project_id}</strong>
           <p>{defaultScope.subject}</p>
           <code>3d-overview-local-2d-detail</code>
+          <button className="scope-action" type="button" onClick={reopenFirstRunWizard}>
+            <BrainCircuit size={14} />首次向导
+          </button>
         </section>
 
         <section className="search-panel">
@@ -2186,6 +2946,7 @@ function App() {
 
         <nav className="mode-list" aria-label="Workbench views">
           {[
+            ['overbrain', ShieldCheck, 'Agent 外脑'],
             ['universe', Orbit, '3D Universe'],
             ['directory', BookOpen, 'Directory'],
             ['route', Route, '2D Detail'],
@@ -2236,7 +2997,9 @@ function App() {
           <div>
             <p>{viewLabels[view]}</p>
             <h2>
-              {view === 'universe'
+              {view === 'overbrain'
+                ? '把 Agent 接入、工具审批、失败免疫、FAME 回写和上下文健康放在同一张控制台里。'
+                : view === 'universe'
                 ? '用 3D 总览承载学科间联系，用 2D 进入局部路线与补充修改。'
                 : activeGoalGate.success_condition}
             </h2>
@@ -2257,7 +3020,28 @@ function App() {
           </div>
         </header>
 
-        {view === 'universe' ? (
+        {view === 'overbrain' ? (
+          <AgentOverbrainStage
+            actionPreview={actionPreview}
+            actionProposal={actionProposal}
+            goalPath={goalPath}
+            contextPack={contextPack}
+            runtime={v13Runtime}
+            selectedProject={selectedProject}
+            currentFameEdges={currentFameEdges}
+            pendingAssetSyncCount={pendingAssetSyncCount}
+            syncOutboxPendingCount={syncOutboxPendingCount}
+            scacContractionRate={scacContractionRate}
+            posteriorEntropyDropAvg={posteriorEntropyDropAvg}
+            proposals={proposals}
+            assetSyncQueue={assetSyncQueue}
+            semanticProposals={semanticProposals}
+            thinkingStages={thinkingStages}
+            localAgentStatus={localAgentConnect.status}
+            localAgentLabelText={selectedLocalAgentLabel}
+            onOpenView={setView}
+          />
+        ) : view === 'universe' ? (
           <section className="universe-stage">
             <KnowledgeUniverse3D
               nodes={universeNodes}
@@ -2698,6 +3482,187 @@ function App() {
             <p className="panel-copy">
               万能插件入口以 MCP 为主，HTTP / CLI / IDE / workflow 为适配层；agent 只能提交 ProposedAction，执行必须经过 Enforcement Kernel。
             </p>
+
+            {firstRunOpen && (
+              <div className="first-run-card">
+                <div className="local-agent-header">
+                  <div>
+                    <h3>首次接入向导</h3>
+                    <p>选择版本、Agent 和配置片段，然后复制给本机 Agent；Agent 回复后由用户确认接入。</p>
+                  </div>
+                  <span>{selectedEditionProfile.shortLabel}</span>
+                </div>
+
+                <div className="edition-switch" role="group" aria-label="Open edition">
+                  {(Object.keys(openEditionProfiles) as OpenEditionId[]).map((edition) => (
+                    <button
+                      className={localAgentConnect.edition === edition ? 'active' : ''}
+                      key={edition}
+                      type="button"
+                      onClick={() => selectOpenEdition(edition)}
+                    >
+                      <BookOpen size={15} />
+                      <span>{openEditionProfiles[edition].label}</span>
+                    </button>
+                  ))}
+                </div>
+
+                <div className="wizard-command-grid">
+                  <code>npm run {selectedEditionProfile.doctorScript}</code>
+                  <code>{selectedLocalAgentCommand}</code>
+                  <code>npm run {selectedEditionProfile.routeScript} -- --goal "&lt;goal&gt;" --compact</code>
+                </div>
+
+                <div className="first-run-actions">
+                  <button type="button" onClick={markLocalAgentReady}>
+                    <CheckCircle2 size={15} />检查入口
+                  </button>
+                  <button type="button" onClick={sendLocalAgentMessage} disabled={localAgentConnect.status === 'not_checked'}>
+                    <Copy size={15} />复制接入消息
+                  </button>
+                  <button type="button" onClick={completeFirstRunWizard}>
+                    <Save size={15} />完成向导
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <div className={`local-agent-connect local-agent-${localAgentConnect.status}`}>
+              <div className="local-agent-header">
+                <div>
+                  <h3>本机 Agent 接入 / {selectedEditionProfile.label}</h3>
+                  <p>{selectedLocalAgentProfile.hint}</p>
+                </div>
+                <span>{localAgentStatusLabels[localAgentConnect.status]}</span>
+              </div>
+
+              <div className="edition-switch compact" role="group" aria-label="Edition switch">
+                {(Object.keys(openEditionProfiles) as OpenEditionId[]).map((edition) => (
+                  <button
+                    className={localAgentConnect.edition === edition ? 'active' : ''}
+                    key={edition}
+                    type="button"
+                    onClick={() => selectOpenEdition(edition)}
+                  >
+                    {openEditionProfiles[edition].shortLabel}
+                  </button>
+                ))}
+              </div>
+
+              <div className="agent-choice-grid">
+                {(Object.keys(localAgentProfiles) as LocalAgentId[]).map((agentId) => (
+                  <button
+                    className={localAgentConnect.selectedAgent === agentId ? 'active' : ''}
+                    key={agentId}
+                    type="button"
+                    onClick={() => selectLocalAgent(agentId)}
+                    title={localAgentProfiles[agentId].hint}
+                  >
+                    <BrainCircuit size={15} />
+                    <span>{localAgentProfiles[agentId].label}</span>
+                  </button>
+                ))}
+              </div>
+
+              <label className="custom-agent-field">
+                <span>Other / 自定义 Agent</span>
+                <input
+                  value={localAgentConnect.customAgentName}
+                  onChange={(event) => updateCustomAgentName(event.currentTarget.value)}
+                  placeholder="OpenClaw / Hermes / 爱马仕 / your-agent"
+                />
+              </label>
+
+              <div className="connect-steps">
+                <article className="step-pass">
+                  <b>1</b>
+                  <strong>选择</strong>
+                  <span>{selectedLocalAgentLabel}</span>
+                </article>
+                <article className={localAgentConnect.status === 'not_checked' ? 'step-wait' : 'step-pass'}>
+                  <b>2</b>
+                  <strong>检查</strong>
+                  <span>{selectedEditionProfile.doctorScript} / eval</span>
+                </article>
+                <article className={localAgentConnect.status === 'sent' || localAgentConnect.status === 'confirmed' ? 'step-pass' : 'step-wait'}>
+                  <b>3</b>
+                  <strong>发送</strong>
+                  <span>Agent 接入消息</span>
+                </article>
+                <article className={localAgentConnect.status === 'confirmed' ? 'step-pass' : 'step-wait'}>
+                  <b>4</b>
+                  <strong>确认</strong>
+                  <span>{localAgentConnect.confirmedAt || 'waiting user'}</span>
+                </article>
+              </div>
+
+              <div className="connect-command">
+                <code>{selectedLocalAgentCommand}</code>
+                <button type="button" onClick={markLocalAgentReady}>
+                  <CheckCircle2 size={15} />检查
+                </button>
+                <button type="button" onClick={sendLocalAgentMessage} disabled={localAgentConnect.status === 'not_checked'}>
+                  <Send size={15} />发送消息
+                </button>
+                <button
+                  type="button"
+                  onClick={confirmLocalAgentConnect}
+                  disabled={localAgentConnect.status !== 'sent' && localAgentConnect.status !== 'confirmed'}
+                >
+                  <CheckCircle2 size={15} />用户确认
+                </button>
+                <button type="button" onClick={resetLocalAgentConnect}>
+                  <Clock3 size={15} />重置
+                </button>
+              </div>
+
+              <div className="agent-message-card">
+                <header>
+                  <strong>Agent 接入消息</strong>
+                  <button
+                    type="button"
+                    onClick={sendLocalAgentMessage}
+                    title="复制接入消息并标记已发送"
+                    disabled={localAgentConnect.status === 'not_checked'}
+                  >
+                    <Copy size={15} />复制并标记
+                  </button>
+                </header>
+                <pre>{localAgentMessage}</pre>
+              </div>
+            </div>
+
+            <div className="runtime-section config-generator">
+              <h3>Agent 配置生成</h3>
+              <div className="snippet-tabs" role="group" aria-label="Config snippet type">
+                {[
+                  ['prompt', 'Prompt'],
+                  ['mcp', 'MCP'],
+                  ['rules', 'Rules'],
+                  ['cli', 'CLI'],
+                  ['sdk', 'SDK'],
+                  ['workflow', 'Workflow'],
+                ].map(([id, label]) => (
+                  <button
+                    className={configSnippetKind === id ? 'active' : ''}
+                    key={id}
+                    type="button"
+                    onClick={() => setConfigSnippetKind(id as typeof configSnippetKind)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <div className="agent-message-card">
+                <header>
+                  <strong>{selectedLocalAgentLabel} / {selectedEditionProfile.shortLabel}</strong>
+                  <button type="button" onClick={copyAgentConfigSnippet}>
+                    <Copy size={15} />复制配置
+                  </button>
+                </header>
+                <pre>{agentConfigSnippet}</pre>
+              </div>
+            </div>
 
             <div className="runtime-section">
               <h3>Connectors</h3>

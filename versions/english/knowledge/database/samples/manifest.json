@@ -1,0 +1,57 @@
+{
+  "edition_id": "english",
+  "generated_at": "2026-06-28T08:16:27.624Z",
+  "generator": "scripts/sample-chinese-open-data-sources.mjs",
+  "mode": "small_metadata_sample",
+  "policy": {
+    "no_bulk_download": true,
+    "no_full_text_import": true,
+    "output_is_candidate_index_only": true,
+    "core_graph_unchanged": true,
+    "timeout_ms": 8000,
+    "per_page": 3,
+    "enabled_sources": [
+      "openalex"
+    ],
+    "exclusion_scope": "programming_tool_calling_agent_stability_only"
+  },
+  "subjects": [
+    {
+      "id": "computer-science",
+      "terms": [
+        "computer science",
+        "software engineering",
+        "knowledge graph"
+      ],
+      "doi": "10.1145/3664191"
+    },
+    {
+      "id": "mathematics",
+      "terms": [
+        "mathematics",
+        "graph theory",
+        "probability theory"
+      ],
+      "doi": "10.1090/noti1173"
+    },
+    {
+      "id": "logic",
+      "terms": [
+        "logic",
+        "formal logic",
+        "model theory"
+      ],
+      "doi": "10.1093/0195138590.001.0001"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "openalex",
+      "records": 26,
+      "sampled": 19,
+      "failed": 0,
+      "output": "knowledge/database/samples/openalex.sample.jsonl",
+      "excluded": 7
+    }
+  ]
+}

@@ -1,36 +1,5 @@
 {
-  "id": "professional-programming",
   "edition_id": "english",
-  "type": "ProfessionalKnowledgeBranch",
-  "label": "Programming",
-  "status": "placeholder",
-  "hub_ref": "language-tree-hub",
-  "planned_subjects": [
-    "software-architecture",
-    "algorithms-and-data-structures",
-    "frontend-engineering",
-    "backend-engineering",
-    "runtime-systems",
-    "databases",
-    "testing-and-verification",
-    "developer-tooling",
-    "agent-tool-integration"
-  ],
-  "seed_routes": [
-    {
-      "id": "route-programming-spec-to-implementation",
-      "name": "Specification to Implementation",
-      "status": "placeholder",
-      "fame": {
-        "mu": 0.5,
-        "chi": 0.5,
-        "epsilon": 0.6,
-        "kappa": 0.4,
-        "nu": 0.35,
-        "delta": 0.1,
-        "rho": 0.3,
-        "lambda": 0.1
-      }
-    }
-  ]
+  "status": "legacy_placeholder",
+  "note": "Kept only for compatibility. The aligned structure now uses knowledge/computer-science and knowledge/agent-tooling."
 }

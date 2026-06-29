@@ -1,0 +1,64 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "patterns": [
+    {
+      "id": "result-pattern-command-success",
+      "label": "命令成功摘要",
+      "status": "success",
+      "required_fields": ["command", "exit_code", "key_output", "evidence", "next_steps"],
+      "summary_template": "命令成功完成；关键证据为 <evidence>；下一步为 <next_steps>。",
+      "fame_update_hint": {
+        "epsilon": 0.04,
+        "kappa": 0.03,
+        "rho": 0.02
+      }
+    },
+    {
+      "id": "result-pattern-command-failure",
+      "label": "命令失败摘要",
+      "status": "failure",
+      "required_fields": ["command", "exit_code", "error_excerpt", "observed_failure", "candidate_causes", "next_test"],
+      "summary_template": "命令失败；观察事实为 <observed_failure>；候选原因包括 <candidate_causes>；下一步最小测试为 <next_test>。",
+      "fame_update_hint": {
+        "delta": -0.08,
+        "risk": 0.05,
+        "epsilon": -0.03
+      }
+    },
+    {
+      "id": "result-pattern-file-edit",
+      "label": "文件编辑摘要",
+      "status": "success",
+      "required_fields": ["files_changed", "change_summary", "validation_result", "remaining_risk"],
+      "summary_template": "已修改 <files_changed>；变更为 <change_summary>；验证结果为 <validation_result>；残余风险为 <remaining_risk>。",
+      "fame_update_hint": {
+        "kappa": 0.04,
+        "epsilon": 0.04
+      }
+    },
+    {
+      "id": "result-pattern-skipped-for-risk",
+      "label": "风险阻断摘要",
+      "status": "skipped",
+      "required_fields": ["requested_action", "blocked_by_policy", "required_approval", "safe_alternative"],
+      "summary_template": "动作 <requested_action> 被策略 <blocked_by_policy> 阻断；需要 <required_approval>；安全替代为 <safe_alternative>。",
+      "fame_update_hint": {
+        "risk": -0.03,
+        "rho": 0.03
+      }
+    },
+    {
+      "id": "result-pattern-action-contract",
+      "label": "工具动作契约摘要",
+      "status": "prepared",
+      "required_fields": ["goal_post", "tool_name", "operation_type", "scope", "expected_signal", "validation_plan", "blocked_if"],
+      "summary_template": "已形成工具动作契约：球门为 <goal_post>；工具为 <tool_name>；动作类型为 <operation_type>；验证信号为 <expected_signal>；阻断条件为 <blocked_if>。",
+      "fame_update_hint": {
+        "kappa": 0.03,
+        "epsilon": 0.03,
+        "risk": -0.02
+      }
+    }
+  ]
+}

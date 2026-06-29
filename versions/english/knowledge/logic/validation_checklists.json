@@ -1,0 +1,99 @@
+{
+  "edition_id": "english",
+  "subject": "logic",
+  "checklists": [
+    {
+      "id": "logic-check-tool-precondition",
+      "label": "工具调用前置条件检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-logic-tool-precheck",
+        "route-agent-tool-proposed-action"
+      ],
+      "items": [
+        {
+          "id": "precondition-goal",
+          "question": "目标是否明确，成功标准是否可验证？"
+        },
+        {
+          "id": "precondition-tool-schema",
+          "question": "工具名称、输入 schema、权限和输出契约是否已读取或确认？"
+        },
+        {
+          "id": "precondition-scope",
+          "question": "project_id、subject、route_id、task_id 和文件路径边界是否明确？"
+        },
+        {
+          "id": "precondition-side-effect",
+          "question": "副作用是否明确，是否需要 ProposedAction 或 ApprovedAction？"
+        },
+        {
+          "id": "precondition-validation",
+          "question": "执行后用什么证据验证结果？"
+        }
+      ]
+    },
+    {
+      "id": "logic-check-knowledge-entry",
+      "label": "知识录入逻辑检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-knowledge-taxonomy-entry"
+      ],
+      "items": [
+        {
+          "id": "entry-taxonomy",
+          "question": "节点是否进入正确的学科层级，而不是按直觉随便挂接？"
+        },
+        {
+          "id": "entry-abstraction",
+          "question": "节点抽象层级是否明确，是 L2 方向、L3 主题、L4 方法、L5 操作还是 L6 案例？"
+        },
+        {
+          "id": "entry-source",
+          "question": "外部来源是否已登记，许可证状态是否允许当前使用方式？"
+        },
+        {
+          "id": "entry-detail-location",
+          "question": "详细内容是否进入 database/rules/indexes，而不是塞进图节点？"
+        },
+        {
+          "id": "entry-fame",
+          "question": "FAME 参数是否有依据，失败经验是否保留负值 delta？"
+        }
+      ]
+    },
+    {
+      "id": "logic-check-failure-diagnosis",
+      "label": "失败诊断检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-logic-failure-diagnosis",
+        "route-negative-fame-lesson"
+      ],
+      "items": [
+        {
+          "id": "failure-observation",
+          "question": "观察到的失败事实是什么，是否和猜测分开记录？"
+        },
+        {
+          "id": "failure-candidates",
+          "question": "候选原因是否至少包含前提错误、工具错误、环境错误、计划错误、验证不足？"
+        },
+        {
+          "id": "failure-test",
+          "question": "是否设计了最小测试区分候选原因？"
+        },
+        {
+          "id": "failure-lesson",
+          "question": "失败是否写成可复用 lesson，而不是只留一句报错？"
+        },
+        {
+          "id": "failure-fame",
+          "question": "是否生成 FAME 更新候选，包含 delta、risk、epsilon 或 rho 的变化理由？"
+        }
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

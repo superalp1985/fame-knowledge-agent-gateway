@@ -1,0 +1,200 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "label": "Agent 工具调取",
+  "source_refs": [
+    "mcp-docs-intro",
+    "mcp-tools-spec",
+    "openai-tools-docs",
+    "anthropic-tool-use",
+    "langchain-tool-calling"
+  ],
+  "taxonomy": [
+    {
+      "id": "agent-tool-discovery",
+      "label": "工具说明读取",
+      "abstraction_level": "L2_field",
+      "summary": "在调用前读取工具名称、输入 schema、权限边界、输出格式和副作用。",
+      "children": [
+        {
+          "id": "agent-tool-manifest",
+          "label": "工具清单",
+          "abstraction_level": "L3_topic",
+          "summary": "记录可用工具、用途、参数、权限和适用场景。"
+        },
+        {
+          "id": "agent-tool-doc-lookup",
+          "label": "调用前查说明",
+          "abstraction_level": "L5_operation",
+          "summary": "当工具用法不确定或风险较高时，先读取说明再构造调用。"
+        },
+        {
+          "id": "agent-mcp-capability-boundary",
+          "label": "MCP 能力发现与边界",
+          "abstraction_level": "L4_method",
+          "summary": "按 resources、prompts、tools 区分上下文资源和可执行工具，避免能力误用。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-schema-validation",
+      "label": "schema 校验",
+      "abstraction_level": "L2_field",
+      "summary": "把工具参数转成结构化对象并校验类型、必填项、枚举和安全边界。",
+      "children": [
+        {
+          "id": "agent-tool-input-schema",
+          "label": "输入 schema",
+          "abstraction_level": "L3_topic",
+          "summary": "定义工具参数的结构、类型、必填字段和约束。"
+        },
+        {
+          "id": "agent-tool-output-contract",
+          "label": "输出契约",
+          "abstraction_level": "L3_topic",
+          "summary": "约束工具返回的状态、数据、错误和摘要格式。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-approval",
+      "label": "ProposedAction 与 ApprovedAction",
+      "abstraction_level": "L2_field",
+      "summary": "把风险动作拆成提案、审批、执行和回写，避免模型直接越权执行。",
+      "children": [
+        {
+          "id": "agent-tool-proposed-action",
+          "label": "ProposedAction",
+          "abstraction_level": "L4_method",
+          "summary": "描述目标、工具、参数、风险、回滚和预期输出。"
+        },
+        {
+          "id": "agent-tool-approved-action",
+          "label": "ApprovedAction",
+          "abstraction_level": "L4_method",
+          "summary": "确认可执行动作，并绑定审批、作用域和审计信息。"
+        },
+        {
+          "id": "agent-guardrail-human-review",
+          "label": "Guardrail 与人工审批",
+          "abstraction_level": "L5_operation",
+          "summary": "敏感工具调用进入 allow、block、rewrite、ask_user 或 ApprovedAction 流程。"
+        },
+        {
+          "id": "agent-output-validation",
+          "label": "输出校验",
+          "abstraction_level": "L5_operation",
+          "summary": "工具输出必须结构化、可验证，并能转成 ToolResultSummary。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-gateway",
+      "label": "Tool Gateway",
+      "abstraction_level": "L2_field",
+      "summary": "集中执行工具调用、权限校验、节流、记录、错误规范化和结果摘要。",
+      "children": [
+        {
+          "id": "agent-tool-enforcement-kernel",
+          "label": "Enforcement Kernel",
+          "abstraction_level": "L3_topic",
+          "summary": "强制检查 Agent 是否按机制工作，阻断未审批的高风险调用。"
+        },
+        {
+          "id": "agent-tool-result-summary",
+          "label": "结果摘要",
+          "abstraction_level": "L5_operation",
+          "summary": "把工具输出压缩成状态、关键证据、失败原因和下一步建议。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-failure-replay",
+      "label": "失败复盘",
+      "abstraction_level": "L2_field",
+      "summary": "把失败工具调用转成可检索的教训、负值 FAME 路由和修复规则。",
+      "children": [
+        {
+          "id": "agent-tool-negative-fame",
+          "label": "负值 FAME 路线",
+          "abstraction_level": "L6_case",
+          "summary": "保留失败经验，供后续任务避坑和权重调整。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-reflection-loop",
+      "label": "反思迭代",
+      "abstraction_level": "L2_field",
+      "summary": "在失败、部分成功、用户纠偏和上下文超预算时，生成反思摘要、失败签名和最小下一步测试。",
+      "children": [
+        {
+          "id": "agent-tool-reflection-summary",
+          "label": "反思摘要",
+          "abstraction_level": "L5_operation",
+          "summary": "只把失败签名、观察证据、候选原因和下一步带回上下文，完整轨迹留外部记忆。"
+        },
+        {
+          "id": "agent-tool-smallest-next-test",
+          "label": "最小下一步测试",
+          "abstraction_level": "L5_operation",
+          "summary": "失败后先执行最低风险的区分性测试，避免连续大范围试错。"
+        }
+      ]
+    },
+    {
+      "id": "agent-tool-usability-evaluation",
+      "label": "易用性与少犯错评测",
+      "abstraction_level": "L2_field",
+      "summary": "用工具成功率、schema 错误率、失败复发率、上下文节省和证据完成率衡量 Agent 是否更好用。",
+      "children": [
+        {
+          "id": "agent-tool-scorecard",
+          "label": "Agent 指标卡",
+          "abstraction_level": "L4_method",
+          "summary": "按 project_id、subject、route_id 聚合指标，形成 FAME 更新候选。"
+        }
+      ]
+    },
+    {
+      "id": "agent-memory-checkpoint-store",
+      "label": "Checkpoint/Store 工程记忆",
+      "abstraction_level": "L2_field",
+      "summary": "把短期 checkpoint、长期 store、工程 overlay 和核心知识网分层管理。",
+      "children": [
+        {
+          "id": "agent-checkpoint-state",
+          "label": "短期 checkpoint",
+          "abstraction_level": "L4_method",
+          "summary": "保存当前任务状态、恢复点和最小续跑信息。"
+        },
+        {
+          "id": "agent-long-term-store",
+          "label": "长期 store",
+          "abstraction_level": "L4_method",
+          "summary": "保存项目经验、失败签名、用户偏好和 FAME 证据。"
+        }
+      ]
+    },
+    {
+      "id": "agent-computer-interface",
+      "label": "Agent-Computer Interface",
+      "abstraction_level": "L2_field",
+      "summary": "把工程任务组织成仓库观察、导航、编辑、测试、摘要和恢复闭环。",
+      "children": [
+        {
+          "id": "agent-repo-navigation",
+          "label": "仓库导航",
+          "abstraction_level": "L4_method",
+          "summary": "定位 package、入口、测试、相关文件和脏工作区。"
+        },
+        {
+          "id": "agent-edit-test-loop",
+          "label": "编辑测试闭环",
+          "abstraction_level": "L5_operation",
+          "summary": "编辑后按风险执行测试，并记录证据和失败签名。"
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ npm run release:check
 npm run gateway:smoke
 npm run lint
 npm run build
+npm run build:release-assets
 ```
 
 Or:
@@ -50,6 +51,17 @@ npm run ci
 - Direct mutation endpoints are blocked.
 - ApprovedAction token execution succeeds.
 - MCP tools list includes semantic, scheduler, asset and trace tools.
+
+## GitHub Release Assets
+
+Before creating a public release, verify:
+
+- `.tmp/release/fame-knowledge-agent-gateway-v<version>-portable.zip` exists.
+- `.tmp/release/fame-knowledge-agent-gateway-v<version>-portable.zip.sha256` exists.
+- `.tmp/release/install.ps1` exists and contains the correct GitHub repository.
+- `.tmp/release/RELEASE_NOTES.md` includes the Windows one-click install command.
+
+Release automation is handled by `.github/workflows/release.yml`. It runs `npm run build:release-assets`, uploads workflow artifacts, then creates or updates the GitHub Release with the portable zip, checksum, installer and manifest.
 
 ## Known Technical Note
 

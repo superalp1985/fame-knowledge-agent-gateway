@@ -1,0 +1,168 @@
+{
+  "edition_id": "english",
+  "subject": "mathematics",
+  "methods": [
+    {
+      "id": "math-method-formalize",
+      "label": "形式化",
+      "abstraction_level": "L4_method",
+      "use_when": "自然语言问题需要变成明确对象、变量、关系和约束。",
+      "steps": [
+        "定义对象和变量。",
+        "列出已知条件和约束。",
+        "写出目标或待证明命题。",
+        "标注假设和适用范围。",
+        "把模糊词交给语言树做术语归一。"
+      ],
+      "agent_fit": [
+        "知识录入",
+        "需求澄清",
+        "工具调用前目标表达"
+      ],
+      "failure_modes": [
+        "变量未定义",
+        "约束遗漏",
+        "概念混用"
+      ]
+    },
+    {
+      "id": "math-method-proof-selection",
+      "label": "证明路线选择",
+      "abstraction_level": "L4_method",
+      "use_when": "需要证明规则、性质、约束或方案逻辑成立。",
+      "steps": [
+        "判断命题类型：存在、全称、等价、蕴含或不等式。",
+        "全称命题优先考虑直接证明、归纳或反证。",
+        "存在命题优先考虑构造或概率方法。",
+        "等价命题拆成双向证明。",
+        "失败时寻找反例或补充条件。"
+      ],
+      "agent_fit": [
+        "逻辑检查",
+        "算法正确性",
+        "知识规则审查"
+      ],
+      "failure_modes": [
+        "只证明单向",
+        "跳过基础情形",
+        "把例子当证明"
+      ]
+    },
+    {
+      "id": "math-method-modeling",
+      "label": "数学建模",
+      "abstraction_level": "L4_method",
+      "use_when": "现实或工程问题需要转成可计算、可验证的结构。",
+      "steps": [
+        "确定目标函数或评价指标。",
+        "定义变量和可控参数。",
+        "列出约束、假设和边界条件。",
+        "选择关系模型、概率模型、优化模型或图模型。",
+        "用数据、测试或反例验证模型。"
+      ],
+      "agent_fit": [
+        "工程规划",
+        "FAME 评分",
+        "知识网路线选择"
+      ],
+      "failure_modes": [
+        "目标错配",
+        "假设不明",
+        "验证缺失"
+      ]
+    },
+    {
+      "id": "math-method-graph-traversal",
+      "label": "图遍历与找球门",
+      "abstraction_level": "L4_method",
+      "use_when": "需要在大知识网中按作用域寻找目标、路径或相邻联想。",
+      "steps": [
+        "先限定 project_id、subject、route_id 和 abstraction_level。",
+        "从语言树中枢进入相关学科入口。",
+        "按 contains 边下钻，按 associates_with 边横向联想。",
+        "用 FAME 分数、risk 和 context_budget 控制扩展。",
+        "找到候选球门后，用验证 route 确认。"
+      ],
+      "agent_fit": [
+        "知识网遍历",
+        "3D/2D 导航",
+        "上下文裁剪"
+      ],
+      "failure_modes": [
+        "无作用域遍历",
+        "图爆炸",
+        "只按距离不看风险"
+      ]
+    },
+    {
+      "id": "math-method-bayesian-update",
+      "label": "贝叶斯式证据更新",
+      "abstraction_level": "L4_method",
+      "use_when": "新证据、测试结果或用户反馈需要更新路线置信。",
+      "steps": [
+        "记录先验置信和来源。",
+        "判断新证据强弱。",
+        "区分成功、失败、部分成功和不可判定。",
+        "更新 epsilon、rho、mu 或 risk。",
+        "保留原始证据和更新理由。"
+      ],
+      "agent_fit": [
+        "FAME 参数更新",
+        "工程记忆复盘",
+        "路线权重调整"
+      ],
+      "failure_modes": [
+        "只看最新一次结果",
+        "忽略证据质量",
+        "删除失败样本"
+      ]
+    },
+    {
+      "id": "math-method-optimization",
+      "label": "优化建模",
+      "abstraction_level": "L4_method",
+      "use_when": "需要在多个候选方案中按目标、约束、风险和成本选择。",
+      "steps": [
+        "定义目标函数。",
+        "列出硬约束和软约束。",
+        "归一化不同指标。",
+        "设置风险惩罚项。",
+        "比较局部改进和全局目标。"
+      ],
+      "agent_fit": [
+        "路线选择",
+        "上下文预算分配",
+        "工具调用策略"
+      ],
+      "failure_modes": [
+        "权重任意",
+        "忽略硬约束",
+        "局部最优误判"
+      ]
+    },
+    {
+      "id": "math-method-error-stability",
+      "label": "误差与稳定性分析",
+      "abstraction_level": "L4_method",
+      "use_when": "估计、近似、模型或自动化流程可能受误差传播影响。",
+      "steps": [
+        "列出输入误差来源。",
+        "判断误差是否会放大。",
+        "设置可接受误差界。",
+        "用独立测试或交叉验证确认结果。",
+        "把高误差路线标为高 risk 或低 epsilon。"
+      ],
+      "agent_fit": [
+        "测试解释",
+        "统计评估",
+        "工具结果可信度"
+      ],
+      "failure_modes": [
+        "过度精确",
+        "忽略边界",
+        "没有误差界"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

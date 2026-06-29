@@ -1,0 +1,157 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "label": "横向联想与多路径找球门玩法",
+  "source_refs": [
+    "react-paper",
+    "tree-of-thoughts-paper",
+    "reflexion-paper"
+  ],
+  "purpose": "让 Agent 在不全量加载图谱的前提下，围绕语言树中枢进行有限、多路径、可回溯、可验证的横向联想。",
+  "global_policy": {
+    "center_first": true,
+    "max_candidate_routes": 5,
+    "max_active_routes": 3,
+    "max_subject_hops": 2,
+    "max_association_edges": 12,
+    "require_validation_hook": true,
+    "stop_when": [
+      "route_score_above_threshold",
+      "context_budget_near_limit",
+      "risk_exceeds_threshold",
+      "user_goal_changed"
+    ]
+  },
+  "playbooks": [
+    {
+      "id": "playbook-think-act-observe-summarize",
+      "label": "思考-行动-观察-摘要",
+      "use_when": [
+        "需要工具调用",
+        "需要外部证据",
+        "任务会跨多步执行"
+      ],
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-result-summary",
+        "route-math-evidence-update"
+      ],
+      "steps": [
+        "语言树把用户目标转成当前作用域和候选路线。",
+        "每次行动前只加载本步必要 route、规则和摘要。",
+        "行动后只把观察摘要写回上下文，完整输出放工程记忆。",
+        "观察结果影响下一步路线评分和 FAME 更新候选。"
+      ],
+      "validation_hook": "route-cs-spec-to-test"
+    },
+    {
+      "id": "playbook-multi-path-route-search",
+      "label": "多路径路线搜索",
+      "use_when": [
+        "问题开放",
+        "单一路线不稳定",
+        "需要抽象或创造性组合"
+      ],
+      "route_refs": [
+        "route-language-multi-path-association",
+        "route-math-graph-traversal",
+        "route-math-route-optimization"
+      ],
+      "steps": [
+        "从语言树生成 2 到 5 条候选路线。",
+        "每条路线写明学科、抽象层级、预计收益、风险和验证钩子。",
+        "用 route_score 选择最多 3 条进入试探。",
+        "先执行最低风险、最容易验证的路线。",
+        "失败路线不删除，转入反思或负值 FAME lesson。"
+      ],
+      "validation_hook": "route-logic-argument-check"
+    },
+    {
+      "id": "playbook-find-goal-traversal",
+      "label": "图遍历找球门",
+      "use_when": [
+        "目标清楚但路线未知",
+        "知识网节点多",
+        "需要快速定位可用模块"
+      ],
+      "route_refs": [
+        "route-math-graph-traversal",
+        "route-cs-kg-indexing"
+      ],
+      "steps": [
+        "先固定球门：完成标准、可验证输出、用户约束。",
+        "从语言树按 subject 和 route_id 扩展，不从全图随机游走。",
+        "优先走 contains 和 routes_to，必要时走 associates_with。",
+        "遇到负值 FAME 或高 risk 边时转为警示，不作为主路线。",
+        "找到候选球门后立即生成最小验证动作。"
+      ],
+      "validation_hook": "route-cs-spec-to-test"
+    },
+    {
+      "id": "playbook-analogical-transfer",
+      "label": "类比迁移",
+      "use_when": [
+        "某学科方法可迁移",
+        "当前分支缺少直接规则",
+        "需要创造性组合"
+      ],
+      "route_refs": [
+        "route-language-abstraction-transfer",
+        "route-language-abstraction-to-association"
+      ],
+      "steps": [
+        "把具体问题提升到方法层或原则层。",
+        "寻找相邻学科中同构的变量、约束、反馈或验证结构。",
+        "只迁移结构，不直接迁移未经验证的结论。",
+        "回到原问题生成可测试假设。",
+        "成功迁移增加 nu，失败迁移增加 risk 并保留教训。"
+      ],
+      "validation_hook": "route-logic-knowledge-consistency"
+    },
+    {
+      "id": "playbook-backtrack-on-risk",
+      "label": "风险回溯",
+      "use_when": [
+        "连续失败",
+        "工具风险升高",
+        "路线证据变弱",
+        "上下文超预算"
+      ],
+      "route_refs": [
+        "route-agent-reflection-improvement",
+        "route-negative-fame-lesson",
+        "route-language-intent-to-scope"
+      ],
+      "steps": [
+        "停止扩大搜索或继续高风险调用。",
+        "回到语言树重算作用域和候选路线。",
+        "读取最近负值 FAME lesson 和失败签名。",
+        "选择更小验证动作或请求人工确认。",
+        "把回溯原因写入工程记忆。"
+      ],
+      "validation_hook": "route-logic-failure-diagnosis"
+    },
+    {
+      "id": "playbook-goalpost-first",
+      "label": "球门优先",
+      "use_when": [
+        "任务目标模糊",
+        "容易发散",
+        "准备调用工具",
+        "需要控制上下文"
+      ],
+      "route_refs": [
+        "route-language-goal-backcasting",
+        "route-language-global-situation-model",
+        "route-agent-tool-action-contract"
+      ],
+      "steps": [
+        "先写球门：完成标准、证据、禁止事项。",
+        "倒推最少 subject 和 route refs。",
+        "为每个候选动作绑定工具契约或只读检查。",
+        "如果找不到可验证动作，回到用户目标而不是扩大遍历。"
+      ],
+      "validation_hook": "route-agent-integration-usability-test"
+    }
+  ]
+}

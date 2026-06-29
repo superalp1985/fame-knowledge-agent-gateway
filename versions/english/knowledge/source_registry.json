@@ -1,0 +1,798 @@
+{
+  "edition_id": "english",
+  "policy": {
+    "default_usage": "reference_summary_only",
+    "do_not_copy_full_text_without_review": true,
+    "license_review_required_before_import": true
+  },
+  "sources": [
+    {
+      "id": "cn-gbt-13745-2009",
+      "title": "GB/T 13745-2009 学科分类与代码",
+      "publisher": "国家标准全文公开系统 / 国家标准委",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4C13F521FD6ECB6E5EC026FCD779986E",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science"
+      ],
+      "usage": "taxonomy_anchor",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: cn-gbt-13745-2009."
+    },
+    {
+      "id": "cn-moe-graduate-catalog-2022",
+      "title": "研究生教育学科专业目录（2022年）",
+      "publisher": "国务院学位委员会 / 教育部",
+      "url": "https://www.moe.gov.cn/srcsite/A22/moe_833/202209/t20220914_660828.html",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science"
+      ],
+      "usage": "education_catalog_anchor",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: cn-moe-graduate-catalog-2022."
+    },
+    {
+      "id": "math-msc2020",
+      "title": "Mathematics Subject Classification 2020",
+      "publisher": "Mathematical Reviews / zbMATH",
+      "url": "https://msc2020.org/",
+      "subject_refs": [
+        "mathematics"
+      ],
+      "usage": "taxonomy_anchor",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: math-msc2020."
+    },
+    {
+      "id": "acm-ccs-2012",
+      "title": "2012 ACM Computing Classification System",
+      "publisher": "Association for Computing Machinery",
+      "url": "https://www.acm.org/publications/class-2012",
+      "subject_refs": [
+        "computer-science"
+      ],
+      "usage": "taxonomy_anchor",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: acm-ccs-2012."
+    },
+    {
+      "id": "acm-cs2023",
+      "title": "Computer Science Curricula 2023",
+      "publisher": "ACM / IEEE Computer Society / AAAI",
+      "url": "https://dl.acm.org/doi/10.1145/3664191",
+      "subject_refs": [
+        "computer-science"
+      ],
+      "usage": "curriculum_anchor",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: acm-cs2023."
+    },
+    {
+      "id": "sep-logic",
+      "title": "Stanford Encyclopedia of Philosophy: Logic",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/logic-classical/",
+      "subject_refs": [
+        "logic"
+      ],
+      "usage": "concept_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: sep-logic."
+    },
+    {
+      "id": "open-logic-project",
+      "title": "Open Logic Project",
+      "publisher": "Open Logic Project",
+      "url": "https://openlogicproject.org/",
+      "subject_refs": [
+        "logic"
+      ],
+      "usage": "open_textbook_reference",
+      "license_review_status": "pending",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: open-logic-project."
+    },
+    {
+      "id": "universal-dependencies",
+      "title": "Universal Dependencies",
+      "publisher": "Universal Dependencies contributors",
+      "url": "https://universaldependencies.org/",
+      "subject_refs": [
+        "language-tree-hub",
+        "computer-science"
+      ],
+      "usage": "grammar_annotation_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: universal-dependencies."
+    },
+    {
+      "id": "princeton-wordnet",
+      "title": "Princeton WordNet",
+      "publisher": "Princeton University",
+      "url": "https://wordnet.princeton.edu/",
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "usage": "lexical_semantic_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: princeton-wordnet."
+    },
+    {
+      "id": "open-english-wordnet",
+      "title": "Open English WordNet",
+      "publisher": "Open English WordNet Community",
+      "url": "https://en-word.net/",
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "usage": "candidate_lexical_resource",
+      "license_review_status": "pending",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: open-english-wordnet."
+    },
+    {
+      "id": "conceptnet",
+      "title": "ConceptNet",
+      "publisher": "ConceptNet contributors",
+      "url": "https://conceptnet.io/",
+      "subject_refs": [
+        "language-tree-hub",
+        "computer-science"
+      ],
+      "usage": "commonsense_association_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: conceptnet."
+    },
+    {
+      "id": "wikidata",
+      "title": "Wikidata",
+      "publisher": "Wikimedia Foundation / Wikidata contributors",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "subject_refs": [
+        "language-tree-hub",
+        "logic",
+        "mathematics",
+        "computer-science"
+      ],
+      "usage": "candidate_entity_graph",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: wikidata."
+    },
+    {
+      "id": "openalex",
+      "title": "OpenAlex Snapshot",
+      "publisher": "OurResearch",
+      "url": "https://docs.openalex.org/download-all-data/openalex-snapshot",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_scholarly_metadata",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openalex."
+    },
+    {
+      "id": "opencitations",
+      "title": "OpenCitations",
+      "publisher": "OpenCitations",
+      "url": "https://opencitations.net/download",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science"
+      ],
+      "usage": "candidate_citation_graph",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: opencitations."
+    },
+    {
+      "id": "dbpedia",
+      "title": "DBpedia",
+      "publisher": "DBpedia Association",
+      "url": "https://www.dbpedia.org/resources/latest-core/",
+      "subject_refs": [
+        "language-tree-hub",
+        "computer-science"
+      ],
+      "usage": "candidate_linked_data",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: dbpedia."
+    },
+    {
+      "id": "loc-linked-data",
+      "title": "Library of Congress Linked Data Service",
+      "publisher": "Library of Congress",
+      "url": "https://id.loc.gov/",
+      "subject_refs": [
+        "language-tree-hub",
+        "computer-science"
+      ],
+      "usage": "candidate_controlled_vocabulary",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: loc-linked-data."
+    },
+    {
+      "id": "openstax-calculus",
+      "title": "OpenStax Calculus",
+      "publisher": "OpenStax / Rice University",
+      "url": "https://openstax.org/details/books/calculus-volume-1",
+      "subject_refs": [
+        "mathematics"
+      ],
+      "usage": "open_textbook_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openstax-calculus."
+    },
+    {
+      "id": "openintro-statistics",
+      "title": "OpenIntro Statistics",
+      "publisher": "OpenIntro",
+      "url": "https://www.openintro.org/book/os/",
+      "subject_refs": [
+        "mathematics"
+      ],
+      "usage": "statistics_textbook_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openintro-statistics."
+    },
+    {
+      "id": "nist-dlmf",
+      "title": "NIST Digital Library of Mathematical Functions",
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://dlmf.nist.gov/",
+      "subject_refs": [
+        "mathematics"
+      ],
+      "usage": "mathematical_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: nist-dlmf."
+    },
+    {
+      "id": "python-docs",
+      "title": "Python Documentation",
+      "publisher": "Python Software Foundation",
+      "url": "https://docs.python.org/3/",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "programming_language_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: python-docs."
+    },
+    {
+      "id": "mdn-web-docs",
+      "title": "MDN Web Docs",
+      "publisher": "Mozilla Contributors",
+      "url": "https://developer.mozilla.org/",
+      "subject_refs": [
+        "computer-science"
+      ],
+      "usage": "web_platform_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: mdn-web-docs."
+    },
+    {
+      "id": "pro-git-book",
+      "title": "Pro Git",
+      "publisher": "Scott Chacon, Ben Straub / Git project",
+      "url": "https://git-scm.com/book/en/v2",
+      "subject_refs": [
+        "computer-science"
+      ],
+      "usage": "version_control_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: pro-git-book."
+    },
+    {
+      "id": "owasp-cheat-sheet-series",
+      "title": "OWASP Cheat Sheet Series",
+      "publisher": "OWASP Foundation",
+      "url": "https://cheatsheetseries.owasp.org/",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "security_practice_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: owasp-cheat-sheet-series."
+    },
+    {
+      "id": "nist-ssdf-sp800-218",
+      "title": "Secure Software Development Framework (SSDF), NIST SP 800-218",
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "secure_software_development_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: nist-ssdf-sp800-218."
+    },
+    {
+      "id": "mcp-docs-intro",
+      "title": "Model Context Protocol Documentation",
+      "publisher": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "agent_protocol_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: mcp-docs-intro."
+    },
+    {
+      "id": "mcp-tools-spec",
+      "title": "Model Context Protocol Tools Specification",
+      "publisher": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_schema_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: mcp-tools-spec."
+    },
+    {
+      "id": "openai-tools-docs",
+      "title": "OpenAI API Tools and Function Calling",
+      "publisher": "OpenAI",
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_calling_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openai-tools-docs."
+    },
+    {
+      "id": "openai-agents-sdk-guardrails",
+      "title": "OpenAI Agents SDK Guardrails",
+      "publisher": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/guardrails/",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_guardrail_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openai-agents-sdk-guardrails."
+    },
+    {
+      "id": "anthropic-tool-use",
+      "title": "Anthropic Tool Use",
+      "publisher": "Anthropic",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_calling_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: anthropic-tool-use."
+    },
+    {
+      "id": "langgraph-memory-docs",
+      "title": "LangGraph Memory Overview",
+      "publisher": "LangChain",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "agent_memory_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: langgraph-memory-docs."
+    },
+    {
+      "id": "langchain-tool-calling",
+      "title": "LangChain Tool Calling",
+      "publisher": "LangChain",
+      "url": "https://docs.langchain.com/oss/python/langchain/tools",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_abstraction_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: langchain-tool-calling."
+    },
+    {
+      "id": "llamaindex-agent-docs",
+      "title": "LlamaIndex Building an Agent",
+      "publisher": "LlamaIndex",
+      "url": "https://developers.llamaindex.ai/python/framework/understanding/agent/",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "agent_workflow_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: llamaindex-agent-docs."
+    },
+    {
+      "id": "react-paper",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "subject_refs": [
+        "language-tree-hub",
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "reasoning_action_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: react-paper."
+    },
+    {
+      "id": "reflexion-paper",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2303.11366",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "reflection_memory_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: reflexion-paper."
+    },
+    {
+      "id": "tree-of-thoughts-paper",
+      "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2305.10601",
+      "subject_refs": [
+        "language-tree-hub",
+        "mathematics",
+        "logic"
+      ],
+      "usage": "multi_path_reasoning_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: tree-of-thoughts-paper."
+    },
+    {
+      "id": "self-refine-paper",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2303.17651",
+      "subject_refs": [
+        "agent-tooling",
+        "logic"
+      ],
+      "usage": "iterative_refinement_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: self-refine-paper."
+    },
+    {
+      "id": "toolformer-paper",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2302.04761",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "tool_use_learning_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: toolformer-paper."
+    },
+    {
+      "id": "swe-agent-paper",
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2405.15793",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "agent_computer_interface_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: swe-agent-paper."
+    },
+    {
+      "id": "agentbench-paper",
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2308.03688",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "agent_evaluation_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: agentbench-paper."
+    },
+    {
+      "id": "openhands",
+      "title": "OpenHands",
+      "publisher": "OpenHands contributors",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "open_source_agent_platform_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openhands."
+    },
+    {
+      "id": "software-heritage",
+      "title": "Software Heritage Archive",
+      "publisher": "Software Heritage",
+      "url": "https://www.softwareheritage.org/",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_software_archive",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: software-heritage."
+    },
+    {
+      "id": "github-archive",
+      "title": "GitHub Archive",
+      "publisher": "GitHub Archive",
+      "url": "https://www.gharchive.org/",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_open_source_event_metadata",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: github-archive."
+    },
+    {
+      "id": "stack-exchange-data-dump",
+      "title": "Stack Exchange Data Dump",
+      "publisher": "Stack Exchange",
+      "url": "https://archive.org/details/stackexchange",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling",
+        "powershell-safety"
+      ],
+      "usage": "candidate_qa_error_patterns",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: stack-exchange-data-dump."
+    },
+    {
+      "id": "libraries-io-data",
+      "title": "Libraries.io Open Data",
+      "publisher": "Libraries.io",
+      "url": "https://libraries.io/data",
+      "subject_refs": [
+        "computer-science"
+      ],
+      "usage": "candidate_package_ecosystem_metadata",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: libraries-io-data."
+    },
+    {
+      "id": "arxiv-bulk-data",
+      "title": "arXiv Bulk Data Access",
+      "publisher": "arXiv",
+      "url": "https://info.arxiv.org/help/bulk_data.html",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_research_metadata",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: arxiv-bulk-data."
+    },
+    {
+      "id": "s2orc",
+      "title": "Semantic Scholar Open Research Corpus",
+      "publisher": "Allen Institute for AI",
+      "url": "https://github.com/allenai/s2orc",
+      "subject_refs": [
+        "logic",
+        "mathematics",
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_scholarly_corpus",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: s2orc."
+    },
+    {
+      "id": "papers-with-code",
+      "title": "Papers with Code",
+      "publisher": "Papers with Code",
+      "url": "https://paperswithcode.com/datasets",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "candidate_ai_task_dataset_index",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: papers-with-code."
+    },
+    {
+      "id": "ms-powershell-quoting-rules",
+      "title": "about_Quoting_Rules",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_quoting_rules",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "syntax_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-quoting-rules."
+    },
+    {
+      "id": "ms-powershell-parsing",
+      "title": "about_Parsing",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parsing",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "syntax_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-parsing."
+    },
+    {
+      "id": "ms-powershell-environment-variables",
+      "title": "about_Environment_Variables",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "runtime_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-environment-variables."
+    },
+    {
+      "id": "ms-powershell-execution-policies",
+      "title": "about_Execution_Policies",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "safety_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-execution-policies."
+    },
+    {
+      "id": "ms-powershell-redirection",
+      "title": "about_Redirection",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "io_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-redirection."
+    },
+    {
+      "id": "cc-cedict",
+      "title": "CC-CEDICT",
+      "publisher": "MDBG / CC-CEDICT maintainers",
+      "url": "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "usage": "candidate_lexicon",
+      "license_review_status": "pending",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: cc-cedict."
+    },
+    {
+      "id": "jieba",
+      "title": "jieba 中文分词",
+      "publisher": "fxsjy / jieba contributors",
+      "url": "https://github.com/fxsjy/jieba",
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "usage": "candidate_segmentation_tool",
+      "license_review_status": "pending",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: jieba."
+    },
+    {
+      "id": "opencc",
+      "title": "OpenCC",
+      "publisher": "BYVoid / OpenCC contributors",
+      "url": "https://github.com/BYVoid/OpenCC",
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "usage": "candidate_chinese_conversion_tool",
+      "license_review_status": "pending",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: opencc."
+    },
+    {
+      "id": "ms-powershell-character-encoding",
+      "title": "about_Character_Encoding",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "encoding_rule_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-character-encoding."
+    },
+    {
+      "id": "ms-powershell-preference-variables",
+      "title": "about_Preference_Variables",
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_preference_variables",
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "usage": "encoding_and_output_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: ms-powershell-preference-variables."
+    },
+    {
+      "id": "mcp-spec-2025-06-18",
+      "title": "Model Context Protocol Specification 2025-06-18",
+      "publisher": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "agent_protocol_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: mcp-spec-2025-06-18."
+    },
+    {
+      "id": "openai-agents-sdk-human-review",
+      "title": "OpenAI Agents SDK Human-in-the-loop",
+      "publisher": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/human_in_the_loop/",
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "usage": "human_review_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: openai-agents-sdk-human-review."
+    },
+    {
+      "id": "langgraph-persistence-docs",
+      "title": "LangGraph Persistence",
+      "publisher": "LangChain",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "agent_memory_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: langgraph-persistence-docs."
+    },
+    {
+      "id": "github-actions-security-hardening",
+      "title": "Security hardening for GitHub Actions",
+      "publisher": "GitHub Docs",
+      "url": "https://docs.github.com/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions",
+      "subject_refs": [
+        "computer-science",
+        "agent-tooling"
+      ],
+      "usage": "ci_security_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: github-actions-security-hardening."
+    },
+    {
+      "id": "swe-agent-github",
+      "title": "SWE-agent",
+      "publisher": "SWE-agent contributors",
+      "url": "https://github.com/swe-agent/swe-agent",
+      "subject_refs": [
+        "agent-tooling",
+        "computer-science"
+      ],
+      "usage": "agent_computer_interface_reference",
+      "license_review_status": "pending_reference_only",
+      "notes": "Reference-only source for the English open edition. Keep summaries self-authored and review license before any data import. Source id mirrors chinese-open: swe-agent-github."
+    }
+  ]
+}

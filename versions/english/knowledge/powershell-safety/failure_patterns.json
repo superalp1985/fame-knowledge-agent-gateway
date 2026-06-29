@@ -1,0 +1,170 @@
+{
+  "edition_id": "english",
+  "subject": "powershell-safety",
+  "patterns": [
+    {
+      "id": "ps-failure-literalpath-multiple",
+      "label": "LiteralPath 多路径误用",
+      "risk": 0.45,
+      "delta": -0.25,
+      "summary": "某些命令或参数组合不支持期望中的 LiteralPath 多路径写法，导致创建或读取失败。",
+      "prevention": [
+        "先查 cmdlet 参数说明。",
+        "多路径创建可使用 -Path 数组或循环。",
+        "复杂路径写入前先做只读探测。"
+      ],
+      "source_refs": [
+        "ms-powershell-parsing"
+      ],
+      "content_refs": [
+        "cu-ps-new-item-path-001"
+      ]
+    },
+    {
+      "id": "ps-failure-quoting-expansion",
+      "label": "引号导致变量未展开或误展开",
+      "risk": 0.55,
+      "delta": -0.35,
+      "summary": "单引号会保持字面量，双引号会展开变量；选错会导致路径、参数或 JSON 内容错误。",
+      "prevention": [
+        "不需要变量展开时优先单引号。",
+        "需要变量展开时使用双引号，并检查嵌套引号。",
+        "JSON 和脚本片段优先使用结构化生成或 here-string。"
+      ],
+      "source_refs": [
+        "ms-powershell-quoting-rules"
+      ],
+      "content_refs": [
+        "cu-ps-quoting-001"
+      ]
+    },
+    {
+      "id": "ps-failure-cross-shell-delete",
+      "label": "跨 shell 拼接删除命令",
+      "risk": 0.95,
+      "delta": -0.75,
+      "summary": "在 PowerShell 中枚举路径后拼接给 cmd、bash 或其他 shell 删除，容易造成转义错误和越界删除。",
+      "prevention": [
+        "文件操作保持一个 shell 端到端完成。",
+        "Windows 下优先用 Remove-Item -LiteralPath。",
+        "递归删除前解析绝对路径并确认边界。"
+      ],
+      "source_refs": [
+        "ms-powershell-parsing"
+      ],
+      "content_refs": [
+        "cu-ps-filesystem-safety-001"
+      ]
+    },
+    {
+      "id": "ps-failure-env-scope",
+      "label": "环境变量作用域误判",
+      "risk": 0.4,
+      "delta": -0.25,
+      "summary": "设置环境变量后误以为对所有进程永久生效，导致后续命令读取不到。",
+      "prevention": [
+        "明确进程、用户或机器作用域。",
+        "临时命令优先在同一进程中设置并执行。",
+        "需要持久化时明确使用对应 API 并记录副作用。"
+      ],
+      "source_refs": [
+        "ms-powershell-environment-variables"
+      ],
+      "content_refs": [
+        "cu-ps-env-001"
+      ]
+    },
+    {
+      "id": "ps-failure-working-dir-relative-path",
+      "label": "相对路径依赖错误工作目录",
+      "risk": 0.6,
+      "delta": -0.35,
+      "summary": "命令依赖相对路径，但当前目录不是项目根或目标目录，导致读取、写入、测试目标错误。",
+      "prevention": [
+        "命令调用显式设置工作目录。",
+        "相对路径执行前用 Test-Path 或目录列表确认。",
+        "结果摘要记录 cwd。"
+      ],
+      "source_refs": [
+        "ms-powershell-parsing"
+      ],
+      "content_refs": [
+        "cu-agent-working-directory-001"
+      ]
+    },
+    {
+      "id": "ps-failure-redirection-stream-miss",
+      "label": "漏采错误流",
+      "risk": 0.5,
+      "delta": -0.3,
+      "summary": "只看标准输出，忽略错误流或警告流，导致误判命令成功或遗漏关键失败原因。",
+      "prevention": [
+        "测试命令必须记录退出码。",
+        "需要排查时捕获错误流摘要。",
+        "不要只凭是否有输出判断成功。"
+      ],
+      "source_refs": [
+        "ms-powershell-redirection"
+      ],
+      "content_refs": [
+        "cu-ps-redirection-streams-001"
+      ]
+    },
+    {
+      "id": "ps-failure-here-string-json",
+      "label": "here-string 写 JSON 出错",
+      "risk": 0.58,
+      "delta": -0.35,
+      "summary": "使用 here-string 写 JSON 或脚本时，起止标记、变量展开、缩进或编码出错，造成文件不可解析。",
+      "prevention": [
+        "结构化数据优先用结构化编辑工具。",
+        "写入后立即 JSON parse。",
+        "需要字面内容时确认单引号 here-string。"
+      ],
+      "source_refs": [
+        "ms-powershell-quoting-rules"
+      ],
+      "content_refs": [
+        "cu-ps-here-string-001"
+      ]
+    },
+    {
+      "id": "ps-failure-output-encoding-mojibake",
+      "label": "PowerShell 中文输出乱码",
+      "risk": 0.52,
+      "delta": -0.32,
+      "summary": "终端、管道或日志显示层使用了错误编码，导致中文输出出现乱码；源文件可能仍是正常 UTF-8。",
+      "prevention": [
+        "优先记录 Console.OutputEncoding、$OutputEncoding 和 PowerShell 版本。",
+        "中文证据用 JSON 或 UTF-8 文件往返验证。",
+        "不要把 PowerShell 屏幕乱码直接当成文件损坏。"
+      ],
+      "source_refs": [
+        "ms-powershell-character-encoding",
+        "ms-powershell-preference-variables"
+      ],
+      "content_refs": [
+        "cu-ps-encoding-output-001"
+      ]
+    },
+    {
+      "id": "tool-failure-terminal-mojibake-misdiagnosis",
+      "label": "把终端乱码误判为源文件损坏",
+      "risk": 0.58,
+      "delta": -0.38,
+      "summary": "Agent 看到终端显示乱码后直接重写文件或修改内容，实际问题可能只是终端编码/解码层。",
+      "prevention": [
+        "先用 Node 或结构化解析器按 UTF-8 读取文件确认内容。",
+        "对比 terminal/json/file 三种证据。",
+        "只有文件字节或解析确实失败时才进入修复动作。"
+      ],
+      "source_refs": [
+        "ms-powershell-character-encoding"
+      ],
+      "content_refs": [
+        "cu-agent-real-eval-encoding-001"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

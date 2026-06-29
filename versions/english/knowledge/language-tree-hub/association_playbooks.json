@@ -1,0 +1,23 @@
+{
+  "edition_id": "english",
+  "playbooks": [
+    {
+      "id": "playbook-tool-error-to-logic",
+      "steps": [
+        "Normalize failure signature",
+        "Check preconditions",
+        "Run minimal distinguishing test",
+        "Write negative FAME lesson"
+      ]
+    },
+    {
+      "id": "playbook-route-search",
+      "steps": [
+        "Select goal gate",
+        "List candidate routes",
+        "Score by FAME and context cost",
+        "Keep top routes with validation"
+      ]
+    }
+  ]
+}

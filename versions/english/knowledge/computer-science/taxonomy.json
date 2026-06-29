@@ -1,0 +1,406 @@
+{
+  "edition_id": "english",
+  "subject": "computer-science",
+  "label": "计算机科学",
+  "source_refs": [
+    "cn-gbt-13745-2009",
+    "cn-moe-graduate-catalog-2022",
+    "acm-ccs-2012",
+    "acm-cs2023"
+  ],
+  "taxonomy": [
+    {
+      "id": "cs-theory",
+      "label": "理论计算机科学",
+      "abstraction_level": "L2_field",
+      "summary": "研究计算、算法、复杂性、形式语言和可判定性等基础问题。",
+      "children": [
+        {
+          "id": "cs-algorithms",
+          "label": "算法",
+          "abstraction_level": "L3_topic",
+          "summary": "研究问题求解步骤、正确性、复杂度和优化。",
+          "children": [
+            {
+              "id": "cs-algorithm-correctness",
+              "label": "算法正确性",
+              "abstraction_level": "L4_method",
+              "summary": "用前后条件、不变量、归纳或反例证明算法是否满足目标。"
+            },
+            {
+              "id": "cs-algorithm-complexity",
+              "label": "复杂度分析",
+              "abstraction_level": "L4_method",
+              "summary": "评估时间、空间和增长阶，避免路线在大图或大项目中爆炸。"
+            },
+            {
+              "id": "cs-search-routing",
+              "label": "搜索与路由",
+              "abstraction_level": "L4_method",
+              "summary": "把问题转成状态、邻接、代价和停止条件，服务知识图遍历。"
+            }
+          ]
+        },
+        {
+          "id": "cs-complexity",
+          "label": "计算复杂性",
+          "abstraction_level": "L3_topic",
+          "summary": "研究计算资源、难度分类和可计算边界。",
+          "children": [
+            {
+              "id": "cs-resource-bound",
+              "label": "资源边界",
+              "abstraction_level": "L4_method",
+              "summary": "为内存、时间、上下文 token、网络和存储设置预算。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-software-engineering",
+      "label": "软件与工程",
+      "abstraction_level": "L2_field",
+      "summary": "研究需求、设计、实现、测试、维护、协作和交付。",
+      "children": [
+        {
+          "id": "cs-requirements",
+          "label": "需求与规格",
+          "abstraction_level": "L3_topic",
+          "summary": "把用户目标、边界、约束和完成标准写成可验证规格。",
+          "children": [
+            {
+              "id": "cs-acceptance-criteria",
+              "label": "验收标准",
+              "abstraction_level": "L4_method",
+              "summary": "明确什么算完成，以及如何通过测试、截图、构建或人工检查验证。"
+            },
+            {
+              "id": "cs-scope-control",
+              "label": "范围控制",
+              "abstraction_level": "L4_method",
+              "summary": "用项目、模块、文件和路线作用域避免无关改动。"
+            }
+          ]
+        },
+        {
+          "id": "cs-programming-languages",
+          "label": "程序设计语言",
+          "abstraction_level": "L3_topic",
+          "summary": "研究语言语法、语义、类型系统、运行时和编程范式。",
+          "children": [
+            {
+              "id": "cs-type-contract",
+              "label": "类型与契约",
+              "abstraction_level": "L4_method",
+              "summary": "用类型、schema、接口和约束降低工具调用和代码修改错误。"
+            },
+            {
+              "id": "cs-runtime-semantics",
+              "label": "运行时语义",
+              "abstraction_level": "L4_method",
+              "summary": "理解执行环境、模块系统、依赖和副作用。"
+            }
+          ]
+        },
+        {
+          "id": "cs-software-testing",
+          "label": "软件测试",
+          "abstraction_level": "L3_topic",
+          "summary": "通过单元、集成、端到端、静态分析和回归测试验证软件。",
+          "children": [
+            {
+              "id": "cs-test-pyramid",
+              "label": "测试分层",
+              "abstraction_level": "L4_method",
+              "summary": "按单元、集成、端到端、烟测和发布检查选择合适测试。"
+            },
+            {
+              "id": "cs-regression-testing",
+              "label": "回归测试",
+              "abstraction_level": "L4_method",
+              "summary": "修改后验证既有功能没有被破坏，并记录证据。"
+            },
+            {
+              "id": "cs-test-oracle",
+              "label": "测试判定器",
+              "abstraction_level": "L4_method",
+              "summary": "定义如何判断输出正确，避免只看命令是否退出。"
+            }
+          ]
+        },
+        {
+          "id": "cs-release-engineering",
+          "label": "发布工程",
+          "abstraction_level": "L3_topic",
+          "summary": "管理构建、版本、许可证、安全检查和发布流程。",
+          "children": [
+            {
+              "id": "cs-release-checklist",
+              "label": "发布检查清单",
+              "abstraction_level": "L4_method",
+              "summary": "检查测试、构建、许可证、密钥、文档和版本边界。"
+            },
+            {
+              "id": "cs-ci-gates",
+              "label": "CI 门禁",
+              "abstraction_level": "L4_method",
+              "summary": "用自动化检查阻止不符合发布条件的改动进入主线。"
+            },
+            {
+              "id": "cs-ci-security-hardening",
+              "label": "CI 安全加固",
+              "abstraction_level": "L4_method",
+              "summary": "限制 CI 权限、保护 secrets、审查 action 和发布路径。"
+            },
+            {
+              "id": "cs-release-artifact-provenance",
+              "label": "发布产物来源证明",
+              "abstraction_level": "L4_method",
+              "summary": "记录 release assets、portable zip、Docker image 和安装脚本的来源、版本和校验结果。"
+            },
+            {
+              "id": "cs-open-source-governance",
+              "label": "开源治理",
+              "abstraction_level": "L4_method",
+              "summary": "保留许可证、贡献、发布、安全和文档治理，但不扩展到泛历史政治社会学科。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-systems-networks",
+      "label": "系统与网络",
+      "abstraction_level": "L2_field",
+      "summary": "研究操作系统、分布式系统、网络、并发和资源管理。",
+      "children": [
+        {
+          "id": "cs-operating-systems",
+          "label": "操作系统",
+          "abstraction_level": "L3_topic",
+          "summary": "研究进程、内存、文件系统、调度和安全边界。",
+          "children": [
+            {
+              "id": "cs-process-environment",
+              "label": "进程与环境",
+              "abstraction_level": "L4_method",
+              "summary": "理解命令执行、环境变量、工作目录和子进程继承。"
+            },
+            {
+              "id": "cs-filesystem-boundary",
+              "label": "文件系统边界",
+              "abstraction_level": "L4_method",
+              "summary": "用路径解析、权限和工作区边界控制文件操作风险。"
+            }
+          ]
+        },
+        {
+          "id": "cs-networking",
+          "label": "计算机网络",
+          "abstraction_level": "L3_topic",
+          "summary": "研究协议、路由、传输、安全和网络应用。",
+          "children": [
+            {
+              "id": "cs-network-side-effect",
+              "label": "网络副作用",
+              "abstraction_level": "L4_method",
+              "summary": "下载、上传、发布和远程调用都需要来源、权限、审计和回滚策略。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-data-information",
+      "label": "数据与信息系统",
+      "abstraction_level": "L2_field",
+      "summary": "研究数据建模、数据库、信息检索、知识表示和数据治理。",
+      "children": [
+        {
+          "id": "cs-databases",
+          "label": "数据库",
+          "abstraction_level": "L3_topic",
+          "summary": "研究数据模型、查询、事务、索引和存储。",
+          "children": [
+            {
+              "id": "cs-schema-design",
+              "label": "schema 设计",
+              "abstraction_level": "L4_method",
+              "summary": "用结构化字段、约束和版本管理知识单元、资产和工程记忆。"
+            },
+            {
+              "id": "cs-transaction-boundary",
+              "label": "事务边界",
+              "abstraction_level": "L4_method",
+              "summary": "对写入、同步和回滚设置一致性边界。"
+            }
+          ]
+        },
+        {
+          "id": "cs-information-retrieval",
+          "label": "信息检索",
+          "abstraction_level": "L3_topic",
+          "summary": "研究索引、排序、查询理解和相关性。",
+          "children": [
+            {
+              "id": "cs-inverted-index",
+              "label": "倒排索引",
+              "abstraction_level": "L4_method",
+              "summary": "用词项到文档或节点的映射支持快速定位。"
+            },
+            {
+              "id": "cs-semantic-index",
+              "label": "语义索引",
+              "abstraction_level": "L4_method",
+              "summary": "用术语、别名、摘要和向量候选提高跨表达查找能力。"
+            },
+            {
+              "id": "cs-scoped-retrieval",
+              "label": "作用域检索",
+              "abstraction_level": "L4_method",
+              "summary": "按 project_id、subject、route_id 和任务目标裁剪结果。"
+            }
+          ]
+        },
+        {
+          "id": "cs-knowledge-graphs",
+          "label": "知识图谱",
+          "abstraction_level": "L3_topic",
+          "summary": "用节点、边、类型、规则和来源组织可推理知识。",
+          "children": [
+            {
+              "id": "cs-kg-light-node",
+              "label": "轻量图节点",
+              "abstraction_level": "L4_method",
+              "summary": "图节点只保存摘要、来源、FAME 和索引引用，详细内容进数据库。"
+            },
+            {
+              "id": "cs-kg-edge-semantics",
+              "label": "边语义",
+              "abstraction_level": "L4_method",
+              "summary": "用 contains、routes_to、associates_with、validates_with 等边表达可遍历关系。"
+            },
+            {
+              "id": "cs-kg-versioning",
+              "label": "图谱版本与同步",
+              "abstraction_level": "L4_method",
+              "summary": "记录图谱变更、数据库同步和用户手动编辑的版本边界。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-ai",
+      "label": "人工智能",
+      "abstraction_level": "L2_field",
+      "summary": "研究感知、学习、推理、规划、语言和智能体系统。",
+      "children": [
+        {
+          "id": "cs-machine-learning",
+          "label": "机器学习",
+          "abstraction_level": "L3_topic",
+          "summary": "从数据中学习模型、表示和决策规则。",
+          "children": [
+            {
+              "id": "cs-evaluation-metrics",
+              "label": "评估指标",
+              "abstraction_level": "L4_method",
+              "summary": "用准确率、召回、成功率、复发率、token 节省等指标衡量系统。"
+            }
+          ]
+        },
+        {
+          "id": "cs-agents",
+          "label": "智能体系统",
+          "abstraction_level": "L3_topic",
+          "summary": "研究目标、环境、行动、工具、记忆和反馈。",
+          "children": [
+            {
+              "id": "cs-agent-loop",
+              "label": "Agent 循环",
+              "abstraction_level": "L4_method",
+              "summary": "目标对齐、路由、计划、工具调用、观察、记忆和迭代。"
+            },
+            {
+              "id": "cs-agent-memory",
+              "label": "Agent 外部记忆",
+              "abstraction_level": "L4_method",
+              "summary": "把长轨迹、失败、证据和工程上下文保存在外部系统中。"
+            },
+            {
+              "id": "cs-agent-tool-governance",
+              "label": "工具治理",
+              "abstraction_level": "L4_method",
+              "summary": "用 ProposedAction、ApprovedAction 和 Tool Gateway 控制副作用。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-security-privacy",
+      "label": "安全与隐私",
+      "abstraction_level": "L2_field",
+      "summary": "研究系统安全、密码、访问控制、威胁建模和隐私保护。",
+      "children": [
+        {
+          "id": "cs-secure-engineering",
+          "label": "安全工程",
+          "abstraction_level": "L3_topic",
+          "summary": "把安全要求、审计、最小权限和防护机制嵌入工程流程。",
+          "children": [
+            {
+              "id": "cs-least-privilege",
+              "label": "最小权限",
+              "abstraction_level": "L4_method",
+              "summary": "只授予完成当前任务所需的最小工具、路径和网络权限。"
+            },
+            {
+              "id": "cs-secret-scanning",
+              "label": "密钥扫描",
+              "abstraction_level": "L4_method",
+              "summary": "发布前检查 API key、token、私有路径和敏感数据。"
+            },
+            {
+              "id": "cs-audit-trail",
+              "label": "审计轨迹",
+              "abstraction_level": "L4_method",
+              "summary": "记录谁在何时因何目标调用了什么工具并产生什么结果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-human-centered",
+      "label": "人机交互",
+      "abstraction_level": "L2_field",
+      "summary": "研究用户、界面、可用性、交互系统和体验评估。",
+      "children": [
+        {
+          "id": "cs-visualization",
+          "label": "信息可视化",
+          "abstraction_level": "L3_topic",
+          "summary": "用视觉结构帮助理解数据、关系和状态。",
+          "children": [
+            {
+              "id": "cs-graph-visualization",
+              "label": "图可视化",
+              "abstraction_level": "L4_method",
+              "summary": "用 3D 总览和 2D 局部图结合展示多层知识结构。"
+            },
+            {
+              "id": "cs-search-navigation",
+              "label": "搜索与导航",
+              "abstraction_level": "L4_method",
+              "summary": "通过搜索、过滤、聚焦和双击下钻降低大图认知负担。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

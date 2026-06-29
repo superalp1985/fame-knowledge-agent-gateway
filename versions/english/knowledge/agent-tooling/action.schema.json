@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fame.local/schemas/chinese-open-agent-action.schema.json",
+  "title": "FAME Agent Tool Action Contract",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/proposedAction"
+    },
+    {
+      "$ref": "#/$defs/approvedAction"
+    },
+    {
+      "$ref": "#/$defs/toolResultSummary"
+    }
+  ],
+  "$defs": {
+    "riskLevel": {
+      "enum": [
+        "read_only",
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "proposedAction": {
+      "type": "object",
+      "required": [
+        "kind",
+        "action_id",
+        "project_id",
+        "task_id",
+        "route_refs",
+        "tool_name",
+        "operation_type",
+        "scope",
+        "arguments",
+        "risk_level",
+        "expected_output",
+        "validation_plan",
+        "rollback_plan"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ProposedAction"
+        },
+        "action_id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "route_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "tool_name": {
+          "type": "string"
+        },
+        "operation_type": {
+          "enum": [
+            "read",
+            "write",
+            "delete",
+            "move",
+            "network",
+            "execute",
+            "test",
+            "build",
+            "publish"
+          ]
+        },
+        "scope": {
+          "type": "object",
+          "required": [
+            "working_directory",
+            "paths",
+            "subjects",
+            "allowed_side_effects"
+          ],
+          "properties": {
+            "working_directory": {
+              "type": "string"
+            },
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "subjects": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "allowed_side_effects": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "arguments": {
+          "type": "object"
+        },
+        "risk_level": {
+          "$ref": "#/$defs/riskLevel"
+        },
+        "expected_output": {
+          "type": "string"
+        },
+        "validation_plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "rollback_plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requires_approval": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "approvedAction": {
+      "type": "object",
+      "required": [
+        "kind",
+        "action_id",
+        "proposed_action_id",
+        "approval_id",
+        "approved_by",
+        "approved_at",
+        "risk_level",
+        "constraints"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ApprovedAction"
+        },
+        "action_id": {
+          "type": "string"
+        },
+        "proposed_action_id": {
+          "type": "string"
+        },
+        "approval_id": {
+          "type": "string"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approved_at": {
+          "type": "string"
+        },
+        "risk_level": {
+          "$ref": "#/$defs/riskLevel"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "toolResultSummary": {
+      "type": "object",
+      "required": [
+        "kind",
+        "action_id",
+        "tool_name",
+        "status",
+        "summary",
+        "evidence",
+        "errors",
+        "next_steps",
+        "fame_update_candidates"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ToolResultSummary"
+        },
+        "action_id": {
+          "type": "string"
+        },
+        "tool_name": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "success",
+            "failure",
+            "partial",
+            "skipped"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "next_steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fame_update_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "route_ref",
+              "delta",
+              "reason"
+            ],
+            "properties": {
+              "route_ref": {
+                "type": "string"
+              },
+              "delta": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "edition_id": "english"
+}

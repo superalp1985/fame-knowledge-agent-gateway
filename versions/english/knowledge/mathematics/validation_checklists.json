@@ -1,0 +1,127 @@
+{
+  "edition_id": "english",
+  "subject": "mathematics",
+  "checklists": [
+    {
+      "id": "math-check-modeling",
+      "label": "建模检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-math-modeling-abstraction"
+      ],
+      "items": [
+        {
+          "id": "model-goal",
+          "question": "目标函数或成功标准是否明确？"
+        },
+        {
+          "id": "model-variables",
+          "question": "变量、参数、可控项和不可控项是否区分？"
+        },
+        {
+          "id": "model-constraints",
+          "question": "硬约束、软约束和边界条件是否列出？"
+        },
+        {
+          "id": "model-assumptions",
+          "question": "假设是否写明，是否会随时间或项目环境变化？"
+        },
+        {
+          "id": "model-validation",
+          "question": "模型结果如何验证，是否有反例或误差界？"
+        }
+      ]
+    },
+    {
+      "id": "math-check-graph-traversal",
+      "label": "图遍历找球门检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-math-graph-traversal"
+      ],
+      "items": [
+        {
+          "id": "graph-scope",
+          "question": "是否已限定 project_id、subject、route_id、task_id 和 abstraction_level？"
+        },
+        {
+          "id": "graph-start-target",
+          "question": "起点、目标球门和停止条件是否明确？"
+        },
+        {
+          "id": "graph-edge-budget",
+          "question": "横向联想边和下钻层级是否有预算？"
+        },
+        {
+          "id": "graph-score",
+          "question": "是否同时考虑 FAME 分数、risk 和 context_budget？"
+        },
+        {
+          "id": "graph-validation",
+          "question": "找到候选路线后是否进入验证 route，而不是直接执行？"
+        }
+      ]
+    },
+    {
+      "id": "math-check-evidence-update",
+      "label": "证据更新检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-math-evidence-update"
+      ],
+      "items": [
+        {
+          "id": "evidence-prior",
+          "question": "更新前路线参数和依据是否记录？"
+        },
+        {
+          "id": "evidence-quality",
+          "question": "新证据是测试、工具结果、人工反馈还是猜测？证据强度如何？"
+        },
+        {
+          "id": "evidence-direction",
+          "question": "证据支持、反驳、部分支持还是不可判定？"
+        },
+        {
+          "id": "evidence-params",
+          "question": "应更新 mu、chi、epsilon、rho、delta 还是 risk？"
+        },
+        {
+          "id": "evidence-retention",
+          "question": "失败样本是否保留，而不是被成功样本覆盖？"
+        }
+      ]
+    },
+    {
+      "id": "math-check-optimization",
+      "label": "优化评分检查",
+      "abstraction_level": "L5_operation",
+      "route_refs": [
+        "route-math-route-optimization"
+      ],
+      "items": [
+        {
+          "id": "opt-objective",
+          "question": "优化目标是否和用户目标一致？"
+        },
+        {
+          "id": "opt-hard-constraints",
+          "question": "是否先满足硬约束，再比较软指标？"
+        },
+        {
+          "id": "opt-weights",
+          "question": "权重是否有理由，是否避免任意调参？"
+        },
+        {
+          "id": "opt-penalty",
+          "question": "risk、上下文成本、许可证风险是否作为惩罚项？"
+        },
+        {
+          "id": "opt-local-global",
+          "question": "是否避免只选择局部最优而牺牲全局工程目标？"
+        }
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

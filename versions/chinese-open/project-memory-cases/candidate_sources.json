@@ -1,0 +1,83 @@
+{
+  "edition_id": "chinese-open",
+  "policy": "只记录候选项目和案例选择理由；正式导入前逐项核验许可证、来源链接和是否可摘要引用。",
+  "candidates": [
+    {
+      "id": "candidate-vscode",
+      "project": "microsoft/vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "why": "大型 TypeScript/Electron 工程，适合提炼 issue、CI、发布、扩展生态和工程治理案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-nodejs",
+      "project": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "why": "大型运行时项目，适合提炼跨平台构建、测试、回归和发布流程案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-python-cpython",
+      "project": "python/cpython",
+      "url": "https://github.com/python/cpython",
+      "why": "成熟语言运行时，适合提炼 bug 修复、测试证明、文档同步和兼容性案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-kubernetes",
+      "project": "kubernetes/kubernetes",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "why": "大型分布式系统，适合提炼发布、测试、配置、安全和回归管理案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-openssl",
+      "project": "openssl/openssl",
+      "url": "https://github.com/openssl/openssl",
+      "why": "安全关键基础库，适合提炼安全修复、兼容性、发布门禁和审计案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-rust",
+      "project": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust",
+      "why": "成熟编译器和语言工程，适合提炼测试、回归、编译错误、文档同步和发布通道案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-react",
+      "project": "facebook/react",
+      "url": "https://github.com/facebook/react",
+      "why": "大型前端框架，适合提炼 API 设计、测试、兼容性和开源协作案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-git",
+      "project": "git/git",
+      "url": "https://github.com/git/git",
+      "why": "版本控制核心项目，适合提炼补丁、测试、兼容性和命令行工程案例。",
+      "status": "candidate_only"
+    },
+    {
+      "id": "candidate-software-heritage",
+      "project": "Software Heritage Archive",
+      "url": "https://www.softwareheritage.org/",
+      "why": "用于发现软件制品历史和稳定开源项目案例；只保存外部 id、摘要和链接。",
+      "status": "external_index_candidate"
+    },
+    {
+      "id": "candidate-github-archive",
+      "project": "GitHub Archive",
+      "url": "https://www.gharchive.org/",
+      "why": "用于筛选活跃项目、issue/PR 事件模式和工程案例候选；注意隐私和使用条款。",
+      "status": "external_index_candidate"
+    },
+    {
+      "id": "candidate-stack-exchange",
+      "project": "Stack Exchange Data Dump",
+      "url": "https://archive.org/details/stackexchange",
+      "why": "用于发现工具调用、PowerShell、Git、Python 等高频错误模式；CC BY-SA 内容必须隔离。",
+      "status": "external_index_candidate"
+    }
+  ]
+}

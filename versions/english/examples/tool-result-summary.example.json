@@ -1,0 +1,13 @@
+{
+  "kind": "ToolResultSummary",
+  "action_id": "task-001-scenario-jsonl-knowledge-edit",
+  "tool_name": "exec_command",
+  "status": "success",
+  "summary": "JSONL parsed and English edition checks passed.",
+  "evidence": [
+    "npm run doctor:english"
+  ],
+  "errors": [],
+  "next_steps": [],
+  "fame_update_candidates": []
+}

@@ -1,0 +1,441 @@
+{
+  "edition_id": "english",
+  "subject": "mathematics",
+  "label": "数学",
+  "source_refs": [
+    "cn-gbt-13745-2009",
+    "cn-moe-graduate-catalog-2022",
+    "math-msc2020"
+  ],
+  "taxonomy": [
+    {
+      "id": "math-foundations",
+      "label": "数学基础与数理逻辑",
+      "abstraction_level": "L2_field",
+      "summary": "研究集合、逻辑、证明、结构和数学对象的基础。",
+      "children": [
+        {
+          "id": "math-set-theory",
+          "label": "集合论",
+          "abstraction_level": "L3_topic",
+          "summary": "用集合、关系、函数和基数表达数学对象。",
+          "children": [
+            {
+              "id": "math-relation-function",
+              "label": "关系与函数",
+              "abstraction_level": "L4_method",
+              "summary": "用映射、定义域、值域、等价关系和偏序组织对象之间的结构。"
+            },
+            {
+              "id": "math-set-operation",
+              "label": "集合运算",
+              "abstraction_level": "L4_method",
+              "summary": "用并、交、差、补、笛卡尔积表达对象组合和约束。"
+            }
+          ]
+        },
+        {
+          "id": "math-proof-methods",
+          "label": "证明方法",
+          "abstraction_level": "L3_topic",
+          "summary": "归纳、反证、构造、对偶、极端原则等证明路线。",
+          "children": [
+            {
+              "id": "math-direct-proof",
+              "label": "直接证明",
+              "abstraction_level": "L4_method",
+              "summary": "从定义和已知条件逐步推出目标结论。"
+            },
+            {
+              "id": "math-contradiction-proof",
+              "label": "反证法",
+              "abstraction_level": "L4_method",
+              "summary": "假设结论不成立，推出矛盾，从而证明原结论。"
+            },
+            {
+              "id": "math-induction-proof",
+              "label": "数学归纳法",
+              "abstraction_level": "L4_method",
+              "summary": "证明基础情形和递推步骤，用于自然数或递归结构。"
+            },
+            {
+              "id": "math-construction-proof",
+              "label": "构造法",
+              "abstraction_level": "L4_method",
+              "summary": "直接构造满足目标条件的对象、算法或示例。"
+            }
+          ]
+        },
+        {
+          "id": "math-formal-structure",
+          "label": "形式结构",
+          "abstraction_level": "L3_topic",
+          "summary": "把问题写成对象、操作、关系、公理和约束。",
+          "children": [
+            {
+              "id": "math-definition-first",
+              "label": "定义优先",
+              "abstraction_level": "L4_method",
+              "summary": "先固定对象定义和符号含义，再讨论性质或计算。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-algebra",
+      "label": "代数",
+      "abstraction_level": "L2_field",
+      "summary": "研究运算、结构、方程和代数系统。",
+      "children": [
+        {
+          "id": "math-linear-algebra",
+          "label": "线性代数",
+          "abstraction_level": "L3_topic",
+          "summary": "向量空间、线性变换、矩阵、特征值和分解。",
+          "children": [
+            {
+              "id": "math-vector-space-model",
+              "label": "向量空间建模",
+              "abstraction_level": "L4_method",
+              "summary": "把对象表示成向量，使用基、维数、线性组合和子空间分析结构。"
+            },
+            {
+              "id": "math-matrix-factorization",
+              "label": "矩阵分解",
+              "abstraction_level": "L4_method",
+              "summary": "用分解揭示线性系统、降维、稳定性和计算效率。"
+            }
+          ]
+        },
+        {
+          "id": "math-abstract-algebra",
+          "label": "抽象代数",
+          "abstraction_level": "L3_topic",
+          "summary": "群、环、域、模等代数结构。",
+          "children": [
+            {
+              "id": "math-structure-preserving-map",
+              "label": "结构保持映射",
+              "abstraction_level": "L4_method",
+              "summary": "用同态、同构等概念比较结构是否本质相同。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-geometry-topology",
+      "label": "几何与拓扑",
+      "abstraction_level": "L2_field",
+      "summary": "研究空间、形状、连续性和不变量。",
+      "children": [
+        {
+          "id": "math-geometry",
+          "label": "几何",
+          "abstraction_level": "L3_topic",
+          "summary": "研究点、线、面、度量、变换和空间结构。",
+          "children": [
+            {
+              "id": "math-geometric-invariant",
+              "label": "几何不变量",
+              "abstraction_level": "L4_method",
+              "summary": "寻找在变换下保持不变的长度、角度、面积、拓扑特征或关系。"
+            }
+          ]
+        },
+        {
+          "id": "math-topology",
+          "label": "拓扑",
+          "abstraction_level": "L3_topic",
+          "summary": "研究连续变形下保持不变的空间性质。",
+          "children": [
+            {
+              "id": "math-continuity-neighborhood",
+              "label": "连续性与邻域",
+              "abstraction_level": "L4_method",
+              "summary": "用邻域、开集、闭集和连续映射表达空间关系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-analysis",
+      "label": "分析",
+      "abstraction_level": "L2_field",
+      "summary": "研究极限、连续、微分、积分、级数和函数空间。",
+      "children": [
+        {
+          "id": "math-calculus",
+          "label": "微积分",
+          "abstraction_level": "L3_topic",
+          "summary": "以极限为基础研究变化率和累积量。",
+          "children": [
+            {
+              "id": "math-rate-accumulation",
+              "label": "变化率与累积",
+              "abstraction_level": "L4_method",
+              "summary": "把局部变化和整体累积联系起来，适合连续过程建模。"
+            }
+          ]
+        },
+        {
+          "id": "math-series-approximation",
+          "label": "级数与近似",
+          "abstraction_level": "L3_topic",
+          "summary": "用级数、展开和误差项近似函数或过程。",
+          "children": [
+            {
+              "id": "math-error-bound",
+              "label": "误差界",
+              "abstraction_level": "L4_method",
+              "summary": "估计近似结果与真实对象之间的最大偏差或可信范围。"
+            }
+          ]
+        },
+        {
+          "id": "math-functional-analysis",
+          "label": "泛函分析",
+          "abstraction_level": "L3_topic",
+          "summary": "在函数空间和算子框架下研究分析问题。",
+          "children": [
+            {
+              "id": "math-normed-space",
+              "label": "赋范空间",
+              "abstraction_level": "L4_method",
+              "summary": "用范数、距离和收敛描述函数或向量的大小与极限。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-discrete-combinatorics",
+      "label": "离散数学与组合",
+      "abstraction_level": "L2_field",
+      "summary": "研究离散结构、计数、图、逻辑关系和算法基础。",
+      "children": [
+        {
+          "id": "math-graph-theory",
+          "label": "图论",
+          "abstraction_level": "L3_topic",
+          "summary": "研究节点、边、路径、连通性、匹配和网络结构。",
+          "children": [
+            {
+              "id": "math-graph-traversal",
+              "label": "图遍历",
+              "abstraction_level": "L4_method",
+              "summary": "按宽度、深度、权重或作用域遍历节点和边，适合知识网找球门。"
+            },
+            {
+              "id": "math-shortest-path",
+              "label": "最短路与代价路由",
+              "abstraction_level": "L4_method",
+              "summary": "在边权、风险、FAME 分数或上下文预算约束下寻找合适路线。"
+            },
+            {
+              "id": "math-community-structure",
+              "label": "社区结构",
+              "abstraction_level": "L4_method",
+              "summary": "识别图中紧密连接的主题簇，用于学科分区和可视化聚类。"
+            }
+          ]
+        },
+        {
+          "id": "math-combinatorics",
+          "label": "组合数学",
+          "abstraction_level": "L3_topic",
+          "summary": "研究计数、排列组合、存在性和构造。",
+          "children": [
+            {
+              "id": "math-counting-principles",
+              "label": "计数原则",
+              "abstraction_level": "L4_method",
+              "summary": "用加法、乘法、容斥、递推和生成函数处理离散可能性。"
+            }
+          ]
+        },
+        {
+          "id": "math-recursion",
+          "label": "递归与递推",
+          "abstraction_level": "L3_topic",
+          "summary": "用基础情形和递推关系描述结构、算法和增长。",
+          "children": [
+            {
+              "id": "math-recursive-decomposition",
+              "label": "递归分解",
+              "abstraction_level": "L4_method",
+              "summary": "把复杂对象拆成同类子问题，适合算法和任务分解。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-probability-statistics",
+      "label": "概率统计",
+      "abstraction_level": "L2_field",
+      "summary": "研究随机现象、数据、估计、推断和不确定性。",
+      "children": [
+        {
+          "id": "math-probability",
+          "label": "概率论",
+          "abstraction_level": "L3_topic",
+          "summary": "用样本空间、随机变量和分布描述不确定性。",
+          "children": [
+            {
+              "id": "math-random-variable",
+              "label": "随机变量",
+              "abstraction_level": "L4_method",
+              "summary": "把不确定事件映射为可计算的数值对象。"
+            },
+            {
+              "id": "math-conditional-probability",
+              "label": "条件概率",
+              "abstraction_level": "L4_method",
+              "summary": "在新证据或上下文条件下更新事件概率。"
+            },
+            {
+              "id": "math-bayesian-update",
+              "label": "贝叶斯更新",
+              "abstraction_level": "L4_method",
+              "summary": "用先验、似然和证据更新后验，适合 FAME 路由置信更新。"
+            }
+          ]
+        },
+        {
+          "id": "math-statistics",
+          "label": "统计学",
+          "abstraction_level": "L3_topic",
+          "summary": "用数据进行估计、检验、建模和决策。",
+          "children": [
+            {
+              "id": "math-estimation",
+              "label": "估计",
+              "abstraction_level": "L4_method",
+              "summary": "从样本推断参数、均值、比例或误差范围。"
+            },
+            {
+              "id": "math-hypothesis-testing",
+              "label": "假设检验",
+              "abstraction_level": "L4_method",
+              "summary": "把判断转成原假设、备择假设、检验统计量和显著性标准。"
+            },
+            {
+              "id": "math-experimental-design",
+              "label": "实验设计",
+              "abstraction_level": "L4_method",
+              "summary": "控制变量、样本、随机化和对照，避免错误归因。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-computational",
+      "label": "计算数学",
+      "abstraction_level": "L2_field",
+      "summary": "研究数值方法、符号计算、优化和计算误差。",
+      "children": [
+        {
+          "id": "math-numerical-analysis",
+          "label": "数值分析",
+          "abstraction_level": "L3_topic",
+          "summary": "研究近似算法、收敛性、稳定性和误差。",
+          "children": [
+            {
+              "id": "math-convergence",
+              "label": "收敛性",
+              "abstraction_level": "L4_method",
+              "summary": "判断迭代或近似过程是否趋向目标结果。"
+            },
+            {
+              "id": "math-stability",
+              "label": "稳定性",
+              "abstraction_level": "L4_method",
+              "summary": "判断输入扰动、舍入误差或中间误差是否会放大。"
+            }
+          ]
+        },
+        {
+          "id": "math-optimization",
+          "label": "优化",
+          "abstraction_level": "L3_topic",
+          "summary": "研究目标函数、约束、最优解和搜索策略。",
+          "children": [
+            {
+              "id": "math-objective-constraint",
+              "label": "目标与约束",
+              "abstraction_level": "L4_method",
+              "summary": "把问题拆成要优化的指标、必须满足的约束和可调变量。"
+            },
+            {
+              "id": "math-local-global",
+              "label": "局部与全局最优",
+              "abstraction_level": "L4_method",
+              "summary": "区分局部改进和全局最优，避免贪心路线误判。"
+            }
+          ]
+        },
+        {
+          "id": "math-symbolic-computation",
+          "label": "符号计算",
+          "abstraction_level": "L3_topic",
+          "summary": "以符号表达式和精确规则进行化简、求解和推导。",
+          "children": [
+            {
+              "id": "math-algebraic-simplification",
+              "label": "代数化简",
+              "abstraction_level": "L4_method",
+              "summary": "在保持等价的前提下简化表达式，暴露结构。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math-applied",
+      "label": "应用数学",
+      "abstraction_level": "L2_field",
+      "summary": "把数学结构和方法用于物理、工程、计算、经济和生命科学等问题。",
+      "children": [
+        {
+          "id": "math-modeling",
+          "label": "数学建模",
+          "abstraction_level": "L3_topic",
+          "summary": "把现实问题转成变量、关系、假设、目标和验证。",
+          "children": [
+            {
+              "id": "math-variable-assumption",
+              "label": "变量与假设",
+              "abstraction_level": "L4_method",
+              "summary": "定义变量、边界、假设和可忽略因素，明确模型适用范围。"
+            },
+            {
+              "id": "math-model-validation",
+              "label": "模型验证",
+              "abstraction_level": "L4_method",
+              "summary": "用数据、测试、反例和误差分析验证模型是否服务目标。"
+            }
+          ]
+        },
+        {
+          "id": "math-decision-modeling",
+          "label": "决策建模",
+          "abstraction_level": "L3_topic",
+          "summary": "把多目标、风险、约束和收益转成可比较的决策结构。",
+          "children": [
+            {
+              "id": "math-score-weighting",
+              "label": "评分与权重",
+              "abstraction_level": "L4_method",
+              "summary": "用权重、归一化和惩罚项比较候选方案。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

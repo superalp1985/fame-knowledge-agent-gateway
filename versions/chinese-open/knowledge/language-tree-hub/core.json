@@ -1,0 +1,87 @@
+{
+  "id": "language-tree-hub",
+  "edition_id": "chinese-open",
+  "type": "LanguageTreeHub",
+  "label": "语言树中枢",
+  "status": "clean_seed",
+  "description": "把中文自然语言目标转成学科作用域、抽象层级、联想路线、上下文包和验证任务的中心层，也是语义树的挂点。",
+  "do_not_import_from": [
+    "knowledge/建木知识网/backbone.json",
+    "knowledge/建木知识网/language/cc_cedict.txt",
+    "knowledge/建木知识网/language/vocab_technical.json"
+  ],
+  "reason": "旧文件存在编码或数据完整性问题；中文开源版只保留语言树机制，重新建立可审核的干净种子。",
+  "layers": [
+    {
+      "id": "intent",
+      "label": "意图层",
+      "purpose": "识别用户目标、任务类型、完成标准和风险等级。",
+      "inputs": ["user_goal", "project_state", "agent_role"],
+      "outputs": ["task_intent", "done_criteria", "risk_flags"]
+    },
+    {
+      "id": "lexicon",
+      "label": "词汇层",
+      "purpose": "维护术语、别名、同义表达、中英映射和学科归属。",
+      "inputs": ["terms", "aliases", "source_refs"],
+      "outputs": ["canonical_terms", "subject_candidates"]
+    },
+    {
+      "id": "grammar",
+      "label": "语法层",
+      "purpose": "识别操作结构、约束条件、输入输出和命令形态。",
+      "inputs": ["sentence", "operation_tokens"],
+      "outputs": ["operation_frame", "constraints"]
+    },
+    {
+      "id": "semantic_abstraction",
+      "label": "语义抽象层",
+      "purpose": "把局部请求提升到可复用的概念、原则、方法或规则。",
+      "inputs": ["operation_frame", "canonical_terms"],
+      "outputs": ["abstraction_level", "route_candidates"]
+    },
+    {
+      "id": "association",
+      "label": "联想迁移层",
+      "purpose": "按抽象相似性寻找相邻学科、失败教训和可迁移方法。",
+      "inputs": ["route_candidates", "fame_edges"],
+      "outputs": ["association_routes", "negative_lessons"]
+    },
+    {
+      "id": "expression",
+      "label": "表达层",
+      "purpose": "生成面向 Agent 的上下文包、步骤、说明和用户可读摘要。",
+      "inputs": ["selected_routes", "content_refs"],
+      "outputs": ["context_pack", "action_brief"]
+    },
+    {
+      "id": "validation",
+      "label": "验证层",
+      "purpose": "把测试、工具结果、人工反馈和证据写回路由参数。",
+      "inputs": ["tool_result", "tests", "human_feedback"],
+      "outputs": ["fame_update_candidates", "memory_trace"]
+    }
+  ],
+  "routing_policy": {
+    "center_first": true,
+    "scope_keys": ["edition_id", "project_id", "subject", "route_id", "task_id"],
+    "context_policy": "summary_refs_lazy_load",
+    "full_memory_retention": true,
+    "do_not_full_graph_load": true,
+    "association_budget": {
+      "max_subject_hops": 2,
+      "max_association_edges": 12,
+      "require_validation_hook": true
+    }
+  },
+  "fame_defaults": {
+    "mu": 0.5,
+    "chi": 0.55,
+    "epsilon": 0.6,
+    "kappa": 0.5,
+    "nu": 0.35,
+    "delta": 0,
+    "rho": 0.35,
+    "risk": 0.25
+  }
+}

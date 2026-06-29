@@ -1,0 +1,67 @@
+{
+  "edition_id": "english",
+  "subject": "powershell-safety",
+  "flow": [
+    {
+      "id": "ps-flow-intent",
+      "label": "识别命令意图",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "命令是只读、写入、删除、移动、网络、执行、测试还是构建？",
+        "是否需要 ProposedAction 或 ApprovedAction？",
+        "是否存在安全替代的只读探测？"
+      ]
+    },
+    {
+      "id": "ps-flow-scope",
+      "label": "确认作用域",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "工作目录是否明确？",
+        "目标路径是否在允许根目录内？",
+        "是否会访问工作区外文件、网络或用户目录？"
+      ]
+    },
+    {
+      "id": "ps-flow-syntax",
+      "label": "检查语法和解析",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "是否需要变量展开？",
+        "是否含空格、中文、通配符或特殊字符？",
+        "是否调用原生命令，参数会不会被 PowerShell 提前解释？"
+      ]
+    },
+    {
+      "id": "ps-flow-risk",
+      "label": "风险分级",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "删除、移动、覆盖、下载、发布是否已审批？",
+        "是否会输出密钥或私有路径？",
+        "是否有回滚或重建方案？"
+      ]
+    },
+    {
+      "id": "ps-flow-execute",
+      "label": "执行和观察",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "先执行最小必要命令。",
+        "限制长输出。",
+        "记录退出码、关键输出和错误摘要。"
+      ]
+    },
+    {
+      "id": "ps-flow-summary",
+      "label": "摘要和回写",
+      "abstraction_level": "L5_operation",
+      "checks": [
+        "生成 ToolResultSummary。",
+        "失败写入候选原因和下一步最小测试。",
+        "需要时更新负值 FAME 路线。"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

@@ -1,0 +1,44 @@
+{
+  "edition_id": "english",
+  "patterns": [
+    {
+      "id": "intent-tool-call",
+      "triggers": [
+        "run",
+        "execute",
+        "test",
+        "build",
+        "delete",
+        "download"
+      ],
+      "route_refs": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight"
+      ]
+    },
+    {
+      "id": "intent-knowledge-edit",
+      "triggers": [
+        "add knowledge",
+        "edit jsonl",
+        "sync index"
+      ],
+      "route_refs": [
+        "route-knowledge-taxonomy-entry",
+        "route-agent-database-sync"
+      ]
+    },
+    {
+      "id": "intent-connect-agent",
+      "triggers": [
+        "connect agent",
+        "agent preset",
+        "wizard"
+      ],
+      "route_refs": [
+        "route-agent-local-connect-check",
+        "route-agent-integration-usability-test"
+      ]
+    }
+  ]
+}

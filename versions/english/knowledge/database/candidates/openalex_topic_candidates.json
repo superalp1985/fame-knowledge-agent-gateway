@@ -1,0 +1,827 @@
+{
+  "edition_id": "english",
+  "generated_at": "2026-06-29T06:13:50.630Z",
+  "generator": "scripts/build-openalex-candidates.mjs",
+  "source_sample": "knowledge/database/samples/openalex.sample.jsonl",
+  "policy": {
+    "candidate_index_only": true,
+    "no_core_graph_write": true,
+    "no_content_unit_write": true,
+    "require_human_review_before_import": true
+  },
+  "summary": {
+    "records_read": 26,
+    "records_used": 19,
+    "records_excluded": 7,
+    "unique_records": 18,
+    "duplicates_removed": 1,
+    "candidates": 18,
+    "by_subject": {
+      "computer-science": 7,
+      "mathematics": 6,
+      "logic": 5
+    }
+  },
+  "by_subject": {
+    "computer-science": [
+      "candidate:openalex:computer-science:https:-openalex.org-t10260",
+      "candidate:openalex:computer-science:https:-openalex.org-t10430",
+      "candidate:openalex:computer-science:https:-openalex.org-t10639",
+      "candidate:openalex:computer-science:https:-openalex.org-t13674",
+      "candidate:openalex:computer-science:https:-openalex.org-t10533",
+      "candidate:openalex:computer-science:https:-openalex.org-t11273",
+      "candidate:openalex:computer-science:https:-openalex.org-t13083"
+    ],
+    "mathematics": [
+      "candidate:openalex:mathematics:https:-openalex.org-t12504",
+      "candidate:openalex:mathematics:https:-openalex.org-t11476",
+      "candidate:openalex:mathematics:https:-openalex.org-t13500",
+      "candidate:openalex:mathematics:https:-openalex.org-t10374",
+      "candidate:openalex:mathematics:https:-openalex.org-t11797",
+      "candidate:openalex:mathematics:https:-openalex.org-t11727"
+    ],
+    "logic": [
+      "candidate:openalex:logic:https:-openalex.org-t10126",
+      "candidate:openalex:logic:https:-openalex.org-t11010",
+      "candidate:openalex:logic:https:-openalex.org-t10820",
+      "candidate:openalex:logic:https:-openalex.org-t10142",
+      "candidate:openalex:logic:https:-openalex.org-t11151"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t10260",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10260",
+      "subject": "computer-science",
+      "query": "software engineering",
+      "title": "Software Engineering Research",
+      "summary": "This cluster of papers focuses on empirical studies in software engineering, covering topics such as refactoring, code clone detection, software defect prediction, requirements traceability, static code attributes, machine learning, software maintenance, source code analysis, bug localization, and API usage patterns.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Information Systems",
+      "works_count": 108586,
+      "cited_by_count": 1590323,
+      "relevance_score": 0.904,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.676,
+        "chi": 0.671,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.576,
+        "risk": 0.242
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t12504",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T12504",
+      "subject": "mathematics",
+      "query": "mathematics",
+      "title": "Mathematics and Applications",
+      "summary": "This cluster of papers covers a wide range of topics in geometric mathematics, including hyperbolic geometry, loops, billiards in ellipses, Poncelet's theorem, Moufang loops, trigonometry, algebraic structures, and their applications in relativity and inversive geometry.",
+      "domain": "Physical Sciences",
+      "field": "Mathematics",
+      "subfield": "Geometry and Topology",
+      "works_count": 157699,
+      "cited_by_count": 811115,
+      "relevance_score": 0.899,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.675,
+        "chi": 0.67,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.575,
+        "risk": 0.242
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t10430",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10430",
+      "subject": "computer-science",
+      "query": "software engineering",
+      "title": "Software Engineering Techniques and Practices",
+      "summary": "This cluster of papers focuses on agile software development, empirical studies, requirements engineering, global software development, systematic literature reviews, project risk management, pair programming, software process improvement, user feedback, and continuous integration in the context of software engineering research.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Information Systems",
+      "works_count": 94255,
+      "cited_by_count": 821911,
+      "relevance_score": 0.886,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.671,
+        "chi": 0.666,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.572,
+        "risk": 0.244
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t10639",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10639",
+      "subject": "computer-science",
+      "query": "software engineering",
+      "title": "Advanced Software Engineering Methodologies",
+      "summary": "This cluster of papers focuses on autonomic computing, self-adaptive systems, and their related concepts such as software architecture, aspect-oriented programming, requirements engineering, feature models, variability management, middleware, and dynamic software product lines. The papers cover topics like modeling and reasoning support for early-phase requirements engineering, architecture-based self-adaptation, automated analysis of feature models, and the challenges in automotive software engineering.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 61741,
+      "cited_by_count": 684085,
+      "relevance_score": 0.871,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.668,
+        "chi": 0.661,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.568,
+        "risk": 0.245
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t11476",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11476",
+      "subject": "mathematics",
+      "query": "graph theory",
+      "title": "Graph theory and applications",
+      "summary": "This cluster of papers focuses on the study of graph spectra, topological indices, Laplacian energy, resistance distance, and their applications in analyzing molecular structures and networks.",
+      "domain": "Physical Sciences",
+      "field": "Mathematics",
+      "subfield": "Geometry and Topology",
+      "works_count": 46547,
+      "cited_by_count": 405667,
+      "relevance_score": 0.853,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.663,
+        "chi": 0.656,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.563,
+        "risk": 0.248
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t13674",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T13674",
+      "subject": "computer-science",
+      "query": "computer science",
+      "title": "Computer Science and Engineering",
+      "summary": "This cluster of papers covers topics related to digital image processing, artificial neural networks, and their applications in various fields such as cryptography, machine learning, computer vision, and data security. The use of MATLAB for digital image processing and the application of artificial neural networks for tasks like face recognition and traffic sign recognition are also prominent in this cluster.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 57824,
+      "cited_by_count": 59391,
+      "relevance_score": 0.816,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.654,
+        "chi": 0.645,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.554,
+        "risk": 0.252
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t10533",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10533",
+      "subject": "computer-science",
+      "query": "computer science",
+      "title": "Teaching and Learning Programming",
+      "summary": "This cluster of papers focuses on computational thinking in education, including topics such as programming education, educational robotics, the maker movement, learning analytics, gender differences in computer science education, tangible interfaces for learning, and the integration of computational thinking into K-12 curriculum. The papers explore various strategies to promote computational thinking skills and engagement in STEM education among students of different ages and backgrounds.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Computer Science Applications",
+      "works_count": 80622,
+      "cited_by_count": 634188,
+      "relevance_score": 0.756,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.639,
+        "chi": 0.627,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.539,
+        "risk": 0.259
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t11273",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11273",
+      "subject": "computer-science",
+      "query": "knowledge graph",
+      "title": "Advanced Graph Neural Networks",
+      "summary": "This cluster of papers focuses on the development, applications, and techniques related to Graph Neural Networks (GNNs) and their variants. It covers topics such as knowledge graph embedding, representation learning, network embedding, deep learning, graph convolutional networks, heterogeneous networks, relational data modeling, signal processing on graphs, and semi-supervised learning.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 57799,
+      "cited_by_count": 554387,
+      "relevance_score": 0.745,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.636,
+        "chi": 0.624,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.536,
+        "risk": 0.261
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t13500",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T13500",
+      "subject": "mathematics",
+      "query": "probability theory",
+      "title": "Probability and Statistical Research",
+      "summary": "This cluster of papers covers a wide range of topics related to probability theory, statistical modeling, and data analysis. It includes discussions on survival models, nonparametric statistics, random variables, confidence intervals, data mining, clinical data repositories, and the application of Markov analysis. The cluster also delves into the gambler's ruin problem and its variations, showcasing a comprehensive exploration of probability and statistical methods.",
+      "domain": "Physical Sciences",
+      "field": "Mathematics",
+      "subfield": "Statistics and Probability",
+      "works_count": 132502,
+      "cited_by_count": 161035,
+      "relevance_score": 0.739,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.635,
+        "chi": 0.622,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.535,
+        "risk": 0.261
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:computer-science:https:-openalex.org-t13083",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T13083",
+      "subject": "computer-science",
+      "query": "knowledge graph",
+      "title": "Advanced Text Analysis Techniques",
+      "summary": "This cluster of papers focuses on the automatic extraction of keywords from textual data using various techniques such as graph-based methods, unsupervised approaches, and neural networks. The research explores the application of linguistic knowledge and statistical information to improve the accuracy of keyword extraction from documents.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 44860,
+      "cited_by_count": 476217,
+      "relevance_score": 0.735,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-cs-engineering-knowledge",
+        "route-cs-kg-indexing",
+        "route-cs-spec-to-test"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.634,
+        "chi": 0.621,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.534,
+        "risk": 0.262
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:logic:https:-openalex.org-t10126",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10126",
+      "subject": "logic",
+      "query": "logic",
+      "title": "Logic, programming, and type systems",
+      "summary": "This cluster of papers covers a wide range of program analysis and verification techniques, including static analysis, formal verification, type inference, memory management, concurrency, garbage collection, separation logic, model checking, abstract interpretation, and programming language semantics.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 111491,
+      "cited_by_count": 1310504,
+      "relevance_score": 0.72,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-logic-argument-check",
+        "route-logic-knowledge-consistency",
+        "route-logic-failure-diagnosis"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.63,
+        "chi": 0.616,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.53,
+        "risk": 0.264
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t10374",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10374",
+      "subject": "mathematics",
+      "query": "graph theory",
+      "title": "Advanced Graph Theory Research",
+      "summary": "This cluster of papers represents advances in graph theory and algorithms, focusing on topics such as parameterized complexity, fixed-parameter algorithms, constraint satisfaction problems, treewidth, kernelization, complexity classification, approximation algorithms, and homomorphism. The papers cover a wide range of algorithmic applications and theoretical developments in the field of graph theory.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Computational Theory and Mathematics",
+      "works_count": 80789,
+      "cited_by_count": 909180,
+      "relevance_score": 0.704,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.626,
+        "chi": 0.611,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.526,
+        "risk": 0.266
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:logic:https:-openalex.org-t11010",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11010",
+      "subject": "logic",
+      "query": "logic",
+      "title": "Logic, Reasoning, and Knowledge",
+      "summary": "This cluster of papers focuses on the intersection of logic programming, knowledge representation, and reasoning. It encompasses topics such as answer set programming, modal logic, belief revision, temporal logic, epistemic logic, nonmonotonic reasoning, description logics, model checking, and constraint logic programming.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 76072,
+      "cited_by_count": 921859,
+      "relevance_score": 0.703,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-logic-argument-check",
+        "route-logic-knowledge-consistency",
+        "route-logic-failure-diagnosis"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.626,
+        "chi": 0.611,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.526,
+        "risk": 0.266
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:logic:https:-openalex.org-t10820",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10820",
+      "subject": "logic",
+      "query": "logic",
+      "title": "Fuzzy Logic and Control Systems",
+      "summary": "This cluster of papers focuses on the theory, design, and applications of Type-2 Fuzzy Logic Systems, including Interval Type-2 Fuzzy Logic. It covers topics such as neuro-fuzzy methods, genetic fuzzy systems, system identification, control systems, machine learning, and pattern recognition.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "works_count": 57703,
+      "cited_by_count": 956650,
+      "relevance_score": 0.697,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-logic-argument-check",
+        "route-logic-knowledge-consistency",
+        "route-logic-failure-diagnosis"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.624,
+        "chi": 0.609,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.524,
+        "risk": 0.266
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t11797",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11797",
+      "subject": "mathematics",
+      "query": "graph theory",
+      "title": "graph theory and CDMA systems",
+      "summary": "This cluster of papers focuses on the research and development of Optical Code Division Multiple Access (CDMA) systems, particularly emphasizing topics such as Fiber Bragg Grating, Spectral Amplitude Coding, Security Performance against eavesdropping, Coherent and Incoherent Systems, Rank Modulation for Flash Memories, Latin Squares, Photonic Routers, Error Correction techniques, Orthogonal Codes, and Wavelength-Time Codes.",
+      "domain": "Physical Sciences",
+      "field": "Engineering",
+      "subfield": "Electrical and Electronic Engineering",
+      "works_count": 52064,
+      "cited_by_count": 483032,
+      "relevance_score": 0.679,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.62,
+        "chi": 0.604,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.52,
+        "risk": 0.269
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:logic:https:-openalex.org-t10142",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T10142",
+      "subject": "logic",
+      "query": "formal logic",
+      "title": "Formal Methods in Verification",
+      "summary": "This cluster of papers revolves around formal methods in software verification and control, focusing on topics such as model checking, symbolic model checking, satisfiability modulo theories, temporal logic, hybrid systems, automata, safety verification, control barrier functions, runtime verification, and probabilistic systems.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Computational Theory and Mathematics",
+      "works_count": 92740,
+      "cited_by_count": 1207225,
+      "relevance_score": 0.594,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-logic-argument-check",
+        "route-logic-knowledge-consistency",
+        "route-logic-failure-diagnosis"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.599,
+        "chi": 0.578,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.498,
+        "risk": 0.279
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:mathematics:https:-openalex.org-t11727",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11727",
+      "subject": "mathematics",
+      "query": "probability theory",
+      "title": "Advanced Algebra and Logic",
+      "summary": "This cluster of papers explores the intersection of fuzzy logic, residuated lattices, t-norms, MV-algebras, quantum logic, and automata theory. It delves into mathematical fuzzy logic, modal logics, and algebraic semantics within the context of probability theory.",
+      "domain": "Physical Sciences",
+      "field": "Computer Science",
+      "subfield": "Computational Theory and Mathematics",
+      "works_count": 76914,
+      "cited_by_count": 719170,
+      "relevance_score": 0.578,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-math-modeling-abstraction",
+        "route-math-graph-traversal",
+        "route-math-evidence-update"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.595,
+        "chi": 0.573,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.494,
+        "risk": 0.281
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    },
+    {
+      "id": "candidate:openalex:logic:https:-openalex.org-t11151",
+      "source_id": "openalex",
+      "source_record_id": "https://openalex.org/T11151",
+      "subject": "logic",
+      "query": "model theory",
+      "title": "Advanced Topology and Set Theory",
+      "summary": "This cluster of papers covers topics in model theory, topological dynamics, and their applications to homogeneous structures, o-minimal structures, large cardinals, and forcing axioms. It explores the interactions between abstract elementary classes, definable sets, and automorphism groups, with connections to Ramsey theory and the structure of compact groups.",
+      "domain": "Physical Sciences",
+      "field": "Mathematics",
+      "subfield": "Geometry and Topology",
+      "works_count": 61386,
+      "cited_by_count": 405427,
+      "relevance_score": 0.56,
+      "scope_flags": [],
+      "recommended_action": "review_for_content_unit_candidate",
+      "route_refs": [
+        "route-logic-argument-check",
+        "route-logic-knowledge-consistency",
+        "route-logic-failure-diagnosis"
+      ],
+      "validation_refs": [
+        "route-logic-knowledge-consistency",
+        "route-math-evidence-update"
+      ],
+      "license_hint": "CC0",
+      "fame_seed": {
+        "mu": 0.59,
+        "chi": 0.568,
+        "epsilon": 0.45,
+        "kappa": 0.42,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.49,
+        "risk": 0.283
+      },
+      "import_policy": {
+        "do_not_import_as_fact": true,
+        "use_as_source_discovery": true,
+        "require_human_review": true,
+        "require_authoritative_source_before_core_content": true
+      }
+    }
+  ]
+}

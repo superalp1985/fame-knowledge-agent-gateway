@@ -1,0 +1,132 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "label": "抽象迁移工作流",
+  "source_refs": [
+    "tree-of-thoughts-paper",
+    "self-refine-paper",
+    "react-paper"
+  ],
+  "purpose": "把局部工程请求提升成可复用的抽象结构，再落回具体操作和验证，避免 Agent 只做表层检索。",
+  "abstraction_ladder": [
+    {
+      "level": "L6_case",
+      "question": "有没有相似成功或失败案例？",
+      "output": "case_ref_or_negative_lesson"
+    },
+    {
+      "level": "L5_operation",
+      "question": "当前下一步具体动作是什么？",
+      "output": "ProposedAction or read-only action"
+    },
+    {
+      "level": "L4_method",
+      "question": "这个动作背后的方法是什么？",
+      "output": "method_ref and validation hook"
+    },
+    {
+      "level": "L3_topic",
+      "question": "它属于哪个主题簇？",
+      "output": "topic cluster and sibling candidates"
+    },
+    {
+      "level": "L2_field",
+      "question": "它属于哪个方向？",
+      "output": "field route and scope budget"
+    },
+    {
+      "level": "L1_discipline",
+      "question": "主学科和相邻学科是什么？",
+      "output": "primary subject and secondary subject"
+    },
+    {
+      "level": "L0_meta",
+      "question": "这类问题的组织方式是什么？",
+      "output": "workflow frame and context policy"
+    }
+  ],
+  "playbooks": [
+    {
+      "id": "lift-and-land",
+      "label": "上提再落地",
+      "steps": [
+        "从用户句子提取对象、动作、约束、证据和完成标准。",
+        "上提到方法层：判断是分类、验证、搜索、优化、生成、同步还是复盘。",
+        "上提到学科层：判断主学科和相邻学科。",
+        "横向寻找同构方法，但保持作用域预算。",
+        "落回操作层：生成可验证下一步。",
+        "用测试或观察证据确认迁移是否有效。"
+      ],
+      "route_refs": [
+        "route-language-abstraction-transfer",
+        "route-math-route-optimization",
+        "route-cs-spec-to-test"
+      ]
+    },
+    {
+      "id": "abstract-failure-signature",
+      "label": "失败签名抽象",
+      "steps": [
+        "把一次失败从工具报错抽象为失败类型。",
+        "绑定触发条件、环境、命令形态、错误模式和修复路线。",
+        "把失败签名连接到语言树术语、工具分支和 PowerShell 安全分支。",
+        "后续命中相同签名时先警示，再执行最小验证。"
+      ],
+      "route_refs": [
+        "route-agent-reflection-improvement",
+        "route-negative-fame-lesson",
+        "route-powershell-command-review"
+      ]
+    },
+    {
+      "id": "abstract-tool-use",
+      "label": "工具调用抽象",
+      "steps": [
+        "把具体工具调用抽象为 read、write、execute、network、test、build、publish 等动作类型。",
+        "根据动作类型选择模板和风险等级。",
+        "再落回具体工具 schema，生成参数。",
+        "执行后把结果转成统一摘要，而不是保留全部输出在上下文。"
+      ],
+      "route_refs": [
+        "route-agent-action-template-selection",
+        "route-agent-tool-gateway-policy",
+        "route-agent-tool-result-summary"
+      ]
+    },
+    {
+      "id": "abstract-user-goal",
+      "label": "用户目标抽象",
+      "steps": [
+        "区分用户想要讨论、规划、实现、测试、发布还是复盘。",
+        "识别隐含约束：开源、上下文健康、知识网隔离、数据库同步、全量记忆。",
+        "生成完成标准和禁止事项。",
+        "把目标映射到最少 subject 和 route refs。"
+      ],
+      "route_refs": [
+        "route-language-intent-to-scope",
+        "route-logic-argument-check"
+      ]
+    },
+    {
+      "id": "abstract-global-to-tool-contract",
+      "label": "从大局观落到工具契约",
+      "steps": [
+        "把用户目标上提成球门、约束、资源、风险和证据。",
+        "选择最小可验证路线。",
+        "把路线落成一个工具动作契约。",
+        "执行后用结果摘要更新路线，而不是继续扩大上下文。"
+      ],
+      "route_refs": [
+        "route-language-global-situation-model",
+        "route-language-goal-backcasting",
+        "route-agent-tool-action-contract"
+      ]
+    }
+  ],
+  "transfer_guardrails": [
+    "抽象迁移必须回到具体验证，不允许停留在漂亮解释。",
+    "横向联想只迁移结构和方法，不迁移无证据事实。",
+    "如果迁移路线让上下文超预算，先缩小 subject 或读取摘要。",
+    "负值 FAME 路线必须保留，用于避错而不是隐藏失败。"
+  ]
+}

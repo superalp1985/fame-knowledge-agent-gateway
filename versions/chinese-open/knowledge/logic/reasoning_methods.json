@@ -1,0 +1,93 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "logic",
+  "methods": [
+    {
+      "id": "logic-method-deduction",
+      "label": "演绎推理",
+      "abstraction_level": "L4_method",
+      "use_when": "前提、规则和目标结论明确，需要判断结论是否必然推出。",
+      "steps": [
+        "列出显式前提。",
+        "补出必要的隐含前提。",
+        "逐步应用规则。",
+        "检查每一步是否由前提或已证明结论推出。",
+        "标注未证明的跳步。"
+      ],
+      "agent_fit": ["方案审查", "工具调用前置条件", "证明任务"],
+      "failure_modes": ["隐含前提未验证", "规则误用", "结论超出前提"]
+    },
+    {
+      "id": "logic-method-induction",
+      "label": "归纳推理",
+      "abstraction_level": "L4_method",
+      "use_when": "从样本、历史案例或多次测试结果推断一般规律。",
+      "steps": [
+        "确认样本数量和覆盖范围。",
+        "检查是否存在反例。",
+        "标注结论置信度。",
+        "禁止从单次成功直接推出普遍规则。"
+      ],
+      "agent_fit": ["工程经验总结", "FAME 参数调整", "失败复发评估"],
+      "failure_modes": ["草率概括", "样本偏差", "忽略时效性"]
+    },
+    {
+      "id": "logic-method-abduction",
+      "label": "溯因推理",
+      "abstraction_level": "L4_method",
+      "use_when": "已观察到结果，需要寻找最可能解释或故障原因。",
+      "steps": [
+        "列出观察事实。",
+        "提出多个候选解释。",
+        "为每个解释列预测。",
+        "用最小测试区分候选解释。",
+        "保留未排除解释，避免过早定论。"
+      ],
+      "agent_fit": ["调试", "错误诊断", "工具调用失败复盘"],
+      "failure_modes": ["单因解释", "确认偏误", "忽略环境变量"]
+    },
+    {
+      "id": "logic-method-counterexample",
+      "label": "反例搜索",
+      "abstraction_level": "L4_method",
+      "use_when": "需要检验通用结论、规则或方案是否过度泛化。",
+      "steps": [
+        "把结论写成明确的一般命题。",
+        "寻找边界条件。",
+        "构造满足前提但让结论失败的案例。",
+        "若找到反例，降低路线置信或加限制条件。"
+      ],
+      "agent_fit": ["规则录入", "方案评审", "PowerShell 安全模式审查"],
+      "failure_modes": ["只看成功样本", "忽略边界", "把例外当噪声"]
+    },
+    {
+      "id": "logic-method-pre-post",
+      "label": "前后条件检查",
+      "abstraction_level": "L5_operation",
+      "use_when": "执行工具、写文件、运行命令或发布前后需要验证状态。",
+      "steps": [
+        "写出执行前必须成立的条件。",
+        "写出执行允许改变的状态。",
+        "写出执行后必须成立的条件。",
+        "执行后用测试、文件检查或输出摘要验证。"
+      ],
+      "agent_fit": ["Tool Gateway", "ProposedAction", "PowerShell 命令执行"],
+      "failure_modes": ["无验证执行", "副作用不明", "只看命令退出码"]
+    },
+    {
+      "id": "logic-method-consistency-check",
+      "label": "一致性检查",
+      "abstraction_level": "L5_operation",
+      "use_when": "多个文档、规则、路由或记忆之间可能冲突。",
+      "steps": [
+        "列出相关主张。",
+        "标注来源和时效。",
+        "找出互相矛盾、重复或缺失的约束。",
+        "优先保留权威、较新、已验证来源。",
+        "把冲突写入待审核项。"
+      ],
+      "agent_fit": ["知识网维护", "文档对齐", "开源发布检查"],
+      "failure_modes": ["旧规则覆盖新规则", "同名概念混用", "缺少来源"]
+    }
+  ]
+}

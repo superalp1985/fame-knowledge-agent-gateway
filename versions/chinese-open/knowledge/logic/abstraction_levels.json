@@ -1,0 +1,41 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "logic",
+  "levels": [
+    {
+      "id": "L0_meta",
+      "label": "推理规范",
+      "agent_use": "判断当前任务是否需要证明、反例、一致性检查或论证分析。"
+    },
+    {
+      "id": "L1_discipline",
+      "label": "逻辑学",
+      "agent_use": "提供形式推理和非形式论证的总入口。"
+    },
+    {
+      "id": "L2_field",
+      "label": "逻辑分支",
+      "agent_use": "在形式逻辑、非形式逻辑、非经典逻辑、应用逻辑之间选路。"
+    },
+    {
+      "id": "L3_topic",
+      "label": "逻辑主题",
+      "agent_use": "选用命题逻辑、谓词逻辑、模型论、论证分析等主题。"
+    },
+    {
+      "id": "L4_method",
+      "label": "推理方法",
+      "agent_use": "使用演绎、归纳、反证、模型构造、反例搜索。"
+    },
+    {
+      "id": "L5_operation",
+      "label": "执行检查",
+      "agent_use": "把判断写成可检查步骤，如列前提、检验推出关系、寻找反例。"
+    },
+    {
+      "id": "L6_case",
+      "label": "推理教训",
+      "agent_use": "记录错误归纳、偷换概念、证据不足等失败路线。"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "status": "manual_seed",
+  "policy": "自建核心术语表；外部词典仅登记为候选，许可证核验前不导入。",
+  "terms": [
+    {
+      "canonical": "语言树中枢",
+      "aliases": [
+        "语言树",
+        "语义树",
+        "language tree",
+        "semantic tree",
+        "language hub"
+      ],
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "abstraction_level": "L0_meta",
+      "summary": "知识网的自然语言入口，负责意图、语义、联想和表达，也是语义树的挂点。"
+    },
+    {
+      "canonical": "路由",
+      "aliases": [
+        "路线",
+        "route",
+        "知识路线"
+      ],
+      "subject_refs": [
+        "language-tree-hub"
+      ],
+      "abstraction_level": "L4_method",
+      "summary": "从任务意图到学科、规则、上下文包和验证方式的可执行路径。"
+    },
+    {
+      "canonical": "作用域",
+      "aliases": [
+        "scope",
+        "范围",
+        "scoping"
+      ],
+      "subject_refs": [
+        "language-tree-hub",
+        "agent-tooling"
+      ],
+      "abstraction_level": "L4_method",
+      "summary": "用 project_id、subject、route_id、task_id 限定上下文和图遍历范围。"
+    },
+    {
+      "canonical": "工程记忆",
+      "aliases": [
+        "project memory",
+        "项目记忆",
+        "外部记忆"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L6_case",
+      "summary": "记录工程过程、证据、决策、工具结果和教训的外部 overlay。"
+    },
+    {
+      "canonical": "工具调取",
+      "aliases": [
+        "tool calling",
+        "工具调用",
+        "function calling"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "Agent 调用外部能力前后的 schema、审批、执行和回写流程。"
+    },
+    {
+      "canonical": "PowerShell 安全语法",
+      "aliases": [
+        "powershell safety",
+        "ps syntax",
+        "PowerShell 高频错误"
+      ],
+      "subject_refs": [
+        "powershell-safety"
+      ],
+      "abstraction_level": "L2_field",
+      "summary": "降低 Windows shell 命令误用、引号错误、路径错误和危险文件操作的规则集合。"
+    },
+    {
+      "canonical": "PowerShell 中文编码",
+      "aliases": [
+        "中文乱码",
+        "PowerShell 乱码",
+        "mojibake",
+        "encoding issue",
+        "UTF-8 输出"
+      ],
+      "subject_refs": [
+        "powershell-safety",
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "处理 PowerShell 中文输出、文件编码、管道解码和证据可信度的工具调用路线。"
+    },
+    {
+      "canonical": "本机 Agent 接入",
+      "aliases": [
+        "local agent connect",
+        "Agent 接入状态",
+        "傻瓜接入",
+        "连接 Agent"
+      ],
+      "subject_refs": [
+        "agent-tooling"
+      ],
+      "abstraction_level": "L5_operation",
+      "summary": "选择本机 Agent 类型并检查中文开源版是否已经具备路由、doctor、实机评测和启动提示。"
+    }
+  ]
+}

@@ -3,54 +3,131 @@
   "edition_id": "english",
   "type": "LanguageTreeHub",
   "label": "Language Tree Hub",
-  "status": "seed",
-  "description": "Central language layer for intent, abstraction, semantics, expression and cross-domain association.",
+  "status": "clean_seed",
+  "description": "The center layer that turns English natural-language goals into subject scope, abstraction layer, association routes, context packs and validation tasks.",
   "layers": [
     {
       "id": "intent",
-      "label": "Intent",
-      "purpose": "Turn a user goal into a scoped route request."
+      "label": "Intent Layer",
+      "purpose": "Identify user goal, task type, done criteria and risk level.",
+      "inputs": [
+        "user_goal",
+        "project_state",
+        "agent_role"
+      ],
+      "outputs": [
+        "task_intent",
+        "done_criteria",
+        "risk_flags"
+      ]
     },
     {
       "id": "lexicon",
-      "label": "Lexicon",
-      "purpose": "Maintain names, terms, aliases and controlled vocabulary."
+      "label": "Lexicon Layer",
+      "purpose": "Maintain terms, aliases, multilingual mappings and subject ownership.",
+      "inputs": [
+        "terms",
+        "aliases",
+        "source_refs"
+      ],
+      "outputs": [
+        "canonical_terms",
+        "subject_candidates"
+      ]
     },
     {
       "id": "grammar",
-      "label": "Grammar",
-      "purpose": "Represent structural constraints, valid transformations and operation forms."
+      "label": "Grammar Layer",
+      "purpose": "Identify operation structure, constraints, inputs, outputs and command shape.",
+      "inputs": [
+        "sentence",
+        "operation_tokens"
+      ],
+      "outputs": [
+        "operation_frame",
+        "constraints"
+      ]
     },
     {
-      "id": "semantics",
-      "label": "Semantics",
-      "purpose": "Map meaning, abstraction level, evidence and cross-domain relations."
+      "id": "semantic_abstraction",
+      "label": "Semantic Abstraction Layer",
+      "purpose": "Raise local requests into reusable concepts, principles, methods or rules.",
+      "inputs": [
+        "operation_frame",
+        "canonical_terms"
+      ],
+      "outputs": [
+        "abstraction_level",
+        "route_candidates"
+      ]
+    },
+    {
+      "id": "association",
+      "label": "Association Transfer Layer",
+      "purpose": "Search adjacent subjects, failure lessons and transferable methods by abstract similarity.",
+      "inputs": [
+        "route_candidates",
+        "fame_edges"
+      ],
+      "outputs": [
+        "association_routes",
+        "negative_lessons"
+      ]
     },
     {
       "id": "expression",
-      "label": "Expression",
-      "purpose": "Prepare task-facing summaries, instructions, UI text and implementation notes."
+      "label": "Expression Layer",
+      "purpose": "Generate context packs, steps, instructions and user-readable summaries for agents.",
+      "inputs": [
+        "selected_routes",
+        "content_refs"
+      ],
+      "outputs": [
+        "context_pack",
+        "action_brief"
+      ]
     },
     {
       "id": "validation",
-      "label": "Validation",
-      "purpose": "Bind claims to tests, evidence, route outcomes and FAME updates."
+      "label": "Validation Layer",
+      "purpose": "Write tests, tool results, human feedback and evidence back into route parameters.",
+      "inputs": [
+        "tool_result",
+        "tests",
+        "human_feedback"
+      ],
+      "outputs": [
+        "fame_update_candidates",
+        "memory_trace"
+      ]
     }
   ],
-  "fame_defaults": {
-    "mu": 0.5,
-    "chi": 0.5,
-    "epsilon": 0.6,
-    "kappa": 0.45,
-    "nu": 0.35,
-    "delta": 0.1,
-    "rho": 0.25,
-    "lambda": 0.1
-  },
   "routing_policy": {
     "center_first": true,
-    "scope_keys": ["edition_id", "project_id", "subject", "route_id"],
+    "scope_keys": [
+      "edition_id",
+      "project_id",
+      "subject",
+      "route_id",
+      "task_id"
+    ],
     "context_policy": "summary_refs_lazy_load",
-    "full_memory_retention": true
+    "full_memory_retention": true,
+    "do_not_full_graph_load": true,
+    "association_budget": {
+      "max_subject_hops": 2,
+      "max_association_edges": 12,
+      "require_validation_hook": true
+    }
+  },
+  "fame_defaults": {
+    "mu": 0.5,
+    "chi": 0.55,
+    "epsilon": 0.6,
+    "kappa": 0.5,
+    "nu": 0.35,
+    "delta": 0,
+    "rho": 0.35,
+    "risk": 0.25
   }
 }

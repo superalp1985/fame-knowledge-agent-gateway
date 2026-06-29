@@ -1,16 +1,13 @@
 # Language Tree Hub
 
-The Language Tree Hub is the center of the English edition.
+The Language Tree Hub is the semantic center of the English open edition. It normalizes user language, chooses abstraction level, selects routes and keeps association under a validation budget.
 
-It coordinates:
+Read order:
 
-- intent parsing
-- terminology and naming
-- grammar and constraints
-- semantic abstraction
-- expression planning
-- cross-domain association
-- evidence and validation language
-- context summaries and route logs
-
-Professional knowledge grows around this hub instead of becoming isolated subject silos.
+1. core.json
+2. lexicon_seed.json
+3. thought_modes.json
+4. intent_patterns.json
+5. association_rules.json
+6. association_playbooks.json
+7. abstraction_playbooks.json

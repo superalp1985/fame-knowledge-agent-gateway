@@ -1,0 +1,47 @@
+{
+  "edition_id": "english",
+  "rule_set_id": "powershell-safety",
+  "label": "PowerShell 安全语法规则",
+  "rules": [
+    {
+      "id": "rule-ps-doc-before-rare-syntax",
+      "severity": "recommended",
+      "summary": "不确定 cmdlet 参数、shell 解析或跨命令行为时，先查说明再执行。",
+      "source_refs": [
+        "ms-powershell-parsing"
+      ]
+    },
+    {
+      "id": "rule-ps-single-shell-filesystem",
+      "severity": "required",
+      "summary": "Windows 文件系统变更操作保持 PowerShell 端到端执行，不把路径拼接给另一个 shell 删除或移动。",
+      "source_refs": [
+        "ms-powershell-parsing"
+      ]
+    },
+    {
+      "id": "rule-ps-resolve-path-before-recursive",
+      "severity": "required",
+      "summary": "递归删除或移动前解析绝对路径，并确认目标仍在预期工作区或显式目标目录内。",
+      "source_refs": [
+        "ms-powershell-parsing"
+      ]
+    },
+    {
+      "id": "rule-ps-quote-by-expansion",
+      "severity": "required",
+      "summary": "按变量展开需求选择引号：字面量优先单引号，需要展开时用双引号并检查转义。",
+      "source_refs": [
+        "ms-powershell-quoting-rules"
+      ]
+    },
+    {
+      "id": "rule-ps-env-scope",
+      "severity": "recommended",
+      "summary": "设置环境变量时明确进程、用户或机器作用域，避免后续命令读取不到。",
+      "source_refs": [
+        "ms-powershell-environment-variables"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "edition_id": "english",
+  "status": "manual_seed",
+  "purpose": "为 content_units.jsonl 提供轻量目录索引，方便 Agent 按学科、抽象层级、来源和关键词按需读取。",
+  "index_policy": {
+    "graph_is_lightweight": true,
+    "content_units_are_database_records": true,
+    "do_not_load_all_units_by_default": true,
+    "preferred_lookup_order": [
+      "subject",
+      "abstraction_level",
+      "route_ref",
+      "keyword",
+      "source_ref"
+    ]
+  },
+  "subjects": [
+    {
+      "id": "language-tree-hub",
+      "label": "语言树中枢",
+      "unit_prefix": "cu-language-",
+      "focus": [
+        "意图",
+        "词汇语义",
+        "语法关系",
+        "抽象迁移",
+        "横向联想",
+        "上下文包",
+        "层级选择",
+        "语义适配",
+        "目录索引",
+        "抽象再具体",
+        "找球门逆推",
+        "全局态势模型",
+        "大局观"
+      ]
+    },
+    {
+      "id": "logic",
+      "label": "逻辑",
+      "unit_prefix": "cu-logic-",
+      "focus": [
+        "形式化",
+        "论证",
+        "证明义务",
+        "反例",
+        "失败诊断",
+        "知识治理",
+        "时序",
+        "不变量"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "label": "数学",
+      "unit_prefix": "cu-math-",
+      "focus": [
+        "集合关系",
+        "证明方法",
+        "图遍历",
+        "概率统计",
+        "优化",
+        "建模"
+      ]
+    },
+    {
+      "id": "computer-science",
+      "label": "计算机科学",
+      "unit_prefix": "cu-cs-",
+      "focus": [
+        "算法",
+        "软件工程",
+        "数据库",
+        "索引",
+        "Agent",
+        "安全",
+        "开源治理",
+        "工程记忆",
+        "同步",
+        "隔离",
+        "CI 安全",
+        "发布产物来源",
+        "release hardening"
+      ]
+    },
+    {
+      "id": "agent-tooling",
+      "label": "Agent 工具调取",
+      "unit_prefix": "cu-agent-",
+      "focus": [
+        "工具说明",
+        "schema",
+        "ProposedAction",
+        "Tool Gateway",
+        "路径",
+        "Git",
+        "Node/npm",
+        "Python",
+        "结构化数据",
+        "网络下载",
+        "测试构建",
+        "数据库同步",
+        "反思迭代",
+        "评测指标",
+        "一次性",
+        "提醒",
+        "时钟",
+        "强制执行",
+        "checkpoint",
+        "工具动作契约",
+        "高频坑位预检",
+        "接入便利性",
+        "失败签名",
+        "本机 Agent 接入",
+        "connected 状态",
+        "接入提醒",
+        "MCP 能力边界",
+        "guardrails",
+        "人工审批",
+        "checkpoint/store",
+        "ACI 工程闭环"
+      ]
+    },
+    {
+      "id": "powershell-safety",
+      "label": "PowerShell 安全语法",
+      "unit_prefix": "cu-ps-",
+      "focus": [
+        "引号",
+        "解析",
+        "路径",
+        "环境变量",
+        "重定向",
+        "执行策略",
+        "编码",
+        "中文乱码",
+        "UTF-8",
+        "输出证据",
+        "原生命令边界",
+        "结构化输出",
+        "参数解析"
+      ]
+    }
+  ],
+  "source_groups": [
+    {
+      "id": "taxonomy_anchors",
+      "source_refs": [
+        "cn-gbt-13745-2009",
+        "cn-moe-graduate-catalog-2022",
+        "math-msc2020",
+        "acm-ccs-2012",
+        "acm-cs2023"
+      ]
+    },
+    {
+      "id": "language_references",
+      "source_refs": [
+        "universal-dependencies",
+        "princeton-wordnet",
+        "open-english-wordnet",
+        "conceptnet",
+        "cc-cedict"
+      ]
+    },
+    {
+      "id": "math_references",
+      "source_refs": [
+        "math-msc2020",
+        "openstax-calculus",
+        "openintro-statistics",
+        "nist-dlmf"
+      ]
+    },
+    {
+      "id": "cs_references",
+      "source_refs": [
+        "acm-ccs-2012",
+        "acm-cs2023",
+        "python-docs",
+        "mdn-web-docs",
+        "pro-git-book"
+      ]
+    },
+    {
+      "id": "security_references",
+      "source_refs": [
+        "owasp-cheat-sheet-series",
+        "nist-ssdf-sp800-218"
+      ]
+    },
+    {
+      "id": "agent_references",
+      "source_refs": [
+        "mcp-docs-intro",
+        "mcp-tools-spec",
+        "openai-agents-sdk-guardrails",
+        "langgraph-memory-docs",
+        "llamaindex-agent-docs",
+        "react-paper",
+        "reflexion-paper",
+        "self-refine-paper",
+        "agentbench-paper"
+      ]
+    },
+    {
+      "id": "agent_protocol_and_memory_references",
+      "source_refs": [
+        "mcp-spec-2025-06-18",
+        "openai-agents-sdk-human-review",
+        "langgraph-persistence-docs",
+        "swe-agent-github"
+      ]
+    },
+    {
+      "id": "ci_release_hardening_references",
+      "source_refs": [
+        "github-actions-security-hardening",
+        "nist-ssdf-sp800-218"
+      ]
+    }
+  ],
+  "route_groups": [
+    {
+      "id": "agent_safe_execution",
+      "route_refs": [
+        "route-language-intent-to-scope",
+        "route-logic-tool-precheck",
+        "route-agent-tool-gateway-policy",
+        "route-agent-tool-result-summary",
+        "route-agent-mcp-capability-boundary",
+        "route-agent-guardrail-human-review"
+      ]
+    },
+    {
+      "id": "agent_critical_error_domains",
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-proposed-action",
+        "route-powershell-safe-command",
+        "route-cs-spec-to-test",
+        "route-negative-fame-lesson",
+        "route-powershell-native-command-boundary",
+        "route-agent-guardrail-human-review"
+      ]
+    },
+    {
+      "id": "agent_abstraction_association",
+      "route_refs": [
+        "route-language-abstraction-transfer",
+        "route-language-multi-path-association",
+        "route-math-graph-traversal"
+      ]
+    },
+    {
+      "id": "agent_evaluation_feedback",
+      "route_refs": [
+        "route-agent-usability-evaluation",
+        "route-agent-reflection-improvement",
+        "route-math-evidence-update",
+        "route-negative-fame-lesson"
+      ]
+    },
+    {
+      "id": "knowledge_governance",
+      "route_refs": [
+        "route-knowledge-taxonomy-entry",
+        "route-logic-knowledge-consistency",
+        "route-cs-open-source-release-gate",
+        "route-cs-ci-security-release-hardening"
+      ]
+    },
+    {
+      "id": "agent_runtime_guardrails",
+      "route_refs": [
+        "route-language-thought-layer-selection",
+        "route-agent-one-shot-tool-use",
+        "route-agent-reminder-clock",
+        "route-agent-mechanism-enforcement",
+        "route-agent-mcp-capability-boundary",
+        "route-agent-guardrail-human-review",
+        "route-agent-checkpoint-store-memory"
+      ]
+    },
+    {
+      "id": "knowledge_navigation_and_sync",
+      "route_refs": [
+        "route-language-semantic-adaptation",
+        "route-language-directory-index",
+        "route-agent-database-sync"
+      ]
+    },
+    {
+      "id": "agent_stability_and_global_thinking",
+      "route_refs": [
+        "route-language-goal-backcasting",
+        "route-language-global-situation-model",
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-integration-usability-test",
+        "route-agent-computer-interface-loop",
+        "route-powershell-native-command-boundary",
+        "route-cs-ci-security-release-hardening"
+      ]
+    },
+    {
+      "id": "external_agent_plugin_bridge",
+      "route_refs": [
+        "route-agent-integration-usability-test",
+        "route-agent-tool-gateway-policy",
+        "route-agent-mechanism-enforcement",
+        "route-cs-agent-memory-loop",
+        "route-agent-local-connect-check",
+        "route-agent-mcp-capability-boundary",
+        "route-agent-checkpoint-store-memory",
+        "route-agent-computer-interface-loop"
+      ]
+    },
+    {
+      "id": "powershell_encoding_and_evidence",
+      "route_refs": [
+        "route-powershell-encoding-output",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ]
+    },
+    {
+      "id": "agent_tool_call_stability_pack",
+      "route_refs": [
+        "route-agent-mcp-capability-boundary",
+        "route-agent-guardrail-human-review",
+        "route-agent-checkpoint-store-memory",
+        "route-agent-computer-interface-loop",
+        "route-cs-ci-security-release-hardening",
+        "route-powershell-native-command-boundary"
+      ]
+    },
+    {
+      "id": "mcp_guardrail_memory_bridge",
+      "route_refs": [
+        "route-agent-mcp-capability-boundary",
+        "route-agent-guardrail-human-review",
+        "route-agent-checkpoint-store-memory"
+      ]
+    }
+  ]
+}

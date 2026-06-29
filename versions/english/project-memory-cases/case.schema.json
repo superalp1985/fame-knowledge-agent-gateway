@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "English Project Memory Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "project_id",
+    "summary",
+    "route_refs",
+    "evidence_refs"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "route_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "promotion_candidate": {
+      "type": "boolean"
+    }
+  }
+}

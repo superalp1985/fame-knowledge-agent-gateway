@@ -1,0 +1,40 @@
+{
+  "edition_id": "english",
+  "levels": [
+    {
+      "id": "L0_meta",
+      "label": "Meta Hub",
+      "use": "language tree, route rules and governance"
+    },
+    {
+      "id": "L1_discipline",
+      "label": "Discipline",
+      "use": "logic, mathematics, computer science and agent tooling"
+    },
+    {
+      "id": "L2_field",
+      "label": "Field",
+      "use": "subject subfields such as PowerShell safety or indexing"
+    },
+    {
+      "id": "L3_concept",
+      "label": "Concept",
+      "use": "terms and reusable concepts"
+    },
+    {
+      "id": "L4_method",
+      "label": "Method",
+      "use": "routes, patterns and playbooks"
+    },
+    {
+      "id": "L5_operation",
+      "label": "Operation",
+      "use": "tool actions and concrete workflow steps"
+    },
+    {
+      "id": "L6_case",
+      "label": "Case",
+      "use": "project memory, lessons and examples"
+    }
+  ]
+}

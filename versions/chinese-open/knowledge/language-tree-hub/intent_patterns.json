@@ -1,0 +1,38 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "patterns": [
+    {
+      "id": "intent-build-knowledge-branch",
+      "label": "建立知识分支",
+      "signals": ["建立", "补全", "录入", "整理", "分类", "知识网"],
+      "route_refs": ["route-language-intent-to-scope", "route-knowledge-taxonomy-entry"],
+      "required_slots": ["subject", "scope", "source_policy"],
+      "default_context_budget": 1800
+    },
+    {
+      "id": "intent-agent-tool-call",
+      "label": "Agent 工具调用",
+      "signals": ["调用工具", "运行命令", "执行", "下载", "写文件", "测试"],
+      "route_refs": ["route-agent-tool-proposed-action", "route-powershell-safe-command"],
+      "required_slots": ["tool_name", "operation_type", "risk_level"],
+      "default_context_budget": 2200
+    },
+    {
+      "id": "intent-debug-failure",
+      "label": "失败复盘",
+      "signals": ["出错", "失败", "卡住", "没生效", "报错", "修复"],
+      "route_refs": ["route-logic-failure-diagnosis", "route-negative-fame-lesson"],
+      "required_slots": ["observed_failure", "expected_result", "evidence"],
+      "default_context_budget": 2600
+    },
+    {
+      "id": "intent-association",
+      "label": "抽象联想",
+      "signals": ["联想", "发散", "迁移", "类比", "大局观", "找球门"],
+      "route_refs": ["route-language-abstraction-to-association"],
+      "required_slots": ["source_subject", "abstraction_level", "target_goal"],
+      "default_context_budget": 2400
+    }
+  ]
+}

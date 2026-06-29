@@ -1,0 +1,220 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "templates": [
+    {
+      "id": "template-read-only-inspection",
+      "label": "read only inspection",
+      "kind": "ProposedAction",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "requires_approval": false,
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [],
+        "allowed_side_effects": [
+          "none"
+        ]
+      },
+      "required_arguments": [
+        "tool_name",
+        "target",
+        "reason"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary."
+      ],
+      "rollback_plan": []
+    },
+    {
+      "id": "template-structured-file-edit",
+      "label": "structured file edit",
+      "kind": "ProposedAction",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "requires_approval": false,
+      "route_refs": [
+        "route-logic-tool-precheck",
+        "route-agent-tool-proposed-action",
+        "route-cs-spec-to-test"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [],
+        "allowed_side_effects": [
+          "modify_declared_files"
+        ]
+      },
+      "required_arguments": [
+        "file_paths",
+        "change_summary",
+        "validation_commands"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary.",
+        "Confirm observable signal after execution."
+      ],
+      "rollback_plan": [
+        "保留修改摘要，必要时由人工或版本控制回退。"
+      ]
+    },
+    {
+      "id": "template-shell-test-build",
+      "label": "shell test build",
+      "kind": "ProposedAction",
+      "operation_type": "test",
+      "risk_level": "low",
+      "requires_approval": false,
+      "route_refs": [
+        "route-powershell-safe-command",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "powershell-safety",
+          "computer-science"
+        ],
+        "allowed_side_effects": [
+          "read_files",
+          "write_build_artifacts"
+        ]
+      },
+      "required_arguments": [
+        "command",
+        "working_directory",
+        "expected_signal"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary."
+      ],
+      "rollback_plan": [
+        "清理可安全删除的临时构建产物。"
+      ]
+    },
+    {
+      "id": "template-network-download",
+      "label": "network download",
+      "kind": "ProposedAction",
+      "operation_type": "network",
+      "risk_level": "medium",
+      "requires_approval": true,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-cs-open-source-release-gate"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "computer-science"
+        ],
+        "allowed_side_effects": [
+          "network_read",
+          "write_declared_downloads"
+        ]
+      },
+      "required_arguments": [
+        "url",
+        "destination",
+        "license_status",
+        "usage"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary."
+      ],
+      "rollback_plan": [
+        "删除下载文件并移除未使用索引引用。"
+      ]
+    },
+    {
+      "id": "template-destructive-filesystem",
+      "label": "destructive filesystem",
+      "kind": "ProposedAction",
+      "operation_type": "delete",
+      "risk_level": "high",
+      "requires_approval": true,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-powershell-safe-command",
+        "route-negative-fame-lesson"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "powershell-safety"
+        ],
+        "allowed_side_effects": [
+          "delete_declared_paths_only"
+        ]
+      },
+      "required_arguments": [
+        "target_paths",
+        "allowed_root",
+        "reason",
+        "post_check"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary.",
+        "Confirm observable signal after execution."
+      ],
+      "rollback_plan": [
+        "只有在确认有备份或可重建时执行；否则拒绝。"
+      ]
+    },
+    {
+      "id": "template-tool-action-contract",
+      "label": "tool action contract",
+      "kind": "ProposedAction",
+      "operation_type": "read | write | execute | test | build | network | delete",
+      "risk_level": "low_to_high_by_operation",
+      "requires_approval": "required_when_mutating_or_high_risk",
+      "route_refs": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "agent-tooling"
+        ],
+        "allowed_side_effects": [
+          "declared_only"
+        ]
+      },
+      "required_arguments": [
+        "tool_name",
+        "operation_type",
+        "working_directory",
+        "scope",
+        "expected_signal",
+        "validation_plan"
+      ],
+      "validation_plan": [
+        "Confirm tool manual and schema have been read.",
+        "Confirm the action has one primary side effect.",
+        "Confirm working directory, paths and permission boundary.",
+        "Confirm observable signal after execution.",
+        "Write ToolResultSummary after execution."
+      ],
+      "rollback_plan": [
+        "高风险动作必须先说明可回滚方式；不可回滚且无审批时拒绝。"
+      ]
+    }
+  ]
+}

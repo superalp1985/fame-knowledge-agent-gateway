@@ -1,0 +1,17 @@
+{
+  "edition_id": "english",
+  "rules": [
+    {
+      "id": "association-requires-validation",
+      "summary": "Any lateral association must keep a validation hook."
+    },
+    {
+      "id": "association-budget",
+      "summary": "Limit cross-subject expansion by subject hops, edge count and context budget."
+    },
+    {
+      "id": "failure-first-reflection",
+      "summary": "Repeated failure triggers reflection routes before retrying."
+    }
+  ]
+}

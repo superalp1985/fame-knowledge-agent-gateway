@@ -1,0 +1,217 @@
+{
+  "edition_id": "english",
+  "subject": "powershell-safety",
+  "patterns": [
+    {
+      "id": "ps-pattern-read-file",
+      "label": "读取文本文件",
+      "risk_level": "read_only",
+      "template": "Get-Content -LiteralPath '<path>'",
+      "when_to_use": "读取确定路径下的文本文件。",
+      "checks": [
+        "路径来自可信作用域。",
+        "文件可能较大时限制输出行数或使用 Select-Object。",
+        "不要把完整大文件塞入上下文。"
+      ],
+      "related_failures": [
+        "tool-failure-context-bloat"
+      ]
+    },
+    {
+      "id": "ps-pattern-list-files",
+      "label": "列出文件",
+      "risk_level": "read_only",
+      "template": "Get-ChildItem -LiteralPath '<path>' -Force",
+      "when_to_use": "检查目录内容或确认目标是否存在。",
+      "checks": [
+        "递归枚举前确认目录规模。",
+        "优先用 rg --files 做代码仓库文件搜索。",
+        "输出只保留必要字段。"
+      ],
+      "related_failures": [
+        "tool-failure-context-bloat"
+      ]
+    },
+    {
+      "id": "ps-pattern-test-path",
+      "label": "路径存在性检查",
+      "risk_level": "read_only",
+      "template": "Test-Path -LiteralPath '<path>'",
+      "when_to_use": "在读取、写入、移动或删除前确认目标是否存在。",
+      "checks": [
+        "只作为存在性检查，不代表路径边界安全。",
+        "递归或破坏性操作前仍需 Resolve-Path。",
+        "输出可转成布尔证据。"
+      ],
+      "related_failures": []
+    },
+    {
+      "id": "ps-pattern-create-directories",
+      "label": "批量创建目录",
+      "risk_level": "low",
+      "template": "$dirs = @('<dir1>', '<dir2>'); New-Item -ItemType Directory -Force -Path $dirs | Out-Null",
+      "when_to_use": "一次创建多个目录。",
+      "checks": [
+        "多路径时确认 cmdlet 参数支持。",
+        "路径必须在当前项目或明确目标目录内。",
+        "创建后用 Get-ChildItem 或 Test-Path 验证。"
+      ],
+      "related_failures": [
+        "ps-failure-literalpath-multiple"
+      ]
+    },
+    {
+      "id": "ps-pattern-set-env-process",
+      "label": "当前进程环境变量",
+      "risk_level": "low",
+      "template": "$env:NAME = 'value'; <command>",
+      "when_to_use": "只需要当前命令或当前 PowerShell 进程读取环境变量。",
+      "checks": [
+        "不要误以为会永久生效。",
+        "不要输出真实密钥。",
+        "命令结束后按需要清理变量。"
+      ],
+      "related_failures": [
+        "ps-failure-env-scope"
+      ]
+    },
+    {
+      "id": "ps-pattern-native-command",
+      "label": "调用原生命令",
+      "risk_level": "low",
+      "template": "npm run <script> --prefix <dir>",
+      "when_to_use": "调用 npm、node、git 等外部程序。",
+      "checks": [
+        "明确工作目录或 --prefix。",
+        "需要传递特殊字符时先确认 PowerShell 解析规则。",
+        "检查退出码和关键输出摘要。"
+      ],
+      "related_failures": [
+        "ps-failure-quoting-expansion"
+      ]
+    },
+    {
+      "id": "ps-pattern-limited-output",
+      "label": "限制长输出",
+      "risk_level": "read_only",
+      "template": "<command> | Select-Object -First 120",
+      "when_to_use": "命令输出可能很长，只需要抽样或前几行判断状态。",
+      "checks": [
+        "确认截断不会隐藏关键错误。",
+        "必要时同时输出计数或摘要。",
+        "完整日志进入外部记忆或文件，不进入上下文。"
+      ],
+      "related_failures": [
+        "tool-failure-context-bloat",
+        "ps-dont-long-output-to-context"
+      ]
+    },
+    {
+      "id": "ps-pattern-safe-copy",
+      "label": "安全复制",
+      "risk_level": "medium",
+      "template": "$source = Resolve-Path -LiteralPath '<source>'; $target = '<target>'; Copy-Item -LiteralPath $source.Path -Destination $target",
+      "when_to_use": "复制明确文件或目录到已声明目标。",
+      "checks": [
+        "确认 source 存在且在允许范围。",
+        "确认 target 不会覆盖重要文件，必要时先 Test-Path。",
+        "复制后验证目标存在。"
+      ],
+      "related_failures": [
+        "ps-failure-cross-shell-delete"
+      ]
+    },
+    {
+      "id": "ps-pattern-safe-move",
+      "label": "安全移动",
+      "risk_level": "high",
+      "template": "$source = Resolve-Path -LiteralPath '<source>'; if (-not ($source.Path.StartsWith('<allowed-root>'))) { throw 'Source outside allowed root' }; Move-Item -LiteralPath $source.Path -Destination '<target>'",
+      "when_to_use": "移动文件或目录，且已明确源、目标和回滚方式。",
+      "checks": [
+        "高风险时必须有 ProposedAction，跨边界移动需要 ApprovedAction。",
+        "确认 source 和 target 的边界。",
+        "移动后验证源和目标状态。"
+      ],
+      "related_failures": [
+        "tool-failure-unscoped-mutation"
+      ]
+    },
+    {
+      "id": "ps-pattern-safe-recursive-delete",
+      "label": "安全递归删除",
+      "risk_level": "high",
+      "template": "$target = Resolve-Path -LiteralPath '<path>'; if (-not ($target.Path.StartsWith('<allowed-root>'))) { throw 'Target outside allowed root' }; Remove-Item -LiteralPath $target.Path -Recurse -Force",
+      "when_to_use": "确实需要删除目录树，且已得到审批。",
+      "checks": [
+        "必须有 ApprovedAction。",
+        "先 Resolve-Path 并确认 allowed root。",
+        "不得跨 shell 拼接删除命令。",
+        "执行后验证目标已删除且未影响其它路径。"
+      ],
+      "related_failures": [
+        "ps-failure-cross-shell-delete"
+      ]
+    },
+    {
+      "id": "ps-pattern-json-emit",
+      "label": "输出 JSON",
+      "risk_level": "read_only",
+      "template": "$obj | ConvertTo-Json -Depth 10",
+      "when_to_use": "需要给 Agent 或脚本稳定读取结构化输出。",
+      "checks": [
+        "设置足够 Depth。",
+        "避免输出密钥和隐私字段。",
+        "消费者按 JSON 解析，不用字符串切割。"
+      ],
+      "related_failures": []
+    },
+    {
+      "id": "ps-pattern-error-summary",
+      "label": "错误摘要",
+      "risk_level": "read_only",
+      "template": "try { <command> } catch { $_.Exception.Message; exit 1 }",
+      "when_to_use": "需要把 PowerShell 异常压缩成可读错误摘要。",
+      "checks": [
+        "不要吞掉退出状态。",
+        "保留关键错误消息。",
+        "完整堆栈只在必要时外置保存。"
+      ],
+      "related_failures": [
+        "tool-failure-context-bloat"
+      ]
+    },
+    {
+      "id": "ps-pattern-script-execution",
+      "label": "受控脚本执行",
+      "risk_level": "medium",
+      "template": "powershell -NoProfile -ExecutionPolicy Bypass -File '<script.ps1>'",
+      "when_to_use": "确实需要执行已知脚本文件，并已确认来源和作用域。",
+      "checks": [
+        "脚本来源必须可信。",
+        "参数和工作目录必须明确。",
+        "不要用该模式绕过未知脚本风险。",
+        "执行后记录输出摘要和副作用。"
+      ],
+      "related_failures": [
+        "tool-failure-unscoped-mutation"
+      ]
+    },
+    {
+      "id": "ps-pattern-utf8-output-probe",
+      "label": "UTF-8 中文输出探针",
+      "risk_level": "read_only",
+      "template": "$text = '中文编码探针-FAME'; [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); $OutputEncoding = [Console]::OutputEncoding; [pscustomobject]@{ console = [Console]::OutputEncoding.WebName; output = $OutputEncoding.WebName; sample = $text } | ConvertTo-Json -Compress",
+      "when_to_use": "PowerShell 终端或工具输出出现中文乱码，需要判断显示层和数据层是否一致。",
+      "checks": [
+        "只读探针，不修改用户文件。",
+        "优先读取 JSON 字段，不用肉眼判断乱码。",
+        "需要文件证据时写入临时 UTF-8 文件并读回。"
+      ],
+      "related_failures": [
+        "ps-failure-output-encoding-mojibake",
+        "tool-failure-terminal-mojibake-misdiagnosis"
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

@@ -1,0 +1,2659 @@
+{
+  "edition_id": "chinese-open",
+  "version": "0.1.0",
+  "nodes": [
+    {
+      "id": "language-tree-hub",
+      "label": "语言树中枢",
+      "subject": "language-tree-hub",
+      "node_type": "hub",
+      "abstraction_level": "L0_meta",
+      "summary": "中文开源知识网的中心入口，负责意图、词汇、语法、语义抽象、联想迁移、表达和验证。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-tree-001",
+        "cu-route-scope-001",
+        "cu-language-thought-layer-selection-001",
+        "cu-language-semantic-adaptation-001",
+        "cu-language-directory-index-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.75,
+        "epsilon": 0.65,
+        "kappa": 0.65,
+        "nu": 0.55,
+        "delta": 0,
+        "rho": 0.55,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "language-multi-path-association",
+      "label": "多路径横向联想",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "从语言树生成多条候选路线，用 FAME、风险、预算和验证钩子筛选，支持回溯和失败教训保留。",
+      "source_refs": [
+        "react-paper",
+        "tree-of-thoughts-paper"
+      ],
+      "content_refs": [
+        "cu-language-multi-path-association-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.62,
+        "kappa": 0.62,
+        "nu": 0.82,
+        "delta": 0.02,
+        "rho": 0.46,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "language-abstraction-transfer",
+      "label": "抽象迁移落地",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "把具体任务上提到方法和学科层，横向迁移可验证结构，再落回最小可执行动作。",
+      "source_refs": [
+        "tree-of-thoughts-paper",
+        "self-refine-paper"
+      ],
+      "content_refs": [
+        "cu-language-abstraction-transfer-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.78,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.26
+      }
+    },
+    {
+      "id": "logic",
+      "label": "逻辑",
+      "subject": "logic",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "为 Agent 提供论证、证明、反例、一致性检查和失败复盘能力。",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-argument-001",
+        "cu-logic-temporal-invariant-001"
+      ],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "logic-tool-precheck",
+      "label": "工具调用前逻辑预检",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "调用工具前检查目标、前提、schema、作用域、副作用和验证方式是否齐备。",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-tool-precheck-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "logic-failure-diagnosis",
+      "label": "失败诊断逻辑",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "把失败拆成观察事实、候选原因、区分性测试、修复动作和 FAME 更新候选。",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-failure-diagnosis-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "logic-knowledge-consistency",
+      "label": "知识录入一致性",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "新增知识前检查学科层级、抽象层级、来源、许可证、详细内容位置和 FAME 依据。",
+      "source_refs": [
+        "cn-gbt-13745-2009",
+        "cn-moe-graduate-catalog-2022"
+      ],
+      "content_refs": [
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "mathematics",
+      "label": "数学",
+      "subject": "mathematics",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "提供形式化、建模、证明、计算和不确定性处理能力。",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-modeling-001"
+      ],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.5,
+        "epsilon": 0.65,
+        "kappa": 0.45,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "math-graph-traversal-route",
+      "label": "图遍历找球门",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "按作用域、边预算、FAME 分数、风险和上下文预算寻找候选知识路线。",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-graph-traversal-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "math-evidence-update",
+      "label": "证据驱动参数更新",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "用测试、工具结果、人工反馈和失败样本更新 FAME 参数。",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-evidence-update-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "math-route-optimization",
+      "label": "路线评分与优化",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "用目标、约束、权重、风险惩罚和上下文成本比较候选路线。",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-route-optimization-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "computer-science",
+      "label": "计算机科学",
+      "subject": "computer-science",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "提供软件、系统、数据、AI、安全、HCI 和开源治理知识。",
+      "source_refs": [
+        "acm-ccs-2012",
+        "acm-cs2023",
+        "github-actions-security-hardening"
+      ],
+      "content_refs": [
+        "cu-cs-kg-001",
+        "cu-cs-kg-indexing-001",
+        "cu-cs-kg-light-graph-heavy-store-001",
+        "cu-cs-database-schema-versioning-001",
+        "cu-cs-ci-security-hardening-001",
+        "cu-cs-release-artifact-provenance-001"
+      ],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.6,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "cs-spec-to-test",
+      "label": "规格到测试",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "把用户目标转成可观察行为、验收标准和测试路径，执行后写回证据摘要。",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-spec-to-test-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "cs-kg-indexing",
+      "label": "知识图谱与索引工程",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "用轻图谱、内容数据库、规则库、别名索引、语义索引和作用域检索支撑大知识网扩展。",
+      "source_refs": [
+        "acm-ccs-2012"
+      ],
+      "content_refs": [
+        "cu-cs-kg-indexing-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.48,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "cs-agent-memory-loop",
+      "label": "Agent 工程记忆闭环",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "把目标、工具事件、测试证据、失败教训和恢复点写入工程记忆 overlay。",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-agent-memory-loop-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "cs-open-source-release-gate",
+      "label": "开源发布门禁",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "发布前检查许可证、来源登记、密钥路径、文档、专用校验和残余风险。",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-open-source-release-gate-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-tooling",
+      "label": "Agent 工具调取",
+      "subject": "agent-tooling",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "为 Agent 提供工具说明读取、schema 校验、审批、执行、摘要和失败复盘机制。",
+      "source_refs": [
+        "mcp-docs-intro",
+        "mcp-tools-spec",
+        "openai-tools-docs",
+        "openai-agents-sdk-guardrails",
+        "langgraph-memory-docs",
+        "llamaindex-agent-docs",
+        "mcp-spec-2025-06-18",
+        "openai-agents-sdk-human-review",
+        "langgraph-persistence-docs"
+      ],
+      "content_refs": [
+        "cu-agent-tool-proposed-action-001",
+        "cu-agent-tool-result-summary-001",
+        "cu-agent-one-shot-tool-use-001",
+        "cu-agent-reminder-clock-001",
+        "cu-agent-mechanism-enforcement-001",
+        "cu-agent-database-sync-001",
+        "cu-agent-ecosystem-mapping-001",
+        "cu-agent-practical-bridge-001",
+        "cu-agent-mcp-capability-boundary-001",
+        "cu-agent-tool-permission-scope-001",
+        "cu-agent-guardrail-human-review-001",
+        "cu-agent-checkpoint-store-memory-001",
+        "cu-agent-computer-interface-loop-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.75,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.05,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-action-template-selection",
+      "label": "Action 模板选择",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "按操作类型和风险等级选择只读、文件编辑、测试构建、下载或破坏性文件系统模板。",
+      "source_refs": [
+        "mcp-tools-spec",
+        "openai-tools-docs"
+      ],
+      "content_refs": [
+        "cu-agent-action-template-selection-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "agent-tool-gateway-policy",
+      "label": "Tool Gateway 策略执行",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "按工具风险执行说明优先、变更提案、高风险审批和结果摘要回写策略。",
+      "source_refs": [
+        "mcp-tools-spec",
+        "openai-tools-docs"
+      ],
+      "content_refs": [
+        "cu-agent-tool-gateway-policy-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-reflection-improvement",
+      "label": "反思迭代与失败回写",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "失败、部分成功或用户纠偏后，生成反思摘要、失败签名、最小下一步测试和 FAME 更新候选。",
+      "source_refs": [
+        "reflexion-paper",
+        "self-refine-paper",
+        "react-paper"
+      ],
+      "content_refs": [
+        "cu-agent-reflection-improvement-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.5,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "agent-usability-evaluation",
+      "label": "Agent 易用性评测",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "用工具成功率、schema 错误率、复发率、上下文节省和抽象迁移成功率评估 Agent 是否更好用。",
+      "source_refs": [
+        "agentbench-paper",
+        "swe-agent-paper",
+        "toolformer-paper"
+      ],
+      "content_refs": [
+        "cu-agent-usability-metrics-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "powershell-safety",
+      "label": "PowerShell 安全语法",
+      "subject": "powershell-safety",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "降低 Windows 命令调用中的解析、引号、路径、环境变量和文件系统风险。",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-quoting-rules",
+        "ms-powershell-redirection",
+        "ms-powershell-character-encoding"
+      ],
+      "content_refs": [
+        "cu-ps-quoting-001",
+        "cu-ps-filesystem-safety-001",
+        "cu-ps-native-command-boundary-001",
+        "cu-ps-structured-output-preference-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.8,
+        "epsilon": 0.8,
+        "kappa": 0.72,
+        "nu": 0.25,
+        "delta": 0.02,
+        "rho": 0.65,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "powershell-command-review",
+      "label": "PowerShell 命令审查流程",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "按意图、作用域、语法解析、风险、执行观察和摘要回写六步审查命令。",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-quoting-rules"
+      ],
+      "content_refs": [
+        "cu-ps-command-review-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-negative-fame-lesson",
+      "label": "负值 FAME 教训路线",
+      "subject": "agent-tooling",
+      "node_type": "lesson",
+      "abstraction_level": "L6_case",
+      "summary": "失败调用保留为可检索教训，后续任务可降低复发率。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-ps-new-item-path-001"
+      ],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.45,
+        "delta": -0.35,
+        "rho": 0.5,
+        "risk": 0.45
+      }
+    },
+    {
+      "id": "project-memory-overlay",
+      "label": "工程记忆 Overlay",
+      "subject": "project-memory",
+      "node_type": "index_ref",
+      "abstraction_level": "L6_case",
+      "summary": "记录实际工程过程、工具结果、测试证据和失败教训，不污染核心知识网。",
+      "source_refs": [],
+      "content_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.3
+      }
+    },
+    {
+      "id": "language-thought-layer-selection",
+      "label": "思考层级选择",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L2_field",
+      "summary": "先判断任务属于元组织、学科、方向、主题、方法、操作还是案例，再决定读哪一层，不把具体操作直接抬成全局结论。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001",
+        "cu-language-context-pack-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.74,
+        "epsilon": 0.7,
+        "kappa": 0.66,
+        "nu": 0.5,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "language-semantic-adaptation",
+      "label": "语义适配与术语归一",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "先把用户表达归一到 canonical term，再决定是映射、保留还是补充别名和学科位置。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-semantic-adaptation-001",
+        "cu-language-lexical-semantic-relations-001",
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.66,
+        "kappa": 0.62,
+        "nu": 0.56,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "language-directory-index",
+      "label": "文字目录索引",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L3_topic",
+      "summary": "按学科、方向、主题、方法、操作和案例逐级展开目录，只暴露入口与摘要，不暴露全量正文。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-directory-index-001",
+        "cu-cs-kg-indexing-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.64,
+        "nu": 0.45,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-one-shot-tool-use",
+      "label": "一次性工具调用",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "一个工具动作只做一次：读说明 -> 生成 ProposedAction -> 执行 -> 摘要回写；命令和结果不在上下文里循环堆叠。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-one-shot-tool-use-001",
+        "cu-agent-tool-manifest-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "agent-reminder-clock",
+      "label": "自设时钟与提醒",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "长任务登记 checkpoint、超时阈值和提醒条件，恢复时按 checkpoint 续跑，并将中断原因写回工程记忆。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-reminder-clock-001",
+        "cu-agent-memory-overlay-boundary-001",
+        "cu-logic-temporal-invariant-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.66,
+        "nu": 0.46,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-mechanism-enforcement",
+      "label": "机制强制执行",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "插件运行时强制检查文档优先、作用域裁剪、一次性工具调用、结果摘要和失败回写；缺少前提时直接阻断。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-mechanism-enforcement-001",
+        "cu-agent-tool-gateway-policy-001",
+        "cu-agent-tool-proposed-action-001"
+      ],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-database-sync",
+      "label": "数据库与知识网同步",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "知识网手动编辑后同步数据库索引、来源引用和 schema 版本；数据库变更保持稳定 id 和回滚策略，避免污染核心知识网。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-database-sync-001",
+        "cu-cs-database-schema-versioning-001",
+        "cu-cs-kg-light-graph-heavy-store-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "language-goal-backcasting",
+      "label": "找球门逆推",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "先固定完成标准、验收证据、禁止事项、风险边界和最小下一步，再倒推 subject、route、工具和上下文预算。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-goal-backcasting-001",
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "language-global-situation-model",
+      "label": "全局态势模型",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L3_topic",
+      "summary": "开工时同时看目标、约束、资源、风险、证据、历史教训和停止条件，避免只盯当前命令。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-global-situation-model-001",
+        "cu-language-context-pack-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-tool-action-contract",
+      "label": "工具动作契约",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "调用工具前把意图压成动作契约：工具名、操作类型、作用域、schema、预期信号、验证计划和回滚或阻断条件。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-tool-action-contract-001",
+        "cu-agent-tool-proposed-action-001",
+        "cu-logic-tool-precheck-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-stability-preflight",
+      "label": "高频坑位预检",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "执行前按 PowerShell、Git、Node/npm、Python、结构化数据、网络下载和数据库同步做轻量预检，命中风险先缩小动作。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-stability-preflight-001",
+        "cu-agent-error-signature-map-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-integration-usability-test",
+      "label": "Agent 接入便利性测试",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "用入口读取、语义归一、ContextPack、ProposedAction、ToolResultSummary、工程记忆摘要六步测试外部 Agent 是否容易接入。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-integration-usability-001",
+        "cu-agent-effect-smoke-scenarios-001",
+        "cu-agent-usability-metrics-001",
+        "cu-agent-ecosystem-mapping-001",
+        "cu-agent-practical-bridge-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "powershell-encoding-output",
+      "label": "PowerShell 中文编码输出",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "中文输出乱码时先跑编码探针，区分终端显示、管道解码和文件真实损坏。",
+      "source_refs": [
+        "ms-powershell-character-encoding",
+        "ms-powershell-preference-variables"
+      ],
+      "content_refs": [
+        "cu-ps-encoding-output-001",
+        "cu-agent-real-eval-encoding-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "agent-local-connect-check",
+      "label": "本机 Agent 接入检查",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "选择本机 Agent 类型后检查协议、路由、doctor、实机评测和启动提示是否齐备；图形化路径生成接入消息，等待 Agent 回复后由用户确认。",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-local-connect-001",
+        "cu-agent-integration-usability-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.04,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-mcp-capability-boundary",
+      "label": "MCP 能力发现与工具边界",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "把 MCP resources、prompts、tools 分层，并把工具 schema、权限、副作用和作用域压成可执行前置边界。",
+      "source_refs": [
+        "mcp-spec-2025-06-18",
+        "mcp-tools-spec"
+      ],
+      "content_refs": [
+        "cu-agent-mcp-capability-boundary-001",
+        "cu-agent-tool-permission-scope-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "agent-guardrail-human-review",
+      "label": "Guardrail 与人工审批路由",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "敏感工具调用用 guardrail 和人工审批阻断高风险发散，并保存恢复点。",
+      "source_refs": [
+        "openai-agents-sdk-guardrails",
+        "openai-agents-sdk-human-review"
+      ],
+      "content_refs": [
+        "cu-agent-guardrail-human-review-001",
+        "cu-agent-output-validation-001"
+      ],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "agent-checkpoint-store-memory",
+      "label": "Checkpoint/Store 工程记忆路由",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "短期状态、长期工程记忆和核心知识网分层保存，图谱只保留摘要索引和 FAME 证据。",
+      "source_refs": [
+        "langgraph-memory-docs",
+        "langgraph-persistence-docs"
+      ],
+      "content_refs": [
+        "cu-agent-checkpoint-store-memory-001",
+        "cu-agent-thread-resume-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-computer-interface-loop",
+      "label": "Agent-Computer Interface 工程闭环",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "仓库观察、文件定位、编辑、测试、错误摘要和下一步动作构成工程 Agent 最小闭环。",
+      "source_refs": [
+        "swe-agent-paper",
+        "swe-agent-github",
+        "openhands"
+      ],
+      "content_refs": [
+        "cu-agent-computer-interface-loop-001",
+        "cu-agent-repo-navigation-edit-test-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "cs-ci-security-release-hardening",
+      "label": "CI 安全与发布加固",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "发布前检查 CI 权限、secrets、第三方 action、发布产物来源和许可证边界。",
+      "source_refs": [
+        "github-actions-security-hardening",
+        "nist-ssdf-sp800-218"
+      ],
+      "content_refs": [
+        "cu-cs-ci-security-hardening-001",
+        "cu-cs-release-artifact-provenance-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "powershell-native-command-boundary",
+      "label": "PowerShell 原生命令边界",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "调用外部 exe、git、node、npm、python、docker 前确认参数边界、编码、退出码和结构化输出。",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-redirection"
+      ],
+      "content_refs": [
+        "cu-ps-native-command-boundary-001",
+        "cu-ps-structured-output-preference-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-hub-multi-path-association",
+      "source": "language-tree-hub",
+      "target": "language-multi-path-association",
+      "edge_type": "routes_to",
+      "summary": "开放问题先由语言树生成多条候选路线，再按预算、FAME、风险和验证钩子筛选。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.62,
+        "kappa": 0.62,
+        "nu": 0.82,
+        "delta": 0.02,
+        "rho": 0.46,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "edge-hub-abstraction-transfer",
+      "source": "language-tree-hub",
+      "target": "language-abstraction-transfer",
+      "edge_type": "routes_to",
+      "summary": "需要创造性组合或跨学科迁移时，从语言树进入抽象迁移落地路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.78,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.26
+      }
+    },
+    {
+      "id": "edge-multi-path-graph-traversal",
+      "source": "language-multi-path-association",
+      "target": "math-graph-traversal-route",
+      "edge_type": "routes_to",
+      "summary": "多路径联想需要数学图遍历提供找球门、预算控制和回溯搜索方法。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.7,
+        "nu": 0.7,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-multi-path-route-optimization",
+      "source": "language-multi-path-association",
+      "target": "math-route-optimization",
+      "edge_type": "validates_with",
+      "summary": "候选路线由路线评分与优化框架比较收益、风险、上下文成本和证据强度。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.55,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-abstraction-transfer-logic",
+      "source": "language-abstraction-transfer",
+      "target": "logic",
+      "edge_type": "validates_with",
+      "summary": "抽象迁移必须经过逻辑一致性、反例和论证检查，避免迁移无证据事实。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.72,
+        "kappa": 0.64,
+        "nu": 0.62,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-abstraction-transfer-cs",
+      "source": "language-abstraction-transfer",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "抽象后的方法可落到计算机科学的工程验证、工具治理、索引和记忆闭环。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.68,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.24
+      }
+    },
+    {
+      "id": "edge-hub-logic",
+      "source": "language-tree-hub",
+      "target": "logic",
+      "edge_type": "routes_to",
+      "summary": "需要论证、证明、反例或一致性检查时进入逻辑分支。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.55,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-logic-tool-precheck",
+      "source": "logic",
+      "target": "logic-tool-precheck",
+      "edge_type": "contains",
+      "summary": "逻辑分支提供工具调用前的前提、作用域和验证检查。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-logic-failure-diagnosis",
+      "source": "logic",
+      "target": "logic-failure-diagnosis",
+      "edge_type": "contains",
+      "summary": "逻辑分支提供失败诊断、反例搜索和溯因复盘入口。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-logic-knowledge-consistency",
+      "source": "logic",
+      "target": "logic-knowledge-consistency",
+      "edge_type": "contains",
+      "summary": "逻辑分支约束知识录入的一致性、来源和抽象层级。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-math",
+      "source": "language-tree-hub",
+      "target": "mathematics",
+      "edge_type": "routes_to",
+      "summary": "需要形式化、建模、证明、计算或概率统计时进入数学分支。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.52,
+        "epsilon": 0.65,
+        "kappa": 0.48,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-math-graph-traversal",
+      "source": "mathematics",
+      "target": "math-graph-traversal-route",
+      "edge_type": "contains",
+      "summary": "数学分支提供图遍历和知识网找球门方法。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-math-evidence-update",
+      "source": "mathematics",
+      "target": "math-evidence-update",
+      "edge_type": "contains",
+      "summary": "数学分支提供证据驱动的 FAME 参数更新方法。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-math-route-optimization",
+      "source": "mathematics",
+      "target": "math-route-optimization",
+      "edge_type": "contains",
+      "summary": "数学分支提供路线评分、权重和风险惩罚的优化框架。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-cs",
+      "source": "language-tree-hub",
+      "target": "computer-science",
+      "edge_type": "routes_to",
+      "summary": "需要软件、系统、数据、AI、安全或开源治理时进入计算机科学分支。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.6,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-cs-spec-to-test",
+      "source": "computer-science",
+      "target": "cs-spec-to-test",
+      "edge_type": "contains",
+      "summary": "计算机科学分支提供规格到测试的工程验证路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-cs-kg-indexing",
+      "source": "computer-science",
+      "target": "cs-kg-indexing",
+      "edge_type": "contains",
+      "summary": "计算机科学分支提供轻图谱、数据库和索引工程路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.48,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-cs-agent-memory-loop",
+      "source": "computer-science",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "contains",
+      "summary": "计算机科学分支提供 Agent 工程记忆闭环路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-cs-open-source-release-gate",
+      "source": "computer-science",
+      "target": "cs-open-source-release-gate",
+      "edge_type": "contains",
+      "summary": "计算机科学分支提供开源发布门禁路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-hub-graph-traversal",
+      "source": "language-tree-hub",
+      "target": "math-graph-traversal-route",
+      "edge_type": "routes_to",
+      "summary": "语言树需要跨学科联想或找球门时，调用数学图遍历路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-cs-spec-to-test",
+      "source": "language-tree-hub",
+      "target": "cs-spec-to-test",
+      "edge_type": "routes_to",
+      "summary": "语言树识别工程实现或测试意图后，可直接进入规格到测试路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-hub-tooling",
+      "source": "language-tree-hub",
+      "target": "agent-tooling",
+      "edge_type": "routes_to",
+      "summary": "任务涉及工具、命令、文件写入或执行时进入 Agent 工具调取分支。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.75,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.05,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-tooling-action-template",
+      "source": "agent-tooling",
+      "target": "agent-action-template-selection",
+      "edge_type": "contains",
+      "summary": "Agent 工具分支提供按风险和操作类型选择 Action 模板的路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-tooling-gateway-policy",
+      "source": "agent-tooling",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "contains",
+      "summary": "Agent 工具分支提供 Tool Gateway 策略执行路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-tooling-reflection-improvement",
+      "source": "agent-tooling",
+      "target": "agent-reflection-improvement",
+      "edge_type": "contains",
+      "summary": "Agent 工具分支在失败、部分成功或用户纠偏后进入反思迭代与失败回写路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.5,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-tooling-usability-evaluation",
+      "source": "agent-tooling",
+      "target": "agent-usability-evaluation",
+      "edge_type": "contains",
+      "summary": "Agent 工具分支用易用性和少犯错指标验证机制是否真的提高工程表现。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-hub-action-template",
+      "source": "language-tree-hub",
+      "target": "agent-action-template-selection",
+      "edge_type": "routes_to",
+      "summary": "语言树识别工具或命令意图后，优先进入 Action 模板选择。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-action-template-logic-precheck",
+      "source": "agent-action-template-selection",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "Action 模板选择后，用逻辑预检确认前提、作用域和验证方式。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.74,
+        "nu": 0.32,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-route-optimization-tooling",
+      "source": "math-route-optimization",
+      "target": "agent-tooling",
+      "edge_type": "validates_with",
+      "summary": "工具策略选择可使用数学路线评分和风险惩罚框架。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-spec-to-test-logic-precheck",
+      "source": "cs-spec-to-test",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "工程验收标准进入工具执行前，先用逻辑预检确认前提和验证方式。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.32,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-agent-memory-tooling",
+      "source": "cs-agent-memory-loop",
+      "target": "agent-tooling",
+      "edge_type": "routes_to",
+      "summary": "Agent 工程记忆闭环依赖工具治理记录 ProposedAction、ToolResultSummary 和失败教训。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-gateway-policy-memory-loop",
+      "source": "agent-tool-gateway-policy",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "routes_to",
+      "summary": "Tool Gateway 策略执行后，把结果摘要、审计和失败教训写入 Agent 工程记忆闭环。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-reflection-negative-lesson",
+      "source": "agent-reflection-improvement",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "routes_to",
+      "summary": "反思迭代把可复发失败写入负值 FAME lesson，并保留失败签名。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.74,
+        "kappa": 0.66,
+        "nu": 0.48,
+        "delta": -0.18,
+        "rho": 0.58,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "edge-reflection-evidence-update",
+      "source": "agent-reflection-improvement",
+      "target": "math-evidence-update",
+      "edge_type": "validates_with",
+      "summary": "反思摘要中的测试证据和用户纠偏进入 FAME 参数更新候选。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.76,
+        "kappa": 0.68,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-reflection-memory-loop",
+      "source": "agent-reflection-improvement",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "routes_to",
+      "summary": "反思摘要和完整轨迹引用进入工程记忆 overlay，不污染核心知识网。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-usability-spec-to-test",
+      "source": "agent-usability-evaluation",
+      "target": "cs-spec-to-test",
+      "edge_type": "validates_with",
+      "summary": "Agent 易用性评测必须连接工程验收标准和可观察测试证据。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-usability-reflection",
+      "source": "agent-usability-evaluation",
+      "target": "agent-reflection-improvement",
+      "edge_type": "routes_to",
+      "summary": "失败复发率、用户纠偏率或 schema 错误率异常时，进入反思迭代路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-tooling-logic-precheck",
+      "source": "agent-tooling",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "Agent 工具调用前使用逻辑预检确认前提、作用域、副作用和验证方式。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-tooling-powershell",
+      "source": "agent-tooling",
+      "target": "powershell-safety",
+      "edge_type": "routes_to",
+      "summary": "在 Windows shell 或 PowerShell 命令执行前加载安全语法规则。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.8,
+        "epsilon": 0.8,
+        "kappa": 0.72,
+        "nu": 0.25,
+        "delta": 0.02,
+        "rho": 0.65,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-powershell-command-review",
+      "source": "powershell-safety",
+      "target": "powershell-command-review",
+      "edge_type": "contains",
+      "summary": "PowerShell 分支提供命令审查和风险矩阵路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-action-template-powershell-review",
+      "source": "agent-action-template-selection",
+      "target": "powershell-command-review",
+      "edge_type": "validates_with",
+      "summary": "模板选择涉及 shell 命令时，进入 PowerShell 命令审查流程。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-powershell-review-gateway",
+      "source": "powershell-command-review",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "validates_with",
+      "summary": "PowerShell 命令审查后，由 Tool Gateway 根据风险等级决定允许、提案或审批。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.3,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-tooling-negative-lesson",
+      "source": "agent-tooling",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "warns_against",
+      "summary": "失败工具调用应写入负值 FAME 教训路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.45,
+        "delta": -0.35,
+        "rho": 0.5,
+        "risk": 0.45
+      }
+    },
+    {
+      "id": "edge-evidence-update-negative-lesson",
+      "source": "math-evidence-update",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "validates_with",
+      "summary": "失败样本通过证据更新影响负值 FAME 教训路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": -0.1,
+        "rho": 0.55,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-logic-failure-negative-lesson",
+      "source": "logic-failure-diagnosis",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "routes_to",
+      "summary": "失败诊断完成后，把可复用教训写入负值 FAME 路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": -0.12,
+        "rho": 0.5,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-cs-memory-overlay",
+      "source": "computer-science",
+      "target": "project-memory-overlay",
+      "edge_type": "indexes",
+      "summary": "工程案例作为 overlay 记录，与核心学科知识隔离。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.3
+      }
+    },
+    {
+      "id": "edge-agent-memory-overlay",
+      "source": "cs-agent-memory-loop",
+      "target": "project-memory-overlay",
+      "edge_type": "indexes",
+      "summary": "Agent 工程记忆闭环把长轨迹、证据和教训写入 project-memory overlay。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-release-gate-logic-consistency",
+      "source": "cs-open-source-release-gate",
+      "target": "logic-knowledge-consistency",
+      "edge_type": "validates_with",
+      "summary": "开源发布前使用逻辑一致性检查确认来源、许可证、抽象层级和文档同步。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-knowledge-consistency-memory",
+      "source": "logic-knowledge-consistency",
+      "target": "project-memory-overlay",
+      "edge_type": "validates_with",
+      "summary": "工程记忆晋升或知识录入前，使用一致性检查避免污染核心知识网。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-logic-math",
+      "source": "logic",
+      "target": "mathematics",
+      "edge_type": "associates_with",
+      "summary": "证明、形式化和数学基础可在逻辑与数学之间联想迁移。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.55,
+        "epsilon": 0.65,
+        "kappa": 0.5,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-math-cs",
+      "source": "mathematics",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "离散数学、概率统计、优化和建模可迁移到计算机科学问题。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.58,
+        "epsilon": 0.65,
+        "kappa": 0.55,
+        "nu": 0.48,
+        "delta": 0,
+        "rho": 0.38,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-graph-traversal-cs-kg",
+      "source": "math-graph-traversal-route",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "图遍历方法迁移到计算机科学的知识图谱、索引和可视化导航。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.68,
+        "epsilon": 0.68,
+        "kappa": 0.7,
+        "nu": 0.55,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-graph-traversal-cs-indexing",
+      "source": "math-graph-traversal-route",
+      "target": "cs-kg-indexing",
+      "edge_type": "associates_with",
+      "summary": "数学图遍历路线与计算机科学索引工程共同控制大知识网遍历效率。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.55,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-language-thought-layer-selection",
+      "source": "language-tree-hub",
+      "target": "language-thought-layer-selection",
+      "edge_type": "routes_to",
+      "summary": "先判断任务属于元组织、学科、方向、主题、方法、操作还是案例，再决定读哪一层，不把具体操作直接抬成全局结论。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.74,
+        "epsilon": 0.7,
+        "kappa": 0.66,
+        "nu": 0.5,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-language-semantic-adaptation",
+      "source": "language-tree-hub",
+      "target": "language-semantic-adaptation",
+      "edge_type": "routes_to",
+      "summary": "先把用户表达归一到 canonical term，再决定是映射、保留还是补充别名和学科位置。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.66,
+        "kappa": 0.62,
+        "nu": 0.56,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-language-directory-index",
+      "source": "language-tree-hub",
+      "target": "language-directory-index",
+      "edge_type": "routes_to",
+      "summary": "按学科、方向、主题、方法、操作和案例逐级展开目录，只暴露入口与摘要，不暴露全量正文。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.64,
+        "nu": 0.45,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-agent-one-shot-tool-use",
+      "source": "agent-tooling",
+      "target": "agent-one-shot-tool-use",
+      "edge_type": "routes_to",
+      "summary": "一个工具动作只做一次：读说明 -> 生成 ProposedAction -> 执行 -> 摘要回写；命令和结果不在上下文里循环堆叠。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-hub-agent-reminder-clock",
+      "source": "agent-tooling",
+      "target": "agent-reminder-clock",
+      "edge_type": "routes_to",
+      "summary": "长任务登记 checkpoint、超时阈值和提醒条件，恢复时按 checkpoint 续跑，并将中断原因写回工程记忆。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.66,
+        "nu": 0.46,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-agent-mechanism-enforcement",
+      "source": "agent-tooling",
+      "target": "agent-mechanism-enforcement",
+      "edge_type": "routes_to",
+      "summary": "插件运行时强制检查文档优先、作用域裁剪、一次性工具调用、结果摘要和失败回写；缺少前提时直接阻断。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-hub-agent-database-sync",
+      "source": "agent-tooling",
+      "target": "agent-database-sync",
+      "edge_type": "routes_to",
+      "summary": "知识网手动编辑后同步数据库索引、来源引用和 schema 版本；数据库变更保持稳定 id 和回滚策略，避免污染核心知识网。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-language-tree-hub-language-goal-backcasting",
+      "source": "language-tree-hub",
+      "target": "language-goal-backcasting",
+      "edge_type": "routes_to",
+      "summary": "先固定完成标准、验收证据、禁止事项、风险边界和最小下一步，再倒推 subject、route、工具和上下文预算。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-language-tree-hub-language-global-situation-model",
+      "source": "language-tree-hub",
+      "target": "language-global-situation-model",
+      "edge_type": "routes_to",
+      "summary": "开工时同时看目标、约束、资源、风险、证据、历史教训和停止条件，避免只盯当前命令。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-tool-action-contract",
+      "source": "agent-tooling",
+      "target": "agent-tool-action-contract",
+      "edge_type": "routes_to",
+      "summary": "调用工具前把意图压成动作契约：工具名、操作类型、作用域、schema、预期信号、验证计划和回滚或阻断条件。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-stability-preflight",
+      "source": "agent-tooling",
+      "target": "agent-stability-preflight",
+      "edge_type": "routes_to",
+      "summary": "执行前按 PowerShell、Git、Node/npm、Python、结构化数据、网络下载和数据库同步做轻量预检，命中风险先缩小动作。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-integration-usability-test",
+      "source": "agent-tooling",
+      "target": "agent-integration-usability-test",
+      "edge_type": "routes_to",
+      "summary": "用入口读取、语义归一、ContextPack、ProposedAction、ToolResultSummary、工程记忆摘要六步测试外部 Agent 是否容易接入。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-language-goal-backcasting-agent-tool-action-contract",
+      "source": "language-goal-backcasting",
+      "target": "agent-tool-action-contract",
+      "edge_type": "routes_to",
+      "summary": "完成标准和风险边界确定后，进入工具动作契约。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-language-global-situation-agent-stability-preflight",
+      "source": "language-global-situation-model",
+      "target": "agent-stability-preflight",
+      "edge_type": "validates_with",
+      "summary": "全局态势模型落地到高频坑位预检，防止只盯当前命令。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-powershell-safety-powershell-encoding-output",
+      "source": "powershell-safety",
+      "target": "powershell-encoding-output",
+      "edge_type": "routes_to",
+      "summary": "PowerShell 安全语法扩展到中文编码输出证据检查。",
+      "source_refs": [
+        "ms-powershell-character-encoding"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-agent-stability-preflight-powershell-encoding-output",
+      "source": "agent-stability-preflight",
+      "target": "powershell-encoding-output",
+      "edge_type": "validates_with",
+      "summary": "高频坑位预检遇到中文乱码时转入编码探针。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-local-connect-check",
+      "source": "agent-tooling",
+      "target": "agent-local-connect-check",
+      "edge_type": "routes_to",
+      "summary": "Agent 工具调取入口提供本机 Agent 傻瓜接入状态检查。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.04,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-local-connect-check-agent-integration-usability-test",
+      "source": "agent-local-connect-check",
+      "target": "agent-integration-usability-test",
+      "edge_type": "validates_with",
+      "summary": "本机接入检查通过后进入外部 Agent 接入便利性测试。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-mcp-capability-boundary",
+      "source": "agent-tooling",
+      "target": "agent-mcp-capability-boundary",
+      "edge_type": "routes_to",
+      "summary": "Agent 工具调取先进入 MCP 能力发现与工具边界，确定可用能力和副作用边界。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-guardrail-human-review",
+      "source": "agent-tooling",
+      "target": "agent-guardrail-human-review",
+      "edge_type": "routes_to",
+      "summary": "高风险工具动作进入 Guardrail 与人工审批路由。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-checkpoint-store-memory",
+      "source": "agent-tooling",
+      "target": "agent-checkpoint-store-memory",
+      "edge_type": "routes_to",
+      "summary": "长任务和外部记忆进入 checkpoint/store 工程记忆路由。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-computer-interface-loop",
+      "source": "agent-tooling",
+      "target": "agent-computer-interface-loop",
+      "edge_type": "routes_to",
+      "summary": "工程型 Agent 调用工具时进入仓库观察、编辑、测试闭环。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-computer-science-cs-ci-security-release-hardening",
+      "source": "computer-science",
+      "target": "cs-ci-security-release-hardening",
+      "edge_type": "routes_to",
+      "summary": "计算机科学发布工程分支连接 CI 安全与发布加固路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-powershell-safety-powershell-native-command-boundary",
+      "source": "powershell-safety",
+      "target": "powershell-native-command-boundary",
+      "edge_type": "routes_to",
+      "summary": "PowerShell 安全分支连接原生命令参数边界路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-mcp-capability-boundary-agent-tool-action-contract",
+      "source": "agent-mcp-capability-boundary",
+      "target": "agent-tool-action-contract",
+      "edge_type": "validates_with",
+      "summary": "能力边界确定后，生成工具动作契约。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-guardrail-human-review-tool-gateway",
+      "source": "agent-guardrail-human-review",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "validates_with",
+      "summary": "Guardrail 决策由 Tool Gateway 执行 allow、block、rewrite 或 ask_user。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-checkpoint-store-memory-cs-agent-memory-loop",
+      "source": "agent-checkpoint-store-memory",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "associates_with",
+      "summary": "Checkpoint/store 与 Agent 工程记忆 overlay 共同承担全量记忆保留和摘要检索。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-computer-interface-loop-cs-spec-to-test",
+      "source": "agent-computer-interface-loop",
+      "target": "cs-spec-to-test",
+      "edge_type": "validates_with",
+      "summary": "工程闭环的编辑动作必须通过规格到测试路线验证。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-cs-ci-security-release-hardening-release-gate",
+      "source": "cs-ci-security-release-hardening",
+      "target": "cs-open-source-release-gate",
+      "edge_type": "validates_with",
+      "summary": "CI 安全和产物来源是开源发布门禁的一部分。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-powershell-native-command-boundary-command-review",
+      "source": "powershell-native-command-boundary",
+      "target": "powershell-command-review",
+      "edge_type": "validates_with",
+      "summary": "原生命令边界检查落回 PowerShell 命令审查流程。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-stability-preflight-powershell-native-command-boundary",
+      "source": "agent-stability-preflight",
+      "target": "powershell-native-command-boundary",
+      "edge_type": "validates_with",
+      "summary": "高频坑位预检命中原生命令时进入 PowerShell 原生命令边界路线。",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    }
+  ]
+}

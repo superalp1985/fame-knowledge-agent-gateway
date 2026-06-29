@@ -1,0 +1,78 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "policies": [
+    {
+      "id": "gateway-policy-doc-first",
+      "label": "doc first",
+      "severity": "required",
+      "applies_to": [
+        "unknown_tool",
+        "schema_sensitive_tool",
+        "high_risk_tool"
+      ],
+      "decision": "block_until_doc_checked",
+      "summary": "If the tool name, schema, permission or side effect is unclear, block until the manual is checked."
+    },
+    {
+      "id": "gateway-policy-read-only-fast-path",
+      "label": "read only fast path",
+      "severity": "allowed",
+      "applies_to": [
+        "read_only"
+      ],
+      "decision": "allow_with_summary",
+      "summary": "Read-only tools may run quickly, but output must be bounded and summarized."
+    },
+    {
+      "id": "gateway-policy-mutation-proposed-action",
+      "label": "mutation proposed action",
+      "severity": "required",
+      "applies_to": [
+        "write",
+        "move",
+        "network",
+        "execute",
+        "test",
+        "build"
+      ],
+      "decision": "require_proposed_action",
+      "summary": "Mutating actions must declare goal, scope, risk, validation and rollback."
+    },
+    {
+      "id": "gateway-policy-high-risk-approval",
+      "label": "high risk approval",
+      "severity": "required",
+      "applies_to": [
+        "delete",
+        "recursive_move",
+        "remote_publish",
+        "credential_change"
+      ],
+      "decision": "require_approved_action",
+      "summary": "High-risk actions require ApprovedAction or equivalent human confirmation."
+    },
+    {
+      "id": "gateway-policy-result-summary",
+      "label": "result summary",
+      "severity": "required",
+      "applies_to": [
+        "all_tool_results"
+      ],
+      "decision": "require_tool_result_summary",
+      "summary": "Every tool execution writes status, evidence, errors, next steps and FAME update candidates."
+    },
+    {
+      "id": "gateway-policy-negative-lesson",
+      "label": "negative lesson",
+      "severity": "required",
+      "applies_to": [
+        "failure",
+        "partial",
+        "regression"
+      ],
+      "decision": "write_negative_lesson_candidate",
+      "summary": "Failures are retained as project memory and negative FAME candidates."
+    }
+  ]
+}

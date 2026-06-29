@@ -1,0 +1,42 @@
+{
+  "edition_id": "chinese-open",
+  "rule_set_id": "agent-tool-governance",
+  "label": "Agent 工具调取治理规则",
+  "rules": [
+    {
+      "id": "rule-tool-doc-first",
+      "severity": "required",
+      "summary": "调用不熟悉、变更性或高风险工具前，先读取工具说明或 schema 摘要。",
+      "applies_to": ["tool_call", "shell_command", "file_write", "network_download"],
+      "route_refs": ["route-agent-tool-doc-first"]
+    },
+    {
+      "id": "rule-proposed-action",
+      "severity": "required_for_mutation",
+      "summary": "写入、删除、移动、下载、执行脚本和网络操作必须先形成 ProposedAction。",
+      "applies_to": ["mutation", "network", "execution"],
+      "route_refs": ["route-agent-tool-proposed-action"]
+    },
+    {
+      "id": "rule-approved-action",
+      "severity": "required_for_high_risk",
+      "summary": "高风险动作必须经过 ApprovedAction 或等价的运行时审批机制。",
+      "applies_to": ["delete", "recursive_move", "credential_change", "remote_publish"],
+      "route_refs": ["route-agent-tool-proposed-action"]
+    },
+    {
+      "id": "rule-result-summary",
+      "severity": "required",
+      "summary": "工具结果必须转成状态、证据、失败原因和下一步摘要，完整输出放外部记忆。",
+      "applies_to": ["tool_result", "shell_output", "test_result"],
+      "route_refs": ["route-agent-tool-result-summary"]
+    },
+    {
+      "id": "rule-negative-memory-retention",
+      "severity": "required",
+      "summary": "失败调用不删除，写成 lesson 或负值 FAME 路线，用于后续避错。",
+      "applies_to": ["failure", "exception", "regression"],
+      "route_refs": ["route-negative-fame-lesson"]
+    }
+  ]
+}

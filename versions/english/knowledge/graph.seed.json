@@ -1,0 +1,2659 @@
+{
+  "edition_id": "english",
+  "version": "0.1.0",
+  "nodes": [
+    {
+      "id": "language-tree-hub",
+      "label": "Language Tree Hub",
+      "subject": "language-tree-hub",
+      "node_type": "hub",
+      "abstraction_level": "L0_meta",
+      "summary": "English open knowledge center for intent, lexicon, grammar, semantic abstraction, lateral association, expression and validation.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-tree-001",
+        "cu-route-scope-001",
+        "cu-language-thought-layer-selection-001",
+        "cu-language-semantic-adaptation-001",
+        "cu-language-directory-index-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.75,
+        "epsilon": 0.65,
+        "kappa": 0.65,
+        "nu": 0.55,
+        "delta": 0,
+        "rho": 0.55,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "language-multi-path-association",
+      "label": "Multi-path Lateral Association",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Generate several candidate routes from the Language Tree and rank them by FAME, risk, budget and validation hooks.",
+      "source_refs": [
+        "react-paper",
+        "tree-of-thoughts-paper"
+      ],
+      "content_refs": [
+        "cu-language-multi-path-association-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.62,
+        "kappa": 0.62,
+        "nu": 0.82,
+        "delta": 0.02,
+        "rho": 0.46,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "language-abstraction-transfer",
+      "label": "Abstraction Transfer Landing",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Raise concrete tasks to method and subject layers, transfer verifiable structure laterally, then return to minimal action.",
+      "source_refs": [
+        "tree-of-thoughts-paper",
+        "self-refine-paper"
+      ],
+      "content_refs": [
+        "cu-language-abstraction-transfer-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.78,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.26
+      }
+    },
+    {
+      "id": "logic",
+      "label": "Logic",
+      "subject": "logic",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "Provides argument analysis, proof obligations, counterexamples, consistency checks and failure diagnosis for agents.",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-argument-001",
+        "cu-logic-temporal-invariant-001"
+      ],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "logic-tool-precheck",
+      "label": "Logical Tool Precheck",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Checks goal, premise, schema, scope, side effect and validation method before tool use.",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-tool-precheck-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "logic-failure-diagnosis",
+      "label": "Failure Diagnosis Logic",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Splits a failure into observed facts, hypotheses, distinguishing tests, repairs and FAME update candidates.",
+      "source_refs": [
+        "sep-logic",
+        "open-logic-project"
+      ],
+      "content_refs": [
+        "cu-logic-failure-diagnosis-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "logic-knowledge-consistency",
+      "label": "Knowledge Authoring Consistency",
+      "subject": "logic",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Constrains knowledge additions by subject level, abstraction level, source, license and FAME rationale.",
+      "source_refs": [
+        "cn-gbt-13745-2009",
+        "cn-moe-graduate-catalog-2022"
+      ],
+      "content_refs": [
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "subject": "mathematics",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "Provides formalization, modeling, graph traversal, scoring, uncertainty handling and optimization.",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-modeling-001"
+      ],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.5,
+        "epsilon": 0.65,
+        "kappa": 0.45,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "math-graph-traversal-route",
+      "label": "Graph Traversal Goal Gate",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Finds candidate knowledge routes by scope, edge budget, FAME score, risk and context budget.",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-graph-traversal-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "math-evidence-update",
+      "label": "Evidence-driven Parameter Update",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Updates FAME parameters from tests, tool results, human feedback and failure examples.",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-evidence-update-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "math-route-optimization",
+      "label": "Route Scoring and Optimization",
+      "subject": "mathematics",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Compares route candidates by effectiveness, fit, confidence, novelty, risk and context pressure.",
+      "source_refs": [
+        "math-msc2020"
+      ],
+      "content_refs": [
+        "cu-math-route-optimization-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "computer-science",
+      "label": "Computer Science",
+      "subject": "computer-science",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "Provides software engineering, systems, data, AI, security, HCI and open-source governance knowledge.",
+      "source_refs": [
+        "acm-ccs-2012",
+        "acm-cs2023",
+        "github-actions-security-hardening"
+      ],
+      "content_refs": [
+        "cu-cs-kg-001",
+        "cu-cs-kg-indexing-001",
+        "cu-cs-kg-light-graph-heavy-store-001",
+        "cu-cs-database-schema-versioning-001",
+        "cu-cs-ci-security-hardening-001",
+        "cu-cs-release-artifact-provenance-001"
+      ],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.6,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "cs-spec-to-test",
+      "label": "Specification to Test",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Turns goals into observable behavior, acceptance criteria and evidence-backed tests.",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-spec-to-test-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "cs-kg-indexing",
+      "label": "Knowledge Graph and Index Engineering",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Combines light graph, content database, alias index, semantic index and scoped search.",
+      "source_refs": [
+        "acm-ccs-2012"
+      ],
+      "content_refs": [
+        "cu-cs-kg-indexing-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.48,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "cs-agent-memory-loop",
+      "label": "Agent Project Memory Loop",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Stores real implementation traces, tool evidence, lessons and resume points outside core knowledge.",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-agent-memory-loop-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "cs-open-source-release-gate",
+      "label": "Open-source Release Gate",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Checks license, sources, secrets, docs, edition health and residual risk before release.",
+      "source_refs": [
+        "acm-cs2023"
+      ],
+      "content_refs": [
+        "cu-cs-open-source-release-gate-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-tooling",
+      "label": "Agent Tooling",
+      "subject": "agent-tooling",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "Governs tool description reading, schema checks, approvals, execution, summaries and failure recurrence prevention.",
+      "source_refs": [
+        "mcp-docs-intro",
+        "mcp-tools-spec",
+        "openai-tools-docs",
+        "openai-agents-sdk-guardrails",
+        "langgraph-memory-docs",
+        "llamaindex-agent-docs",
+        "mcp-spec-2025-06-18",
+        "openai-agents-sdk-human-review",
+        "langgraph-persistence-docs"
+      ],
+      "content_refs": [
+        "cu-agent-tool-proposed-action-001",
+        "cu-agent-tool-result-summary-001",
+        "cu-agent-one-shot-tool-use-001",
+        "cu-agent-reminder-clock-001",
+        "cu-agent-mechanism-enforcement-001",
+        "cu-agent-database-sync-001",
+        "cu-agent-ecosystem-mapping-001",
+        "cu-agent-practical-bridge-001",
+        "cu-agent-mcp-capability-boundary-001",
+        "cu-agent-tool-permission-scope-001",
+        "cu-agent-guardrail-human-review-001",
+        "cu-agent-checkpoint-store-memory-001",
+        "cu-agent-computer-interface-loop-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.75,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.05,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-action-template-selection",
+      "label": "Action Template Selection",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Chooses the right ProposedAction template by operation type and risk.",
+      "source_refs": [
+        "mcp-tools-spec",
+        "openai-tools-docs"
+      ],
+      "content_refs": [
+        "cu-agent-action-template-selection-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "agent-tool-gateway-policy",
+      "label": "Tool Gateway Policy Execution",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Applies doc-first, proposal, approval and result-summary policies.",
+      "source_refs": [
+        "mcp-tools-spec",
+        "openai-tools-docs"
+      ],
+      "content_refs": [
+        "cu-agent-tool-gateway-policy-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-reflection-improvement",
+      "label": "Reflection Iteration and Failure Write-back",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Turns failures and corrections into recurrence guards and negative FAME lessons.",
+      "source_refs": [
+        "reflexion-paper",
+        "self-refine-paper",
+        "react-paper"
+      ],
+      "content_refs": [
+        "cu-agent-reflection-improvement-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.5,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "agent-usability-evaluation",
+      "label": "Agent Usability Evaluation",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Measures whether the system makes agents easier to connect and less error-prone.",
+      "source_refs": [
+        "agentbench-paper",
+        "swe-agent-paper",
+        "toolformer-paper"
+      ],
+      "content_refs": [
+        "cu-agent-usability-metrics-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "powershell-safety",
+      "label": "PowerShell Safety",
+      "subject": "powershell-safety",
+      "node_type": "discipline",
+      "abstraction_level": "L1_discipline",
+      "summary": "Reduces Windows shell mistakes around parsing, quoting, paths, recursion, streams and encoding.",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-quoting-rules",
+        "ms-powershell-redirection",
+        "ms-powershell-character-encoding"
+      ],
+      "content_refs": [
+        "cu-ps-quoting-001",
+        "cu-ps-filesystem-safety-001",
+        "cu-ps-native-command-boundary-001",
+        "cu-ps-structured-output-preference-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.8,
+        "epsilon": 0.8,
+        "kappa": 0.72,
+        "nu": 0.25,
+        "delta": 0.02,
+        "rho": 0.65,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "powershell-command-review",
+      "label": "PowerShell Command Review Flow",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Reviews command shape, path resolution, pipeline and side effects before execution.",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-quoting-rules"
+      ],
+      "content_refs": [
+        "cu-ps-command-review-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "route-negative-fame-lesson",
+      "label": "Negative FAME Lesson Route",
+      "subject": "agent-tooling",
+      "node_type": "lesson",
+      "abstraction_level": "L6_case",
+      "summary": "Preserves failed or conflicting routes as visible lessons instead of deleting them.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-ps-new-item-path-001"
+      ],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.45,
+        "delta": -0.35,
+        "rho": 0.5,
+        "risk": 0.45
+      }
+    },
+    {
+      "id": "project-memory-overlay",
+      "label": "Project Memory Overlay",
+      "subject": "project-memory",
+      "node_type": "index_ref",
+      "abstraction_level": "L6_case",
+      "summary": "Keeps implementation memory separate from reusable core knowledge.",
+      "source_refs": [],
+      "content_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.3
+      }
+    },
+    {
+      "id": "language-thought-layer-selection",
+      "label": "Thinking Layer Selection",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L2_field",
+      "summary": "Selects the right abstraction layer before traversal or execution.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001",
+        "cu-language-context-pack-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.74,
+        "epsilon": 0.7,
+        "kappa": 0.66,
+        "nu": 0.5,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "language-semantic-adaptation",
+      "label": "Semantic Adaptation and Term Normalization",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Maps user wording, aliases and tool names to canonical terms.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-semantic-adaptation-001",
+        "cu-language-lexical-semantic-relations-001",
+        "cu-logic-knowledge-consistency-001"
+      ],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.66,
+        "kappa": 0.62,
+        "nu": 0.56,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "language-directory-index",
+      "label": "Text Directory Index",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L3_topic",
+      "summary": "Provides expandable subject indexes synchronized with graph edits.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-directory-index-001",
+        "cu-cs-kg-indexing-001"
+      ],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.64,
+        "nu": 0.45,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-one-shot-tool-use",
+      "label": "One-shot Tool Use",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Reads tool manuals at call time and retains only summaries to protect context.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-one-shot-tool-use-001",
+        "cu-agent-tool-manifest-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "agent-reminder-clock",
+      "label": "Self-set Clock and Reminder",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Schedules checkpoints and resume prompts for long-running tasks.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-reminder-clock-001",
+        "cu-agent-memory-overlay-boundary-001",
+        "cu-logic-temporal-invariant-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.66,
+        "nu": 0.46,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-mechanism-enforcement",
+      "label": "Mechanism Enforcement",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Makes route, action contract, approval and result summary checks difficult for an agent to skip.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-mechanism-enforcement-001",
+        "cu-agent-tool-gateway-policy-001",
+        "cu-agent-tool-proposed-action-001"
+      ],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-database-sync",
+      "label": "Database and Knowledge-net Sync",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Keeps multimodal and detailed data in databases while the graph keeps light previews and refs.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-database-sync-001",
+        "cu-cs-database-schema-versioning-001",
+        "cu-cs-kg-light-graph-heavy-store-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "language-goal-backcasting",
+      "label": "Goal Gate Backcasting",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Works backward from success criteria, evidence and forbidden outcomes to a minimal route set.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-goal-backcasting-001",
+        "cu-language-thought-layer-selection-001",
+        "cu-route-scope-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "language-global-situation-model",
+      "label": "Global Situation Model",
+      "subject": "language-tree-hub",
+      "node_type": "route",
+      "abstraction_level": "L3_topic",
+      "summary": "Keeps goal, constraints, resources, risk, history and stop conditions visible before action.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-language-global-situation-model-001",
+        "cu-language-context-pack-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "agent-tool-action-contract",
+      "label": "Tool Action Contract",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Normalizes every tool intent into scope, expected signal, validation, rollback and approval requirements.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-tool-action-contract-001",
+        "cu-agent-tool-proposed-action-001",
+        "cu-logic-tool-precheck-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-stability-preflight",
+      "label": "High-frequency Pitfall Preflight",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Checks common tool failure domains before execution.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-stability-preflight-001",
+        "cu-agent-error-signature-map-001",
+        "cu-agent-tool-result-summary-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-integration-usability-test",
+      "label": "Agent Integration Usability Test",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Tests whether external agents can use the plugin immediately.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-integration-usability-001",
+        "cu-agent-effect-smoke-scenarios-001",
+        "cu-agent-usability-metrics-001",
+        "cu-agent-ecosystem-mapping-001",
+        "cu-agent-practical-bridge-001"
+      ],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "powershell-encoding-output",
+      "label": "PowerShell Chinese Encoding Output",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Distinguishes display mojibake from pipe decoding and real file corruption.",
+      "source_refs": [
+        "ms-powershell-character-encoding",
+        "ms-powershell-preference-variables"
+      ],
+      "content_refs": [
+        "cu-ps-encoding-output-001",
+        "cu-agent-real-eval-encoding-001"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "agent-local-connect-check",
+      "label": "Local Agent Connection Check",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Lets a user pick a local agent, generate config or prompt text, and confirm connection.",
+      "source_refs": [],
+      "content_refs": [
+        "cu-agent-local-connect-001",
+        "cu-agent-integration-usability-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.04,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-mcp-capability-boundary",
+      "label": "MCP Capability Discovery and Tool Boundary",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Separates MCP resources, prompts and tools, then compresses schema, permissions, side effects and scope into a pre-call boundary.",
+      "source_refs": [
+        "mcp-spec-2025-06-18",
+        "mcp-tools-spec"
+      ],
+      "content_refs": [
+        "cu-agent-mcp-capability-boundary-001",
+        "cu-agent-tool-permission-scope-001"
+      ],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "agent-guardrail-human-review",
+      "label": "Guardrail and Human Review Route",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Uses guardrails and human review to block high-risk tool drift and preserve resume points.",
+      "source_refs": [
+        "openai-agents-sdk-guardrails",
+        "openai-agents-sdk-human-review"
+      ],
+      "content_refs": [
+        "cu-agent-guardrail-human-review-001",
+        "cu-agent-output-validation-001"
+      ],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "agent-checkpoint-store-memory",
+      "label": "Checkpoint/Store Project Memory Route",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L4_method",
+      "summary": "Splits short-term state, long-term project memory and core knowledge while keeping the graph lightweight.",
+      "source_refs": [
+        "langgraph-memory-docs",
+        "langgraph-persistence-docs"
+      ],
+      "content_refs": [
+        "cu-agent-checkpoint-store-memory-001",
+        "cu-agent-thread-resume-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "agent-computer-interface-loop",
+      "label": "Agent-Computer Interface Engineering Loop",
+      "subject": "agent-tooling",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Provides the repository observation, navigation, edit, test, summary and next-action loop for engineering agents.",
+      "source_refs": [
+        "swe-agent-paper",
+        "swe-agent-github",
+        "openhands"
+      ],
+      "content_refs": [
+        "cu-agent-computer-interface-loop-001",
+        "cu-agent-repo-navigation-edit-test-001"
+      ],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "cs-ci-security-release-hardening",
+      "label": "CI Security and Release Hardening",
+      "subject": "computer-science",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Checks CI permissions, secrets, third-party actions, artifact provenance and license boundaries before release.",
+      "source_refs": [
+        "github-actions-security-hardening",
+        "nist-ssdf-sp800-218"
+      ],
+      "content_refs": [
+        "cu-cs-ci-security-hardening-001",
+        "cu-cs-release-artifact-provenance-001"
+      ],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "powershell-native-command-boundary",
+      "label": "PowerShell Native Command Boundary",
+      "subject": "powershell-safety",
+      "node_type": "route",
+      "abstraction_level": "L5_operation",
+      "summary": "Reviews native command argument passing, encoding, exit code and structured evidence in PowerShell.",
+      "source_refs": [
+        "ms-powershell-parsing",
+        "ms-powershell-redirection"
+      ],
+      "content_refs": [
+        "cu-ps-native-command-boundary-001",
+        "cu-ps-structured-output-preference-001"
+      ],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-hub-multi-path-association",
+      "source": "language-tree-hub",
+      "target": "language-multi-path-association",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-multi-path-association.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.62,
+        "kappa": 0.62,
+        "nu": 0.82,
+        "delta": 0.02,
+        "rho": 0.46,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "edge-hub-abstraction-transfer",
+      "source": "language-tree-hub",
+      "target": "language-abstraction-transfer",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-abstraction-transfer.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.78,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.26
+      }
+    },
+    {
+      "id": "edge-multi-path-graph-traversal",
+      "source": "language-multi-path-association",
+      "target": "math-graph-traversal-route",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-multi-path-association to math-graph-traversal-route.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.7,
+        "nu": 0.7,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-multi-path-route-optimization",
+      "source": "language-multi-path-association",
+      "target": "math-route-optimization",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from language-multi-path-association to math-route-optimization.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.55,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-abstraction-transfer-logic",
+      "source": "language-abstraction-transfer",
+      "target": "logic",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from language-abstraction-transfer to logic.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.72,
+        "kappa": 0.64,
+        "nu": 0.62,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-abstraction-transfer-cs",
+      "source": "language-abstraction-transfer",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from language-abstraction-transfer to computer-science.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.66,
+        "kappa": 0.64,
+        "nu": 0.68,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.24
+      }
+    },
+    {
+      "id": "edge-hub-logic",
+      "source": "language-tree-hub",
+      "target": "logic",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to logic.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.55,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-logic-tool-precheck",
+      "source": "logic",
+      "target": "logic-tool-precheck",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from logic to logic-tool-precheck.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-logic-failure-diagnosis",
+      "source": "logic",
+      "target": "logic-failure-diagnosis",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from logic to logic-failure-diagnosis.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-logic-knowledge-consistency",
+      "source": "logic",
+      "target": "logic-knowledge-consistency",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from logic to logic-knowledge-consistency.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-math",
+      "source": "language-tree-hub",
+      "target": "mathematics",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to mathematics.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.52,
+        "epsilon": 0.65,
+        "kappa": 0.48,
+        "nu": 0.4,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-math-graph-traversal",
+      "source": "mathematics",
+      "target": "math-graph-traversal-route",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from mathematics to math-graph-traversal-route.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-math-evidence-update",
+      "source": "mathematics",
+      "target": "math-evidence-update",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from mathematics to math-evidence-update.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-math-route-optimization",
+      "source": "mathematics",
+      "target": "math-route-optimization",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from mathematics to math-route-optimization.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-cs",
+      "source": "language-tree-hub",
+      "target": "computer-science",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to computer-science.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.6,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-cs-spec-to-test",
+      "source": "computer-science",
+      "target": "cs-spec-to-test",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from computer-science to cs-spec-to-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-cs-kg-indexing",
+      "source": "computer-science",
+      "target": "cs-kg-indexing",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from computer-science to cs-kg-indexing.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.48,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-cs-agent-memory-loop",
+      "source": "computer-science",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from computer-science to cs-agent-memory-loop.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-cs-open-source-release-gate",
+      "source": "computer-science",
+      "target": "cs-open-source-release-gate",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from computer-science to cs-open-source-release-gate.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-hub-graph-traversal",
+      "source": "language-tree-hub",
+      "target": "math-graph-traversal-route",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to math-graph-traversal-route.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.72,
+        "nu": 0.58,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-cs-spec-to-test",
+      "source": "language-tree-hub",
+      "target": "cs-spec-to-test",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to cs-spec-to-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-hub-tooling",
+      "source": "language-tree-hub",
+      "target": "agent-tooling",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to agent-tooling.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.75,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.05,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-tooling-action-template",
+      "source": "agent-tooling",
+      "target": "agent-action-template-selection",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from agent-tooling to agent-action-template-selection.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-tooling-gateway-policy",
+      "source": "agent-tooling",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from agent-tooling to agent-tool-gateway-policy.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-tooling-reflection-improvement",
+      "source": "agent-tooling",
+      "target": "agent-reflection-improvement",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from agent-tooling to agent-reflection-improvement.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.5,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-tooling-usability-evaluation",
+      "source": "agent-tooling",
+      "target": "agent-usability-evaluation",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from agent-tooling to agent-usability-evaluation.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-hub-action-template",
+      "source": "language-tree-hub",
+      "target": "agent-action-template-selection",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to agent-action-template-selection.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.76,
+        "nu": 0.32,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-action-template-logic-precheck",
+      "source": "agent-action-template-selection",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-action-template-selection to logic-tool-precheck.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.74,
+        "nu": 0.32,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-route-optimization-tooling",
+      "source": "math-route-optimization",
+      "target": "agent-tooling",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from math-route-optimization to agent-tooling.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.66,
+        "epsilon": 0.7,
+        "kappa": 0.68,
+        "nu": 0.42,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-spec-to-test-logic-precheck",
+      "source": "cs-spec-to-test",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from cs-spec-to-test to logic-tool-precheck.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.32,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-agent-memory-tooling",
+      "source": "cs-agent-memory-loop",
+      "target": "agent-tooling",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from cs-agent-memory-loop to agent-tooling.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-gateway-policy-memory-loop",
+      "source": "agent-tool-gateway-policy",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tool-gateway-policy to cs-agent-memory-loop.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.05,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-reflection-negative-lesson",
+      "source": "agent-reflection-improvement",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-reflection-improvement to route-negative-fame-lesson.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.74,
+        "kappa": 0.66,
+        "nu": 0.48,
+        "delta": -0.18,
+        "rho": 0.58,
+        "risk": 0.28
+      }
+    },
+    {
+      "id": "edge-reflection-evidence-update",
+      "source": "agent-reflection-improvement",
+      "target": "math-evidence-update",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-reflection-improvement to math-evidence-update.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.72,
+        "epsilon": 0.76,
+        "kappa": 0.68,
+        "nu": 0.48,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-reflection-memory-loop",
+      "source": "agent-reflection-improvement",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-reflection-improvement to cs-agent-memory-loop.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-usability-spec-to-test",
+      "source": "agent-usability-evaluation",
+      "target": "cs-spec-to-test",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-usability-evaluation to cs-spec-to-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-usability-reflection",
+      "source": "agent-usability-evaluation",
+      "target": "agent-reflection-improvement",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-usability-evaluation to agent-reflection-improvement.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.76,
+        "kappa": 0.7,
+        "nu": 0.46,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-tooling-logic-precheck",
+      "source": "agent-tooling",
+      "target": "logic-tool-precheck",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-tooling to logic-tool-precheck.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.76,
+        "epsilon": 0.74,
+        "kappa": 0.72,
+        "nu": 0.35,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-tooling-powershell",
+      "source": "agent-tooling",
+      "target": "powershell-safety",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to powershell-safety.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.8,
+        "epsilon": 0.8,
+        "kappa": 0.72,
+        "nu": 0.25,
+        "delta": 0.02,
+        "rho": 0.65,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-powershell-command-review",
+      "source": "powershell-safety",
+      "target": "powershell-command-review",
+      "edge_type": "contains",
+      "summary": "English edition mirror: contains from powershell-safety to powershell-command-review.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-action-template-powershell-review",
+      "source": "agent-action-template-selection",
+      "target": "powershell-command-review",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-action-template-selection to powershell-command-review.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-powershell-review-gateway",
+      "source": "powershell-command-review",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from powershell-command-review to agent-tool-gateway-policy.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.3,
+        "delta": 0.04,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-tooling-negative-lesson",
+      "source": "agent-tooling",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "warns_against",
+      "summary": "English edition mirror: warns_against from agent-tooling to route-negative-fame-lesson.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.65,
+        "epsilon": 0.7,
+        "kappa": 0.55,
+        "nu": 0.45,
+        "delta": -0.35,
+        "rho": 0.5,
+        "risk": 0.45
+      }
+    },
+    {
+      "id": "edge-evidence-update-negative-lesson",
+      "source": "math-evidence-update",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from math-evidence-update to route-negative-fame-lesson.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.68,
+        "epsilon": 0.76,
+        "kappa": 0.62,
+        "nu": 0.45,
+        "delta": -0.1,
+        "rho": 0.55,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-logic-failure-negative-lesson",
+      "source": "logic-failure-diagnosis",
+      "target": "route-negative-fame-lesson",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from logic-failure-diagnosis to route-negative-fame-lesson.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.68,
+        "epsilon": 0.72,
+        "kappa": 0.62,
+        "nu": 0.48,
+        "delta": -0.12,
+        "rho": 0.5,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-cs-memory-overlay",
+      "source": "computer-science",
+      "target": "project-memory-overlay",
+      "edge_type": "indexes",
+      "summary": "English edition mirror: indexes from computer-science to project-memory-overlay.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.55,
+        "chi": 0.6,
+        "epsilon": 0.65,
+        "kappa": 0.6,
+        "nu": 0.35,
+        "delta": 0,
+        "rho": 0.45,
+        "risk": 0.3
+      }
+    },
+    {
+      "id": "edge-agent-memory-overlay",
+      "source": "cs-agent-memory-loop",
+      "target": "project-memory-overlay",
+      "edge_type": "indexes",
+      "summary": "English edition mirror: indexes from cs-agent-memory-loop to project-memory-overlay.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.74,
+        "kappa": 0.7,
+        "nu": 0.45,
+        "delta": 0.04,
+        "rho": 0.6,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-release-gate-logic-consistency",
+      "source": "cs-open-source-release-gate",
+      "target": "logic-knowledge-consistency",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from cs-open-source-release-gate to logic-knowledge-consistency.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.72,
+        "epsilon": 0.8,
+        "kappa": 0.68,
+        "nu": 0.3,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-knowledge-consistency-memory",
+      "source": "logic-knowledge-consistency",
+      "target": "project-memory-overlay",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from logic-knowledge-consistency to project-memory-overlay.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.7,
+        "epsilon": 0.76,
+        "kappa": 0.65,
+        "nu": 0.35,
+        "delta": 0.02,
+        "rho": 0.55,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-logic-math",
+      "source": "logic",
+      "target": "mathematics",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from logic to mathematics.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.5,
+        "chi": 0.55,
+        "epsilon": 0.65,
+        "kappa": 0.5,
+        "nu": 0.5,
+        "delta": 0,
+        "rho": 0.35,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-math-cs",
+      "source": "mathematics",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from mathematics to computer-science.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.52,
+        "chi": 0.58,
+        "epsilon": 0.65,
+        "kappa": 0.55,
+        "nu": 0.48,
+        "delta": 0,
+        "rho": 0.38,
+        "risk": 0.25
+      }
+    },
+    {
+      "id": "edge-graph-traversal-cs-kg",
+      "source": "math-graph-traversal-route",
+      "target": "computer-science",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from math-graph-traversal-route to computer-science.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.68,
+        "epsilon": 0.68,
+        "kappa": 0.7,
+        "nu": 0.55,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.22
+      }
+    },
+    {
+      "id": "edge-graph-traversal-cs-indexing",
+      "source": "math-graph-traversal-route",
+      "target": "cs-kg-indexing",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from math-graph-traversal-route to cs-kg-indexing.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.72,
+        "nu": 0.55,
+        "delta": 0.03,
+        "rho": 0.56,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-language-thought-layer-selection",
+      "source": "language-tree-hub",
+      "target": "language-thought-layer-selection",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-thought-layer-selection.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.74,
+        "epsilon": 0.7,
+        "kappa": 0.66,
+        "nu": 0.5,
+        "delta": 0.02,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-language-semantic-adaptation",
+      "source": "language-tree-hub",
+      "target": "language-semantic-adaptation",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-semantic-adaptation.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.58,
+        "chi": 0.7,
+        "epsilon": 0.66,
+        "kappa": 0.62,
+        "nu": 0.56,
+        "delta": 0.02,
+        "rho": 0.48,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-hub-language-directory-index",
+      "source": "language-tree-hub",
+      "target": "language-directory-index",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-directory-index.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.6,
+        "chi": 0.72,
+        "epsilon": 0.68,
+        "kappa": 0.64,
+        "nu": 0.45,
+        "delta": 0.01,
+        "rho": 0.5,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-agent-one-shot-tool-use",
+      "source": "agent-tooling",
+      "target": "agent-one-shot-tool-use",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-one-shot-tool-use.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.28,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.15
+      }
+    },
+    {
+      "id": "edge-hub-agent-reminder-clock",
+      "source": "agent-tooling",
+      "target": "agent-reminder-clock",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-reminder-clock.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.72,
+        "kappa": 0.66,
+        "nu": 0.46,
+        "delta": 0.02,
+        "rho": 0.52,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-hub-agent-mechanism-enforcement",
+      "source": "agent-tooling",
+      "target": "agent-mechanism-enforcement",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-mechanism-enforcement.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.8,
+        "epsilon": 0.76,
+        "kappa": 0.78,
+        "nu": 0.34,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-hub-agent-database-sync",
+      "source": "agent-tooling",
+      "target": "agent-database-sync",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-database-sync.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.02,
+        "rho": 0.58,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-language-tree-hub-language-goal-backcasting",
+      "source": "language-tree-hub",
+      "target": "language-goal-backcasting",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-goal-backcasting.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-language-tree-hub-language-global-situation-model",
+      "source": "language-tree-hub",
+      "target": "language-global-situation-model",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-tree-hub to language-global-situation-model.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.78,
+        "epsilon": 0.72,
+        "kappa": 0.7,
+        "nu": 0.62,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.18
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-tool-action-contract",
+      "source": "agent-tooling",
+      "target": "agent-tool-action-contract",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-tool-action-contract.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-stability-preflight",
+      "source": "agent-tooling",
+      "target": "agent-stability-preflight",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-stability-preflight.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-integration-usability-test",
+      "source": "agent-tooling",
+      "target": "agent-integration-usability-test",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-integration-usability-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-language-goal-backcasting-agent-tool-action-contract",
+      "source": "language-goal-backcasting",
+      "target": "agent-tool-action-contract",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from language-goal-backcasting to agent-tool-action-contract.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-language-global-situation-agent-stability-preflight",
+      "source": "language-global-situation-model",
+      "target": "agent-stability-preflight",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from language-global-situation-model to agent-stability-preflight.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.78,
+        "kappa": 0.78,
+        "nu": 0.46,
+        "delta": 0.04,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-powershell-safety-powershell-encoding-output",
+      "source": "powershell-safety",
+      "target": "powershell-encoding-output",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from powershell-safety to powershell-encoding-output.",
+      "source_refs": [
+        "ms-powershell-character-encoding"
+      ],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-agent-stability-preflight-powershell-encoding-output",
+      "source": "agent-stability-preflight",
+      "target": "powershell-encoding-output",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-stability-preflight to powershell-encoding-output.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.62,
+        "chi": 0.76,
+        "epsilon": 0.78,
+        "kappa": 0.7,
+        "nu": 0.36,
+        "delta": 0.03,
+        "rho": 0.58,
+        "risk": 0.2
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-local-connect-check",
+      "source": "agent-tooling",
+      "target": "agent-local-connect-check",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-local-connect-check.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.72,
+        "nu": 0.42,
+        "delta": 0.04,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-local-connect-check-agent-integration-usability-test",
+      "source": "agent-local-connect-check",
+      "target": "agent-integration-usability-test",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-local-connect-check to agent-integration-usability-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.64,
+        "chi": 0.74,
+        "epsilon": 0.82,
+        "kappa": 0.72,
+        "nu": 0.44,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.16
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-mcp-capability-boundary",
+      "source": "agent-tooling",
+      "target": "agent-mcp-capability-boundary",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-mcp-capability-boundary.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-guardrail-human-review",
+      "source": "agent-tooling",
+      "target": "agent-guardrail-human-review",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-guardrail-human-review.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-checkpoint-store-memory",
+      "source": "agent-tooling",
+      "target": "agent-checkpoint-store-memory",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-checkpoint-store-memory.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-tooling-agent-computer-interface-loop",
+      "source": "agent-tooling",
+      "target": "agent-computer-interface-loop",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from agent-tooling to agent-computer-interface-loop.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.64,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-computer-science-cs-ci-security-release-hardening",
+      "source": "computer-science",
+      "target": "cs-ci-security-release-hardening",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from computer-science to cs-ci-security-release-hardening.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.62,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-powershell-safety-powershell-native-command-boundary",
+      "source": "powershell-safety",
+      "target": "powershell-native-command-boundary",
+      "edge_type": "routes_to",
+      "summary": "English edition mirror: routes_to from powershell-safety to powershell-native-command-boundary.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.66,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-mcp-capability-boundary-agent-tool-action-contract",
+      "source": "agent-mcp-capability-boundary",
+      "target": "agent-tool-action-contract",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-mcp-capability-boundary to agent-tool-action-contract.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.72,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.78,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-guardrail-human-review-tool-gateway",
+      "source": "agent-guardrail-human-review",
+      "target": "agent-tool-gateway-policy",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-guardrail-human-review to agent-tool-gateway-policy.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.74,
+        "chi": 0.82,
+        "epsilon": 0.82,
+        "kappa": 0.8,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-agent-checkpoint-store-memory-cs-agent-memory-loop",
+      "source": "agent-checkpoint-store-memory",
+      "target": "cs-agent-memory-loop",
+      "edge_type": "associates_with",
+      "summary": "English edition mirror: associates_with from agent-checkpoint-store-memory to cs-agent-memory-loop.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.78,
+        "epsilon": 0.78,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-computer-interface-loop-cs-spec-to-test",
+      "source": "agent-computer-interface-loop",
+      "target": "cs-spec-to-test",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-computer-interface-loop to cs-spec-to-test.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.8,
+        "epsilon": 0.78,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-cs-ci-security-release-hardening-release-gate",
+      "source": "cs-ci-security-release-hardening",
+      "target": "cs-open-source-release-gate",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from cs-ci-security-release-hardening to cs-open-source-release-gate.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.66,
+        "chi": 0.76,
+        "epsilon": 0.84,
+        "kappa": 0.74,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.12
+      }
+    },
+    {
+      "id": "edge-powershell-native-command-boundary-command-review",
+      "source": "powershell-native-command-boundary",
+      "target": "powershell-command-review",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from powershell-native-command-boundary to powershell-command-review.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.68,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    },
+    {
+      "id": "edge-agent-stability-preflight-powershell-native-command-boundary",
+      "source": "agent-stability-preflight",
+      "target": "powershell-native-command-boundary",
+      "edge_type": "validates_with",
+      "summary": "English edition mirror: validates_with from agent-stability-preflight to powershell-native-command-boundary.",
+      "source_refs": [],
+      "fame": {
+        "mu": 0.7,
+        "chi": 0.82,
+        "epsilon": 0.8,
+        "kappa": 0.76,
+        "nu": 0.42,
+        "delta": 0.03,
+        "rho": 0.6,
+        "risk": 0.14
+      }
+    }
+  ]
+}

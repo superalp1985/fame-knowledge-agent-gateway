@@ -1,0 +1,155 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "playbooks": [
+    {
+      "id": "playbook-read-only-inspection",
+      "label": "只读检查",
+      "risk_level": "read_only",
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "读取相关 route 和 subject index。",
+        "确认工具是只读行为。",
+        "执行工具并保留关键输出摘要。",
+        "把完整输出放外部记忆或日志，不塞入上下文。"
+      ],
+      "required_result_fields": [
+        "status",
+        "summary",
+        "evidence",
+        "next_steps"
+      ]
+    },
+    {
+      "id": "playbook-file-write",
+      "label": "文件写入",
+      "risk_level": "medium",
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-proposed-action",
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "读取工具说明和当前文件状态。",
+        "生成 ProposedAction，说明写入目标、范围和验证方式。",
+        "优先使用结构化编辑工具。",
+        "写入后运行 JSON、lint、测试或 release check。",
+        "写回 ToolResultSummary。"
+      ],
+      "requires_approval_when": [
+        "写入工作区外路径",
+        "覆盖未知用户改动",
+        "生成大量文件"
+      ]
+    },
+    {
+      "id": "playbook-destructive-filesystem",
+      "label": "破坏性文件系统操作",
+      "risk_level": "high",
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-powershell-safe-command",
+        "route-negative-fame-lesson"
+      ],
+      "steps": [
+        "禁止跨 shell 拼接路径后删除。",
+        "先解析绝对路径，确认目标边界。",
+        "生成 ProposedAction 并等待 ApprovedAction。",
+        "执行后记录目标路径、影响范围和验证结果。",
+        "失败时写入负值 FAME lesson。"
+      ],
+      "requires_approval_when": [
+        "递归删除",
+        "批量移动",
+        "清空目录",
+        "工作区外路径"
+      ]
+    },
+    {
+      "id": "playbook-network-download",
+      "label": "网络下载",
+      "risk_level": "medium",
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-proposed-action"
+      ],
+      "steps": [
+        "确认下载来源和许可证。",
+        "生成 ProposedAction，说明用途、目标目录和清理策略。",
+        "下载后记录来源 URL、校验信息和许可证状态。",
+        "未经审核不把外部内容导入核心知识网。"
+      ],
+      "requires_approval_when": [
+        "下载可执行文件",
+        "下载大型数据",
+        "下载许可证不明内容"
+      ]
+    },
+    {
+      "id": "playbook-long-task-resume",
+      "label": "长任务恢复点",
+      "risk_level": "low",
+      "route_refs": [
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "每个阶段结束写当前目标、已加载引用、测试结果和下一步。",
+        "恢复时先读恢复点摘要，再按 route_id 懒加载上下文。",
+        "不要把完整历史重新塞回上下文。"
+      ],
+      "required_result_fields": [
+        "current_goal",
+        "loaded_refs",
+        "next_step"
+      ]
+    },
+    {
+      "id": "playbook-global-startup-frame",
+      "label": "开工大局观框架",
+      "risk_level": "read_only",
+      "route_refs": [
+        "route-language-goal-backcasting",
+        "route-language-global-situation-model",
+        "route-language-thought-layer-selection"
+      ],
+      "steps": [
+        "固定球门：完成标准、验收证据和禁止事项。",
+        "列出约束：作用域、上下文预算、文件系统边界、许可证和用户改动。",
+        "选择最少 subject 和 route refs，不全量读图。",
+        "为下一步工具调用绑定验证信号和停止条件。"
+      ],
+      "required_result_fields": [
+        "goal_post",
+        "constraints",
+        "selected_routes",
+        "next_verification"
+      ]
+    },
+    {
+      "id": "playbook-tool-action-contract",
+      "label": "工具动作契约",
+      "risk_level": "low",
+      "route_refs": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "steps": [
+        "把用户意图压成一个工具动作，不把多个副作用塞进一次调用。",
+        "核对工具说明、schema、工作目录、作用域和预期信号。",
+        "命中高频坑位时先缩小动作或转 ProposedAction。",
+        "执行后只写摘要和证据，完整输出进外部记忆。"
+      ],
+      "required_result_fields": [
+        "tool_name",
+        "operation_type",
+        "scope",
+        "expected_signal",
+        "validation_result"
+      ]
+    }
+  ]
+}

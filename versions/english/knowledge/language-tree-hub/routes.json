@@ -1,66 +1,287 @@
-{
-  "edition_id": "english",
-  "route_group": "language-tree-hub",
-  "routes": [
-    {
-      "id": "route-language-intent-to-scope",
-      "name": "Intent to Scope",
-      "subject": "language-tree-hub",
-      "domain": "intent",
-      "type": "routing",
-      "status": "seed",
-      "content": "Transform the active goal into project_id, subject, route_id, task_id and context budget before loading professional knowledge.",
-      "keywords": ["intent", "scope", "route", "context"],
-      "fame": {
-        "mu": 0.56,
-        "chi": 0.58,
-        "epsilon": 0.72,
-        "kappa": 0.52,
-        "nu": 0.24,
-        "delta": 0.08,
-        "rho": 0.2,
-        "lambda": 0.08
-      }
-    },
-    {
-      "id": "route-language-abstraction-to-association",
-      "name": "Abstraction to Association",
-      "subject": "language-tree-hub",
-      "domain": "semantics",
-      "type": "association",
-      "status": "seed",
-      "content": "Lift a local problem into a reusable abstraction, then search adjacent professional branches only when the abstraction suggests useful transfer.",
-      "keywords": ["abstraction", "association", "transfer", "semantics"],
-      "fame": {
-        "mu": 0.5,
-        "chi": 0.7,
-        "epsilon": 0.68,
-        "kappa": 0.42,
-        "nu": 0.33,
-        "delta": 0.15,
-        "rho": 0.31,
-        "lambda": 0.12
-      }
-    },
-    {
-      "id": "route-language-validation-feedback",
-      "name": "Validation Feedback",
-      "subject": "language-tree-hub",
-      "domain": "validation",
-      "type": "feedback",
-      "status": "seed",
-      "content": "Convert tests, tool results, user review and failure lessons into FAME edge updates without deleting raw memory.",
-      "keywords": ["validation", "feedback", "FAME", "full memory"],
-      "fame": {
-        "mu": 0.54,
-        "chi": 0.52,
-        "epsilon": 0.7,
-        "kappa": 0.5,
-        "nu": 0.28,
-        "delta": 0.12,
-        "rho": 0.18,
-        "lambda": 0.16
-      }
+[
+  {
+    "id": "route-language-intent-to-scope",
+    "name": "Intent to Scope",
+    "subject": "language-tree-hub",
+    "domain": "intent",
+    "type": "routing",
+    "content": "Translate the user goal into edition_id, project_id, subject, route_id, task_id and context budget before loading subject knowledge.",
+    "keywords": [
+      "intent",
+      "scope",
+      "context",
+      "route"
+    ],
+    "content_refs": [
+      "cu-language-tree-001",
+      "cu-route-scope-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.6,
+      "chi": 0.75,
+      "epsilon": 0.65,
+      "kappa": 0.65,
+      "nu": 0.4,
+      "delta": 0,
+      "rho": 0.55,
+      "risk": 0.2
     }
-  ]
-}
+  },
+  {
+    "id": "route-language-abstraction-to-association",
+    "name": "Abstraction to Association Transfer",
+    "subject": "language-tree-hub",
+    "domain": "semantics",
+    "type": "association",
+    "content": "Lift a local problem to an abstraction layer, search adjacent subjects for transferable methods, and attach validation conditions.",
+    "keywords": [
+      "abstraction",
+      "association",
+      "transfer",
+      "goal gate"
+    ],
+    "content_refs": [
+      "cu-language-tree-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.55,
+      "chi": 0.68,
+      "epsilon": 0.55,
+      "kappa": 0.52,
+      "nu": 0.75,
+      "delta": 0,
+      "rho": 0.4,
+      "risk": 0.35
+    }
+  },
+  {
+    "id": "route-language-multi-path-association",
+    "name": "Multi-path Lateral Association",
+    "subject": "language-tree-hub",
+    "domain": "route-search",
+    "type": "association",
+    "content": "For open problems, generate several candidate routes from the Language Tree and rank them by budget, FAME, risk and validation hooks. Failed routes become reflection or negative FAME lessons.",
+    "keywords": [
+      "multi-path",
+      "association",
+      "Tree of Thoughts",
+      "backtracking"
+    ],
+    "content_refs": [
+      "cu-language-multi-path-association-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.58,
+      "chi": 0.7,
+      "epsilon": 0.62,
+      "kappa": 0.62,
+      "nu": 0.82,
+      "delta": 0.02,
+      "rho": 0.46,
+      "risk": 0.28
+    }
+  },
+  {
+    "id": "route-language-abstraction-transfer",
+    "name": "Abstraction Transfer Landing",
+    "subject": "language-tree-hub",
+    "domain": "semantic-abstraction",
+    "type": "abstraction",
+    "content": "Raise a concrete task to method, topic and subject layers, transfer a verifiable structure laterally, then land it back into the smallest executable action.",
+    "keywords": [
+      "abstraction transfer",
+      "analogy",
+      "semantics",
+      "validation"
+    ],
+    "content_refs": [
+      "cu-language-abstraction-transfer-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.6,
+      "chi": 0.68,
+      "epsilon": 0.66,
+      "kappa": 0.64,
+      "nu": 0.78,
+      "delta": 0.02,
+      "rho": 0.48,
+      "risk": 0.26
+    }
+  },
+  {
+    "id": "route-knowledge-taxonomy-entry",
+    "name": "Knowledge Taxonomy Entry",
+    "subject": "language-tree-hub",
+    "domain": "knowledge-authoring",
+    "type": "routing",
+    "content": "When adding knowledge, locate the subject level and abstraction level first, then write summary, source, content_ref and initial FAME values.",
+    "keywords": [
+      "authoring",
+      "taxonomy",
+      "abstraction level",
+      "source"
+    ],
+    "content_refs": [
+      "cu-route-scope-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.6,
+      "chi": 0.65,
+      "epsilon": 0.7,
+      "kappa": 0.65,
+      "nu": 0.35,
+      "delta": 0,
+      "rho": 0.5,
+      "risk": 0.2
+    }
+  },
+  {
+    "id": "route-language-thought-layer-selection",
+    "name": "Thinking Layer Selection",
+    "subject": "language-tree-hub",
+    "domain": "thinking-layer",
+    "type": "routing",
+    "content": "Choose meta, subject, topic, concept, method, operation or case layer before route traversal so the agent knows whether to reason broadly or execute narrowly.",
+    "keywords": [
+      "thinking layer",
+      "abstraction",
+      "route depth"
+    ],
+    "content_refs": [
+      "cu-language-thought-layer-selection-001",
+      "cu-route-scope-001",
+      "cu-language-context-pack-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.62,
+      "chi": 0.74,
+      "epsilon": 0.7,
+      "kappa": 0.66,
+      "nu": 0.5,
+      "delta": 0.02,
+      "rho": 0.5,
+      "risk": 0.18
+    }
+  },
+  {
+    "id": "route-language-semantic-adaptation",
+    "name": "Semantic Adaptation and Term Normalization",
+    "subject": "language-tree-hub",
+    "domain": "semantic-normalization",
+    "type": "abstraction",
+    "content": "Normalize user wording, aliases, Chinese-English terms and tool names to canonical terms before subject and route selection.",
+    "keywords": [
+      "semantic adaptation",
+      "canonical term",
+      "alias"
+    ],
+    "content_refs": [
+      "cu-language-semantic-adaptation-001",
+      "cu-language-lexical-semantic-relations-001",
+      "cu-logic-knowledge-consistency-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.58,
+      "chi": 0.7,
+      "epsilon": 0.66,
+      "kappa": 0.62,
+      "nu": 0.56,
+      "delta": 0.02,
+      "rho": 0.48,
+      "risk": 0.2
+    }
+  },
+  {
+    "id": "route-language-directory-index",
+    "name": "Text Directory Index",
+    "subject": "language-tree-hub",
+    "domain": "navigation",
+    "type": "routing",
+    "content": "Expose the knowledge net as an expandable subject directory synchronized with graph and database edits.",
+    "keywords": [
+      "directory",
+      "index",
+      "tree view"
+    ],
+    "content_refs": [
+      "cu-language-directory-index-001",
+      "cu-cs-kg-indexing-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.6,
+      "chi": 0.72,
+      "epsilon": 0.68,
+      "kappa": 0.64,
+      "nu": 0.45,
+      "delta": 0.01,
+      "rho": 0.5,
+      "risk": 0.18
+    }
+  },
+  {
+    "id": "route-language-goal-backcasting",
+    "name": "Goal Gate Backcasting",
+    "subject": "language-tree-hub",
+    "domain": "goal-framing",
+    "type": "routing",
+    "content": "Start from success criteria, evidence, forbidden outcomes and context budget, then work backward to the minimal route set.",
+    "keywords": [
+      "goal gate",
+      "backcasting",
+      "done criteria"
+    ],
+    "content_refs": [
+      "cu-language-goal-backcasting-001",
+      "cu-language-thought-layer-selection-001",
+      "cu-route-scope-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.66,
+      "chi": 0.78,
+      "epsilon": 0.72,
+      "kappa": 0.7,
+      "nu": 0.62,
+      "delta": 0.03,
+      "rho": 0.58,
+      "risk": 0.18
+    }
+  },
+  {
+    "id": "route-language-global-situation-model",
+    "name": "Global Situation Model",
+    "subject": "language-tree-hub",
+    "domain": "global-thinking",
+    "type": "abstraction",
+    "content": "Before action, review goal, constraints, resources, risks, history and stop conditions so the agent keeps the big picture.",
+    "keywords": [
+      "global situation",
+      "constraints",
+      "risk",
+      "big picture"
+    ],
+    "content_refs": [
+      "cu-language-global-situation-model-001",
+      "cu-language-context-pack-001"
+    ],
+    "priority": 1,
+    "fame": {
+      "mu": 0.66,
+      "chi": 0.78,
+      "epsilon": 0.72,
+      "kappa": 0.7,
+      "nu": 0.62,
+      "delta": 0.03,
+      "rho": 0.58,
+      "risk": 0.18
+    }
+  }
+]

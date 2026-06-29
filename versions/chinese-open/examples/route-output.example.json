@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "edition_id": "chinese-open",
+  "selected_scenario": {
+    "id": "scenario-jsonl-knowledge-edit",
+    "label": "JSONL 知识库编辑",
+    "operation_type": "write",
+    "risk_level": "medium"
+  },
+  "context_pack": {
+    "edition_id": "chinese-open",
+    "project_id": "example-project",
+    "task_id": "task-001",
+    "subject": "agent-tooling",
+    "semantic_anchor": "language-tree-hub",
+    "lexicon_refs": ["knowledge/language-tree-hub/lexicon_seed.json"],
+    "route_ids": [
+      "route-language-goal-backcasting",
+      "route-language-global-situation-model",
+      "route-agent-tool-action-contract",
+      "route-agent-stability-preflight",
+      "route-agent-tool-result-summary",
+      "route-agent-database-sync"
+    ],
+    "abstraction_level": "L4_method",
+    "thought_mode": "L4_method",
+    "summaries": [
+      {
+        "ref": "route-agent-tool-action-contract",
+        "summary": "调用工具前把意图压成动作契约。"
+      }
+    ],
+    "content_refs": ["cu-agent-tool-action-contract-001"],
+    "rules": ["gate-no-contract-no-risky-tool", "gate-no-goalpost-no-expansion"],
+    "negative_lessons": ["tool-failure-knowledge-index-drift"],
+    "context_budget": 2800
+  },
+  "tool_gateway_decision": {
+    "final_decision": "blocked_until_contract_complete",
+    "requires_proposed_action": true,
+    "requires_approved_action": false,
+    "blockers": ["tool_name_or_tool_schema_not_declared"]
+  },
+  "proposed_action": {
+    "kind": "ProposedAction",
+    "action_id": "task-001-scenario-jsonl-knowledge-edit",
+    "project_id": "example-project",
+    "task_id": "task-001",
+    "route_refs": [
+      "route-language-goal-backcasting",
+      "route-language-global-situation-model",
+      "route-agent-tool-action-contract",
+      "route-agent-stability-preflight",
+      "route-agent-tool-result-summary",
+      "route-agent-database-sync"
+    ],
+    "tool_name": "<tool-name>",
+    "operation_type": "write",
+    "scope": {
+      "working_directory": "<project-root>",
+      "paths": [],
+      "subjects": ["agent-tooling"],
+      "allowed_side_effects": ["modify_declared_files"]
+    },
+    "arguments": {},
+    "risk_level": "medium",
+    "expected_output": "<observable-signal>",
+    "validation_plan": ["JSONL 保持一行一个对象。"],
+    "rollback_plan": ["记录 changed_files；必要时由版本控制或人工按变更摘要回退。"],
+    "requires_approval": false
+  }
+}

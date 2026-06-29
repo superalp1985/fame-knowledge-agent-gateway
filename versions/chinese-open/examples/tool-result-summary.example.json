@@ -1,0 +1,23 @@
+{
+  "kind": "ToolResultSummary",
+  "action_id": "task-001-scenario-jsonl-knowledge-edit",
+  "tool_name": "apply_patch",
+  "status": "success",
+  "summary": "已更新中文开源版知识文件，并通过结构化校验。",
+  "evidence": [
+    "node versions/chinese-open/tests/agent-effect-smoke.mjs exited 0",
+    "node scripts/check-chinese-open.mjs exited 0"
+  ],
+  "errors": [],
+  "next_steps": [
+    "把完整命令输出保存到工程记忆 overlay。",
+    "只把本摘要留在上下文。"
+  ],
+  "fame_update_candidates": [
+    {
+      "route_ref": "route-agent-tool-action-contract",
+      "delta": 0.03,
+      "reason": "工具动作契约和验证证据完整。"
+    }
+  ]
+}

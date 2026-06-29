@@ -8,6 +8,12 @@
     "install:all": "npm ci --prefix workbench",
     "install:workbench": "npm install --prefix workbench",
     "prepare:public-knowledge": "node scripts/prepare-public-knowledge.mjs",
+    "sample:chinese-open:data-sources": "node scripts/sample-chinese-open-data-sources.mjs",
+    "build:chinese-open:openalex-candidates": "node scripts/build-openalex-candidates.mjs",
+    "route:chinese-open": "node scripts/chinese-open-route.mjs",
+    "connect:chinese-open": "node scripts/chinese-open-connect.mjs",
+    "doctor:chinese-open": "node scripts/chinese-open-doctor.mjs",
+    "eval:chinese-open": "node scripts/chinese-open-real-eval.mjs",
     "generate:knowledge": "npm run generate:knowledge --prefix workbench",
     "generate:all": "npm run generate:knowledge --prefix workbench && npm run generate:project-memory --prefix workbench && npm run generate:multimodal --prefix workbench && npm run generate:v13 --prefix workbench",
     "dev": "npm run dev --prefix workbench -- --host 127.0.0.1 --port 5178",
@@ -17,7 +23,19 @@
     "build": "npm run build --prefix workbench",
     "lint": "npm run lint --prefix workbench",
     "release:check": "node scripts/release-check.mjs",
+    "check:chinese-open": "node scripts/check-chinese-open.mjs",
     "test": "npm run gateway:smoke",
-    "ci": "npm run release:check && npm run gateway:smoke && npm run lint && npm run build"
+    "ci": "npm run release:check && npm run check:chinese-open && npm run check:english && npm run check:editions && npm run doctor:chinese-open && npm run doctor:english && npm run eval:chinese-open && npm run eval:english && npm run connect:chinese-open -- --agent codex && npm run connect:english -- --agent codex && npm run gateway:smoke && npm run lint && npm run build",
+    "sync:english": "node scripts/sync-english-edition.mjs",
+    "route:english": "node scripts/english-route.mjs",
+    "connect:english": "node scripts/english-connect.mjs",
+    "doctor:english": "node scripts/english-doctor.mjs",
+    "eval:english": "node scripts/english-real-eval.mjs",
+    "check:english": "node scripts/check-english.mjs",
+    "check:editions": "node scripts/check-edition-alignment.mjs",
+    "start": "node scripts/start-all.mjs",
+    "start:preview": "set FAME_START_MODE=preview&& node scripts/start-all.mjs",
+    "package:portable": "node scripts/package-portable.mjs",
+    "build:release-assets": "node scripts/build-release-assets.mjs"
   }
 }

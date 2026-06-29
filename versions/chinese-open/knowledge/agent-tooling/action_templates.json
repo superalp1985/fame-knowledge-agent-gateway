@@ -1,0 +1,220 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "templates": [
+    {
+      "id": "template-read-only-inspection",
+      "label": "只读检查模板",
+      "kind": "ProposedAction",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "requires_approval": false,
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [],
+        "allowed_side_effects": [
+          "none"
+        ]
+      },
+      "required_arguments": [
+        "tool_name",
+        "target",
+        "reason"
+      ],
+      "validation_plan": [
+        "确认工具输出和目标相关。",
+        "提取关键证据摘要。",
+        "不把长输出完整塞入上下文。"
+      ],
+      "rollback_plan": []
+    },
+    {
+      "id": "template-structured-file-edit",
+      "label": "结构化文件编辑模板",
+      "kind": "ProposedAction",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "requires_approval": false,
+      "route_refs": [
+        "route-logic-tool-precheck",
+        "route-agent-tool-proposed-action",
+        "route-cs-spec-to-test"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [],
+        "allowed_side_effects": [
+          "modify_declared_files"
+        ]
+      },
+      "required_arguments": [
+        "file_paths",
+        "change_summary",
+        "validation_commands"
+      ],
+      "validation_plan": [
+        "确认目标文件在当前项目作用域内。",
+        "检查是否存在用户未提交改动。",
+        "使用结构化编辑工具。",
+        "运行 JSON、schema、lint、测试或 release check。"
+      ],
+      "rollback_plan": [
+        "保留修改摘要，必要时由人工或版本控制回退。"
+      ]
+    },
+    {
+      "id": "template-shell-test-build",
+      "label": "测试与构建命令模板",
+      "kind": "ProposedAction",
+      "operation_type": "test",
+      "risk_level": "low",
+      "requires_approval": false,
+      "route_refs": [
+        "route-powershell-safe-command",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "powershell-safety",
+          "computer-science"
+        ],
+        "allowed_side_effects": [
+          "read_files",
+          "write_build_artifacts"
+        ]
+      },
+      "required_arguments": [
+        "command",
+        "working_directory",
+        "expected_signal"
+      ],
+      "validation_plan": [
+        "确认命令工作目录。",
+        "确认输出不会泄漏密钥。",
+        "记录退出状态、关键输出和失败摘要。"
+      ],
+      "rollback_plan": [
+        "清理可安全删除的临时构建产物。"
+      ]
+    },
+    {
+      "id": "template-network-download",
+      "label": "网络下载模板",
+      "kind": "ProposedAction",
+      "operation_type": "network",
+      "risk_level": "medium",
+      "requires_approval": true,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-cs-open-source-release-gate"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "computer-science"
+        ],
+        "allowed_side_effects": [
+          "network_read",
+          "write_declared_downloads"
+        ]
+      },
+      "required_arguments": [
+        "url",
+        "destination",
+        "license_status",
+        "usage"
+      ],
+      "validation_plan": [
+        "确认来源 URL 和用途。",
+        "登记许可证和来源。",
+        "未经审核不导入核心知识网正文。"
+      ],
+      "rollback_plan": [
+        "删除下载文件并移除未使用索引引用。"
+      ]
+    },
+    {
+      "id": "template-destructive-filesystem",
+      "label": "破坏性文件系统模板",
+      "kind": "ProposedAction",
+      "operation_type": "delete",
+      "risk_level": "high",
+      "requires_approval": true,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-powershell-safe-command",
+        "route-negative-fame-lesson"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "powershell-safety"
+        ],
+        "allowed_side_effects": [
+          "delete_declared_paths_only"
+        ]
+      },
+      "required_arguments": [
+        "target_paths",
+        "allowed_root",
+        "reason",
+        "post_check"
+      ],
+      "validation_plan": [
+        "解析目标绝对路径。",
+        "确认目标在 allowed_root 内。",
+        "禁止跨 shell 删除。",
+        "执行后验证影响范围。"
+      ],
+      "rollback_plan": [
+        "只有在确认有备份或可重建时执行；否则拒绝。"
+      ]
+    },
+    {
+      "id": "template-tool-action-contract",
+      "label": "工具动作契约模板",
+      "kind": "ProposedAction",
+      "operation_type": "read | write | execute | test | build | network | delete",
+      "risk_level": "low_to_high_by_operation",
+      "requires_approval": "required_when_mutating_or_high_risk",
+      "route_refs": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "scope_defaults": {
+        "paths": [],
+        "subjects": [
+          "agent-tooling"
+        ],
+        "allowed_side_effects": [
+          "declared_only"
+        ]
+      },
+      "required_arguments": [
+        "tool_name",
+        "operation_type",
+        "working_directory",
+        "scope",
+        "expected_signal",
+        "validation_plan"
+      ],
+      "validation_plan": [
+        "确认工具说明和 schema 已读。",
+        "确认动作只有一个主要副作用。",
+        "确认工作目录、路径和权限边界。",
+        "确认执行后可观察信号。",
+        "执行后写 ToolResultSummary。"
+      ],
+      "rollback_plan": [
+        "高风险动作必须先说明可回滚方式；不可回滚且无审批时拒绝。"
+      ]
+    }
+  ]
+}

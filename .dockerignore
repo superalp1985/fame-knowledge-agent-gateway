@@ -1,0 +1,12 @@
+.git
+.tmp
+node_modules
+workbench/node_modules
+workbench/dist
+runtime_store
+knowledge_backup
+logs
+*.log
+.env
+.env.*
+!.env.example

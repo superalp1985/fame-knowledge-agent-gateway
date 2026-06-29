@@ -1,0 +1,300 @@
+{
+  "edition_id": "english",
+  "status": "research_registry",
+  "purpose": "登记成熟数据源的用途、许可证风险、导入方式和隔离策略。默认只登记来源和自写摘要，不直接导入大规模数据。",
+  "policy": {
+    "default_action": "reference_or_sample_only",
+    "prefer_open_license": [
+      "CC0",
+      "public-domain",
+      "permissive-with-attribution"
+    ],
+    "share_alike_policy": "isolate_and_do_not_mix_into_core_without_review",
+    "large_dump_policy": "store_outside_graph_and_import_only_indexes_or_summaries",
+    "privacy_policy": "do_not_import_personal_or_sensitive_payloads",
+    "required_before_import": [
+      "license_review",
+      "source_url",
+      "version_or_snapshot_date",
+      "attribution_plan",
+      "schema_mapping",
+      "sample_validation"
+    ]
+  },
+  "priority_tiers": [
+    {
+      "tier": "A",
+      "label": "优先候选",
+      "criteria": [
+        "来源成熟",
+        "结构化程度高",
+        "许可证友好或可引用",
+        "适合做索引和分类锚点",
+        "对 Agent 有直接价值"
+      ]
+    },
+    {
+      "tier": "B",
+      "label": "隔离候选",
+      "criteria": [
+        "价值高",
+        "许可证或 ShareAlike 需要隔离",
+        "体量较大",
+        "适合外部数据库或样本索引"
+      ]
+    },
+    {
+      "tier": "C",
+      "label": "暂不导入",
+      "criteria": [
+        "许可证不清",
+        "隐私风险高",
+        "维护成本高",
+        "与当前开源版目标不够贴合"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "wikidata",
+      "title": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "publisher": "Wikimedia Foundation / Wikidata contributors",
+      "domain": "general_knowledge_graph",
+      "license_hint": "CC0 public domain dedication for Wikidata data",
+      "recommended_tier": "A",
+      "recommended_use": [
+        "entity_id_anchor",
+        "multilingual_aliases",
+        "cross_domain_relations",
+        "external_id_bridge"
+      ],
+      "import_strategy": "外部数据库保存实体和关系子集；核心知识网只保存自写摘要、来源引用和必要 id 映射。",
+      "risk_notes": "体量极大，事实时效和质量不均；需要 snapshot 日期、语言过滤和 subject scope。"
+    },
+    {
+      "id": "openalex",
+      "title": "OpenAlex",
+      "url": "https://docs.openalex.org/download-all-data/openalex-snapshot",
+      "publisher": "OurResearch",
+      "domain": "scholarly_metadata",
+      "license_hint": "CC0",
+      "recommended_tier": "A",
+      "recommended_use": [
+        "paper_metadata",
+        "concept_hierarchy",
+        "citation_graph",
+        "source_discovery"
+      ],
+      "import_strategy": "按学科和概念抽取论文、作者、机构、概念和引用摘要索引；不把论文正文导入核心知识网。",
+      "risk_notes": "元数据可能有缺失或错误；适合来源发现，不等于事实证明。"
+    },
+    {
+      "id": "opencitations",
+      "title": "OpenCitations",
+      "url": "https://opencitations.net/download",
+      "publisher": "OpenCitations",
+      "domain": "open_citation_data",
+      "license_hint": "CC0 for citation data",
+      "recommended_tier": "A",
+      "recommended_use": [
+        "citation_graph",
+        "source_reliability_signal",
+        "research_route_discovery"
+      ],
+      "import_strategy": "外部数据库保存引用边和元数据索引；知识网只用作来源关系和证据强度辅助。",
+      "risk_notes": "引用关系不代表内容正确；需要与实际论文摘要或权威来源交叉验证。"
+    },
+    {
+      "id": "universal-dependencies-data",
+      "title": "Universal Dependencies Treebanks",
+      "url": "https://universaldependencies.org/",
+      "publisher": "Universal Dependencies contributors",
+      "domain": "linguistic_treebanks",
+      "license_hint": "Treebanks have individual licenses; commonly CC BY-SA variants, must check per treebank.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "grammar_layer_training_reference",
+        "dependency_relation_examples",
+        "language_tree_validation"
+      ],
+      "import_strategy": "不默认导入语料；只登记标签体系和自写规则摘要。若导入样本，按 treebank 单独许可证隔离。",
+      "risk_notes": "不同 treebank 许可证不同；ShareAlike 语料不可混入 Apache-2.0 核心内容。"
+    },
+    {
+      "id": "open-english-wordnet-data",
+      "title": "Open English WordNet",
+      "url": "https://en-word.net/",
+      "publisher": "Open English WordNet Community",
+      "domain": "lexical_semantics",
+      "license_hint": "CC BY 4.0",
+      "recommended_tier": "A",
+      "recommended_use": [
+        "synonym_sets",
+        "hypernym_hyponym_edges",
+        "lexical_semantic_index"
+      ],
+      "import_strategy": "可作为独立词义数据库候选，保留 attribution；核心图谱只保存路由规则和少量自写摘要。",
+      "risk_notes": "需要保留署名和版本；中文映射仍需额外来源。"
+    },
+    {
+      "id": "conceptnet-data",
+      "title": "ConceptNet",
+      "url": "https://github.com/commonsense/conceptnet5/wiki/Downloads",
+      "publisher": "ConceptNet contributors",
+      "domain": "commonsense_semantic_network",
+      "license_hint": "CC BY-SA 4.0",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "association_candidates",
+        "commonsense_edges",
+        "lateral_association_seed"
+      ],
+      "import_strategy": "只作为隔离候选库；不得把原始边直接混进 Apache-2.0 核心知识网。",
+      "risk_notes": "ShareAlike 要求强；边质量和语境需要过滤，适合候选联想，不适合作为事实来源。"
+    },
+    {
+      "id": "dbpedia",
+      "title": "DBpedia",
+      "url": "https://www.dbpedia.org/resources/latest-core/",
+      "publisher": "DBpedia Association",
+      "domain": "general_knowledge_graph",
+      "license_hint": "DBpedia datasets commonly use CC BY-SA and/or GFDL-derived terms; check dataset.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "entity_graph_candidate",
+        "ontology_reference",
+        "linked_data_bridge"
+      ],
+      "import_strategy": "仅做外部 linked-data 参考或隔离索引；优先用 Wikidata 作为更宽松的数据锚点。",
+      "risk_notes": "许可证和派生来源复杂；开源核心不直接导入。"
+    },
+    {
+      "id": "library-of-congress-linked-data",
+      "title": "Library of Congress Linked Data Service",
+      "url": "https://id.loc.gov/",
+      "publisher": "Library of Congress",
+      "domain": "controlled_vocabularies",
+      "license_hint": "Check individual vocabulary terms and service notices.",
+      "recommended_tier": "A",
+      "recommended_use": [
+        "subject_heading_anchor",
+        "controlled_vocabulary",
+        "classification_reference"
+      ],
+      "import_strategy": "优先登记为主题词和分类来源；导入前按具体词表核验版权和使用声明。",
+      "risk_notes": "适合作为受控词表锚点，不替代本项目的学科抽象层。"
+    },
+    {
+      "id": "software-heritage",
+      "title": "Software Heritage Archive",
+      "url": "https://www.softwareheritage.org/",
+      "publisher": "Software Heritage",
+      "domain": "software_source_archive",
+      "license_hint": "Archive preserves source code under original project licenses; metadata terms must be checked.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "open_source_case_discovery",
+        "repository_history_reference",
+        "software_artifact_ids"
+      ],
+      "import_strategy": "只保存外部 artifact id、项目摘要和案例索引；不导入源码内容。",
+      "risk_notes": "代码许可证各不相同；体量巨大，必须按项目和许可证过滤。"
+    },
+    {
+      "id": "github-archive",
+      "title": "GitHub Archive",
+      "url": "https://www.gharchive.org/",
+      "publisher": "GitHub Archive",
+      "domain": "open_source_event_metadata",
+      "license_hint": "Check GitHub Archive terms and GitHub public event data terms.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "project_activity_signals",
+        "issue_pr_event_patterns",
+        "case_candidate_selection"
+      ],
+      "import_strategy": "按仓库和时间窗口抽样统计事件，不保存个人敏感分析，不作为核心知识事实。",
+      "risk_notes": "事件包含用户行为数据；注意隐私、体量和速率成本。"
+    },
+    {
+      "id": "stack-exchange-data-dump",
+      "title": "Stack Exchange Data Dump",
+      "url": "https://archive.org/details/stackexchange",
+      "publisher": "Stack Exchange",
+      "domain": "qa_knowledge",
+      "license_hint": "CC BY-SA",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "tool_error_case_candidates",
+        "programming_qa_pattern_mining",
+        "negative_lesson_seed"
+      ],
+      "import_strategy": "隔离库内做问题模式统计和链接引用；核心知识网只写自有总结并保留 attribution。",
+      "risk_notes": "ShareAlike 和署名要求强；质量不均，答案可能过时。"
+    },
+    {
+      "id": "s2orc",
+      "title": "Semantic Scholar Open Research Corpus",
+      "url": "https://github.com/allenai/s2orc",
+      "publisher": "Allen Institute for AI",
+      "domain": "scholarly_corpus",
+      "license_hint": "Corpus has dataset-specific terms; paper text licenses vary.",
+      "recommended_tier": "C",
+      "recommended_use": [
+        "research_corpus_candidate",
+        "metadata_or_abstract_reference_after_review"
+      ],
+      "import_strategy": "暂不导入正文；若使用，只做元数据候选并按许可证过滤。",
+      "risk_notes": "论文正文版权复杂，不适合直接进入开源核心。"
+    },
+    {
+      "id": "arxiv-bulk-data",
+      "title": "arXiv Bulk Data Access",
+      "url": "https://info.arxiv.org/help/bulk_data.html",
+      "publisher": "arXiv",
+      "domain": "preprint_metadata_and_source",
+      "license_hint": "Article licenses vary by paper; metadata and source access terms must be checked.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "paper_discovery",
+        "agent_research_route_reference",
+        "source_registry_seed"
+      ],
+      "import_strategy": "只导入元数据和链接候选；不导入论文全文或源文件到核心知识库。",
+      "risk_notes": "论文许可证不统一；预印本不等于权威结论。"
+    },
+    {
+      "id": "papers-with-code",
+      "title": "Papers with Code",
+      "url": "https://paperswithcode.com/datasets",
+      "publisher": "Papers with Code",
+      "domain": "ml_papers_datasets_tasks",
+      "license_hint": "Check dataset/API terms and individual linked datasets.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "ai_task_taxonomy",
+        "dataset_and_benchmark_discovery",
+        "agent_evaluation_reference"
+      ],
+      "import_strategy": "只登记任务、数据集和论文链接候选；具体数据集逐项许可证核验。",
+      "risk_notes": "链接数据集许可证各异，不能批量默认导入。"
+    },
+    {
+      "id": "libraries-io",
+      "title": "Libraries.io Open Data",
+      "url": "https://libraries.io/data",
+      "publisher": "Libraries.io",
+      "domain": "package_ecosystem_metadata",
+      "license_hint": "Check current open data license and terms.",
+      "recommended_tier": "B",
+      "recommended_use": [
+        "dependency_ecosystem_reference",
+        "package_graph",
+        "software_supply_chain_signal"
+      ],
+      "import_strategy": "可做隔离依赖图和包生态统计；核心知识网只保存自写摘要和来源链接。",
+      "risk_notes": "依赖数据量大且会过期；需要 snapshot 和生态范围。"
+    }
+  ]
+}

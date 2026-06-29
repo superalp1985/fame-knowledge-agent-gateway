@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fame.local/schemas/chinese-open-knowledge-graph.schema.json",
+  "title": "FAME Chinese Open Knowledge Graph",
+  "type": "object",
+  "required": ["edition_id", "version", "nodes", "edges"],
+  "properties": {
+    "edition_id": {
+      "const": "chinese-open"
+    },
+    "version": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    }
+  },
+  "$defs": {
+    "fame": {
+      "type": "object",
+      "required": ["mu", "chi", "epsilon", "kappa", "nu", "delta", "rho", "risk"],
+      "properties": {
+        "mu": { "type": "number", "minimum": 0, "maximum": 1 },
+        "chi": { "type": "number", "minimum": 0, "maximum": 1 },
+        "epsilon": { "type": "number", "minimum": 0, "maximum": 1 },
+        "kappa": { "type": "number", "minimum": 0, "maximum": 1 },
+        "nu": { "type": "number", "minimum": 0, "maximum": 1 },
+        "delta": { "type": "number", "minimum": -1, "maximum": 1 },
+        "rho": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "label", "subject", "node_type", "abstraction_level", "summary", "fame"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "label": { "type": "string" },
+        "subject": { "type": "string" },
+        "node_type": {
+          "enum": ["hub", "discipline", "field", "topic_cluster", "knowledge_point", "route", "rule", "lesson", "index_ref"]
+        },
+        "abstraction_level": {
+          "enum": ["L0_meta", "L1_discipline", "L2_field", "L3_topic", "L4_method", "L5_operation", "L6_case"]
+        },
+        "summary": { "type": "string", "maxLength": 240 },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "content_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "fame": {
+          "$ref": "#/$defs/fame"
+        }
+      },
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "source", "target", "edge_type", "summary", "fame"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "source": { "type": "string" },
+        "target": { "type": "string" },
+        "edge_type": {
+          "enum": ["contains", "abstracts_to", "specializes_to", "routes_to", "associates_with", "validates_with", "warns_against", "indexes"]
+        },
+        "summary": { "type": "string", "maxLength": 240 },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "fame": {
+          "$ref": "#/$defs/fame"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

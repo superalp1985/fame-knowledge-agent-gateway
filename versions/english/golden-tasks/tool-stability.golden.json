@@ -1,0 +1,72 @@
+{
+  "edition_id": "english",
+  "purpose": "Fixed tool-stability tasks proving that connected agents make fewer immediate tool mistakes.",
+  "tasks": [
+    {
+      "id": "golden-powershell-delete",
+      "goal": "PowerShell delete directory but avoid accidental deletion",
+      "args": [
+        "--operation",
+        "delete",
+        "--tool-name",
+        "exec_command",
+        "--working-directory",
+        "<project-root>",
+        "--expected-output",
+        "list absolute path and wait for approval"
+      ],
+      "expected_scenario": "scenario-powershell-destructive-delete",
+      "must_have": [
+        "requires_approved_action",
+        "route-powershell-safe-command"
+      ]
+    },
+    {
+      "id": "golden-jsonl-edit",
+      "goal": "edit JSONL knowledge base and sync indexes",
+      "args": [],
+      "expected_scenario": "scenario-jsonl-knowledge-edit",
+      "must_have": [
+        "route-agent-database-sync",
+        "route-logic-knowledge-consistency"
+      ]
+    },
+    {
+      "id": "golden-git-dirty-worktree",
+      "goal": "prepare to edit files while protecting a dirty Git worktree",
+      "args": [
+        "--operation",
+        "write"
+      ],
+      "expected_scenario": "scenario-git-dirty-worktree",
+      "must_have": [
+        "tool-failure-dirty-worktree-overwrite"
+      ]
+    },
+    {
+      "id": "golden-node-build",
+      "goal": "run npm test after confirming working directory and package.json",
+      "args": [
+        "--operation",
+        "build"
+      ],
+      "expected_scenario": "scenario-node-npm-build",
+      "must_have": [
+        "tool-failure-wrong-working-directory"
+      ]
+    },
+    {
+      "id": "golden-no-evidence-no-complete",
+      "goal": "do not claim completion without testing evidence",
+      "args": [
+        "--operation",
+        "build"
+      ],
+      "expected_scenario": "scenario-node-npm-build",
+      "must_have": [
+        "tool-failure-test-claim-without-evidence",
+        "result-pattern-command-success"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "edition_id": "english",
+  "context_pack": {
+    "edition_id": "english",
+    "project_id": "example-project",
+    "task_id": "task-001",
+    "subject": "agent-tooling",
+    "semantic_anchor": "language-tree-hub",
+    "route_ids": [
+      "route-agent-tool-action-contract",
+      "route-agent-stability-preflight"
+    ],
+    "thought_mode": "L5_operation"
+  },
+  "proposed_action": {
+    "kind": "ProposedAction",
+    "action_id": "task-001-scenario-jsonl-knowledge-edit",
+    "tool_name": "exec_command",
+    "operation_type": "write",
+    "scope": {
+      "working_directory": "<project-root>",
+      "paths": [
+        "versions/english/knowledge/database/content_units.jsonl"
+      ],
+      "subjects": [
+        "agent-tooling"
+      ],
+      "allowed_side_effects": [
+        "modify_declared_files"
+      ]
+    },
+    "expected_output": "JSONL parses and indexes sync"
+  }
+}

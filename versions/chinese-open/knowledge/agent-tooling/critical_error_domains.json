@@ -1,0 +1,285 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "label": "Agent 高频错误核心域",
+  "purpose": "开源首版优先做完整的范围。其他学科内容只保留骨架，交给社区逐步扩展。",
+  "completion_policy": {
+    "must_be_complete_for_open_seed": true,
+    "community_extensible_subjects": [
+      "logic",
+      "mathematics",
+      "computer-science",
+      "language-tree-hub"
+    ],
+    "core_focus": [
+      "tool_calling",
+      "command_execution",
+      "file_editing",
+      "test_build",
+      "failure_memory",
+      "global_framing",
+      "tool_action_contract",
+      "integration_usability"
+    ]
+  },
+  "domains": [
+    {
+      "id": "tool-doc-schema",
+      "label": "工具说明与 schema",
+      "risk": 0.82,
+      "route_refs": [
+        "route-agent-tool-doc-first",
+        "route-logic-tool-precheck"
+      ],
+      "content_refs": [
+        "cu-agent-tool-manifest-001",
+        "cu-agent-tool-schema-contract-001"
+      ],
+      "must_cover": [
+        "工具用途",
+        "参数类型",
+        "必填字段",
+        "枚举",
+        "权限",
+        "副作用",
+        "输出契约",
+        "错误格式"
+      ]
+    },
+    {
+      "id": "path-filesystem",
+      "label": "路径与文件系统",
+      "risk": 0.9,
+      "route_refs": [
+        "route-powershell-safe-command",
+        "route-agent-tool-proposed-action"
+      ],
+      "content_refs": [
+        "cu-ps-filesystem-safety-001",
+        "cu-agent-filesystem-scope-001"
+      ],
+      "must_cover": [
+        "工作目录",
+        "绝对路径",
+        "相对路径",
+        "通配符",
+        "递归",
+        "删除",
+        "移动",
+        "用户改动保护"
+      ]
+    },
+    {
+      "id": "powershell",
+      "label": "PowerShell",
+      "risk": 0.86,
+      "route_refs": [
+        "route-powershell-command-review",
+        "route-powershell-safe-command"
+      ],
+      "content_refs": [
+        "cu-ps-quoting-001",
+        "cu-ps-parsing-native-command-001",
+        "cu-ps-here-string-001"
+      ],
+      "must_cover": [
+        "引号",
+        "变量展开",
+        "原生命令",
+        "here-string",
+        "环境变量",
+        "重定向",
+        "执行策略"
+      ]
+    },
+    {
+      "id": "git",
+      "label": "Git 与版本控制",
+      "risk": 0.84,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-cs-spec-to-test"
+      ],
+      "content_refs": [
+        "cu-cs-version-control-001",
+        "cu-agent-git-safety-001"
+      ],
+      "must_cover": [
+        "工作区脏状态",
+        "未跟踪文件",
+        "分支",
+        "非交互命令",
+        "禁止误 reset",
+        "提交前检查"
+      ]
+    },
+    {
+      "id": "node-npm",
+      "label": "Node/npm",
+      "risk": 0.72,
+      "route_refs": [
+        "route-agent-tool-gateway-policy",
+        "route-cs-spec-to-test"
+      ],
+      "content_refs": [
+        "cu-agent-node-npm-001"
+      ],
+      "must_cover": [
+        "package scripts",
+        "工作目录",
+        "依赖安装",
+        "lockfile",
+        "构建产物",
+        "环境变量"
+      ]
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "risk": 0.7,
+      "route_refs": [
+        "route-agent-tool-gateway-policy",
+        "route-cs-spec-to-test"
+      ],
+      "content_refs": [
+        "cu-cs-python-runtime-001",
+        "cu-agent-python-runtime-001"
+      ],
+      "must_cover": [
+        "解释器",
+        "虚拟环境",
+        "模块路径",
+        "包安装",
+        "编码",
+        "脚本副作用"
+      ]
+    },
+    {
+      "id": "structured-data",
+      "label": "JSON/YAML/结构化数据",
+      "risk": 0.68,
+      "route_refs": [
+        "route-logic-knowledge-consistency",
+        "route-cs-spec-to-test"
+      ],
+      "content_refs": [
+        "cu-agent-structured-data-001"
+      ],
+      "must_cover": [
+        "JSON 解析",
+        "JSONL 行",
+        "尾逗号",
+        "编码",
+        "schema",
+        "机械改写"
+      ]
+    },
+    {
+      "id": "network-download",
+      "label": "网络下载与外部数据",
+      "risk": 0.78,
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-cs-open-source-release-gate"
+      ],
+      "content_refs": [
+        "cu-agent-network-download-001"
+      ],
+      "must_cover": [
+        "来源 URL",
+        "许可证",
+        "快照日期",
+        "校验",
+        "隔离目录",
+        "不导全文"
+      ]
+    },
+    {
+      "id": "test-build",
+      "label": "测试与构建",
+      "risk": 0.62,
+      "route_refs": [
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "content_refs": [
+        "cu-cs-testing-layers-001",
+        "cu-agent-test-build-001"
+      ],
+      "must_cover": [
+        "退出码",
+        "关键输出",
+        "构建产物",
+        "失败摘要",
+        "回归检查",
+        "证据完成率"
+      ]
+    },
+    {
+      "id": "database-sync",
+      "label": "数据库与知识网同步",
+      "risk": 0.74,
+      "route_refs": [
+        "route-cs-kg-indexing",
+        "route-logic-knowledge-consistency"
+      ],
+      "content_refs": [
+        "cu-cs-database-schema-versioning-001",
+        "cu-agent-database-sync-001"
+      ],
+      "must_cover": [
+        "稳定 id",
+        "schema 版本",
+        "索引同步",
+        "手动编辑",
+        "回滚",
+        "核心知识污染"
+      ]
+    },
+    {
+      "id": "startup-global-framing",
+      "label": "开工大局观与作用域",
+      "risk": 0.76,
+      "route_refs": [
+        "route-language-goal-backcasting",
+        "route-language-global-situation-model",
+        "route-language-intent-to-scope"
+      ],
+      "content_refs": [
+        "cu-language-goal-backcasting-001",
+        "cu-language-global-situation-model-001"
+      ],
+      "must_cover": [
+        "完成标准",
+        "验收证据",
+        "禁止事项",
+        "上下文预算",
+        "作用域",
+        "停止条件"
+      ]
+    },
+    {
+      "id": "tool-action-contract",
+      "label": "工具动作契约",
+      "risk": 0.8,
+      "route_refs": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "content_refs": [
+        "cu-agent-tool-action-contract-001",
+        "cu-agent-stability-preflight-001"
+      ],
+      "must_cover": [
+        "工具说明",
+        "schema",
+        "工作目录",
+        "作用域",
+        "预期信号",
+        "验证计划",
+        "回滚或阻断条件"
+      ]
+    }
+  ]
+}

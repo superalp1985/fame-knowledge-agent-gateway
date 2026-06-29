@@ -1,0 +1,23 @@
+{
+  "edition_id": "english",
+  "playbooks": [
+    {
+      "id": "abstract-then-land",
+      "steps": [
+        "Extract operation frame",
+        "Raise to method",
+        "Find transferable structure",
+        "Land as ProposedAction"
+      ]
+    },
+    {
+      "id": "global-before-local",
+      "steps": [
+        "Review goal",
+        "Review constraints",
+        "Review risks",
+        "Select smallest executable route"
+      ]
+    }
+  ]
+}

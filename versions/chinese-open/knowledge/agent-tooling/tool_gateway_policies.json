@@ -1,0 +1,54 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "policies": [
+    {
+      "id": "gateway-policy-doc-first",
+      "label": "工具说明优先",
+      "severity": "required",
+      "applies_to": ["unknown_tool", "schema_sensitive_tool", "high_risk_tool"],
+      "decision": "block_until_doc_checked",
+      "summary": "工具名称、参数 schema、权限和副作用不明确时，不允许直接调用。"
+    },
+    {
+      "id": "gateway-policy-read-only-fast-path",
+      "label": "只读快速通道",
+      "severity": "allowed",
+      "applies_to": ["read_only"],
+      "decision": "allow_with_summary",
+      "summary": "只读工具可直接执行，但必须控制输出长度并写结果摘要。"
+    },
+    {
+      "id": "gateway-policy-mutation-proposed-action",
+      "label": "变更动作必须提案",
+      "severity": "required",
+      "applies_to": ["write", "move", "network", "execute", "test", "build"],
+      "decision": "require_proposed_action",
+      "summary": "变更动作必须说明目标、作用域、风险、验证方式和回滚策略。"
+    },
+    {
+      "id": "gateway-policy-high-risk-approval",
+      "label": "高风险动作必须审批",
+      "severity": "required",
+      "applies_to": ["delete", "recursive_move", "remote_publish", "credential_change"],
+      "decision": "require_approved_action",
+      "summary": "高风险动作必须经过 ApprovedAction 或等价人工确认。"
+    },
+    {
+      "id": "gateway-policy-result-summary",
+      "label": "结果摘要回写",
+      "severity": "required",
+      "applies_to": ["all_tool_results"],
+      "decision": "require_tool_result_summary",
+      "summary": "所有工具执行都必须生成状态、证据、错误、下一步和 FAME 更新候选。"
+    },
+    {
+      "id": "gateway-policy-negative-lesson",
+      "label": "失败教训保留",
+      "severity": "required",
+      "applies_to": ["failure", "partial", "regression"],
+      "decision": "write_negative_lesson_candidate",
+      "summary": "失败不删除，写入工程记忆和负值 FAME 候选，供后续避错。"
+    }
+  ]
+}

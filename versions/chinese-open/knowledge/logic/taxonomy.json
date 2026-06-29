@@ -1,0 +1,326 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "logic",
+  "label": "逻辑",
+  "source_refs": ["cn-gbt-13745-2009", "cn-moe-graduate-catalog-2022", "sep-logic", "open-logic-project"],
+  "taxonomy": [
+    {
+      "id": "logic-formal",
+      "label": "形式逻辑",
+      "abstraction_level": "L2_field",
+      "summary": "研究形式语言、推理规则、证明、模型和有效性的逻辑分支。",
+      "children": [
+        {
+          "id": "logic-formal-language",
+          "label": "形式语言",
+          "abstraction_level": "L3_topic",
+          "summary": "用符号、语法和形成规则精确表达命题、谓词、公式和推理对象。",
+          "children": [
+            {
+              "id": "logic-syntax-semantics",
+              "label": "语法与语义分离",
+              "abstraction_level": "L4_method",
+              "summary": "先区分符号表达是否合式，再判断表达在模型或解释下是否成立。"
+            },
+            {
+              "id": "logic-formalization",
+              "label": "自然语言形式化",
+              "abstraction_level": "L4_method",
+              "summary": "把自然语言主张转成明确的对象、谓词、关系、量词和约束。"
+            }
+          ]
+        },
+        {
+          "id": "logic-propositional",
+          "label": "命题逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "用命题和联结词研究真假条件与有效推理。",
+          "children": [
+            {
+              "id": "logic-truth-table",
+              "label": "真值表",
+              "abstraction_level": "L4_method",
+              "summary": "枚举命题变量真假组合，用于检验公式等价、蕴含和有效性。"
+            },
+            {
+              "id": "logic-natural-deduction",
+              "label": "自然演绎",
+              "abstraction_level": "L4_method",
+              "summary": "用引入和消去规则构造从前提到结论的证明。"
+            }
+          ]
+        },
+        {
+          "id": "logic-predicate",
+          "label": "谓词逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "引入对象、谓词、量词和关系，表达更细的推理结构。",
+          "children": [
+            {
+              "id": "logic-quantifier-scope",
+              "label": "量词作用域",
+              "abstraction_level": "L4_method",
+              "summary": "区分全称、存在、嵌套和作用域，避免把局部结论泛化。"
+            },
+            {
+              "id": "logic-countermodel",
+              "label": "反模型",
+              "abstraction_level": "L4_method",
+              "summary": "构造满足前提但不满足结论的解释，用于否定有效推出。"
+            }
+          ]
+        },
+        {
+          "id": "logic-proof-theory",
+          "label": "证明论",
+          "abstraction_level": "L3_topic",
+          "summary": "研究证明系统、推导规则和证明结构。",
+          "children": [
+            {
+              "id": "logic-proof-normalization",
+              "label": "证明规范化",
+              "abstraction_level": "L4_method",
+              "summary": "检查证明是否存在冗余、循环或未授权步骤。"
+            },
+            {
+              "id": "logic-proof-obligation",
+              "label": "证明义务",
+              "abstraction_level": "L4_method",
+              "summary": "把结论拆成必须逐项证明或测试的子目标。"
+            }
+          ]
+        },
+        {
+          "id": "logic-model-theory",
+          "label": "模型论",
+          "abstraction_level": "L3_topic",
+          "summary": "研究形式语言和解释结构之间的满足关系。",
+          "children": [
+            {
+              "id": "logic-satisfaction",
+              "label": "满足关系",
+              "abstraction_level": "L4_method",
+              "summary": "判断某个结构、环境或工程状态是否满足给定公式或规格。"
+            },
+            {
+              "id": "logic-model-checking-bridge",
+              "label": "模型检查桥接",
+              "abstraction_level": "L4_method",
+              "summary": "把系统状态、约束和性质转成可验证的模型检查思路。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-informal",
+      "label": "非形式逻辑",
+      "abstraction_level": "L2_field",
+      "summary": "关注自然语言论证、谬误、语境和说服结构。",
+      "children": [
+        {
+          "id": "logic-argumentation",
+          "label": "论证分析",
+          "abstraction_level": "L3_topic",
+          "summary": "识别主张、理由、隐含前提、反驳和论证强度。",
+          "children": [
+            {
+              "id": "logic-claim-evidence-warrant",
+              "label": "主张-证据-担保",
+              "abstraction_level": "L4_method",
+              "summary": "把论证拆成结论、证据和连接二者的隐含规则。"
+            },
+            {
+              "id": "logic-objection-response",
+              "label": "反驳与回应",
+              "abstraction_level": "L4_method",
+              "summary": "列出可能反例、限制条件和替代解释，再决定是否采纳结论。"
+            }
+          ]
+        },
+        {
+          "id": "logic-fallacies",
+          "label": "谬误分析",
+          "abstraction_level": "L3_topic",
+          "summary": "识别形式或语境中的错误推理模式。",
+          "children": [
+            {
+              "id": "logic-equivocation",
+              "label": "偷换概念",
+              "abstraction_level": "L4_method",
+              "summary": "同一术语在论证中改变含义，导致结论看似成立。"
+            },
+            {
+              "id": "logic-hasty-generalization",
+              "label": "草率概括",
+              "abstraction_level": "L4_method",
+              "summary": "从不足样本或局部成功直接推出一般规律。"
+            },
+            {
+              "id": "logic-false-cause",
+              "label": "错误因果",
+              "abstraction_level": "L4_method",
+              "summary": "把相关、时间先后或单次观察误当成因果关系。"
+            }
+          ]
+        },
+        {
+          "id": "logic-decision-argument",
+          "label": "决策论证",
+          "abstraction_level": "L3_topic",
+          "summary": "面向工程选择时，比较目标、约束、证据、风险和可逆性。",
+          "children": [
+            {
+              "id": "logic-reversibility-check",
+              "label": "可逆性检查",
+              "abstraction_level": "L4_method",
+              "summary": "在执行前判断决策是否可回滚，风险是否需要审批。"
+            },
+            {
+              "id": "logic-evidence-threshold",
+              "label": "证据阈值",
+              "abstraction_level": "L4_method",
+              "summary": "按风险等级确定需要多少测试、来源或人工确认。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-non-classical",
+      "label": "非经典逻辑",
+      "abstraction_level": "L2_field",
+      "summary": "改变经典逻辑规则或语义以处理模态、时间、直觉主义、多值等问题。",
+      "children": [
+        {
+          "id": "logic-modal",
+          "label": "模态逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "研究必然、可能、知识、义务等模态概念。",
+          "children": [
+            {
+              "id": "logic-knowledge-belief",
+              "label": "知识与信念",
+              "abstraction_level": "L4_method",
+              "summary": "区分已验证事实、合理假设、待确认信息和模型猜测。"
+            },
+            {
+              "id": "logic-deontic-obligation",
+              "label": "义务与许可",
+              "abstraction_level": "L4_method",
+              "summary": "表达必须做、允许做、禁止做和需要审批的行动规则。"
+            }
+          ]
+        },
+        {
+          "id": "logic-temporal",
+          "label": "时序逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "表达时间顺序、状态变化和系统性质。",
+          "children": [
+            {
+              "id": "logic-before-after-invariant",
+              "label": "前后状态与不变量",
+              "abstraction_level": "L4_method",
+              "summary": "检查动作执行前条件、执行后条件和过程不变量。"
+            },
+            {
+              "id": "logic-resume-state",
+              "label": "恢复点状态",
+              "abstraction_level": "L4_method",
+              "summary": "长任务中记录当前目标、已知状态和下一步，避免中断后失序。"
+            }
+          ]
+        },
+        {
+          "id": "logic-fuzzy",
+          "label": "模糊逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "允许真值程度化，适合处理连续、不确定或模糊边界。",
+          "children": [
+            {
+              "id": "logic-confidence-grade",
+              "label": "置信程度",
+              "abstraction_level": "L4_method",
+              "summary": "把结论标注为高、中、低置信，而不是强行二值化。"
+            },
+            {
+              "id": "logic-fame-confidence",
+              "label": "FAME 置信映射",
+              "abstraction_level": "L4_method",
+              "summary": "用证据强度、贴合度和成功率更新 FAME 路由参数。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-applied",
+      "label": "应用逻辑",
+      "abstraction_level": "L2_field",
+      "summary": "把逻辑用于计算机、数学、语言、决策和工程验证。",
+      "children": [
+        {
+          "id": "logic-program-verification",
+          "label": "程序验证逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "用前后条件、不变量和形式规格验证程序行为。",
+          "children": [
+            {
+              "id": "logic-pre-post-condition",
+              "label": "前置与后置条件",
+              "abstraction_level": "L4_method",
+              "summary": "执行工具或代码前确认输入条件，执行后检查输出条件。"
+            },
+            {
+              "id": "logic-invariant",
+              "label": "不变量",
+              "abstraction_level": "L4_method",
+              "summary": "识别执行过程必须保持不变的安全、数据和结构约束。"
+            }
+          ]
+        },
+        {
+          "id": "logic-agent-reasoning",
+          "label": "Agent 推理控制",
+          "abstraction_level": "L3_topic",
+          "summary": "用逻辑结构约束 Agent 的判断、行动和错误复盘。",
+          "children": [
+            {
+              "id": "logic-tool-call-validity",
+              "label": "工具调用有效性",
+              "abstraction_level": "L4_method",
+              "summary": "调用工具前检查目标、前提、权限、schema、风险和验证方式是否齐备。"
+            },
+            {
+              "id": "logic-failure-diagnosis",
+              "label": "失败诊断",
+              "abstraction_level": "L4_method",
+              "summary": "把失败拆成前提错误、工具错误、环境错误、计划错误或验证不足。"
+            }
+          ]
+        },
+        {
+          "id": "logic-knowledge-governance",
+          "label": "知识治理逻辑",
+          "abstraction_level": "L3_topic",
+          "summary": "控制知识录入、来源、许可证、时效和晋升过程。",
+          "children": [
+            {
+              "id": "logic-source-validity",
+              "label": "来源有效性",
+              "abstraction_level": "L4_method",
+              "summary": "判断来源是否权威、可公开引用、许可证清晰且仍然有效。"
+            },
+            {
+              "id": "logic-overlay-promotion",
+              "label": "Overlay 晋升判断",
+              "abstraction_level": "L4_method",
+              "summary": "工程记忆要晋升为核心知识前，必须判断是否通用、可验证且无隐私风险。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "edition_id": "english",
+  "subject": "powershell-safety",
+  "label": "PowerShell 安全语法",
+  "source_refs": [
+    "ms-powershell-parsing",
+    "ms-powershell-quoting-rules",
+    "ms-powershell-environment-variables",
+    "ms-powershell-execution-policies",
+    "ms-powershell-redirection"
+  ],
+  "taxonomy": [
+    {
+      "id": "ps-parsing",
+      "label": "解析规则",
+      "abstraction_level": "L2_field",
+      "summary": "理解 PowerShell 如何解析命令、表达式、参数和原生命令。",
+      "children": [
+        {
+          "id": "ps-expression-mode",
+          "label": "表达式模式",
+          "abstraction_level": "L3_topic",
+          "summary": "PowerShell 在表达式上下文中解析变量、字符串和运算符。"
+        },
+        {
+          "id": "ps-argument-mode",
+          "label": "参数模式",
+          "abstraction_level": "L3_topic",
+          "summary": "命令参数位置的文本、变量、引号和特殊字符解析方式。"
+        }
+      ]
+    },
+    {
+      "id": "ps-quoting",
+      "label": "引号规则",
+      "abstraction_level": "L2_field",
+      "summary": "根据变量展开、路径、空格和转义需求选择单引号、双引号或 here-string。",
+      "children": [
+        {
+          "id": "ps-single-quotes",
+          "label": "单引号",
+          "abstraction_level": "L3_topic",
+          "summary": "适合不需要变量展开的字面字符串。"
+        },
+        {
+          "id": "ps-double-quotes",
+          "label": "双引号",
+          "abstraction_level": "L3_topic",
+          "summary": "适合需要变量展开或表达式插值的字符串。"
+        }
+      ]
+    },
+    {
+      "id": "ps-environment",
+      "label": "环境变量",
+      "abstraction_level": "L2_field",
+      "summary": "管理进程、用户、机器作用域下的环境变量读写和传递。",
+      "children": [
+        {
+          "id": "ps-env-drive",
+          "label": "Env: 驱动器",
+          "abstraction_level": "L3_topic",
+          "summary": "通过 Env: 访问当前进程环境变量。"
+        }
+      ]
+    },
+    {
+      "id": "ps-execution-policy",
+      "label": "执行策略",
+      "abstraction_level": "L2_field",
+      "summary": "理解脚本执行策略、范围和安全限制，避免错误绕过。",
+      "children": [
+        {
+          "id": "ps-policy-scope",
+          "label": "策略作用域",
+          "abstraction_level": "L3_topic",
+          "summary": "执行策略可以按进程、用户、机器等范围设置。"
+        }
+      ]
+    },
+    {
+      "id": "ps-native-interop",
+      "label": "原生命令互操作",
+      "abstraction_level": "L2_field",
+      "summary": "调用外部 exe、node、git、npm 等命令时处理参数、转义和退出码。",
+      "children": [
+        {
+          "id": "ps-native-arguments",
+          "label": "原生命令参数",
+          "abstraction_level": "L3_topic",
+          "summary": "确保参数按外部程序期望传递，避免 PowerShell 提前解释。"
+        },
+        {
+          "id": "ps-native-argument-boundary",
+          "label": "原生命令参数边界",
+          "abstraction_level": "L4_method",
+          "summary": "确认参数是否由 PowerShell 预解析，并优先使用清晰的参数边界。"
+        },
+        {
+          "id": "ps-structured-output",
+          "label": "结构化输出",
+          "abstraction_level": "L4_method",
+          "summary": "面向 Agent 证据采集优先输出 JSON、退出码和短摘要。"
+        }
+      ]
+    },
+    {
+      "id": "ps-filesystem-safety",
+      "label": "文件系统安全",
+      "abstraction_level": "L2_field",
+      "summary": "对创建、删除、移动、复制、递归操作进行路径边界和风险校验。",
+      "children": [
+        {
+          "id": "ps-literal-path",
+          "label": "LiteralPath 与 Path",
+          "abstraction_level": "L3_topic",
+          "summary": "包含通配符或特殊字符的路径优先使用 LiteralPath；多路径时确认 cmdlet 参数支持。"
+        },
+        {
+          "id": "ps-recursive-delete",
+          "label": "递归删除边界",
+          "abstraction_level": "L3_topic",
+          "summary": "递归删除前必须解析并确认目标路径在预期工作区内。"
+        }
+      ]
+    }
+  ],
+  "note": "English open edition mirror. IDs and structure stay aligned with chinese-open; labels are concise English summaries."
+}

@@ -1,0 +1,41 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "mathematics",
+  "levels": [
+    {
+      "id": "L0_meta",
+      "label": "数学抽象原则",
+      "agent_use": "判断问题是否需要形式化、建模、证明、计算或概率推断。"
+    },
+    {
+      "id": "L1_discipline",
+      "label": "数学",
+      "agent_use": "进入数学总分支并选择大类。"
+    },
+    {
+      "id": "L2_field",
+      "label": "数学方向",
+      "agent_use": "选择代数、分析、离散、概率统计、计算数学等方向。"
+    },
+    {
+      "id": "L3_topic",
+      "label": "数学主题",
+      "agent_use": "定位图论、线性代数、优化、证明方法等主题。"
+    },
+    {
+      "id": "L4_method",
+      "label": "数学方法",
+      "agent_use": "选用证明、建模、估计、优化、近似或构造方法。"
+    },
+    {
+      "id": "L5_operation",
+      "label": "可执行步骤",
+      "agent_use": "把数学路线转成定义变量、列假设、计算、验证的步骤。"
+    },
+    {
+      "id": "L6_case",
+      "label": "应用案例",
+      "agent_use": "记录模型成功、假设失败、近似误差等工程经验。"
+    }
+  ]
+}

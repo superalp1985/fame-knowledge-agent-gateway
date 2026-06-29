@@ -1,0 +1,331 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "agent-tooling",
+  "label": "工具调用稳定性场景矩阵",
+  "purpose": "把 Agent 高频工程动作转成可预检、可路由、可验证、可复盘的最小场景，优先服务编程和工具调用。",
+  "global_required_routes": [
+    "route-language-goal-backcasting",
+    "route-language-global-situation-model",
+    "route-agent-tool-action-contract",
+    "route-agent-stability-preflight",
+    "route-agent-tool-result-summary",
+    "route-agent-mcp-capability-boundary",
+    "route-agent-guardrail-human-review",
+    "route-agent-checkpoint-store-memory"
+  ],
+  "scenarios": [
+    {
+      "id": "scenario-powershell-destructive-delete",
+      "label": "PowerShell 递归删除审查",
+      "operation_type": "delete",
+      "risk_level": "high",
+      "trigger": "需要删除、移动、清空或递归处理文件系统路径。",
+      "required_routes": [
+        "route-powershell-command-review",
+        "route-powershell-safe-command",
+        "route-agent-tool-action-contract",
+        "route-negative-fame-lesson"
+      ],
+      "required_checks": [
+        "确认 working_directory。",
+        "Resolve-Path 或等价方式确认目标绝对路径。",
+        "确认目标在 allowed_root 内。",
+        "禁止 PowerShell 枚举后交给 cmd/bash 删除。",
+        "高风险动作必须 ApprovedAction。"
+      ],
+      "failure_signatures": [
+        "ps-failure-cross-shell-delete",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-jsonl-knowledge-edit",
+      "label": "JSONL 知识库编辑",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "trigger": "需要新增、更新或同步 content_units.jsonl、route_index.json、alias_index.json 等结构化知识文件。",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-agent-database-sync",
+        "route-logic-knowledge-consistency"
+      ],
+      "required_checks": [
+        "JSONL 保持一行一个对象。",
+        "写入后逐行 JSON.parse。",
+        "route/content/source 引用必须存在。",
+        "同步 content_index、subject_index、alias_index。",
+        "运行 check-chinese-open 和 release-check。"
+      ],
+      "failure_signatures": [
+        "tool-failure-json-string-edit",
+        "tool-failure-knowledge-index-drift"
+      ],
+      "expected_summary_pattern": "result-pattern-file-edit"
+    },
+    {
+      "id": "scenario-git-dirty-worktree",
+      "label": "Git 脏工作区保护",
+      "operation_type": "write",
+      "risk_level": "medium",
+      "trigger": "准备修改、移动、删除文件或提交前。",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test"
+      ],
+      "required_checks": [
+        "读取 git status --short。",
+        "识别未跟踪文件和同文件未知改动。",
+        "不得 reset、checkout 或覆盖用户改动。",
+        "修改后列出 changed_files 和验证结果。"
+      ],
+      "failure_signatures": [
+        "tool-failure-dirty-worktree-overwrite",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-file-edit"
+    },
+    {
+      "id": "scenario-node-npm-build",
+      "label": "Node/npm 测试构建",
+      "operation_type": "build",
+      "risk_level": "low",
+      "trigger": "需要运行 npm script、构建、lint、test 或安装依赖。",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "确认 package.json 所在目录。",
+        "确认脚本语义和副作用。",
+        "安装依赖或改 lockfile 属于变更动作。",
+        "记录退出码、关键输出和构建产物。"
+      ],
+      "failure_signatures": [
+        "tool-failure-wrong-working-directory",
+        "tool-failure-test-claim-without-evidence"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-python-runtime",
+      "label": "Python 运行时判断",
+      "operation_type": "execute",
+      "risk_level": "low",
+      "trigger": "需要运行 Python 脚本、安装包、读取模块或生成数据。",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "确认解释器路径和版本。",
+        "确认虚拟环境或 bundled runtime。",
+        "确认模块路径和工作目录。",
+        "安装包或执行副作用脚本必须提案。",
+        "记录编码和关键错误摘要。"
+      ],
+      "failure_signatures": [
+        "tool-failure-wrong-working-directory",
+        "tool-failure-runtime-assumption"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-network-source-import",
+      "label": "网络下载与来源导入",
+      "operation_type": "network",
+      "risk_level": "medium",
+      "trigger": "需要下载、抓取、导入外部资料或开源项目案例。",
+      "required_routes": [
+        "route-agent-tool-action-contract",
+        "route-agent-stability-preflight",
+        "route-cs-open-source-release-gate",
+        "route-logic-knowledge-consistency"
+      ],
+      "required_checks": [
+        "记录 URL、快照日期、用途和目标目录。",
+        "登记 source_registry 或 data_sources。",
+        "许可证不明只保留摘要和链接。",
+        "大文件和 ShareAlike 内容隔离，不进入核心知识网。"
+      ],
+      "failure_signatures": [
+        "tool-failure-network-import-pollution"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-external-agent-integration",
+      "label": "外部 Agent 接入",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "外部 Agent 第一次接入中文开源知识网或需要验证接入便利性。",
+      "required_routes": [
+        "route-agent-integration-usability-test",
+        "route-language-goal-backcasting",
+        "route-agent-tool-action-contract",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "读取 07_Agent协议与最小接入。",
+        "用 lexicon_seed 做语义归一。",
+        "生成最小 ContextPack。",
+        "构造一个只读工具动作契约。",
+        "写 ToolResultSummary。"
+      ],
+      "failure_signatures": [
+        "tool-failure-skip-doc",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-powershell-encoding-mojibake",
+      "label": "PowerShell 中文乱码诊断",
+      "operation_type": "read",
+      "risk_level": "low",
+      "trigger": "PowerShell、终端、命令输出或日志显示中文乱码，需要判断是显示层问题、管道解码问题还是文件真实损坏。",
+      "required_routes": [
+        "route-powershell-encoding-output",
+        "route-powershell-command-review",
+        "route-agent-stability-preflight",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "记录 PowerShell 版本、Console.OutputEncoding 和 $OutputEncoding。",
+        "用中文探针同时验证屏幕输出、JSON 输出和 UTF-8 文件读取。",
+        "不要只凭终端乱码判定源文件损坏。",
+        "需要写文件时显式使用 UTF-8 编码并再读取验证。",
+        "ToolResultSummary 记录证据来源是 terminal、json 还是 file。"
+      ],
+      "failure_signatures": [
+        "ps-failure-output-encoding-mojibake",
+        "tool-failure-terminal-mojibake-misdiagnosis"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-local-agent-connect-check",
+      "label": "本机 Agent 接入状态检查",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "用户希望直接选择本机 Agent 并知道是否已经接入中文开源版。",
+      "required_routes": [
+        "route-agent-local-connect-check",
+        "route-agent-integration-usability-test",
+        "route-agent-tool-gateway-policy",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "选择 agent 类型：codex、cursor、claude-desktop、claude-code、openai-agents、gemini-cli、openhands、swe-agent、aider、cline、roo-code、continue、langgraph、autogen、crewai、dify、generic 或 other。",
+        "检查 QUICKSTART_AGENT、AGENTS、route CLI、doctor 和 real eval 是否可用。",
+        "生成 agent_start_prompt、Agent 接入消息和 next_command。",
+        "图形化路径必须等待 Agent 回复后由用户确认接入。",
+        "输出 connected/not_connected 与 blockers。",
+        "不修改用户 Agent 配置，除非用户明确要求。"
+      ],
+      "failure_signatures": [
+        "tool-failure-skip-doc",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-mcp-tool-boundary",
+      "label": "MCP 工具能力边界检查",
+      "operation_type": "read",
+      "risk_level": "read_only",
+      "trigger": "外部 Agent 通过 MCP 或类似协议接入，需要区分资源、提示和工具。",
+      "required_routes": [
+        "route-agent-mcp-capability-boundary",
+        "route-agent-tool-action-contract",
+        "route-agent-tool-gateway-policy"
+      ],
+      "required_checks": [
+        "区分 resources、prompts、tools。",
+        "读取工具 schema 和输出契约。",
+        "确认每个工具的副作用和权限。",
+        "缺少边界时只允许只读探测。"
+      ],
+      "failure_signatures": [
+        "tool-failure-capability-boundary-confusion",
+        "tool-failure-skip-doc"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-guardrail-human-review",
+      "label": "敏感动作审批检查",
+      "operation_type": "approval",
+      "risk_level": "high",
+      "trigger": "工具动作涉及删除、发布、密钥、外部写入或不可自动回滚副作用。",
+      "required_routes": [
+        "route-agent-guardrail-human-review",
+        "route-agent-tool-proposed-action",
+        "route-agent-tool-gateway-policy"
+      ],
+      "required_checks": [
+        "生成 ProposedAction。",
+        "判断是否需要 ApprovedAction。",
+        "记录用户批准或拒绝。",
+        "没有审批状态则阻断执行。"
+      ],
+      "failure_signatures": [
+        "tool-failure-approval-bypass",
+        "tool-failure-unscoped-mutation"
+      ],
+      "expected_summary_pattern": "result-pattern-skipped-for-risk"
+    },
+    {
+      "id": "scenario-powershell-native-command",
+      "label": "PowerShell 原生命令参数检查",
+      "operation_type": "execute",
+      "risk_level": "medium",
+      "trigger": "PowerShell 中调用 git、node、npm、python、docker、curl 或其它外部程序。",
+      "required_routes": [
+        "route-powershell-native-command-boundary",
+        "route-powershell-command-review",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "确认工作目录。",
+        "确认参数边界和引号规则。",
+        "确认退出码和错误流。",
+        "优先使用 JSON 或短摘要作为证据。"
+      ],
+      "failure_signatures": [
+        "tool-failure-native-command-argument-drift",
+        "tool-failure-wrong-working-directory"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    },
+    {
+      "id": "scenario-agent-resume-memory",
+      "label": "Agent 中断恢复记忆检查",
+      "operation_type": "resume",
+      "risk_level": "medium",
+      "trigger": "长任务被打断、审批暂停、工具失败或线程恢复。",
+      "required_routes": [
+        "route-agent-checkpoint-store-memory",
+        "route-agent-reminder-clock",
+        "route-agent-tool-result-summary"
+      ],
+      "required_checks": [
+        "读取 checkpoint/thread 摘要。",
+        "确认最后稳定证据。",
+        "列出未完成阻断项。",
+        "生成下一步最小动作而不是重放完整日志。"
+      ],
+      "failure_signatures": [
+        "tool-failure-memory-resume-loss",
+        "tool-failure-context-bloat"
+      ],
+      "expected_summary_pattern": "result-pattern-command-success"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "edition_id": "chinese-open",
+  "subject": "language-tree-hub",
+  "label": "科目分级到思考模式与工具策略",
+  "purpose": "把学科层级直接映射为 Agent 的思考方式、工具选择和验证方式，避免只做分类不做决策。",
+  "policy": {
+    "hierarchy_controls_thinking": true,
+    "thinking_controls_tool_choice": true,
+    "full_memory_retention": true,
+    "no_full_graph_load": true,
+    "scope_keys": ["edition_id", "project_id", "subject", "route_id", "task_id"]
+  },
+  "modes": [
+    {
+      "level": "L0_meta",
+      "label": "元组织思考",
+      "thinking_mode": "先判断任务属于知识组织、工程执行、调工具、写记忆还是做调研。",
+      "tool_policy": "只读读取 route_index、subject_index、scoping_index 和核心错误域；不直接变更状态。",
+      "validation_policy": "用任务类型、完成标准和风险等级确认作用域。",
+      "stop_condition": "完成意图和作用域拆解后再进入下一层。",
+      "route_refs": ["route-language-intent-to-scope", "route-agent-tool-doc-first"]
+    },
+    {
+      "level": "L1_discipline",
+      "label": "学科入口思考",
+      "thinking_mode": "决定先进入哪个学科分支，以及是否需要工具治理分支。",
+      "tool_policy": "读取 subject taxonomy 与关键 route；如果是工具/命令任务，先加载 agent-tooling 或 powershell-safety。",
+      "validation_policy": "确认主学科和次学科，不把不同学科的规则混成一团。",
+      "stop_condition": "锁定主 subject 和候选 route。",
+      "route_refs": ["route-cs-engineering-knowledge", "route-powershell-command-review", "route-logic-tool-precheck"]
+    },
+    {
+      "level": "L2_field",
+      "label": "方向层思考",
+      "thinking_mode": "在学科内部选方向：例如软件工程、数据库、图遍历、命令审查、证明方法。",
+      "tool_policy": "只加载 해당方向相关的 taxonomy、validation checklists 和少量 content refs。",
+      "validation_policy": "验证方向是否和任务目标、路径边界、风险等级一致。",
+      "stop_condition": "形成方向级候选路线和验证计划。",
+      "route_refs": ["route-cs-spec-to-test", "route-math-graph-traversal", "route-agent-action-template-selection"]
+    },
+    {
+      "level": "L3_topic",
+      "label": "主题簇思考",
+      "thinking_mode": "收缩到具体主题簇，只保留当前问题真正相关的知识点。",
+      "tool_policy": "优先读取 content_index、少量 content units 和必要规则，不加载整科全部内容。",
+      "validation_policy": "检查主题是否足够具体，是否会误扩散到相邻但无关的领域。",
+      "stop_condition": "主题足够具体且能支持下一步操作。",
+      "route_refs": ["route-cs-kg-indexing", "route-math-route-optimization", "route-agent-tool-result-summary"]
+    },
+    {
+      "level": "L4_method",
+      "label": "方法层思考",
+      "thinking_mode": "选择方法、流程、算法、验证策略或命令审查方式。",
+      "tool_policy": "可以生成 ProposedAction，但仍需先做逻辑预检和作用域确认。",
+      "validation_policy": "为方法绑定最小可验证证据，例如测试、构建、解析、样本或对照。",
+      "stop_condition": "方法已选定且验证计划明确。",
+      "route_refs": ["route-logic-argument-check", "route-agent-tool-proposed-action", "route-cs-spec-to-test"]
+    },
+    {
+      "level": "L5_operation",
+      "label": "操作层思考",
+      "thinking_mode": "只思考当前一步该做什么，不把所有后续步骤挤进上下文。",
+      "tool_policy": "每步只执行一个小动作，优先读、查、测，再考虑写；高风险动作必须过 Tool Gateway。",
+      "validation_policy": "执行后立即写 ToolResultSummary，保留完整轨迹在外部记忆。",
+      "stop_condition": "本步结果已可观察，或者需要返回上一层重新收敛。",
+      "route_refs": ["route-agent-tool-gateway-policy", "route-agent-tool-result-summary", "route-powershell-safe-command"]
+    },
+    {
+      "level": "L6_case",
+      "label": "案例层思考",
+      "thinking_mode": "用成功案例和失败签名校正当前任务，不把失败抹掉。",
+      "tool_policy": "优先读取负值 FAME、失败模式和工程记忆摘要，避免复发。",
+      "validation_policy": "验证案例是否真的可迁移，别把偶然成功当规律。",
+      "stop_condition": "形成下一步更小、更稳的验证动作。",
+      "route_refs": ["route-logic-failure-diagnosis", "route-agent-reflection-improvement", "route-negative-fame-lesson"]
+    }
+  ],
+  "subject_implications": [
+    {
+      "subject": "agent-tooling",
+      "implication": "工具说明、schema、路径、工作目录和变更风险优先于知识广度。",
+      "preferred_routes": ["route-agent-tool-doc-first", "route-agent-tool-proposed-action", "route-agent-tool-gateway-policy"]
+    },
+    {
+      "subject": "powershell-safety",
+      "implication": "命令思考必须先考虑解析、引号、重定向和文件系统边界。",
+      "preferred_routes": ["route-powershell-command-review", "route-powershell-safe-command"]
+    },
+    {
+      "subject": "logic",
+      "implication": "论证、前提、反例和一致性检查优先于直接行动。",
+      "preferred_routes": ["route-logic-argument-check", "route-logic-tool-precheck", "route-logic-failure-diagnosis"]
+    },
+    {
+      "subject": "mathematics",
+      "implication": "图遍历、评分、优化和证据更新用于控制候选路线数量。",
+      "preferred_routes": ["route-math-graph-traversal", "route-math-route-optimization", "route-math-evidence-update"]
+    },
+    {
+      "subject": "computer-science",
+      "implication": "软件工程、索引、数据库和测试决定工程路线的实际可执行性。",
+      "preferred_routes": ["route-cs-spec-to-test", "route-cs-kg-indexing", "route-cs-agent-memory-loop"]
+    }
+  ]
+}

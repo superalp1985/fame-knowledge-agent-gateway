@@ -1,0 +1,25 @@
+{
+  "edition_id": "english",
+  "modes": [
+    {
+      "id": "L0_meta",
+      "trigger": "architecture, governance or route design",
+      "output": "principles and constraints"
+    },
+    {
+      "id": "L4_method",
+      "trigger": "planning, abstraction transfer or lateral association",
+      "output": "candidate routes and validation hooks"
+    },
+    {
+      "id": "L5_operation",
+      "trigger": "tool use, file edits, tests or builds",
+      "output": "ProposedAction and ToolResultSummary"
+    },
+    {
+      "id": "L6_case",
+      "trigger": "debugging repeated failures or resuming work",
+      "output": "project memory refs and lessons"
+    }
+  ]
+}

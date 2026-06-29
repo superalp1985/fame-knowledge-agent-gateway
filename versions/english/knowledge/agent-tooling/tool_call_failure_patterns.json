@@ -1,0 +1,248 @@
+{
+  "edition_id": "english",
+  "subject": "agent-tooling",
+  "patterns": [
+    {
+      "id": "tool-failure-skip-doc",
+      "label": "Skipped required documentation",
+      "risk": 0.75,
+      "delta": -0.45,
+      "summary": "Recurring failure: Skipped required documentation.",
+      "prevention": [
+        "调用前读取工具 manifest 或说明摘要。",
+        "不确定时优先执行只读探测。",
+        "把工具名、参数和期望输出写入 ProposedAction。"
+      ],
+      "route_refs": [
+        "route-agent-tool-doc-first"
+      ]
+    },
+    {
+      "id": "tool-failure-unscoped-mutation",
+      "label": "Unscoped mutating tool call",
+      "risk": 0.9,
+      "delta": -0.6,
+      "summary": "Recurring failure: Unscoped mutating tool call.",
+      "prevention": [
+        "高风险动作必须进入 ApprovedAction。",
+        "文件系统操作先解析目标路径并确认边界。",
+        "记录预期影响和回滚方式。"
+      ],
+      "route_refs": [
+        "route-agent-tool-proposed-action"
+      ]
+    },
+    {
+      "id": "tool-failure-context-bloat",
+      "label": "Context bloat from unnecessary loading",
+      "risk": 0.55,
+      "delta": -0.35,
+      "summary": "Recurring failure: Context bloat from unnecessary loading.",
+      "prevention": [
+        "工具输出转摘要，完整日志留外部记忆。",
+        "图遍历按 subject 和 route_id 裁剪。",
+        "只保留当前任务必要证据。"
+      ],
+      "route_refs": [
+        "route-agent-tool-result-summary"
+      ]
+    },
+    {
+      "id": "tool-failure-dirty-worktree-overwrite",
+      "label": "Dirty worktree overwrite risk",
+      "risk": 0.88,
+      "delta": -0.65,
+      "summary": "Recurring failure: Dirty worktree overwrite risk.",
+      "prevention": [
+        "改文件前读取目标文件和 git status。",
+        "只编辑任务相关范围。",
+        "发现同文件有未知改动时，先兼容现状，不做回滚。",
+        "提交或大改前列出变更摘要。"
+      ],
+      "route_refs": [
+        "route-agent-tool-proposed-action",
+        "route-cs-spec-to-test"
+      ]
+    },
+    {
+      "id": "tool-failure-wrong-working-directory",
+      "label": "Wrong working directory",
+      "risk": 0.72,
+      "delta": -0.45,
+      "summary": "Recurring failure: Wrong working directory.",
+      "prevention": [
+        "每个命令显式设置 working_directory。",
+        "运行前确认目标文件或 package.json 是否存在。",
+        "输出摘要记录 cwd 和命令意图。"
+      ],
+      "route_refs": [
+        "route-agent-action-template-selection",
+        "route-powershell-command-review"
+      ]
+    },
+    {
+      "id": "tool-failure-json-string-edit",
+      "label": "String-based JSON/JSONL edit",
+      "risk": 0.66,
+      "delta": -0.4,
+      "summary": "Recurring failure: String-based JSON/JSONL edit.",
+      "prevention": [
+        "优先使用结构化编辑或解析器。",
+        "写入后立即运行 JSON/JSONL/schema 校验。",
+        "JSONL 保持一行一个对象，不插入格式化多行对象。"
+      ],
+      "route_refs": [
+        "route-logic-knowledge-consistency",
+        "route-cs-spec-to-test"
+      ]
+    },
+    {
+      "id": "tool-failure-network-import-pollution",
+      "label": "Network import polluted core knowledge",
+      "risk": 0.8,
+      "delta": -0.55,
+      "summary": "Recurring failure: Network import polluted core knowledge.",
+      "prevention": [
+        "先登记 source_registry 和 data_sources。",
+        "只导入样本、摘要或外部索引引用。",
+        "ShareAlike 或版权复杂数据进入隔离库。",
+        "核心知识只写自有摘要。"
+      ],
+      "route_refs": [
+        "route-cs-open-source-release-gate",
+        "route-logic-knowledge-consistency"
+      ]
+    },
+    {
+      "id": "tool-failure-test-claim-without-evidence",
+      "label": "Claimed success without evidence",
+      "risk": 0.7,
+      "delta": -0.5,
+      "summary": "Recurring failure: Claimed success without evidence.",
+      "prevention": [
+        "每个工程任务绑定验收标准。",
+        "运行合适的最小测试。",
+        "不能测试时明确说明未测试和残余风险。",
+        "结果摘要必须包含证据。"
+      ],
+      "route_refs": [
+        "route-cs-spec-to-test",
+        "route-agent-usability-evaluation"
+      ]
+    },
+    {
+      "id": "tool-failure-knowledge-index-drift",
+      "label": "Knowledge index drift",
+      "risk": 0.76,
+      "delta": -0.48,
+      "summary": "Recurring failure: Knowledge index drift.",
+      "prevention": [
+        "结构化知识修改后同步相关索引。",
+        "route_refs 和 content_refs 必须能解析到真实记录。",
+        "运行 check-chinese-open 验证引用完整性。",
+        "手动编辑图谱后记录数据库同步摘要。"
+      ],
+      "route_refs": [
+        "route-agent-database-sync",
+        "route-logic-knowledge-consistency"
+      ]
+    },
+    {
+      "id": "tool-failure-runtime-assumption",
+      "label": "Runtime assumption without verification",
+      "risk": 0.68,
+      "delta": -0.42,
+      "summary": "Recurring failure: Runtime assumption without verification.",
+      "prevention": [
+        "执行前确认解释器、版本、工作目录和依赖入口。",
+        "使用项目已有脚本或 bundled runtime。",
+        "结果摘要记录运行时和关键环境信号。",
+        "安装依赖或改变环境必须进入 ProposedAction。"
+      ],
+      "route_refs": [
+        "route-agent-stability-preflight",
+        "route-cs-spec-to-test"
+      ]
+    },
+    {
+      "id": "tool-failure-terminal-mojibake-misdiagnosis",
+      "label": "Terminal mojibake misdiagnosed as file corruption",
+      "risk": 0.58,
+      "delta": -0.38,
+      "summary": "Recurring failure: Terminal mojibake misdiagnosed as file corruption.",
+      "prevention": [
+        "先按 UTF-8 读取文件或解析 JSON 证据。",
+        "PowerShell 输出问题先走编码探针路线。",
+        "结果摘要标明证据来自 terminal、json 还是 file。"
+      ],
+      "route_refs": [
+        "route-powershell-encoding-output",
+        "route-agent-stability-preflight"
+      ]
+    },
+    {
+      "id": "tool-failure-capability-boundary-confusion",
+      "label": "Capability boundary confusion",
+      "risk": 0.74,
+      "delta": -0.45,
+      "summary": "Recurring failure: Capability boundary confusion.",
+      "prevention": [
+        "接入时先读取 MCP 能力边界。",
+        "工具调用前生成 Tool Action Contract。",
+        "缺少 schema 或权限边界时阻断。"
+      ],
+      "route_refs": [
+        "route-agent-mcp-capability-boundary",
+        "route-agent-tool-action-contract"
+      ]
+    },
+    {
+      "id": "tool-failure-approval-bypass",
+      "label": "Approval bypass for sensitive action",
+      "risk": 0.9,
+      "delta": -0.65,
+      "summary": "Recurring failure: Approval bypass for sensitive action.",
+      "prevention": [
+        "高风险动作必须通过 Guardrail 与人工审批。",
+        "Tool Gateway 缺少审批状态时阻断。",
+        "结果摘要记录审批来源。"
+      ],
+      "route_refs": [
+        "route-agent-guardrail-human-review",
+        "route-agent-tool-gateway-policy"
+      ]
+    },
+    {
+      "id": "tool-failure-native-command-argument-drift",
+      "label": "Native command argument drift",
+      "risk": 0.72,
+      "delta": -0.45,
+      "summary": "Recurring failure: Native command argument drift.",
+      "prevention": [
+        "确认原生命令参数边界。",
+        "优先结构化参数和结构化输出。",
+        "结果摘要记录 cwd、退出码和关键输出。"
+      ],
+      "route_refs": [
+        "route-powershell-native-command-boundary",
+        "route-powershell-command-review"
+      ]
+    },
+    {
+      "id": "tool-failure-memory-resume-loss",
+      "label": "Lost memory on resume",
+      "risk": 0.7,
+      "delta": -0.4,
+      "summary": "Recurring failure: Lost memory on resume.",
+      "prevention": [
+        "长任务登记 checkpoint/store。",
+        "恢复时先读摘要和下一步最小动作。",
+        "不要把完整日志塞回上下文。"
+      ],
+      "route_refs": [
+        "route-agent-checkpoint-store-memory",
+        "route-agent-reminder-clock"
+      ]
+    }
+  ]
+}
